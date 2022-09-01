@@ -1,0 +1,3889 @@
+ID,Name,Calories,Fats,Carbohydrates,Proteins,Cost,Expiry
+1,acini di pepe,0,0,0,0,0,0
+2,acorn squash,0,0,0,0,0,0
+3,additional cocktail sauce,0,0,0,0,0,0
+4,additional flour,0,0,0,0,0,0
+5,additional oil,0,0,0,0,0,0
+6,adobo,0,0,0,0,0,0
+7,adobo sauce,0,0,0,0,0,0
+8,agave nectar,0,0,0,0,0,0
+9,agave syrup,0,0,0,0,0,0
+10,alfalfa sprouts,0,0,0,0,0,0
+11,alfredo,0,0,0,0,0,0
+12,alfredo sauce,0,0,0,0,0,0
+13,alfredo-style pasta sauce,0,0,0,0,0,0
+14,all-purpose apples,0,0,0,0,0,0
+15,all-purpose baking mix,0,0,0,0,0,0
+16,all-purpose flour,0,0,0,0,0,0
+17,all-purpose flour (optional),0,0,0,0,0,0
+18,all-purpose rice flour,0,0,0,0,0,0
+19,allspice,0,0,0,0,0,0
+20,allspice berries,0,0,0,0,0,0
+21,almond butter,0,0,0,0,0,0
+22,almond extract,0,0,0,0,0,0
+23,almond extract (optional),0,0,0,0,0,0
+24,almond flour,0,0,0,0,0,0
+25,almond halves,0,0,0,0,0,0
+26,almond milk,0,0,0,0,0,0
+27,almond paste,0,0,0,0,0,0
+28,almonds,0,0,0,0,0,0
+29,alum,0,0,0,0,0,0
+30,amaretto liqueur,0,0,0,0,0,0
+31,amarula liqueur,0,0,0,0,0,0
+32,american,0,0,0,0,0,0
+33,american cheese,0,0,0,0,0,0
+34,american cheese or,0,0,0,0,0,0
+35,anaheim chile peppers,0,0,0,0,0,0
+36,anaheim peppers,0,0,0,0,0,0
+37,anchovy filet,0,0,0,0,0,0
+38,anchovy filets,0,0,0,0,0,0
+39,anchovy fillets,0,0,0,0,0,0
+40,anchovy paste,0,0,0,0,0,0
+41,anchovy paste (optional),0,0,0,0,0,0
+42,andouille,0,0,0,0,0,0
+43,andouille sausage,0,0,0,0,0,0
+44,andouille sausage links,0,0,0,0,0,0
+45,anise extract,0,0,0,0,0,0
+46,anise oil (optional),0,0,0,0,0,0
+47,anise seed,0,0,0,0,0,0
+48,apple,0,0,0,0,0,0
+49,apple brandy,0,0,0,0,0,0
+50,apple butter,0,0,0,0,0,0
+51,apple cider,0,0,0,0,0,0
+52,apple cider glaze:,0,0,0,0,0,0
+53,apple cider vinegar,0,0,0,0,0,0
+54,apple juice,0,0,0,0,0,0
+55,apple pie,0,0,0,0,0,0
+56,apple pie spice,0,0,0,0,0,0
+57,apple-rosemary sauce,0,0,0,0,0,0
+58,apples,0,0,0,0,0,0
+59,apples (any variety,0,0,0,0,0,0
+60,applesauce,0,0,0,0,0,0
+61,applesauce (optional),0,0,0,0,0,0
+62,apricot baby food,0,0,0,0,0,0
+63,apricot brandy,0,0,0,0,0,0
+64,apricot dipping sauce,0,0,0,0,0,0
+65,apricot halves,0,0,0,0,0,0
+66,apricot jam,0,0,0,0,0,0
+67,apricot nectar,0,0,0,0,0,0
+68,apricot preserves,0,0,0,0,0,0
+69,arborio rice,0,0,0,0,0,0
+70,arrowroot powder,0,0,0,0,0,0
+71,arrowroot starch,0,0,0,0,0,0
+72,artichoke hearts,0,0,0,0,0,0
+73,artichokes,0,0,0,0,0,0
+74,artificial chicken tenders,0,0,0,0,0,0
+75,artificial sweetener,0,0,0,0,0,0
+76,arugula,0,0,0,0,0,0
+77,arugula torn,0,0,0,0,0,0
+78,asian (dark) sesame,0,0,0,0,0,0
+79,asian (toasted) sesame,0,0,0,0,0,0
+80,asian chile paste,0,0,0,0,0,0
+81,asian chile pepper,0,0,0,0,0,0
+82,asian chili garlic,0,0,0,0,0,0
+83,asian chili paste,0,0,0,0,0,0
+84,asian fish sauce,0,0,0,0,0,0
+85,asian pear,0,0,0,0,0,0
+86,asian sesame oil,0,0,0,0,0,0
+87,asian sweet chile,0,0,0,0,0,0
+88,asparagus,0,0,0,0,0,0
+89,asparagus spears,0,0,0,0,0,0
+90,assorted crackers,0,0,0,0,0,0
+91,au gratin instant,0,0,0,0,0,0
+92,au jus gravy,0,0,0,0,0,0
+93,avocado,0,0,0,0,0,0
+94,avocado dressing:,0,0,0,0,0,0
+95,avocado fries:,0,0,0,0,0,0
+96,avocados,0,0,0,0,0,0
+97,baby,0,0,0,0,0,0
+98,baby arugula,0,0,0,0,0,0
+99,baby arugula leaves,0,0,0,0,0,0
+100,baby bella,0,0,0,0,0,0
+101,baby bella mushrooms,0,0,0,0,0,0
+102,baby carrots,0,0,0,0,0,0
+103,baby clams,0,0,0,0,0,0
+104,baby corn,0,0,0,0,0,0
+105,baby dutch yellow,0,0,0,0,0,0
+106,baby greens,0,0,0,0,0,0
+107,baby mozzarella balls,0,0,0,0,0,0
+108,baby peas,0,0,0,0,0,0
+109,baby portobello mushrooms,0,0,0,0,0,0
+110,baby salad greens,0,0,0,0,0,0
+111,baby shrimp,0,0,0,0,0,0
+112,baby spinach,0,0,0,0,0,0
+113,baby spinach leaves,0,0,0,0,0,0
+114,baby yukon gold,0,0,0,0,0,0
+115,bacon,0,0,0,0,0,0
+116,bacon (optional),0,0,0,0,0,0
+117,bacon bits,0,0,0,0,0,0
+118,bacon drippings,0,0,0,0,0,0
+119,bacon grease,0,0,0,0,0,0
+120,bacon pieces,0,0,0,0,0,0
+121,bacon slices,0,0,0,0,0,0
+122,bag,0,0,0,0,0,0
+123,bag baby salad,0,0,0,0,0,0
+124,bag baby spinach,0,0,0,0,0,0
+125,bag birds,0,0,0,0,0,0
+126,bag corn chips,0,0,0,0,0,0
+127,bag corn tortilla,0,0,0,0,0,0
+128,bag cranberries,0,0,0,0,0,0
+129,bag fresh baby,0,0,0,0,0,0
+130,bag fresh cranberries,0,0,0,0,0,0
+131,bag fresh spinach,0,0,0,0,0,0
+132,bag frozen,0,0,0,0,0,0
+133,bag high quality,0,0,0,0,0,0
+134,bag italian-blend salad,0,0,0,0,0,0
+135,bag milk chocolate,0,0,0,0,0,0
+136,bag mixed baby,0,0,0,0,0,0
+137,bag mixed field,0,0,0,0,0,0
+138,bag mixed salad,0,0,0,0,0,0
+139,bag semisweet chocolate,0,0,0,0,0,0
+140,bag spicy corn,0,0,0,0,0,0
+141,bag spinach,0,0,0,0,0,0
+142,bag spring mix,0,0,0,0,0,0
+143,bag tortilla chips,0,0,0,0,0,0
+144,bagel,0,0,0,0,0,0
+145,bags,0,0,0,0,0,0
+146,bags fresh spinach,0,0,0,0,0,0
+147,bags milk chocolate,0,0,0,0,0,0
+148,bags semi-sweet chocolate,0,0,0,0,0,0
+149,baguette slices,0,0,0,0,0,0
+150,baked beans,0,0,0,0,0,0
+151,baked pastry shell,0,0,0,0,0,0
+152,baker's angel flake,0,0,0,0,0,0
+153,baker's semi-sweet baking,0,0,0,0,0,0
+154,bakers' ammonia,0,0,0,0,0,0
+155,baking potatoes,0,0,0,0,0,0
+156,ball,0,0,0,0,0,0
+157,balls,0,0,0,0,0,0
+158,balsamic vinaigrette,0,0,0,0,0,0
+159,balsamic vinaigrette salad,0,0,0,0,0,0
+160,balsamic vinegar,0,0,0,0,0,0
+161,balsamic vinegar (optional),0,0,0,0,0,0
+162,bamboo shoots,0,0,0,0,0,0
+163,bamboo skewers,0,0,0,0,0,0
+164,banana,0,0,0,0,0,0
+165,banana cut,0,0,0,0,0,0
+166,banana nut coconut,0,0,0,0,0,0
+167,banana nut frosting:,0,0,0,0,0,0
+168,banana peppers,0,0,0,0,0,0
+169,bananas,0,0,0,0,0,0
+170,bananas cut,0,0,0,0,0,0
+171,bananas frozen,0,0,0,0,0,0
+172,bar chocolate,0,0,0,0,0,0
+173,bar chocolate candy,0,0,0,0,0,0
+174,bar german sweet,0,0,0,0,0,0
+175,bar milk chocolate,0,0,0,0,0,0
+176,bar toblerone swiss,0,0,0,0,0,0
+177,barbecue,0,0,0,0,0,0
+178,barbecue sauce,0,0,0,0,0,0
+179,barbeque,0,0,0,0,0,0
+180,barbeque sauce,0,0,0,0,0,0
+181,barley,0,0,0,0,0,0
+182,bars,0,0,0,0,0,0
+183,bars milk chocolate,0,0,0,0,0,0
+184,basic cookie mix,0,0,0,0,0,0
+185,basil,0,0,0,0,0,0
+186,basil chiffonade,0,0,0,0,0,0
+187,basil leaves,0,0,0,0,0,0
+188,basil pesto,0,0,0,0,0,0
+189,basil-flavored feta cheese,0,0,0,0,0,0
+190,basket cherry tomatoes,0,0,0,0,0,0
+191,basmati rice,0,0,0,0,0,0
+192,batter:,0,0,0,0,0,0
+193,bay,0,0,0,0,0,0
+194,bay leaf,0,0,0,0,0,0
+195,bay leaf (optional),0,0,0,0,0,0
+196,bay leaves,0,0,0,0,0,0
+197,bay scallops,0,0,0,0,0,0
+198,bean cakes:,0,0,0,0,0,0
+199,bean dip,0,0,0,0,0,0
+200,bean soup mix,0,0,0,0,0,0
+201,bean sprouts,0,0,0,0,0,0
+202,bear meat,0,0,0,0,0,0
+203,beaten,0,0,0,0,0,0
+204,beaten eggs,0,0,0,0,0,0
+205,beau monde ™,0,0,0,0,0,0
+206,beef,0,0,0,0,0,0
+207,beef base,0,0,0,0,0,0
+208,beef bouillon,0,0,0,0,0,0
+209,beef bouillon cube,0,0,0,0,0,0
+210,beef bouillon cubes,0,0,0,0,0,0
+211,beef bouillon granules,0,0,0,0,0,0
+212,beef brisket,0,0,0,0,0,0
+213,beef broth,0,0,0,0,0,0
+214,beef chuck,0,0,0,0,0,0
+215,beef chuck pot,0,0,0,0,0,0
+216,beef chuck roast,0,0,0,0,0,0
+217,beef chuck steaks,0,0,0,0,0,0
+218,beef cocktail wieners,0,0,0,0,0,0
+219,beef consomme,0,0,0,0,0,0
+220,beef cube steaks,0,0,0,0,0,0
+221,beef drippings,0,0,0,0,0,0
+222,beef filet,0,0,0,0,0,0
+223,beef flank steak,0,0,0,0,0,0
+224,beef frankfurters,0,0,0,0,0,0
+225,beef gravy,0,0,0,0,0,0
+226,beef kielbasa,0,0,0,0,0,0
+227,beef neck bones,0,0,0,0,0,0
+228,beef oxtail,0,0,0,0,0,0
+229,beef ravioli,0,0,0,0,0,0
+230,beef rib roast,0,0,0,0,0,0
+231,beef ribs,0,0,0,0,0,0
+232,beef roast,0,0,0,0,0,0
+233,beef round roast,0,0,0,0,0,0
+234,beef round steak,0,0,0,0,0,0
+235,beef rump roast,0,0,0,0,0,0
+236,beef sausage,0,0,0,0,0,0
+237,beef shank,0,0,0,0,0,0
+238,beef short ribs,0,0,0,0,0,0
+239,beef sirloin,0,0,0,0,0,0
+240,beef sirloin roast,0,0,0,0,0,0
+241,beef sirloin steak,0,0,0,0,0,0
+242,beef sirloin steaks,0,0,0,0,0,0
+243,beef sirloin strips,0,0,0,0,0,0
+244,beef skirt steak,0,0,0,0,0,0
+245,beef soup bones,0,0,0,0,0,0
+246,beef stew meat,0,0,0,0,0,0
+247,beef stock,0,0,0,0,0,0
+248,beef suet,0,0,0,0,0,0
+249,beef tamales,0,0,0,0,0,0
+250,beef tenderloin,0,0,0,0,0,0
+251,beef tenderloin filets,0,0,0,0,0,0
+252,beef tenderloin medallions,0,0,0,0,0,0
+253,beef tenderloin roast,0,0,0,0,0,0
+254,beef top sirloin,0,0,0,0,0,0
+255,beefsteak tomato,0,0,0,0,0,0
+256,beefsteak tomatoes,0,0,0,0,0,0
+257,beer,0,0,0,0,0,0
+258,beer room temperature,0,0,0,0,0,0
+259,beets,0,0,0,0,0,0
+260,belgian endive leaves,0,0,0,0,0,0
+261,bell pepper,0,0,0,0,0,0
+262,bell peppers,0,0,0,0,0,0
+263,bermuda onion,0,0,0,0,0,0
+264,berry cranberry sauce,0,0,0,0,0,0
+265,bibb lettuce,0,0,0,0,0,0
+266,bibb lettuce leaves,0,0,0,0,0,0
+267,biscuit,0,0,0,0,0,0
+268,biscuit mix,0,0,0,0,0,0
+269,biscuit mix (e.g.,0,0,0,0,0,0
+270,biscuits,0,0,0,0,0,0
+271,bison flank steak,0,0,0,0,0,0
+272,bite-size broccoli florets,0,0,0,0,0,0
+273,bite-size cheese crackers,0,0,0,0,0,0
+274,bite-size chunks fresh,0,0,0,0,0,0
+275,bite-size pretzel twists,0,0,0,0,0,0
+276,bite-sized broccoli florets,0,0,0,0,0,0
+277,bite-sized pieces fresh,0,0,0,0,0,0
+278,bitters,0,0,0,0,0,0
+279,bittersweet chocolate,0,0,0,0,0,0
+280,bittersweet chocolate bar,0,0,0,0,0,0
+281,black bean sauce,0,0,0,0,0,0
+282,black bean soup,0,0,0,0,0,0
+283,black beans,0,0,0,0,0,0
+284,black beans; drain,0,0,0,0,0,0
+285,black cherry,0,0,0,0,0,0
+286,black food coloring,0,0,0,0,0,0
+287,black forest ham,0,0,0,0,0,0
+288,black greek olives,0,0,0,0,0,0
+289,black mustard seeds,0,0,0,0,0,0
+290,black olives,0,0,0,0,0,0
+291,black paste food,0,0,0,0,0,0
+292,black pepper,0,0,0,0,0,0
+293,black peppercorns,0,0,0,0,0,0
+294,black rice,0,0,0,0,0,0
+295,black sesame seeds,0,0,0,0,0,0
+296,black shoestring licorice,0,0,0,0,0,0
+297,black squid ink,0,0,0,0,0,0
+298,black tea bag,0,0,0,0,0,0
+299,black walnuts,0,0,0,0,0,0
+300,black-eyed peas,0,0,0,0,0,0
+301,blackberries,0,0,0,0,0,0
+302,blackberry,0,0,0,0,0,0
+303,blackberry preserves,0,0,0,0,0,0
+304,blackberry wine,0,0,0,0,0,0
+305,blackstrap molasses,0,0,0,0,0,0
+306,blue cheese,0,0,0,0,0,0
+307,blue cheese crumbles,0,0,0,0,0,0
+308,blue cheese salad,0,0,0,0,0,0
+309,blue cheese sauce:,0,0,0,0,0,0
+310,blue corn tortilla,0,0,0,0,0,0
+311,blue crab claws,0,0,0,0,0,0
+312,blue crab crabmeat,0,0,0,0,0,0
+313,blue food coloring,0,0,0,0,0,0
+314,blueberries,0,0,0,0,0,0
+315,blueberry,0,0,0,0,0,0
+316,blueberry pie filling,0,0,0,0,0,0
+317,blueberry preserves,0,0,0,0,0,0
+318,blueberry sauce:,0,0,0,0,0,0
+319,boiling water,0,0,0,0,0,0
+320,bok choy,0,0,0,0,0,0
+321,bologna cut,0,0,0,0,0,0
+322,bone-in beef pot,0,0,0,0,0,0
+323,bone-in chicken breast,0,0,0,0,0,0
+324,bone-in chicken parts,0,0,0,0,0,0
+325,bone-in chicken pieces,0,0,0,0,0,0
+326,bone-in chicken thighs,0,0,0,0,0,0
+327,bone-in country style,0,0,0,0,0,0
+328,bone-in pork chops,0,0,0,0,0,0
+329,bone-in pork loin,0,0,0,0,0,0
+330,bone-in pork shoulder,0,0,0,0,0,0
+331,bone-in shank ham,0,0,0,0,0,0
+332,boneless,0,0,0,0,0,0
+333,boneless beef chuck,0,0,0,0,0,0
+334,boneless beef round,0,0,0,0,0,0
+335,boneless beef sirloin,0,0,0,0,0,0
+336,boneless beef top,0,0,0,0,0,0
+337,boneless chicken breast,0,0,0,0,0,0
+338,boneless chicken breasts,0,0,0,0,0,0
+339,boneless chicken thighs,0,0,0,0,0,0
+340,boneless chuck roast,0,0,0,0,0,0
+341,boneless duck breast,0,0,0,0,0,0
+342,boneless ham,0,0,0,0,0,0
+343,boneless lamb shoulder,0,0,0,0,0,0
+344,boneless leg,0,0,0,0,0,0
+345,boneless new york,0,0,0,0,0,0
+346,boneless pork,0,0,0,0,0,0
+347,boneless pork butt,0,0,0,0,0,0
+348,boneless pork chops,0,0,0,0,0,0
+349,boneless pork loin,0,0,0,0,0,0
+350,boneless pork ribs,0,0,0,0,0,0
+351,boneless pork roast,0,0,0,0,0,0
+352,boneless pork shoulder,0,0,0,0,0,0
+353,boneless pork tenderloin,0,0,0,0,0,0
+354,boneless round steak,0,0,0,0,0,0
+355,boneless rump roast,0,0,0,0,0,0
+356,boneless salmon fillet,0,0,0,0,0,0
+357,boneless salmon fillets,0,0,0,0,0,0
+358,boneless sirloin steak,0,0,0,0,0,0
+359,boneless sirloin steaks,0,0,0,0,0,0
+360,boneless skinless,0,0,0,0,0,0
+361,boneless skinless chicken,0,0,0,0,0,0
+362,boneless skinless salmon,0,0,0,0,0,0
+363,boneless skinless turkey,0,0,0,0,0,0
+364,boneless turkey breast,0,0,0,0,0,0
+365,boneless venison roast,0,0,0,0,0,0
+366,bosc pear,0,0,0,0,0,0
+367,bosc pears,0,0,0,0,0,0
+368,boston bibb,0,0,0,0,0,0
+369,boston butt roast,0,0,0,0,0,0
+370,bottle,0,0,0,0,0,0
+371,bottle barbecue sauce,0,0,0,0,0,0
+372,bottle barbeque sauce,0,0,0,0,0,0
+373,bottle blue cheese,0,0,0,0,0,0
+374,bottle burgundy wine,0,0,0,0,0,0
+375,bottle caesar salad,0,0,0,0,0,0
+376,bottle catalina salad,0,0,0,0,0,0
+377,bottle clam juice,0,0,0,0,0,0
+378,bottle garlic,0,0,0,0,0,0
+379,bottle greek,0,0,0,0,0,0
+380,bottle honey teriyaki,0,0,0,0,0,0
+381,bottle hot pepper,0,0,0,0,0,0
+382,bottle hot sauce,0,0,0,0,0,0
+383,bottle italian dressing,0,0,0,0,0,0
+384,bottle italian salad,0,0,0,0,0,0
+385,bottle ketchup,0,0,0,0,0,0
+386,bottle merlot wine,0,0,0,0,0,0
+387,bottle ranch,0,0,0,0,0,0
+388,bottle raspberry vinaigrette,0,0,0,0,0,0
+389,bottle raspberry walnut,0,0,0,0,0,0
+390,bottle tomato,0,0,0,0,0,0
+391,bottle zesty italian,0,0,0,0,0,0
+392,bottled lemon juice,0,0,0,0,0,0
+393,bottles,0,0,0,0,0,0
+394,bottles tomato-based chili,0,0,0,0,0,0
+395,bottom crust:,0,0,0,0,0,0
+396,bottom round,0,0,0,0,0,0
+397,bottom round roast,0,0,0,0,0,0
+398,bouquet garni,0,0,0,0,0,0
+399,bourbon,0,0,0,0,0,0
+400,bourbon (optional),0,0,0,0,0,0
+401,bourbon whiskey,0,0,0,0,0,0
+402,bow tie (farfalle),0,0,0,0,0,0
+403,bow tie pasta,0,0,0,0,0,0
+404,bow-tie pasta (farfalle),0,0,0,0,0,0
+405,box,0,0,0,0,0,0
+406,box chicken-flavored crackers,0,0,0,0,0,0
+407,box confectioners' sugar,0,0,0,0,0,0
+408,box frozen,0,0,0,0,0,0
+409,box moist pineapple,0,0,0,0,0,0
+410,box penne pasta,0,0,0,0,0,0
+411,box pepperidge,0,0,0,0,0,0
+412,box toothpicks,0,0,0,0,0,0
+413,box vanilla cake,0,0,0,0,0,0
+414,box vanilla wafers,0,0,0,0,0,0
+415,box yellow cake,0,0,0,0,0,0
+416,boxes dry corn,0,0,0,0,0,0
+417,brandy,0,0,0,0,0,0
+418,brandy (optional),0,0,0,0,0,0
+419,brandy-based orange liqueur,0,0,0,0,0,0
+420,bratwurst,0,0,0,0,0,0
+421,bratwurst casings,0,0,0,0,0,0
+422,bratwurst links,0,0,0,0,0,0
+423,braunschweiger,0,0,0,0,0,0
+424,braunschweiger liverwurst,0,0,0,0,0,0
+425,bread,0,0,0,0,0,0
+426,bread crumbs,0,0,0,0,0,0
+427,bread crusts,0,0,0,0,0,0
+428,bread cut,0,0,0,0,0,0
+429,bread flour,0,0,0,0,0,0
+430,bread pudding:,0,0,0,0,0,0
+431,breakfast sausage,0,0,0,0,0,0
+432,breakstone's,0,0,0,0,0,0
+433,brewers' yeast,0,0,0,0,0,0
+434,brie cheese,0,0,0,0,0,0
+435,brine:,0,0,0,0,0,0
+436,brioche buns,0,0,0,0,0,0
+437,broad egg noodles,0,0,0,0,0,0
+438,broccoli,0,0,0,0,0,0
+439,broccoli coleslaw mix,0,0,0,0,0,0
+440,broccoli crowns,0,0,0,0,0,0
+441,broccoli cut,0,0,0,0,0,0
+442,broccoli florets,0,0,0,0,0,0
+443,broccoli stalk,0,0,0,0,0,0
+444,broccoli stalks,0,0,0,0,0,0
+445,broiler-fryer chicken,0,0,0,0,0,0
+446,broth:,0,0,0,0,0,0
+447,brown gravy,0,0,0,0,0,0
+448,brown lentils,0,0,0,0,0,0
+449,brown mustard,0,0,0,0,0,0
+450,brown paste food,0,0,0,0,0,0
+451,brown rice,0,0,0,0,0,0
+452,brown rice flour,0,0,0,0,0,0
+453,brown sugar,0,0,0,0,0,0
+454,brown sugar (optional),0,0,0,0,0,0
+455,brown sugar substitute,0,0,0,0,0,0
+456,brown sugar twin,0,0,0,0,0,0
+457,brownie mix,0,0,0,0,0,0
+458,brownies:,0,0,0,0,0,0
+459,brussels,0,0,0,0,0,0
+460,brussels sprouts,0,0,0,0,0,0
+461,bucatini pasta,0,0,0,0,0,0
+462,buckwheat groats,0,0,0,0,0,0
+463,buffalo,0,0,0,0,0,0
+464,buffalo sauce:,0,0,0,0,0,0
+465,buffalo wing sauce,0,0,0,0,0,0
+466,bulb fennel,0,0,0,0,0,0
+467,bulb fennel bulb,0,0,0,0,0,0
+468,bulb garlic,0,0,0,0,0,0
+469,bulb garlic cloves,0,0,0,0,0,0
+470,bulbs fennel,0,0,0,0,0,0
+471,bulgur,0,0,0,0,0,0
+472,bulk,0,0,0,0,0,0
+473,bulk chorizo sausage,0,0,0,0,0,0
+474,bulk italian sausage,0,0,0,0,0,0
+475,bulk mild italian,0,0,0,0,0,0
+476,bulk pork sausage,0,0,0,0,0,0
+477,bulk turkey sausage,0,0,0,0,0,0
+478,bunches,0,0,0,0,0,0
+479,bunches beets,0,0,0,0,0,0
+480,bunches fresh spinach,0,0,0,0,0,0
+481,bunches green onion,0,0,0,0,0,0
+482,bunches green onions,0,0,0,0,0,0
+483,bunches kale stems,0,0,0,0,0,0
+484,bunches radishes,0,0,0,0,0,0
+485,bunches watercress,0,0,0,0,0,0
+486,burgers:,0,0,0,0,0,0
+487,burgundy wine,0,0,0,0,0,0
+488,burrata cheese,0,0,0,0,0,0
+489,burrito,0,0,0,0,0,0
+490,burrito-size flour tortillas,0,0,0,0,0,0
+491,butter,0,0,0,0,0,0
+492,butter (optional),0,0,0,0,0,0
+493,butter beans,0,0,0,0,0,0
+494,butter cake mix,0,0,0,0,0,0
+495,butter flavor,0,0,0,0,0,0
+496,butter or margarine,0,0,0,0,0,0
+497,butter-flavored granules,0,0,0,0,0,0
+498,butter-flavored shortening,0,0,0,0,0,0
+499,butterfly pork chops,0,0,0,0,0,0
+500,buttermilk,0,0,0,0,0,0
+501,buttermilk ranch,0,0,0,0,0,0
+502,buttermilk self-rising cornmeal,0,0,0,0,0,0
+503,butternut,0,0,0,0,0,0
+504,butternut squash,0,0,0,0,0,0
+505,butterscotch chips,0,0,0,0,0,0
+506,butterscotch instant pudding,0,0,0,0,0,0
+507,butterscotch-flavored chips,0,0,0,0,0,0
+508,buttery crackers,0,0,0,0,0,0
+509,buttery round crackers,0,0,0,0,0,0
+510,button mushrooms,0,0,0,0,0,0
+511,cabbage,0,0,0,0,0,0
+512,cabbage leaves,0,0,0,0,0,0
+513,caesar,0,0,0,0,0,0
+514,caesar salad,0,0,0,0,0,0
+515,caesar-style salad,0,0,0,0,0,0
+516,cajun,0,0,0,0,0,0
+517,cajun pepper seasoning,0,0,0,0,0,0
+518,cajun-style seasoning,0,0,0,0,0,0
+519,cake flour,0,0,0,0,0,0
+520,cake mix,0,0,0,0,0,0
+521,cake:,0,0,0,0,0,0
+522,cakes,0,0,0,0,0,0
+523,calamari,0,0,0,0,0,0
+524,calumet baking powder,0,0,0,0,0,0
+525,camembert cheese,0,0,0,0,0,0
+526,campanelle pasta,0,0,0,0,0,0
+527,canadian bacon,0,0,0,0,0,0
+528,canadian beer,0,0,0,0,0,0
+529,candied cherries,0,0,0,0,0,0
+530,candied lemon peel,0,0,0,0,0,0
+531,candy corn,0,0,0,0,0,0
+532,candy lime slices,0,0,0,0,0,0
+533,candy-coated chocolate pieces,0,0,0,0,0,0
+534,candy-coated milk chocolate,0,0,0,0,0,0
+535,canned heart,0,0,0,0,0,0
+536,canned water chestnuts,0,0,0,0,0,0
+537,cannellini (white kidney),0,0,0,0,0,0
+538,cannellini (white) beans,0,0,0,0,0,0
+539,cannellini beans,0,0,0,0,0,0
+540,canola oil,0,0,0,0,0,0
+541,canola oil (optional),0,0,0,0,0,0
+542,cantaloupe,0,0,0,0,0,0
+543,cantaloupe balls,0,0,0,0,0,0
+544,cantaloupe cut,0,0,0,0,0,0
+545,capacola sausage,0,0,0,0,0,0
+546,capers,0,0,0,0,0,0
+547,caramel,0,0,0,0,0,0
+548,caramel banana sauce:,0,0,0,0,0,0
+549,caramel ice cream,0,0,0,0,0,0
+550,caramel icing:,0,0,0,0,0,0
+551,caramels,0,0,0,0,0,0
+552,carapelli premium,0,0,0,0,0,0
+553,caraway seed,0,0,0,0,0,0
+554,caraway seeds,0,0,0,0,0,0
+555,carbonated mineral water,0,0,0,0,0,0
+556,cardamom,0,0,0,0,0,0
+557,caribou cut,0,0,0,0,0,0
+558,carob powder,0,0,0,0,0,0
+559,carrot,0,0,0,0,0,0
+560,carrot cake:,0,0,0,0,0,0
+561,carrot juice,0,0,0,0,0,0
+562,carrots,0,0,0,0,0,0
+563,carton,0,0,0,0,0,0
+564,carton egg substitute,0,0,0,0,0,0
+565,carton low-sodium chicken,0,0,0,0,0,0
+566,carton low-sodium vegetable,0,0,0,0,0,0
+567,carton small-curd cottage,0,0,0,0,0,0
+568,cartons,0,0,0,0,0,0
+569,cartons low-sodium chicken,0,0,0,0,0,0
+570,cashew butter,0,0,0,0,0,0
+571,cashew halves,0,0,0,0,0,0
+572,cashew nuts,0,0,0,0,0,0
+573,cashew pieces,0,0,0,0,0,0
+574,cashews,0,0,0,0,0,0
+575,castor sugar,0,0,0,0,0,0
+576,catalina salad,0,0,0,0,0,0
+577,catfish fillets,0,0,0,0,0,0
+578,cauliflower,0,0,0,0,0,0
+579,cavatelli pasta,0,0,0,0,0,0
+580,cayenne pepper,0,0,0,0,0,0
+581,cayenne pepper (add,0,0,0,0,0,0
+582,cayenne pepper (optional),0,0,0,0,0,0
+583,cayenne pepper hot,0,0,0,0,0,0
+584,cayenne pepper sauce,0,0,0,0,0,0
+585,cedar plank,0,0,0,0,0,0
+586,celery,0,0,0,0,0,0
+587,celery flakes,0,0,0,0,0,0
+588,celery rib,0,0,0,0,0,0
+589,celery ribs,0,0,0,0,0,0
+590,celery root,0,0,0,0,0,0
+591,celery salt,0,0,0,0,0,0
+592,celery seed,0,0,0,0,0,0
+593,celery stalk,0,0,0,0,0,0
+594,celery stalks,0,0,0,0,0,0
+595,cellentani,0,0,0,0,0,0
+596,center,0,0,0,0,0,0
+597,center cut pork,0,0,0,0,0,0
+598,center-cut bacon,0,0,0,0,0,0
+599,center-cut beef tenderloin,0,0,0,0,0,0
+600,center-cut pork chops,0,0,0,0,0,0
+601,center-cut salmon fillets,0,0,0,0,0,0
+602,chablis,0,0,0,0,0,0
+603,chablis wine,0,0,0,0,0,0
+604,champagne,0,0,0,0,0,0
+605,champagne vinegar,0,0,0,0,0,0
+606,channa masala spice,0,0,0,0,0,0
+607,chanterelle mushrooms,0,0,0,0,0,0
+608,chardonnay,0,0,0,0,0,0
+609,chardonnay wine,0,0,0,0,0,0
+610,chayote squashes,0,0,0,0,0,0
+611,chayotes,0,0,0,0,0,0
+612,cheap beer,0,0,0,0,0,0
+613,cheddar cheese,0,0,0,0,0,0
+614,cheddar cheese soup,0,0,0,0,0,0
+615,cheese curds,0,0,0,0,0,0
+616,cheese tortellini,0,0,0,0,0,0
+617,cheese-filled tortellini,0,0,0,0,0,0
+618,cheese-flavored crackers,0,0,0,0,0,0
+619,cherry,0,0,0,0,0,0
+620,cherry peppers,0,0,0,0,0,0
+621,cherry pie,0,0,0,0,0,0
+622,cherry pie filling,0,0,0,0,0,0
+623,cherry preserves,0,0,0,0,0,0
+624,cherry tomatoes,0,0,0,0,0,0
+625,cherry-flavored cola,0,0,0,0,0,0
+626,chestnuts,0,0,0,0,0,0
+627,chia seeds,0,0,0,0,0,0
+628,chianti wine,0,0,0,0,0,0
+629,chicken,0,0,0,0,0,0
+630,chicken apple sausage,0,0,0,0,0,0
+631,chicken bouillon,0,0,0,0,0,0
+632,chicken bouillon cubes,0,0,0,0,0,0
+633,chicken bouillon granules,0,0,0,0,0,0
+634,chicken bouillon powder,0,0,0,0,0,0
+635,chicken breast,0,0,0,0,0,0
+636,chicken breasts,0,0,0,0,0,0
+637,chicken broth,0,0,0,0,0,0
+638,chicken chunks,0,0,0,0,0,0
+639,chicken drumettes,0,0,0,0,0,0
+640,chicken drumsticks,0,0,0,0,0,0
+641,chicken eggs,0,0,0,0,0,0
+642,chicken filling:,0,0,0,0,0,0
+643,chicken leg quarters,0,0,0,0,0,0
+644,chicken livers,0,0,0,0,0,0
+645,chicken noodle soup,0,0,0,0,0,0
+646,chicken parts,0,0,0,0,0,0
+647,chicken sausages,0,0,0,0,0,0
+648,chicken seasoning,0,0,0,0,0,0
+649,chicken stock,0,0,0,0,0,0
+650,chicken tenders,0,0,0,0,0,0
+651,chicken thighs,0,0,0,0,0,0
+652,chicken topping:,0,0,0,0,0,0
+653,chicken vegetable soup,0,0,0,0,0,0
+654,chicken wing drumettes,0,0,0,0,0,0
+655,chicken wing sections,0,0,0,0,0,0
+656,chicken wings,0,0,0,0,0,0
+657,chicken-flavor,0,0,0,0,0,0
+658,chicken-flavored demi-glace,0,0,0,0,0,0
+659,chicken-flavored ramen,0,0,0,0,0,0
+660,chicken-flavored ramen noodles,0,0,0,0,0,0
+661,chicken:,0,0,0,0,0,0
+662,chickens,0,0,0,0,0,0
+663,chickpeas,0,0,0,0,0,0
+664,chile padi (bird's,0,0,0,0,0,0
+665,chile paste,0,0,0,0,0,0
+666,chile powder,0,0,0,0,0,0
+667,chile powder (optional),0,0,0,0,0,0
+668,chile sauce,0,0,0,0,0,0
+669,chile-garlic sauce,0,0,0,0,0,0
+670,chili,0,0,0,0,0,0
+671,chili beans,0,0,0,0,0,0
+672,chili garlic sauce,0,0,0,0,0,0
+673,chili oil,0,0,0,0,0,0
+674,chili paste,0,0,0,0,0,0
+675,chili paste (sambal,0,0,0,0,0,0
+676,chili powder,0,0,0,0,0,0
+677,chili powder (optional),0,0,0,0,0,0
+678,chili sauce,0,0,0,0,0,0
+679,chinese cabbage,0,0,0,0,0,0
+680,chinese eggplants,0,0,0,0,0,0
+681,chinese rice wine,0,0,0,0,0,0
+682,chipotle chile,0,0,0,0,0,0
+683,chipotle chile peppers,0,0,0,0,0,0
+684,chipotle chile powder,0,0,0,0,0,0
+685,chipotle chilies,0,0,0,0,0,0
+686,chipotle pepper,0,0,0,0,0,0
+687,chipotle pepper powder,0,0,0,0,0,0
+688,chipotle peppers,0,0,0,0,0,0
+689,chipotle powder,0,0,0,0,0,0
+690,chive,0,0,0,0,0,0
+691,chives,0,0,0,0,0,0
+692,chocolate,0,0,0,0,0,0
+693,chocolate brownie,0,0,0,0,0,0
+694,chocolate cake mix,0,0,0,0,0,0
+695,chocolate candy bar,0,0,0,0,0,0
+696,chocolate chips,0,0,0,0,0,0
+697,chocolate confectioners' coating,0,0,0,0,0,0
+698,chocolate cookie crumbs,0,0,0,0,0,0
+699,chocolate frosting,0,0,0,0,0,0
+700,chocolate fudge,0,0,0,0,0,0
+701,chocolate fudge sauce,0,0,0,0,0,0
+702,chocolate hazelnut spread,0,0,0,0,0,0
+703,chocolate mint wafer,0,0,0,0,0,0
+704,chocolate sandwich cookie,0,0,0,0,0,0
+705,chocolate sandwich cookies,0,0,0,0,0,0
+706,chocolate shavings,0,0,0,0,0,0
+707,chocolate syrup,0,0,0,0,0,0
+708,chocolate wafer cookies,0,0,0,0,0,0
+709,chocolate wafers,0,0,0,0,0,0
+710,chocolate-covered almond buttercrunch,0,0,0,0,0,0
+711,chocolate-covered caramel candies,0,0,0,0,0,0
+712,chocolate-flavored soy milk,0,0,0,0,0,0
+713,chocolate-hazelnut spread,0,0,0,0,0,0
+714,chopped,0,0,0,0,0,0
+715,chopped apples,0,0,0,0,0,0
+716,chopped clams,0,0,0,0,0,0
+717,chopped cranberries,0,0,0,0,0,0
+718,chopped english cucumber,0,0,0,0,0,0
+719,chopped fresh thyme,0,0,0,0,0,0
+720,chopped onions,0,0,0,0,0,0
+721,chopped orange bell,0,0,0,0,0,0
+722,chopped pecans,0,0,0,0,0,0
+723,chopped potatoes,0,0,0,0,0,0
+724,chopped strawberries,0,0,0,0,0,0
+725,chopped tomatoes,0,0,0,0,0,0
+726,chopped water chestnuts,0,0,0,0,0,0
+727,chorizo,0,0,0,0,0,0
+728,chorizo sausage,0,0,0,0,0,0
+729,chorizo sausage links,0,0,0,0,0,0
+730,chow mein noodles,0,0,0,0,0,0
+731,chuck roast,0,0,0,0,0,0
+732,chuck roast cut,0,0,0,0,0,0
+733,chunk chicken,0,0,0,0,0,0
+734,chunk light tuna,0,0,0,0,0,0
+735,chunk white chicken,0,0,0,0,0,0
+736,chunks,0,0,0,0,0,0
+737,chunky blue cheese,0,0,0,0,0,0
+738,chunky peanut butter,0,0,0,0,0,0
+739,chunky salsa,0,0,0,0,0,0
+740,chunky salsa (optional),0,0,0,0,0,0
+741,chunky tomato sauce,0,0,0,0,0,0
+742,chutney,0,0,0,0,0,0
+743,cider vinegar,0,0,0,0,0,0
+744,cilantro,0,0,0,0,0,0
+745,cilantro leaves,0,0,0,0,0,0
+746,cindy's magical motorvatin',0,0,0,0,0,0
+747,cinnamon,0,0,0,0,0,0
+748,cinnamon bread,0,0,0,0,0,0
+749,cinnamon chips,0,0,0,0,0,0
+750,cinnamon croutons:,0,0,0,0,0,0
+751,cinnamon stick,0,0,0,0,0,0
+752,cinnamon sticks,0,0,0,0,0,0
+753,cinnamon sugar,0,0,0,0,0,0
+754,cinnamon-roasted almonds,0,0,0,0,0,0
+755,cinnamon-sugar,0,0,0,0,0,0
+756,citrus corn salad:,0,0,0,0,0,0
+757,clam juice,0,0,0,0,0,0
+758,clams,0,0,0,0,0,0
+759,clamshell mushrooms,0,0,0,0,0,0
+760,clear imitation vanilla,0,0,0,0,0,0
+761,clear vanilla extract,0,0,0,0,0,0
+762,clementines,0,0,0,0,0,0
+763,cloves,0,0,0,0,0,0
+764,coarse,0,0,0,0,0,0
+765,coarse dijon mustard,0,0,0,0,0,0
+766,coarse ground black,0,0,0,0,0,0
+767,coarse kosher salt,0,0,0,0,0,0
+768,coarse salt,0,0,0,0,0,0
+769,coarse sea salt,0,0,0,0,0,0
+770,coarse sugar crystals,0,0,0,0,0,0
+771,coarse-grain mustard,0,0,0,0,0,0
+772,coarse-grained dijon mustard,0,0,0,0,0,0
+773,coating:,0,0,0,0,0,0
+774,cocktail sauce,0,0,0,0,0,0
+775,cocktail wieners,0,0,0,0,0,0
+776,cocoa,0,0,0,0,0,0
+777,cocoa powder,0,0,0,0,0,0
+778,coconut,0,0,0,0,0,0
+779,coconut extract,0,0,0,0,0,0
+780,coconut flakes,0,0,0,0,0,0
+781,coconut milk,0,0,0,0,0,0
+782,coconut oil,0,0,0,0,0,0
+783,coconut sugar,0,0,0,0,0,0
+784,coconut-flavored rum,0,0,0,0,0,0
+785,cod,0,0,0,0,0,0
+786,cod fillets,0,0,0,0,0,0
+787,coffee,0,0,0,0,0,0
+788,coffee beans,0,0,0,0,0,0
+789,coffee-flavored liqueur,0,0,0,0,0,0
+790,colby cheese,0,0,0,0,0,0
+791,colby-jack cheese,0,0,0,0,0,0
+792,colby-monterey jack cheese,0,0,0,0,0,0
+793,cold,0,0,0,0,0,0
+794,cold beer,0,0,0,0,0,0
+795,cold butter,0,0,0,0,0,0
+796,cold buttermilk,0,0,0,0,0,0
+797,cold margarine,0,0,0,0,0,0
+798,cold milk,0,0,0,0,0,0
+799,cold water,0,0,0,0,0,0
+800,cold water (optional),0,0,0,0,0,0
+801,cole slaw,0,0,0,0,0,0
+802,coleslaw mix,0,0,0,0,0,0
+803,collard,0,0,0,0,0,0
+804,collard greens,0,0,0,0,0,0
+805,colored miniature marshmallows,0,0,0,0,0,0
+806,comice pears,0,0,0,0,0,0
+807,concord grapes,0,0,0,0,0,0
+808,condensed cream,0,0,0,0,0,0
+809,confectioners' sugar,0,0,0,0,0,0
+810,confectioners' sugar (optional),0,0,0,0,0,0
+811,cook,0,0,0,0,0,0
+812,cooked boneless,0,0,0,0,0,0
+813,cooked boneless skinless,0,0,0,0,0,0
+814,cooked crawfish,0,0,0,0,0,0
+815,cooked medium shrimp,0,0,0,0,0,0
+816,cooked skinless boneless,0,0,0,0,0,0
+817,cooking oil,0,0,0,0,0,0
+818,cooking sherry,0,0,0,0,0,0
+819,cooking spray,0,0,0,0,0,0
+820,coriander,0,0,0,0,0,0
+821,coriander seeds,0,0,0,0,0,0
+822,corkscrew pasta,0,0,0,0,0,0
+823,corn,0,0,0,0,0,0
+824,corn bread mix,0,0,0,0,0,0
+825,corn bread/muffin mix,0,0,0,0,0,0
+826,corn chips,0,0,0,0,0,0
+827,corn flake cereal,0,0,0,0,0,0
+828,corn flake crumbs,0,0,0,0,0,0
+829,corn flakes,0,0,0,0,0,0
+830,corn flour,0,0,0,0,0,0
+831,corn kernels,0,0,0,0,0,0
+832,corn meal,0,0,0,0,0,0
+833,corn muffin mix,0,0,0,0,0,0
+834,corn oil,0,0,0,0,0,0
+835,corn syrup,0,0,0,0,0,0
+836,corn tortilla,0,0,0,0,0,0
+837,corn tortilla chips,0,0,0,0,0,0
+838,corn tortillas,0,0,0,0,0,0
+839,cornbread crust:,0,0,0,0,0,0
+840,cornflakes,0,0,0,0,0,0
+841,cornflakes cereal,0,0,0,0,0,0
+842,cornish game hens,0,0,0,0,0,0
+843,cornmeal,0,0,0,0,0,0
+844,cornstarch,0,0,0,0,0,0
+845,cornstarch (optional),0,0,0,0,0,0
+846,cottage cheese,0,0,0,0,0,0
+847,country,0,0,0,0,0,0
+848,country style gravy,0,0,0,0,0,0
+849,country style pork,0,0,0,0,0,0
+850,country style white,0,0,0,0,0,0
+851,country-style bread,0,0,0,0,0,0
+852,country-style ham,0,0,0,0,0,0
+853,country-style pork ribs,0,0,0,0,0,0
+854,crab,0,0,0,0,0,0
+855,crab cakes:,0,0,0,0,0,0
+856,crab meat,0,0,0,0,0,0
+857,crab stuffing:,0,0,0,0,0,0
+858,crabmeat,0,0,0,0,0,0
+859,cracker barrel shredded,0,0,0,0,0,0
+860,cracker crumbs,0,0,0,0,0,0
+861,crackers,0,0,0,0,0,0
+862,craisins,0,0,0,0,0,0
+863,cranberries,0,0,0,0,0,0
+864,cranberry,0,0,0,0,0,0
+865,cranberry juice,0,0,0,0,0,0
+866,cranberry juice cocktail,0,0,0,0,0,0
+867,cranberry sauce,0,0,0,0,0,0
+868,cranberry vinaigrette salad,0,0,0,0,0,0
+869,cranberry-flavored gelatin mix,0,0,0,0,0,0
+870,crawfish,0,0,0,0,0,0
+871,crawfish tails,0,0,0,0,0,0
+872,cream,0,0,0,0,0,0
+873,cream cheese,0,0,0,0,0,0
+874,cream cheese frosting,0,0,0,0,0,0
+875,cream cheese icing:,0,0,0,0,0,0
+876,cream sherry,0,0,0,0,0,0
+877,cream style corn,0,0,0,0,0,0
+878,cream-filled sponge snack,0,0,0,0,0,0
+879,cream-style corn,0,0,0,0,0,0
+880,cream-style horseradish sauce,0,0,0,0,0,0
+881,creamy caesar salad,0,0,0,0,0,0
+882,creamy cucumber salad,0,0,0,0,0,0
+883,creamy garlic salad,0,0,0,0,0,0
+884,creamy peanut butter,0,0,0,0,0,0
+885,creamy ranch salad,0,0,0,0,0,0
+886,creamy salad,0,0,0,0,0,0
+887,creme,0,0,0,0,0,0
+888,creme fraiche,0,0,0,0,0,0
+889,cremini mushrooms,0,0,0,0,0,0
+890,creole,0,0,0,0,0,0
+891,creole mustard,0,0,0,0,0,0
+892,creole mustard (optional),0,0,0,0,0,0
+893,creole seasoning,0,0,0,0,0,0
+894,creole-style seasoning,0,0,0,0,0,0
+895,crimini mushrooms,0,0,0,0,0,0
+896,crisp,0,0,0,0,0,0
+897,crisp rice cereal,0,0,0,0,0,0
+898,crisp taco shells,0,0,0,0,0,0
+899,crisply,0,0,0,0,0,0
+900,crispy bacon,0,0,0,0,0,0
+901,crispy corn,0,0,0,0,0,0
+902,crispy rice cereal,0,0,0,0,0,0
+903,crosse,0,0,0,0,0,0
+904,croutons,0,0,0,0,0,0
+905,crumb topping:,0,0,0,0,0,0
+906,crumbled firm,0,0,0,0,0,0
+907,crunch topping:,0,0,0,0,0,0
+908,crunchy peanut butter,0,0,0,0,0,0
+909,crust:,0,0,0,0,0,0
+910,crystal,0,0,0,0,0,0
+911,cubed,0,0,0,0,0,0
+912,cubed cantaloupe,0,0,0,0,0,0
+913,cubed country ham,0,0,0,0,0,0
+914,cubed english cucumber,0,0,0,0,0,0
+915,cubed potatoes,0,0,0,0,0,0
+916,cubed salami,0,0,0,0,0,0
+917,cubed seedless watermelon,0,0,0,0,0,0
+918,cubed skinless boneless,0,0,0,0,0,0
+919,cubed watermelon,0,0,0,0,0,0
+920,cucumber,0,0,0,0,0,0
+921,cucumber (optional),0,0,0,0,0,0
+922,cucumber slices,0,0,0,0,0,0
+923,cucumbers,0,0,0,0,0,0
+924,cumin,0,0,0,0,0,0
+925,cumin seed,0,0,0,0,0,0
+926,cumin seeds,0,0,0,0,0,0
+927,currant jelly,0,0,0,0,0,0
+928,currants,0,0,0,0,0,0
+929,curry paste,0,0,0,0,0,0
+930,curry powder,0,0,0,0,0,0
+931,curry powder (optional),0,0,0,0,0,0
+932,custard powder,0,0,0,0,0,0
+933,cut green beans,0,0,0,0,0,0
+934,dannon oikos plain,0,0,0,0,0,0
+935,dark,0,0,0,0,0,0
+936,dark beer,0,0,0,0,0,0
+937,dark brown sugar,0,0,0,0,0,0
+938,dark chocolate,0,0,0,0,0,0
+939,"dark chocolate ""kiss""",0,0,0,0,0,0
+940,dark chocolate cake,0,0,0,0,0,0
+941,dark chocolate chips,0,0,0,0,0,0
+942,dark corn syrup,0,0,0,0,0,0
+943,dark molasses,0,0,0,0,0,0
+944,dark red kidney,0,0,0,0,0,0
+945,dark rum,0,0,0,0,0,0
+946,dark rum (optional),0,0,0,0,0,0
+947,dark sesame oil,0,0,0,0,0,0
+948,dark soy sauce,0,0,0,0,0,0
+949,dash,0,0,0,0,0,0
+950,dash cayenne pepper,0,0,0,0,0,0
+951,dash salt,0,0,0,0,0,0
+952,dashi granules,0,0,0,0,0,0
+953,date filling:,0,0,0,0,0,0
+954,dates,0,0,0,0,0,0
+955,day,0,0,0,0,0,0
+956,day-old bread,0,0,0,0,0,0
+957,deep dish frozen,0,0,0,0,0,0
+958,deep dish pie,0,0,0,0,0,0
+959,deli,0,0,0,0,0,0
+960,deli ham,0,0,0,0,0,0
+961,delicata,0,0,0,0,0,0
+962,demerara sugar,0,0,0,0,0,0
+963,devil's food cake,0,0,0,0,0,0
+964,devil's food chocolate,0,0,0,0,0,0
+965,diced cucumber,0,0,0,0,0,0
+966,diced english cucumbers,0,0,0,0,0,0
+967,diced onions,0,0,0,0,0,0
+968,diced orange bell,0,0,0,0,0,0
+969,diced peaches,0,0,0,0,0,0
+970,diced seedless watermelon,0,0,0,0,0,0
+971,dietz,0,0,0,0,0,0
+972,dijon,0,0,0,0,0,0
+973,dijon mustard,0,0,0,0,0,0
+974,dijon mustard (optional),0,0,0,0,0,0
+975,dijon-style mustard,0,0,0,0,0,0
+976,dill,0,0,0,0,0,0
+977,dill pickle,0,0,0,0,0,0
+978,dill pickle juice,0,0,0,0,0,0
+979,dill pickle slices,0,0,0,0,0,0
+980,dill pickle spear,0,0,0,0,0,0
+981,dill pickles,0,0,0,0,0,0
+982,dill sauce:,0,0,0,0,0,0
+983,dill seed,0,0,0,0,0,0
+984,dip:,0,0,0,0,0,0
+985,dirty rice mix,0,0,0,0,0,0
+986,ditalini,0,0,0,0,0,0
+987,ditalini pasta,0,0,0,0,0,0
+988,dole banana,0,0,0,0,0,0
+989,dole kiwi fruit,0,0,0,0,0,0
+990,dole mandarin oranges,0,0,0,0,0,0
+991,double-strength,0,0,0,0,0,0
+992,dough:,0,0,0,0,0,0
+993,doughnuts:,0,0,0,0,0,0
+994,dr. pepper soft,0,0,0,0,0,0
+995,dressing,0,0,0,0,0,0
+996,dressing:,0,0,0,0,0,0
+997,dry alfredo sauce,0,0,0,0,0,0
+998,dry bread,0,0,0,0,0,0
+999,dry bread crumbs,0,0,0,0,0,0
+1000,dry breadcrumbs,0,0,0,0,0,0
+1001,dry brown gravy,0,0,0,0,0,0
+1002,dry brown lentils,0,0,0,0,0,0
+1003,dry cannellini beans,0,0,0,0,0,0
+1004,dry chinese egg,0,0,0,0,0,0
+1005,dry corn bread,0,0,0,0,0,0
+1006,dry corn muffin,0,0,0,0,0,0
+1007,dry cottage cheese,0,0,0,0,0,0
+1008,dry crab boil,0,0,0,0,0,0
+1009,dry egg noodles,0,0,0,0,0,0
+1010,dry enchilada sauce,0,0,0,0,0,0
+1011,dry fajita seasoning,0,0,0,0,0,0
+1012,dry farfalle (bow,0,0,0,0,0,0
+1013,dry fettuccine noodles,0,0,0,0,0,0
+1014,dry fettuccine pasta,0,0,0,0,0,0
+1015,dry fettuccini noodles,0,0,0,0,0,0
+1016,dry fettuccini pasta,0,0,0,0,0,0
+1017,dry gin,0,0,0,0,0,0
+1018,dry gravy maker,0,0,0,0,0,0
+1019,dry green lentils,0,0,0,0,0,0
+1020,dry hollandaise sauce,0,0,0,0,0,0
+1021,dry ingredients:,0,0,0,0,0,0
+1022,dry italian-style salad,0,0,0,0,0,0
+1023,dry jasmine rice,0,0,0,0,0,0
+1024,dry kidney bean,0,0,0,0,0,0
+1025,dry kidney beans,0,0,0,0,0,0
+1026,dry lasagna noodles,0,0,0,0,0,0
+1027,dry leek soup,0,0,0,0,0,0
+1028,dry lentils,0,0,0,0,0,0
+1029,dry lima beans,0,0,0,0,0,0
+1030,dry linguini,0,0,0,0,0,0
+1031,dry macaroni,0,0,0,0,0,0
+1032,dry marsala,0,0,0,0,0,0
+1033,dry marsala wine,0,0,0,0,0,0
+1034,dry mesquite,0,0,0,0,0,0
+1035,dry mexican,0,0,0,0,0,0
+1036,dry milk powder,0,0,0,0,0,0
+1037,dry mushroom gravy,0,0,0,0,0,0
+1038,dry mustard,0,0,0,0,0,0
+1039,dry mustard powder,0,0,0,0,0,0
+1040,dry navy beans,0,0,0,0,0,0
+1041,dry onion,0,0,0,0,0,0
+1042,dry onion soup,0,0,0,0,0,0
+1043,dry pancake mix,0,0,0,0,0,0
+1044,dry pasta,0,0,0,0,0,0
+1045,dry pectin,0,0,0,0,0,0
+1046,dry penne pasta,0,0,0,0,0,0
+1047,dry potato flakes,0,0,0,0,0,0
+1048,dry ranch,0,0,0,0,0,0
+1049,dry ranch salad,0,0,0,0,0,0
+1050,dry sherry,0,0,0,0,0,0
+1051,dry sherry (optional),0,0,0,0,0,0
+1052,dry soy vermicelli,0,0,0,0,0,0
+1053,dry sugar cookie,0,0,0,0,0,0
+1054,dry taco,0,0,0,0,0,0
+1055,dry vermicelli pasta,0,0,0,0,0,0
+1056,dry vermouth,0,0,0,0,0,0
+1057,dry yellow lentils,0,0,0,0,0,0
+1058,dry ziti pasta,0,0,0,0,0,0
+1059,dry-roasted peanuts,0,0,0,0,0,0
+1060,duck,0,0,0,0,0,0
+1061,duck eggs,0,0,0,0,0,0
+1062,duck sauce,0,0,0,0,0,0
+1063,duck sauce:,0,0,0,0,0,0
+1064,dumplings:,0,0,0,0,0,0
+1065,dungeness crab,0,0,0,0,0,0
+1066,dutch process cocoa,0,0,0,0,0,0
+1067,eagle,0,0,0,0,0,0
+1068,ears,0,0,0,0,0,0
+1069,ears corn,0,0,0,0,0,0
+1070,ears fresh corn,0,0,0,0,0,0
+1071,ears white corn,0,0,0,0,0,0
+1072,egg,0,0,0,0,0,0
+1073,egg (optional),0,0,0,0,0,0
+1074,egg noodles,0,0,0,0,0,0
+1075,egg roll wrappers,0,0,0,0,0,0
+1076,egg substitute,0,0,0,0,0,0
+1077,egg whites,0,0,0,0,0,0
+1078,egg yolk,0,0,0,0,0,0
+1079,egg yolks,0,0,0,0,0,0
+1080,eggnog,0,0,0,0,0,0
+1081,eggplant,0,0,0,0,0,0
+1082,eggplants,0,0,0,0,0,0
+1083,eggs,0,0,0,0,0,0
+1084,eggs room temperature,0,0,0,0,0,0
+1085,elbow macaroni,0,0,0,0,0,0
+1086,elbow shell,0,0,0,0,0,0
+1087,elderberries,0,0,0,0,0,0
+1088,enchilada sauce,0,0,0,0,0,0
+1089,english (seedless) cucumbers,0,0,0,0,0,0
+1090,english cucumber,0,0,0,0,0,0
+1091,english cucumbers,0,0,0,0,0,0
+1092,english daisy blossoms,0,0,0,0,0,0
+1093,english muffins,0,0,0,0,0,0
+1094,english muffins split,0,0,0,0,0,0
+1095,enoki mushrooms,0,0,0,0,0,0
+1096,envelope,0,0,0,0,0,0
+1097,envelope dry onion,0,0,0,0,0,0
+1098,envelope hollandaise sauce,0,0,0,0,0,0
+1099,envelope instant hot,0,0,0,0,0,0
+1100,envelope onion soup,0,0,0,0,0,0
+1101,envelope ranch,0,0,0,0,0,0
+1102,envelope rapid rise,0,0,0,0,0,0
+1103,envelope sloppy joe,0,0,0,0,0,0
+1104,envelopes,0,0,0,0,0,0
+1105,evaporated milk,0,0,0,0,0,0
+1106,extra crispy frozen,0,0,0,0,0,0
+1107,extra crunchy peanut,0,0,0,0,0,0
+1108,extra firm tofu,0,0,0,0,0,0
+1109,extra virgin olive,0,0,0,0,0,0
+1110,extra-firm tofu,0,0,0,0,0,0
+1111,extra-firm tofu cut,0,0,0,0,0,0
+1112,extra-large paper muffin,0,0,0,0,0,0
+1113,extra-lean ground beef,0,0,0,0,0,0
+1114,extra-lean ground turkey,0,0,0,0,0,0
+1115,extra-long asparagus,0,0,0,0,0,0
+1116,fajita,0,0,0,0,0,0
+1117,farfalle (bow tie),0,0,0,0,0,0
+1118,farfalle pasta,0,0,0,0,0,0
+1119,farina,0,0,0,0,0,0
+1120,farro,0,0,0,0,0,0
+1121,fat-free caramel sauce,0,0,0,0,0,0
+1122,fat-free chicken broth,0,0,0,0,0,0
+1123,fat-free cottage cheese,0,0,0,0,0,0
+1124,fat-free cream cheese,0,0,0,0,0,0
+1125,fat-free creamy salad,0,0,0,0,0,0
+1126,fat-free mayonnaise,0,0,0,0,0,0
+1127,fat-free milk,0,0,0,0,0,0
+1128,fat-free plain yogurt,0,0,0,0,0,0
+1129,fat-free reduced-sodium chicken,0,0,0,0,0,0
+1130,fava beans,0,0,0,0,0,0
+1131,female blue crabs,0,0,0,0,0,0
+1132,fennel,0,0,0,0,0,0
+1133,fennel bulb,0,0,0,0,0,0
+1134,fennel bulbs,0,0,0,0,0,0
+1135,fennel seed,0,0,0,0,0,0
+1136,fennel seeds,0,0,0,0,0,0
+1137,fenugreek seeds,0,0,0,0,0,0
+1138,feta cheese,0,0,0,0,0,0
+1139,fettuccine,0,0,0,0,0,0
+1140,fettuccine noodles,0,0,0,0,0,0
+1141,fettuccine pasta,0,0,0,0,0,0
+1142,fettuccini pasta,0,0,0,0,0,0
+1143,fiesta dipping sauce:,0,0,0,0,0,0
+1144,file powder,0,0,0,0,0,0
+1145,filet,0,0,0,0,0,0
+1146,filet mignon steaks,0,0,0,0,0,0
+1147,fillet salmon,0,0,0,0,0,0
+1148,fillets,0,0,0,0,0,0
+1149,fillets catfish fillets,0,0,0,0,0,0
+1150,fillets fresh salmon,0,0,0,0,0,0
+1151,filling,0,0,0,0,0,0
+1152,filling:,0,0,0,0,0,0
+1153,fine bread,0,0,0,0,0,0
+1154,fine bread crumbs,0,0,0,0,0,0
+1155,fine bulgur,0,0,0,0,0,0
+1156,fine cornmeal,0,0,0,0,0,0
+1157,fines herbs,0,0,0,0,0,0
+1158,fingerling potatoes,0,0,0,0,0,0
+1159,fire,0,0,0,0,0,0
+1160,firm,0,0,0,0,0,0
+1161,firm bananas.,0,0,0,0,0,0
+1162,firm tofu,0,0,0,0,0,0
+1163,fish sauce,0,0,0,0,0,0
+1164,fish sticks:,0,0,0,0,0,0
+1165,fish stock,0,0,0,0,0,0
+1166,fl,0,0,0,0,0,0
+1167,fl oz),0,0,0,0,0,0
+1168,flan:,0,0,0,0,0,0
+1169,flank,0,0,0,0,0,0
+1170,flank steak,0,0,0,0,0,0
+1171,flank steak cut,0,0,0,0,0,0
+1172,flat beer,0,0,0,0,0,0
+1173,flat iron steak,0,0,0,0,0,0
+1174,flat iron steaks,0,0,0,0,0,0
+1175,flax seed meal,0,0,0,0,0,0
+1176,flax seeds,0,0,0,0,0,0
+1177,flounder fillets,0,0,0,0,0,0
+1178,flour,0,0,0,0,0,0
+1179,flour (or matzo,0,0,0,0,0,0
+1180,flour tortillas,0,0,0,0,0,0
+1181,fluid,0,0,0,0,0,0
+1182,fluid ounce amaretto,0,0,0,0,0,0
+1183,fluid ounce bourbon,0,0,0,0,0,0
+1184,fluid ounce hazelnut,0,0,0,0,0,0
+1185,fluid ounce simple,0,0,0,0,0,0
+1186,fluid ounce sweet,0,0,0,0,0,0
+1187,fluid ounce vodka,0,0,0,0,0,0
+1188,fluid ounce whiskey,0,0,0,0,0,0
+1189,fluid ounce),0,0,0,0,0,0
+1190,fluid ounce) bottles,0,0,0,0,0,0
+1191,fluid ounce) container,0,0,0,0,0,0
+1192,fluid ounce) jigger,0,0,0,0,0,0
+1193,fluid ounce) jiggers,0,0,0,0,0,0
+1194,fluid ounces,0,0,0,0,0,0
+1195,fluid ounces beer,0,0,0,0,0,0
+1196,fluid ounces fresh,0,0,0,0,0,0
+1197,fluid ounces frozen,0,0,0,0,0,0
+1198,fluid ounces galliano,0,0,0,0,0,0
+1199,fluid ounces lemon,0,0,0,0,0,0
+1200,fluid ounces merlot,0,0,0,0,0,0
+1201,fluid ounces milk,0,0,0,0,0,0
+1202,fluid ounces pineapple,0,0,0,0,0,0
+1203,fluid ounces red,0,0,0,0,0,0
+1204,fluid ounces triple,0,0,0,0,0,0
+1205,fluid ounces warm,0,0,0,0,0,0
+1206,fluid ounces water,0,0,0,0,0,0
+1207,fluid ounces white,0,0,0,0,0,0
+1208,fluid ounces worcestershire,0,0,0,0,0,0
+1209,focaccia bread,0,0,0,0,0,0
+1210,focaccia dough,0,0,0,0,0,0
+1211,foie gras,0,0,0,0,0,0
+1212,fontina cheese,0,0,0,0,0,0
+1213,foo yung sauce,0,0,0,0,0,0
+1214,food,0,0,0,0,0,0
+1215,food coloring,0,0,0,0,0,0
+1216,frankfurters,0,0,0,0,0,0
+1217,french baguette,0,0,0,0,0,0
+1218,french baguette cut,0,0,0,0,0,0
+1219,french baguettes,0,0,0,0,0,0
+1220,french bread,0,0,0,0,0,0
+1221,french bread baguettes,0,0,0,0,0,0
+1222,french dressing,0,0,0,0,0,0
+1223,french green lentils,0,0,0,0,0,0
+1224,french lentils,0,0,0,0,0,0
+1225,french rolls,0,0,0,0,0,0
+1226,french rolls split,0,0,0,0,0,0
+1227,french salad,0,0,0,0,0,0
+1228,french style green,0,0,0,0,0,0
+1229,french-fried onion rings,0,0,0,0,0,0
+1230,french-fried onions,0,0,0,0,0,0
+1231,fresh arugula,0,0,0,0,0,0
+1232,fresh asparagus,0,0,0,0,0,0
+1233,fresh asparagus spears,0,0,0,0,0,0
+1234,fresh asparagus tips,0,0,0,0,0,0
+1235,fresh baby spinach,0,0,0,0,0,0
+1236,fresh basil,0,0,0,0,0,0
+1237,fresh basil leaves,0,0,0,0,0,0
+1238,fresh bean sprouts,0,0,0,0,0,0
+1239,fresh blackberries,0,0,0,0,0,0
+1240,fresh blueberries,0,0,0,0,0,0
+1241,fresh bratwurst sausages,0,0,0,0,0,0
+1242,fresh bread crumbs,0,0,0,0,0,0
+1243,fresh broccoli,0,0,0,0,0,0
+1244,fresh broccoli florets,0,0,0,0,0,0
+1245,fresh button mushrooms,0,0,0,0,0,0
+1246,fresh cassava roots,0,0,0,0,0,0
+1247,fresh cheese ravioli,0,0,0,0,0,0
+1248,fresh cheese tortellini,0,0,0,0,0,0
+1249,fresh chicken livers,0,0,0,0,0,0
+1250,fresh chile,0,0,0,0,0,0
+1251,fresh chinese wheat,0,0,0,0,0,0
+1252,fresh chives,0,0,0,0,0,0
+1253,fresh cilantro,0,0,0,0,0,0
+1254,fresh cilantro leaves,0,0,0,0,0,0
+1255,fresh cilantro sprigs,0,0,0,0,0,0
+1256,fresh clams,0,0,0,0,0,0
+1257,fresh coconut,0,0,0,0,0,0
+1258,fresh coriander,0,0,0,0,0,0
+1259,fresh corn kernels,0,0,0,0,0,0
+1260,fresh crab meat,0,0,0,0,0,0
+1261,fresh crabmeat,0,0,0,0,0,0
+1262,fresh cranberries,0,0,0,0,0,0
+1263,fresh dill,0,0,0,0,0,0
+1264,fresh dill weed,0,0,0,0,0,0
+1265,fresh garlic,0,0,0,0,0,0
+1266,fresh ginger,0,0,0,0,0,0
+1267,fresh ginger cut,0,0,0,0,0,0
+1268,fresh ginger root,0,0,0,0,0,0
+1269,fresh gooseberries,0,0,0,0,0,0
+1270,fresh ground black,0,0,0,0,0,0
+1271,fresh ground cumin,0,0,0,0,0,0
+1272,fresh ground nutmeg,0,0,0,0,0,0
+1273,fresh ground pepper,0,0,0,0,0,0
+1274,fresh ground pork,0,0,0,0,0,0
+1275,fresh ground spicy,0,0,0,0,0,0
+1276,fresh italian sandwich,0,0,0,0,0,0
+1277,fresh jalapeno chile,0,0,0,0,0,0
+1278,fresh jalapeno pepper,0,0,0,0,0,0
+1279,fresh jalapeno peppers,0,0,0,0,0,0
+1280,fresh lemon,0,0,0,0,0,0
+1281,fresh lemon juice,0,0,0,0,0,0
+1282,fresh lemon thyme,0,0,0,0,0,0
+1283,fresh lima beans,0,0,0,0,0,0
+1284,fresh lime,0,0,0,0,0,0
+1285,fresh lime juice,0,0,0,0,0,0
+1286,fresh lump crabmeat,0,0,0,0,0,0
+1287,fresh mint,0,0,0,0,0,0
+1288,fresh mint leaves,0,0,0,0,0,0
+1289,fresh mint sprigs,0,0,0,0,0,0
+1290,fresh mozzarella cheese,0,0,0,0,0,0
+1291,fresh mozzarella cut,0,0,0,0,0,0
+1292,fresh mushrooms,0,0,0,0,0,0
+1293,fresh mushrooms coarsley,0,0,0,0,0,0
+1294,fresh mussels,0,0,0,0,0,0
+1295,fresh okra pods,0,0,0,0,0,0
+1296,fresh orange juice,0,0,0,0,0,0
+1297,fresh oregano,0,0,0,0,0,0
+1298,fresh parsley,0,0,0,0,0,0
+1299,fresh parsley leaves,0,0,0,0,0,0
+1300,fresh pasta,0,0,0,0,0,0
+1301,fresh pea pods,0,0,0,0,0,0
+1302,fresh peach,0,0,0,0,0,0
+1303,fresh peaches,0,0,0,0,0,0
+1304,fresh peas,0,0,0,0,0,0
+1305,fresh pineapple,0,0,0,0,0,0
+1306,fresh pineapple chunks,0,0,0,0,0,0
+1307,fresh plum tomatoes,0,0,0,0,0,0
+1308,fresh poblano chile,0,0,0,0,0,0
+1309,fresh poblano peppers,0,0,0,0,0,0
+1310,fresh porcini mushrooms,0,0,0,0,0,0
+1311,fresh pumpkin,0,0,0,0,0,0
+1312,fresh raspberries,0,0,0,0,0,0
+1313,fresh rhubarb,0,0,0,0,0,0
+1314,fresh romano,0,0,0,0,0,0
+1315,fresh rosemary,0,0,0,0,0,0
+1316,fresh rosemary leaves,0,0,0,0,0,0
+1317,fresh sage,0,0,0,0,0,0
+1318,fresh salmon fillet,0,0,0,0,0,0
+1319,fresh salsa,0,0,0,0,0,0
+1320,fresh sea bass,0,0,0,0,0,0
+1321,fresh serviceberries,0,0,0,0,0,0
+1322,fresh shiitake mushrooms,0,0,0,0,0,0
+1323,fresh shrimp,0,0,0,0,0,0
+1324,fresh spinach,0,0,0,0,0,0
+1325,fresh spinach leaves,0,0,0,0,0,0
+1326,fresh spinach torn,0,0,0,0,0,0
+1327,fresh strawberries,0,0,0,0,0,0
+1328,fresh strawberry halves,0,0,0,0,0,0
+1329,fresh tarragon,0,0,0,0,0,0
+1330,fresh thai,0,0,0,0,0,0
+1331,fresh thai basil,0,0,0,0,0,0
+1332,fresh thick chinese,0,0,0,0,0,0
+1333,fresh thyme,0,0,0,0,0,0
+1334,fresh thyme leaves,0,0,0,0,0,0
+1335,fresh tomatillos husks,0,0,0,0,0,0
+1336,fresh tomato,0,0,0,0,0,0
+1337,fresh tomatoes,0,0,0,0,0,0
+1338,fresh tortellini pasta,0,0,0,0,0,0
+1339,fresh tuna steaks,0,0,0,0,0,0
+1340,frosting:,0,0,0,0,0,0
+1341,frozen,0,0,0,0,0,0
+1342,frozen asian mixed,0,0,0,0,0,0
+1343,frozen baby lima,0,0,0,0,0,0
+1344,frozen bean,0,0,0,0,0,0
+1345,frozen bite-size potato,0,0,0,0,0,0
+1346,frozen blackberries,0,0,0,0,0,0
+1347,frozen blueberries,0,0,0,0,0,0
+1348,frozen broccoli,0,0,0,0,0,0
+1349,frozen broccoli carrots,0,0,0,0,0,0
+1350,frozen broccoli cuts,0,0,0,0,0,0
+1351,frozen broccoli florets,0,0,0,0,0,0
+1352,frozen broccoli spears,0,0,0,0,0,0
+1353,frozen california mixed,0,0,0,0,0,0
+1354,frozen cauliflower,0,0,0,0,0,0
+1355,frozen cheese ravioli,0,0,0,0,0,0
+1356,frozen chicken wing,0,0,0,0,0,0
+1357,frozen chicken wings,0,0,0,0,0,0
+1358,frozen corn,0,0,0,0,0,0
+1359,frozen corn kernels,0,0,0,0,0,0
+1360,frozen cranberries,0,0,0,0,0,0
+1361,frozen cut asparagus,0,0,0,0,0,0
+1362,frozen cut okra,0,0,0,0,0,0
+1363,frozen egg noodles,0,0,0,0,0,0
+1364,frozen english peas,0,0,0,0,0,0
+1365,frozen french-cut green,0,0,0,0,0,0
+1366,frozen garlic bread,0,0,0,0,0,0
+1367,frozen hash brown,0,0,0,0,0,0
+1368,frozen italian-blend vegetables,0,0,0,0,0,0
+1369,frozen lemonade concentrate,0,0,0,0,0,0
+1370,frozen lima beans,0,0,0,0,0,0
+1371,frozen limeade concentrate,0,0,0,0,0,0
+1372,frozen loose-pack hash,0,0,0,0,0,0
+1373,frozen mango juice,0,0,0,0,0,0
+1374,frozen margarita mix,0,0,0,0,0,0
+1375,frozen meatballs,0,0,0,0,0,0
+1376,frozen non-dairy,0,0,0,0,0,0
+1377,frozen okra,0,0,0,0,0,0
+1378,frozen orange juice,0,0,0,0,0,0
+1379,frozen passion fruit,0,0,0,0,0,0
+1380,frozen pea pods,0,0,0,0,0,0
+1381,frozen peach slices,0,0,0,0,0,0
+1382,frozen peas,0,0,0,0,0,0
+1383,frozen pepper,0,0,0,0,0,0
+1384,frozen petite peas,0,0,0,0,0,0
+1385,frozen pie crust,0,0,0,0,0,0
+1386,frozen pineapple chunks,0,0,0,0,0,0
+1387,frozen pink lemonade,0,0,0,0,0,0
+1388,frozen pot stickers,0,0,0,0,0,0
+1389,frozen potato rounds,0,0,0,0,0,0
+1390,frozen puff pastry,0,0,0,0,0,0
+1391,frozen raspberries,0,0,0,0,0,0
+1392,frozen ready-to-cook chicken,0,0,0,0,0,0
+1393,frozen sandwich steak,0,0,0,0,0,0
+1394,frozen shoepeg corn,0,0,0,0,0,0
+1395,frozen shrimp,0,0,0,0,0,0
+1396,frozen spinach,0,0,0,0,0,0
+1397,frozen spinach souffle,0,0,0,0,0,0
+1398,frozen stir-fry vegetables,0,0,0,0,0,0
+1399,frozen strawberries,0,0,0,0,0,0
+1400,frozen strawberry daiquiri,0,0,0,0,0,0
+1401,frozen tater tots,0,0,0,0,0,0
+1402,frozen turnip greens,0,0,0,0,0,0
+1403,frozen whole-kernel corn,0,0,0,0,0,0
+1404,frozen wontons,0,0,0,0,0,0
+1405,fructose (fruit sugar),0,0,0,0,0,0
+1406,fruit,0,0,0,0,0,0
+1407,fruit cocktail,0,0,0,0,0,0
+1408,fruit preserves,0,0,0,0,0,0
+1409,fruit:,0,0,0,0,0,0
+1410,fudge stripe cookies,0,0,0,0,0,0
+1411,fuji apple,0,0,0,0,0,0
+1412,fun size bars,0,0,0,0,0,0
+1413,fusilli (spiral) pasta,0,0,0,0,0,0
+1414,fusilli pasta,0,0,0,0,0,0
+1415,fuyu persimmons,0,0,0,0,0,0
+1416,gala apples,0,0,0,0,0,0
+1417,galangal,0,0,0,0,0,0
+1418,gallon chicken stock,0,0,0,0,0,0
+1419,gallon coffee ice,0,0,0,0,0,0
+1420,gallon ice water,0,0,0,0,0,0
+1421,gallon milk,0,0,0,0,0,0
+1422,gallon peanut oil,0,0,0,0,0,0
+1423,gallon snow,0,0,0,0,0,0
+1424,gallon vanilla ice,0,0,0,0,0,0
+1425,gallon vegetable broth,0,0,0,0,0,0
+1426,gallon water,0,0,0,0,0,0
+1427,garam masala,0,0,0,0,0,0
+1428,garbanzo beans,0,0,0,0,0,0
+1429,garden herb tofu,0,0,0,0,0,0
+1430,garlic,0,0,0,0,0,0
+1431,garlic cheese,0,0,0,0,0,0
+1432,garlic chili sauce,0,0,0,0,0,0
+1433,garlic clove,0,0,0,0,0,0
+1434,garlic cloves,0,0,0,0,0,0
+1435,garlic croutons,0,0,0,0,0,0
+1436,garlic granules,0,0,0,0,0,0
+1437,garlic herb,0,0,0,0,0,0
+1438,garlic herb cheese,0,0,0,0,0,0
+1439,garlic oil,0,0,0,0,0,0
+1440,garlic paste,0,0,0,0,0,0
+1441,garlic pepper,0,0,0,0,0,0
+1442,garlic pepper seasoning,0,0,0,0,0,0
+1443,garlic powder,0,0,0,0,0,0
+1444,garlic salt,0,0,0,0,0,0
+1445,garlic salt (optional),0,0,0,0,0,0
+1446,garlic-and-tomato pasta sauce,0,0,0,0,0,0
+1447,garnish:,0,0,0,0,0,0
+1448,garnish: corn chips,0,0,0,0,0,0
+1449,garnish: shallot crisps*,0,0,0,0,0,0
+1450,garnish: store-bought apple,0,0,0,0,0,0
+1451,gemelli (small,0,0,0,0,0,0
+1452,gemelli pasta,0,0,0,0,0,0
+1453,generous dash ground,0,0,0,0,0,0
+1454,genoa salami,0,0,0,0,0,0
+1455,german chocolate cake,0,0,0,0,0,0
+1456,ghee,0,0,0,0,0,0
+1457,gin,0,0,0,0,0,0
+1458,ginger,0,0,0,0,0,0
+1459,ginger garlic paste,0,0,0,0,0,0
+1460,ginger oil,0,0,0,0,0,0
+1461,ginger paste,0,0,0,0,0,0
+1462,ginger root,0,0,0,0,0,0
+1463,gingerbread cake mix,0,0,0,0,0,0
+1464,gingersnap cookie crumbs,0,0,0,0,0,0
+1465,gingersnap cookies,0,0,0,0,0,0
+1466,gingersnaps,0,0,0,0,0,0
+1467,glaze,0,0,0,0,0,0
+1468,glaze:,0,0,0,0,0,0
+1469,glucose syrup,0,0,0,0,0,0
+1470,gluten free casein,0,0,0,0,0,0
+1471,gluten-free baking mix,0,0,0,0,0,0
+1472,gluten-free bread slices,0,0,0,0,0,0
+1473,gluten-free elbow pasta,0,0,0,0,0,0
+1474,gluten-free vanilla extract,0,0,0,0,0,0
+1475,glycerin,0,0,0,0,0,0
+1476,gnocchi:,0,0,0,0,0,0
+1477,goat cheese,0,0,0,0,0,0
+1478,gold tequila,0,0,0,0,0,0
+1479,golden delicious apple,0,0,0,0,0,0
+1480,golden delicious apples,0,0,0,0,0,0
+1481,golden raisins,0,0,0,0,0,0
+1482,golden syrup,0,0,0,0,0,0
+1483,good-quality semi-,0,0,0,0,0,0
+1484,gorgonzola cheese,0,0,0,0,0,0
+1485,gouda cheese,0,0,0,0,0,0
+1486,goya adobo,0,0,0,0,0,0
+1487,goya corn oil,0,0,0,0,0,0
+1488,goya corn tortillas,0,0,0,0,0,0
+1489,goya discos,0,0,0,0,0,0
+1490,goya dried oregano,0,0,0,0,0,0
+1491,goya extra virgin,0,0,0,0,0,0
+1492,goya flour tortillas,0,0,0,0,0,0
+1493,goya ground black,0,0,0,0,0,0
+1494,goya ground cumin,0,0,0,0,0,0
+1495,goya guacamole,0,0,0,0,0,0
+1496,goya hot sauce,0,0,0,0,0,0
+1497,goya minced garlic,0,0,0,0,0,0
+1498,goya mojo criollo,0,0,0,0,0,0
+1499,goya oregano leaf,0,0,0,0,0,0
+1500,goya salsa pico,0,0,0,0,0,0
+1501,goya salsita,0,0,0,0,0,0
+1502,goya sazonador total,0,0,0,0,0,0
+1503,goya sofrito,0,0,0,0,0,0
+1504,goya spanish olives,0,0,0,0,0,0
+1505,goya tomato sauce,0,0,0,0,0,0
+1506,goya white,0,0,0,0,0,0
+1507,graham cracker crumbs,0,0,0,0,0,0
+1508,graham cracker crust,0,0,0,0,0,0
+1509,graham cracker pie,0,0,0,0,0,0
+1510,graham cracker squares,0,0,0,0,0,0
+1511,graham crackers,0,0,0,0,0,0
+1512,grain tortillas,0,0,0,0,0,0
+1513,grainy dijon mustard,0,0,0,0,0,0
+1514,grainy mustard,0,0,0,0,0,0
+1515,grand marnier,0,0,0,0,0,0
+1516,granny smith apple,0,0,0,0,0,0
+1517,granny smith apples,0,0,0,0,0,0
+1518,granola,0,0,0,0,0,0
+1519,granular sucralose sweetener,0,0,0,0,0,0
+1520,granular sucrolose sweetener,0,0,0,0,0,0
+1521,grape,0,0,0,0,0,0
+1522,grape leaves,0,0,0,0,0,0
+1523,grape tomatoes,0,0,0,0,0,0
+1524,grapefruit,0,0,0,0,0,0
+1525,grapefruit cut,0,0,0,0,0,0
+1526,grapeseed oil,0,0,0,0,0,0
+1527,gray salt,0,0,0,0,0,0
+1528,great northern,0,0,0,0,0,0
+1529,great northern beans,0,0,0,0,0,0
+1530,greek olives,0,0,0,0,0,0
+1531,greek salad,0,0,0,0,0,0
+1532,greek seasoning,0,0,0,0,0,0
+1533,greek vinaigrette salad,0,0,0,0,0,0
+1534,greek yogurt,0,0,0,0,0,0
+1535,greek-style yogurt,0,0,0,0,0,0
+1536,green apples,0,0,0,0,0,0
+1537,green beans,0,0,0,0,0,0
+1538,green beans french,0,0,0,0,0,0
+1539,green bell pepper,0,0,0,0,0,0
+1540,green bell peppers,0,0,0,0,0,0
+1541,green cabbage,0,0,0,0,0,0
+1542,green candy sprinkles,0,0,0,0,0,0
+1543,green chile enchilada,0,0,0,0,0,0
+1544,green chile pepper,0,0,0,0,0,0
+1545,green chile peppers,0,0,0,0,0,0
+1546,green chile ranchero,0,0,0,0,0,0
+1547,green chilies,0,0,0,0,0,0
+1548,green curry paste,0,0,0,0,0,0
+1549,green decorator sugar,0,0,0,0,0,0
+1550,green enchilada sauce,0,0,0,0,0,0
+1551,green food coloring,0,0,0,0,0,0
+1552,green leaf lettuce,0,0,0,0,0,0
+1553,green lentils,0,0,0,0,0,0
+1554,green maraschino cherries,0,0,0,0,0,0
+1555,green olives,0,0,0,0,0,0
+1556,green onion,0,0,0,0,0,0
+1557,green onion tops,0,0,0,0,0,0
+1558,green onions,0,0,0,0,0,0
+1559,green peas,0,0,0,0,0,0
+1560,green pepper sauce,0,0,0,0,0,0
+1561,green plantains,0,0,0,0,0,0
+1562,green salsa,0,0,0,0,0,0
+1563,green salsa (salsa,0,0,0,0,0,0
+1564,green seedless grapes,0,0,0,0,0,0
+1565,green split peas,0,0,0,0,0,0
+1566,green tea powder,0,0,0,0,0,0
+1567,green tomatoes,0,0,0,0,0,0
+1568,grilled pineapple slices,0,0,0,0,0,0
+1569,grilled skinless boneless,0,0,0,0,0,0
+1570,grinds,0,0,0,0,0,0
+1571,ground,0,0,0,0,0,0
+1572,ground allspice,0,0,0,0,0,0
+1573,ground almonds,0,0,0,0,0,0
+1574,ground anise seed,0,0,0,0,0,0
+1575,ground beef,0,0,0,0,0,0
+1576,ground beef chuck,0,0,0,0,0,0
+1577,ground beef round,0,0,0,0,0,0
+1578,ground beef sirloin,0,0,0,0,0,0
+1579,ground black pepper,0,0,0,0,0,0
+1580,ground breakfast sausage,0,0,0,0,0,0
+1581,ground cardamom,0,0,0,0,0,0
+1582,ground cardamom (optional),0,0,0,0,0,0
+1583,ground chicken,0,0,0,0,0,0
+1584,ground chuck,0,0,0,0,0,0
+1585,ground cinnamon,0,0,0,0,0,0
+1586,ground cinnamon (optional),0,0,0,0,0,0
+1587,ground clove,0,0,0,0,0,0
+1588,ground cloves,0,0,0,0,0,0
+1589,ground coriander,0,0,0,0,0,0
+1590,ground coriander seed,0,0,0,0,0,0
+1591,ground cumin,0,0,0,0,0,0
+1592,ground cumin (optional),0,0,0,0,0,0
+1593,ground cumin seed,0,0,0,0,0,0
+1594,ground curry powder,0,0,0,0,0,0
+1595,ground ginger,0,0,0,0,0,0
+1596,ground ham,0,0,0,0,0,0
+1597,ground italian sausage,0,0,0,0,0,0
+1598,ground lamb,0,0,0,0,0,0
+1599,ground mace,0,0,0,0,0,0
+1600,ground mustard,0,0,0,0,0,0
+1601,ground nutmeg,0,0,0,0,0,0
+1602,ground oregano,0,0,0,0,0,0
+1603,ground paprika,0,0,0,0,0,0
+1604,ground peanuts,0,0,0,0,0,0
+1605,ground pecans,0,0,0,0,0,0
+1606,ground pork,0,0,0,0,0,0
+1607,ground pork breakfast,0,0,0,0,0,0
+1608,ground pork sausage,0,0,0,0,0,0
+1609,ground round,0,0,0,0,0,0
+1610,ground sage,0,0,0,0,0,0
+1611,ground sea salt,0,0,0,0,0,0
+1612,ground sirloin,0,0,0,0,0,0
+1613,ground spicy pork,0,0,0,0,0,0
+1614,ground sumac,0,0,0,0,0,0
+1615,ground thyme,0,0,0,0,0,0
+1616,ground turkey,0,0,0,0,0,0
+1617,ground turkey breast,0,0,0,0,0,0
+1618,ground turmeric,0,0,0,0,0,0
+1619,ground veal,0,0,0,0,0,0
+1620,ground venison,0,0,0,0,0,0
+1621,ground walnuts,0,0,0,0,0,0
+1622,ground white meat,0,0,0,0,0,0
+1623,ground white pepper,0,0,0,0,0,0
+1624,grouper fillets,0,0,0,0,0,0
+1625,guacamole,0,0,0,0,0,0
+1626,guacamole salad:,0,0,0,0,0,0
+1627,guanciale,0,0,0,0,0,0
+1628,gumdrops,0,0,0,0,0,0
+1629,gummi worms,0,0,0,0,0,0
+1630,haas avocado cut,0,0,0,0,0,0
+1631,habanero,0,0,0,0,0,0
+1632,habanero hot sauce,0,0,0,0,0,0
+1633,habanero pepper,0,0,0,0,0,0
+1634,habanero peppers,0,0,0,0,0,0
+1635,haddock fillets,0,0,0,0,0,0
+1636,hakurei turnips,0,0,0,0,0,0
+1637,half,0,0,0,0,0,0
+1638,half-and-half,0,0,0,0,0,0
+1639,half-and-half (optional),0,0,0,0,0,0
+1640,half-and-half (or whole,0,0,0,0,0,0
+1641,half-and-half cream,0,0,0,0,0,0
+1642,halibut cheeks,0,0,0,0,0,0
+1643,halibut fillet,0,0,0,0,0,0
+1644,halibut fillets,0,0,0,0,0,0
+1645,halibut steak,0,0,0,0,0,0
+1646,halibut steaks,0,0,0,0,0,0
+1647,halved seedless,0,0,0,0,0,0
+1648,ham,0,0,0,0,0,0
+1649,ham base,0,0,0,0,0,0
+1650,ham bone,0,0,0,0,0,0
+1651,ham hock,0,0,0,0,0,0
+1652,ham hocks,0,0,0,0,0,0
+1653,ham slices,0,0,0,0,0,0
+1654,ham steak,0,0,0,0,0,0
+1655,ham steaks,0,0,0,0,0,0
+1656,hamburger,0,0,0,0,0,0
+1657,hamburger buns,0,0,0,0,0,0
+1658,hamburger patties,0,0,0,0,0,0
+1659,hard salami,0,0,0,0,0,0
+1660,hard taco shells,0,0,0,0,0,0
+1661,hard-boiled egg,0,0,0,0,0,0
+1662,hard-boiled eggs,0,0,0,0,0,0
+1663,hard-cooked egg,0,0,0,0,0,0
+1664,hard-cooked eggs,0,0,0,0,0,0
+1665,hash browns:,0,0,0,0,0,0
+1666,hass avocados,0,0,0,0,0,0
+1667,hatch chile peppers,0,0,0,0,0,0
+1668,hawaiian sea salt,0,0,0,0,0,0
+1669,hazelnut flavor instant,0,0,0,0,0,0
+1670,hazelnut liqueur,0,0,0,0,0,0
+1671,hazelnut oil,0,0,0,0,0,0
+1672,hazelnuts,0,0,0,0,0,0
+1673,head,0,0,0,0,0,0
+1674,head bok choy,0,0,0,0,0,0
+1675,head broccoli,0,0,0,0,0,0
+1676,head broccoli cut,0,0,0,0,0,0
+1677,head cabbage,0,0,0,0,0,0
+1678,head cauliflower,0,0,0,0,0,0
+1679,head cauliflower cut,0,0,0,0,0,0
+1680,head escarole,0,0,0,0,0,0
+1681,head fresh broccoli,0,0,0,0,0,0
+1682,head garlic,0,0,0,0,0,0
+1683,head green,0,0,0,0,0,0
+1684,head green cabbage,0,0,0,0,0,0
+1685,head green leaf,0,0,0,0,0,0
+1686,head iceberg lettuce,0,0,0,0,0,0
+1687,head leaf lettuce,0,0,0,0,0,0
+1688,head lettuce,0,0,0,0,0,0
+1689,head napa cabbage,0,0,0,0,0,0
+1690,head red cabbage,0,0,0,0,0,0
+1691,head red leaf,0,0,0,0,0,0
+1692,head red lettuce,0,0,0,0,0,0
+1693,head romaine lettuce,0,0,0,0,0,0
+1694,head savoy cabbage,0,0,0,0,0,0
+1695,heads,0,0,0,0,0,0
+1696,heads bibb lettuce,0,0,0,0,0,0
+1697,heads butter lettuce,0,0,0,0,0,0
+1698,heads fresh broccoli,0,0,0,0,0,0
+1699,heads fresh dill,0,0,0,0,0,0
+1700,heart,0,0,0,0,0,0
+1701,hearts,0,0,0,0,0,0
+1702,heavy cream,0,0,0,0,0,0
+1703,heavy cream (optional),0,0,0,0,0,0
+1704,heavy cream room,0,0,0,0,0,0
+1705,heavy kitchen,0,0,0,0,0,0
+1706,heavy whipping cream,0,0,0,0,0,0
+1707,hemp milk,0,0,0,0,0,0
+1708,herb,0,0,0,0,0,0
+1709,herb mayonnaise,0,0,0,0,0,0
+1710,herb pan sauce:,0,0,0,0,0,0
+1711,herb salad mix,0,0,0,0,0,0
+1712,herb-seasoned stuffing mix,0,0,0,0,0,0
+1713,herbes,0,0,0,0,0,0
+1714,hickory,0,0,0,0,0,0
+1715,hickory chips,0,0,0,0,0,0
+1716,hickory smoke,0,0,0,0,0,0
+1717,hickory wood chips,0,0,0,0,0,0
+1718,hickory-flavored liquid smoke,0,0,0,0,0,0
+1719,hidden,0,0,0,0,0,0
+1720,high protein crisp,0,0,0,0,0,0
+1721,high quality milk,0,0,0,0,0,0
+1722,high-quality semisweet chocolate,0,0,0,0,0,0
+1723,high-quality white chocolate,0,0,0,0,0,0
+1724,hillshire,0,0,0,0,0,0
+1725,himalayan pink salt,0,0,0,0,0,0
+1726,hoagie rolls,0,0,0,0,0,0
+1727,hoisin sauce,0,0,0,0,0,0
+1728,hollandaise sauce mix,0,0,0,0,0,0
+1729,homemade bechamel sauce,0,0,0,0,0,0
+1730,homemade chicken broth,0,0,0,0,0,0
+1731,hominy,0,0,0,0,0,0
+1732,honey,0,0,0,0,0,0
+1733,honey barbeque sauce,0,0,0,0,0,0
+1734,honey dijon mustard,0,0,0,0,0,0
+1735,honey graham cereal,0,0,0,0,0,0
+1736,honey hickory barbeque,0,0,0,0,0,0
+1737,honey mustard,0,0,0,0,0,0
+1738,honey mustard salad,0,0,0,0,0,0
+1739,honey sriracha glaze:,0,0,0,0,0,0
+1740,honey-roasted peanuts,0,0,0,0,0,0
+1741,honey-sweetened corn flake,0,0,0,0,0,0
+1742,honeydew melon,0,0,0,0,0,0
+1743,honeydew melon fruit,0,0,0,0,0,0
+1744,horseradish,0,0,0,0,0,0
+1745,horseradish mustard,0,0,0,0,0,0
+1746,horseradish sauce,0,0,0,0,0,0
+1747,hot,0,0,0,0,0,0
+1748,hot biscuits split,0,0,0,0,0,0
+1749,hot bread roll,0,0,0,0,0,0
+1750,hot buffalo,0,0,0,0,0,0
+1751,hot chicken broth,0,0,0,0,0,0
+1752,hot chile paste,0,0,0,0,0,0
+1753,hot chile peppers,0,0,0,0,0,0
+1754,hot chili oil,0,0,0,0,0,0
+1755,hot chili powder,0,0,0,0,0,0
+1756,hot chili sauce,0,0,0,0,0,0
+1757,hot chutney,0,0,0,0,0,0
+1758,hot curry paste,0,0,0,0,0,0
+1759,hot dog buns,0,0,0,0,0,0
+1760,hot dogs,0,0,0,0,0,0
+1761,hot fudge,0,0,0,0,0,0
+1762,hot fudge ice,0,0,0,0,0,0
+1763,hot fudge sauce,0,0,0,0,0,0
+1764,hot house cucumber,0,0,0,0,0,0
+1765,hot milk,0,0,0,0,0,0
+1766,hot paprika,0,0,0,0,0,0
+1767,hot pepper sauce,0,0,0,0,0,0
+1768,hot pepperoni sticks,0,0,0,0,0,0
+1769,hot pork sausage,0,0,0,0,0,0
+1770,hot salsa,0,0,0,0,0,0
+1771,hot sauce,0,0,0,0,0,0
+1772,hot sausage,0,0,0,0,0,0
+1773,hot taco sauce,0,0,0,0,0,0
+1774,hot turkey sausage,0,0,0,0,0,0
+1775,hot water,0,0,0,0,0,0
+1776,huckleberries,0,0,0,0,0,0
+1777,hummus,0,0,0,0,0,0
+1778,hungarian paprika,0,0,0,0,0,0
+1779,hungarian sweet paprika,0,0,0,0,0,0
+1780,ice,0,0,0,0,0,0
+1781,ice cream sandwiches,0,0,0,0,0,0
+1782,ice cubes,0,0,0,0,0,0
+1783,ice water,0,0,0,0,0,0
+1784,iceberg lettuce,0,0,0,0,0,0
+1785,iceberg lettuce julienne,0,0,0,0,0,0
+1786,iceberg lettuce leaves,0,0,0,0,0,0
+1787,icing:,0,0,0,0,0,0
+1788,idahoan signature™ russets,0,0,0,0,0,0
+1789,imitation crab legs,0,0,0,0,0,0
+1790,imitation crab meat,0,0,0,0,0,0
+1791,imitation crabmeat,0,0,0,0,0,0
+1792,imitation crabmeat cut,0,0,0,0,0,0
+1793,inch,0,0,0,0,0,0
+1794,inch piece fresh,0,0,0,0,0,0
+1795,inch square) dinner,0,0,0,0,0,0
+1796,inch square) egg,0,0,0,0,0,0
+1797,inch square) spring,0,0,0,0,0,0
+1798,inch thick),0,0,0,0,0,0
+1799,inch thick) boneless,0,0,0,0,0,0
+1800,inch thick) pork,0,0,0,0,0,0
+1801,inch thick) slice,0,0,0,0,0,0
+1802,inch thick) slices,0,0,0,0,0,0
+1803,inch thick) steak,0,0,0,0,0,0
+1804,inch-thick halibut steaks,0,0,0,0,0,0
+1805,individual packages,0,0,0,0,0,0
+1806,instant,0,0,0,0,0,0
+1807,instant banana,0,0,0,0,0,0
+1808,instant beef bouillon,0,0,0,0,0,0
+1809,instant brown rice,0,0,0,0,0,0
+1810,instant butterscotch pudding,0,0,0,0,0,0
+1811,instant chocolate pudding,0,0,0,0,0,0
+1812,instant coffee (optional),0,0,0,0,0,0
+1813,instant coffee granules,0,0,0,0,0,0
+1814,instant coffee powder,0,0,0,0,0,0
+1815,instant espresso powder,0,0,0,0,0,0
+1816,instant lemon,0,0,0,0,0,0
+1817,instant pistachio,0,0,0,0,0,0
+1818,instant potato flakes,0,0,0,0,0,0
+1819,instant rice,0,0,0,0,0,0
+1820,instant stuffing mix,0,0,0,0,0,0
+1821,instant tapioca,0,0,0,0,0,0
+1822,instant vanilla,0,0,0,0,0,0
+1823,instant vanilla pudding,0,0,0,0,0,0
+1824,instant yeast,0,0,0,0,0,0
+1825,irish bacon,0,0,0,0,0,0
+1826,irish cream liqueur,0,0,0,0,0,0
+1827,irish whiskey,0,0,0,0,0,0
+1828,italian blend,0,0,0,0,0,0
+1829,italian bread,0,0,0,0,0,0
+1830,italian bread crumbs,0,0,0,0,0,0
+1831,italian chicken sausage,0,0,0,0,0,0
+1832,italian dressing,0,0,0,0,0,0
+1833,italian fontina cheese,0,0,0,0,0,0
+1834,italian meatballs,0,0,0,0,0,0
+1835,italian parsley,0,0,0,0,0,0
+1836,italian plum tomatoes,0,0,0,0,0,0
+1837,italian prune plums,0,0,0,0,0,0
+1838,italian salad,0,0,0,0,0,0
+1839,italian sausage,0,0,0,0,0,0
+1840,italian sausage links,0,0,0,0,0,0
+1841,italian seasoning,0,0,0,0,0,0
+1842,italian tuna,0,0,0,0,0,0
+1843,italian whole,0,0,0,0,0,0
+1844,italian-seasoned bread crumbs,0,0,0,0,0,0
+1845,italian-seasoned breadcrumbs,0,0,0,0,0,0
+1846,italian-style bread crumbs,0,0,0,0,0,0
+1847,italian-style frozen meatballs,0,0,0,0,0,0
+1848,italian-style plum tomatoes,0,0,0,0,0,0
+1849,italian-style salad,0,0,0,0,0,0
+1850,italian-style salad greens,0,0,0,0,0,0
+1851,italian-style seasoning,0,0,0,0,0,0
+1852,italian-style tomato paste,0,0,0,0,0,0
+1853,italian-style whole,0,0,0,0,0,0
+1854,jalapeno cheese dip,0,0,0,0,0,0
+1855,jalapeno chile,0,0,0,0,0,0
+1856,jalapeno chile pepper,0,0,0,0,0,0
+1857,jalapeno chile peppers,0,0,0,0,0,0
+1858,jalapeno chiles,0,0,0,0,0,0
+1859,jalapeno pepper,0,0,0,0,0,0
+1860,jalapeno peppers,0,0,0,0,0,0
+1861,jalapeno-flavored cream cheese,0,0,0,0,0,0
+1862,jarred,0,0,0,0,0,0
+1863,jarred jalapeno pepper,0,0,0,0,0,0
+1864,jell-o lime flavor,0,0,0,0,0,0
+1865,jell-o strawberry flavor,0,0,0,0,0,0
+1866,jell-o vanilla flavor,0,0,0,0,0,0
+1867,jellied cranberry sauce,0,0,0,0,0,0
+1868,jerk,0,0,0,0,0,0
+1869,jerusalem,0,0,0,0,0,0
+1870,jewel yams,0,0,0,0,0,0
+1871,jicama,0,0,0,0,0,0
+1872,jimmy,0,0,0,0,0,0
+1873,juice,0,0,0,0,0,0
+1874,juicy,0,0,0,0,0,0
+1875,jumbo egg,0,0,0,0,0,0
+1876,jumbo eggs,0,0,0,0,0,0
+1877,jumbo pasta shells,0,0,0,0,0,0
+1878,jumbo shrimp,0,0,0,0,0,0
+1879,kaffir lime leaves,0,0,0,0,0,0
+1880,kaiser rolls,0,0,0,0,0,0
+1881,kalamata olives,0,0,0,0,0,0
+1882,kale,0,0,0,0,0,0
+1883,kale cut,0,0,0,0,0,0
+1884,kale ribs,0,0,0,0,0,0
+1885,kecap manis,0,0,0,0,0,0
+1886,kentucky bourbon,0,0,0,0,0,0
+1887,kernel corn,0,0,0,0,0,0
+1888,ketchup,0,0,0,0,0,0
+1889,ketchup (optional),0,0,0,0,0,0
+1890,key lime juice,0,0,0,0,0,0
+1891,kidney beans,0,0,0,0,0,0
+1892,kielbasa,0,0,0,0,0,0
+1893,kielbasa sausage,0,0,0,0,0,0
+1894,kikkoman less sodium,0,0,0,0,0,0
+1895,kikkoman lite soy,0,0,0,0,0,0
+1896,kikkoman panko bread,0,0,0,0,0,0
+1897,kikkoman ponzu lime,0,0,0,0,0,0
+1898,kikkoman stir-fry sauce,0,0,0,0,0,0
+1899,kimchi,0,0,0,0,0,0
+1900,kitchen twine,0,0,0,0,0,0
+1901,kiwi,0,0,0,0,0,0
+1902,kiwi fruit,0,0,0,0,0,0
+1903,kiwis,0,0,0,0,0,0
+1904,kohlrabi,0,0,0,0,0,0
+1905,kohlrabi bulbs,0,0,0,0,0,0
+1906,korean chili pepper,0,0,0,0,0,0
+1907,kosher salt,0,0,0,0,0,0
+1908,kraft,0,0,0,0,0,0
+1909,kraft grated parmesan,0,0,0,0,0,0
+1910,kraft mexican style,0,0,0,0,0,0
+1911,kraft roasted red,0,0,0,0,0,0
+1912,kraft shredded mozzarella,0,0,0,0,0,0
+1913,kraft signature roasted,0,0,0,0,0,0
+1914,kumquats,0,0,0,0,0,0
+1915,ladyfinger cookies,0,0,0,0,0,0
+1916,ladyfingers,0,0,0,0,0,0
+1917,lamb chops,0,0,0,0,0,0
+1918,lamb meat,0,0,0,0,0,0
+1919,lamb shanks,0,0,0,0,0,0
+1920,lamb shoulder blade,0,0,0,0,0,0
+1921,lamb shoulder chops,0,0,0,0,0,0
+1922,lamb shoulder steaks,0,0,0,0,0,0
+1923,lamb stock,0,0,0,0,0,0
+1924,land,0,0,0,0,0,0
+1925,land o,0,0,0,0,0,0
+1926,lard,0,0,0,0,0,0
+1927,large,0,0,0,0,0,0
+1928,large apple,0,0,0,0,0,0
+1929,large apples,0,0,0,0,0,0
+1930,large artichokes,0,0,0,0,0,0
+1931,large avocado,0,0,0,0,0,0
+1932,large avocados,0,0,0,0,0,0
+1933,large baking potatoes,0,0,0,0,0,0
+1934,large banana,0,0,0,0,0,0
+1935,large bananas,0,0,0,0,0,0
+1936,large basil leaves,0,0,0,0,0,0
+1937,large beets,0,0,0,0,0,0
+1938,large bell pepper,0,0,0,0,0,0
+1939,large bermuda onions,0,0,0,0,0,0
+1940,large biscuits,0,0,0,0,0,0
+1941,large bok,0,0,0,0,0,0
+1942,large boneless skinless,0,0,0,0,0,0
+1943,large butternut squash,0,0,0,0,0,0
+1944,large button mushrooms,0,0,0,0,0,0
+1945,large carrot,0,0,0,0,0,0
+1946,large carrots,0,0,0,0,0,0
+1947,large chicken wings,0,0,0,0,0,0
+1948,large clams,0,0,0,0,0,0
+1949,large clove garlic,0,0,0,0,0,0
+1950,large cloves,0,0,0,0,0,0
+1951,large cod fillets,0,0,0,0,0,0
+1952,large cold eggs,0,0,0,0,0,0
+1953,large cooking apples,0,0,0,0,0,0
+1954,large cremini mushrooms,0,0,0,0,0,0
+1955,large cucumber,0,0,0,0,0,0
+1956,large cucumbers,0,0,0,0,0,0
+1957,large dill pickle,0,0,0,0,0,0
+1958,large dill pickles,0,0,0,0,0,0
+1959,large egg,0,0,0,0,0,0
+1960,large egg noodles,0,0,0,0,0,0
+1961,large egg whites,0,0,0,0,0,0
+1962,large eggplant,0,0,0,0,0,0
+1963,large eggplants,0,0,0,0,0,0
+1964,large eggs,0,0,0,0,0,0
+1965,large english cucumber,0,0,0,0,0,0
+1966,large fennel bulb,0,0,0,0,0,0
+1967,large flour tortillas,0,0,0,0,0,0
+1968,large granny smith,0,0,0,0,0,0
+1969,large hamburger buns,0,0,0,0,0,0
+1970,large hawaiian sweet,0,0,0,0,0,0
+1971,large head,0,0,0,0,0,0
+1972,large head cabbage,0,0,0,0,0,0
+1973,large head cauliflower,0,0,0,0,0,0
+1974,large head fresh,0,0,0,0,0,0
+1975,large head iceberg,0,0,0,0,0,0
+1976,large head lettuce,0,0,0,0,0,0
+1977,large head napa,0,0,0,0,0,0
+1978,large head romaine,0,0,0,0,0,0
+1979,large heads,0,0,0,0,0,0
+1980,large heirloom tomato,0,0,0,0,0,0
+1981,large idaho potato,0,0,0,0,0,0
+1982,large jalapeno peppers,0,0,0,0,0,0
+1983,large jicama,0,0,0,0,0,0
+1984,large leek,0,0,0,0,0,0
+1985,large leeks,0,0,0,0,0,0
+1986,large lemon,0,0,0,0,0,0
+1987,large lemons,0,0,0,0,0,0
+1988,large mango,0,0,0,0,0,0
+1989,large marshmallows,0,0,0,0,0,0
+1990,large maui sweet,0,0,0,0,0,0
+1991,large mcintosh apple,0,0,0,0,0,0
+1992,large meaty ham,0,0,0,0,0,0
+1993,large mint leaves,0,0,0,0,0,0
+1994,large mushroom caps,0,0,0,0,0,0
+1995,large mushrooms,0,0,0,0,0,0
+1996,large onion,0,0,0,0,0,0
+1997,large onions,0,0,0,0,0,0
+1998,large orange,0,0,0,0,0,0
+1999,large oranges,0,0,0,0,0,0
+2000,large parsnip,0,0,0,0,0,0
+2001,large peaches,0,0,0,0,0,0
+2002,large pears,0,0,0,0,0,0
+2003,large pita,0,0,0,0,0,0
+2004,large pitas,0,0,0,0,0,0
+2005,large poblano peppers,0,0,0,0,0,0
+2006,large pomegranate,0,0,0,0,0,0
+2007,large portobello mushroom,0,0,0,0,0,0
+2008,large potato,0,0,0,0,0,0
+2009,large potatoes,0,0,0,0,0,0
+2010,large ripe,0,0,0,0,0,0
+2011,large ripe avocados,0,0,0,0,0,0
+2012,large ripe banana,0,0,0,0,0,0
+2013,large ripe bananas,0,0,0,0,0,0
+2014,large ripe tomato,0,0,0,0,0,0
+2015,large ripe tomatoes,0,0,0,0,0,0
+2016,large roll,0,0,0,0,0,0
+2017,large roma (plum),0,0,0,0,0,0
+2018,large russet potato,0,0,0,0,0,0
+2019,large russet potatoes,0,0,0,0,0,0
+2020,large seedless english,0,0,0,0,0,0
+2021,large shallot,0,0,0,0,0,0
+2022,large shrimp,0,0,0,0,0,0
+2023,large skinless boneless,0,0,0,0,0,0
+2024,large spaghetti,0,0,0,0,0,0
+2025,large stalk celery,0,0,0,0,0,0
+2026,large stalks celery,0,0,0,0,0,0
+2027,large sweet apple,0,0,0,0,0,0
+2028,large sweet potatoes,0,0,0,0,0,0
+2029,large tart apple,0,0,0,0,0,0
+2030,large tart apples,0,0,0,0,0,0
+2031,large tomato,0,0,0,0,0,0
+2032,large tomatoes,0,0,0,0,0,0
+2033,large turnip,0,0,0,0,0,0
+2034,large vidalia onion,0,0,0,0,0,0
+2035,large vidalia onions,0,0,0,0,0,0
+2036,large watermelon,0,0,0,0,0,0
+2037,large yam,0,0,0,0,0,0
+2038,large yellow tomatoes,0,0,0,0,0,0
+2039,large yukon gold,0,0,0,0,0,0
+2040,large zucchini,0,0,0,0,0,0
+2041,large zucchini cut,0,0,0,0,0,0
+2042,lasagna noodles,0,0,0,0,0,0
+2043,lavender flowers,0,0,0,0,0,0
+2044,leaf fresh sage,0,0,0,0,0,0
+2045,leaf lettuce,0,0,0,0,0,0
+2046,leaf-shaped spearmint gumdrops,0,0,0,0,0,0
+2047,lean bacon,0,0,0,0,0,0
+2048,lean beef brisket,0,0,0,0,0,0
+2049,lean beef chuck,0,0,0,0,0,0
+2050,lean beef stew,0,0,0,0,0,0
+2051,lean ground beef,0,0,0,0,0,0
+2052,lean ground chuck,0,0,0,0,0,0
+2053,lean ground lamb,0,0,0,0,0,0
+2054,lean ground pork,0,0,0,0,0,0
+2055,lean ground turkey,0,0,0,0,0,0
+2056,lean pork chops,0,0,0,0,0,0
+2057,lean pork tenderloin,0,0,0,0,0,0
+2058,lean steak cut,0,0,0,0,0,0
+2059,leaves,0,0,0,0,0,0
+2060,leaves bibb lettuce,0,0,0,0,0,0
+2061,leaves cabbage,0,0,0,0,0,0
+2062,leaves fresh basil,0,0,0,0,0,0
+2063,leaves fresh sage,0,0,0,0,0,0
+2064,leaves mint,0,0,0,0,0,0
+2065,leaves napa cabbage,0,0,0,0,0,0
+2066,leek,0,0,0,0,0,0
+2067,leek cut,0,0,0,0,0,0
+2068,leeks,0,0,0,0,0,0
+2069,leeks (white,0,0,0,0,0,0
+2070,leeks (white portion,0,0,0,0,0,0
+2071,leeks bulb,0,0,0,0,0,0
+2072,leeks cut,0,0,0,0,0,0
+2073,leeks white part,0,0,0,0,0,0
+2074,leftover roast pork,0,0,0,0,0,0
+2075,lemon,0,0,0,0,0,0
+2076,lemon (optional),0,0,0,0,0,0
+2077,lemon butter sauce:,0,0,0,0,0,0
+2078,lemon cake mix,0,0,0,0,0,0
+2079,lemon cream icing,0,0,0,0,0,0
+2080,lemon cream sauce:,0,0,0,0,0,0
+2081,lemon curd,0,0,0,0,0,0
+2082,lemon cut,0,0,0,0,0,0
+2083,lemon extract,0,0,0,0,0,0
+2084,lemon extract (optional),0,0,0,0,0,0
+2085,lemon glaze:,0,0,0,0,0,0
+2086,lemon grass,0,0,0,0,0,0
+2087,lemon grass cut,0,0,0,0,0,0
+2088,lemon juice,0,0,0,0,0,0
+2089,lemon juice (optional),0,0,0,0,0,0
+2090,lemon juice concentrate,0,0,0,0,0,0
+2091,lemon oil,0,0,0,0,0,0
+2092,lemon pepper,0,0,0,0,0,0
+2093,lemon pepper (optional),0,0,0,0,0,0
+2094,lemon pepper seasoning,0,0,0,0,0,0
+2095,lemon pie filling,0,0,0,0,0,0
+2096,lemon slices,0,0,0,0,0,0
+2097,lemon wedges,0,0,0,0,0,0
+2098,lemon yogurt,0,0,0,0,0,0
+2099,lemon zest,0,0,0,0,0,0
+2100,lemon's peel,0,0,0,0,0,0
+2101,lemon-butter-basil sauce:,0,0,0,0,0,0
+2102,lemon-caper sauce:,0,0,0,0,0,0
+2103,lemon-lime soda,0,0,0,0,0,0
+2104,lemon-pepper seasoning,0,0,0,0,0,0
+2105,lemonade,0,0,0,0,0,0
+2106,lemongrass stalks bottom,0,0,0,0,0,0
+2107,lemons,0,0,0,0,0,0
+2108,lentils,0,0,0,0,0,0
+2109,lettuce leaves,0,0,0,0,0,0
+2110,light,0,0,0,0,0,0
+2111,light beer,0,0,0,0,0,0
+2112,light brown sugar,0,0,0,0,0,0
+2113,light coconut milk,0,0,0,0,0,0
+2114,light corn syrup,0,0,0,0,0,0
+2115,light cream,0,0,0,0,0,0
+2116,light cream cheese,0,0,0,0,0,0
+2117,light fruit pectin,0,0,0,0,0,0
+2118,light mayonnaise,0,0,0,0,0,0
+2119,light molasses,0,0,0,0,0,0
+2120,light rum,0,0,0,0,0,0
+2121,light soy sauce,0,0,0,0,0,0
+2122,lima beans,0,0,0,0,0,0
+2123,lime,0,0,0,0,0,0
+2124,lime cut,0,0,0,0,0,0
+2125,lime juice,0,0,0,0,0,0
+2126,lime sour cream:,0,0,0,0,0,0
+2127,lime wedges,0,0,0,0,0,0
+2128,lime zest,0,0,0,0,0,0
+2129,lime-flavored gelatin mix,0,0,0,0,0,0
+2130,limes,0,0,0,0,0,0
+2131,linguica sausage,0,0,0,0,0,0
+2132,linguine,0,0,0,0,0,0
+2133,linguine pasta,0,0,0,0,0,0
+2134,linguine-style rice noodles,0,0,0,0,0,0
+2135,linguini pasta,0,0,0,0,0,0
+2136,link,0,0,0,0,0,0
+2137,links,0,0,0,0,0,0
+2138,links chicken,0,0,0,0,0,0
+2139,links italian sausage,0,0,0,0,0,0
+2140,links pork sausage,0,0,0,0,0,0
+2141,liquid,0,0,0,0,0,0
+2142,liquid egg substitute,0,0,0,0,0,0
+2143,liquid hickory smoke,0,0,0,0,0,0
+2144,liquid mesquite,0,0,0,0,0,0
+2145,liquid pectin,0,0,0,0,0,0
+2146,liquid smoke,0,0,0,0,0,0
+2147,liquid smoke flavoring,0,0,0,0,0,0
+2148,lite frozen,0,0,0,0,0,0
+2149,lite soy sauce,0,0,0,0,0,0
+2150,liter lime soda,0,0,0,0,0,0
+2151,liters,0,0,0,0,0,0
+2152,little smokie sausages,0,0,0,0,0,0
+2153,liver pate,0,0,0,0,0,0
+2154,loaf,0,0,0,0,0,0
+2155,loaf ciabatta bread,0,0,0,0,0,0
+2156,loaf cocktail rye,0,0,0,0,0,0
+2157,loaf italian bread,0,0,0,0,0,0
+2158,loaf pound cake,0,0,0,0,0,0
+2159,loaf round bread,0,0,0,0,0,0
+2160,loaf round crusty,0,0,0,0,0,0
+2161,loaf round french,0,0,0,0,0,0
+2162,loaf round pumpernickel,0,0,0,0,0,0
+2163,loaf round pumpernikel,0,0,0,0,0,0
+2164,loaf round rye,0,0,0,0,0,0
+2165,loaf sourdough bread,0,0,0,0,0,0
+2166,loaves,0,0,0,0,0,0
+2167,loaves italian bread,0,0,0,0,0,0
+2168,lobster meat,0,0,0,0,0,0
+2169,lobster split,0,0,0,0,0,0
+2170,lobster tails,0,0,0,0,0,0
+2171,log,0,0,0,0,0,0
+2172,lollipop sticks,0,0,0,0,0,0
+2173,long skewers,0,0,0,0,0,0
+2174,long-grain rice,0,0,0,0,0,0
+2175,low fat graham,0,0,0,0,0,0
+2176,low sodium chicken,0,0,0,0,0,0
+2177,low sodium garbanzo,0,0,0,0,0,0
+2178,low sodium low,0,0,0,0,0,0
+2179,low sodium soy,0,0,0,0,0,0
+2180,low sodium teriyaki,0,0,0,0,0,0
+2181,low-fat,0,0,0,0,0,0
+2182,low-fat buttermilk,0,0,0,0,0,0
+2183,low-fat cottage cheese,0,0,0,0,0,0
+2184,low-fat cream,0,0,0,0,0,0
+2185,low-fat creamy salad,0,0,0,0,0,0
+2186,low-fat firm,0,0,0,0,0,0
+2187,low-fat mayonnaise,0,0,0,0,0,0
+2188,low-fat milk,0,0,0,0,0,0
+2189,low-fat peach yogurt,0,0,0,0,0,0
+2190,low-fat plain yogurt,0,0,0,0,0,0
+2191,low-sodium beef broth,0,0,0,0,0,0
+2192,low-sodium chicken broth,0,0,0,0,0,0
+2193,low-sodium chicken stock,0,0,0,0,0,0
+2194,low-sodium cream,0,0,0,0,0,0
+2195,low-sodium salt,0,0,0,0,0,0
+2196,low-sodium soy sauce,0,0,0,0,0,0
+2197,low-sodium vegetable broth,0,0,0,0,0,0
+2198,low-sodium vegetable stock,0,0,0,0,0,0
+2199,low-sodium worcestershire sauce,0,0,0,0,0,0
+2200,lowfat cream cheese,0,0,0,0,0,0
+2201,lucky,0,0,0,0,0,0
+2202,lukewarm water,0,0,0,0,0,0
+2203,lump crabmeat,0,0,0,0,0,0
+2204,lumpia wrappers,0,0,0,0,0,0
+2205,macadamia nuts,0,0,0,0,0,0
+2206,macaroni,0,0,0,0,0,0
+2207,mache (lamb's lettuce),0,0,0,0,0,0
+2208,macintosh apples,0,0,0,0,0,0
+2209,madeira wine,0,0,0,0,0,0
+2210,magic baking powder,0,0,0,0,0,0
+2211,mahi mahi fillets,0,0,0,0,0,0
+2212,malt vinegar,0,0,0,0,0,0
+2213,manchego cheese,0,0,0,0,0,0
+2214,mandarin orange,0,0,0,0,0,0
+2215,mandarin orange segments,0,0,0,0,0,0
+2216,mandarin oranges,0,0,0,0,0,0
+2217,mango,0,0,0,0,0,0
+2218,mango chutney,0,0,0,0,0,0
+2219,mango cut,0,0,0,0,0,0
+2220,mango pepper salsa:,0,0,0,0,0,0
+2221,mangos,0,0,0,0,0,0
+2222,manicotti pasta,0,0,0,0,0,0
+2223,manicotti shells,0,0,0,0,0,0
+2224,maple,0,0,0,0,0,0
+2225,maple flavoring,0,0,0,0,0,0
+2226,maple pecan glaze:,0,0,0,0,0,0
+2227,maple syrup,0,0,0,0,0,0
+2228,maple syrup (optional),0,0,0,0,0,0
+2229,maraschino cherries,0,0,0,0,0,0
+2230,maraschino cherry,0,0,0,0,0,0
+2231,maraschino cherry juice,0,0,0,0,0,0
+2232,margarine,0,0,0,0,0,0
+2233,margarine cut,0,0,0,0,0,0
+2234,marinade:,0,0,0,0,0,0
+2235,marinara sauce,0,0,0,0,0,0
+2236,marsala wine,0,0,0,0,0,0
+2237,marshmallow creme,0,0,0,0,0,0
+2238,marshmallow fluff,0,0,0,0,0,0
+2239,marshmallows,0,0,0,0,0,0
+2240,masa harina,0,0,0,0,0,0
+2241,masa harina (instant,0,0,0,0,0,0
+2242,mascarpone cheese,0,0,0,0,0,0
+2243,matchstick-cut carrots,0,0,0,0,0,0
+2244,matzo,0,0,0,0,0,0
+2245,matzo cracker,0,0,0,0,0,0
+2246,matzo crackers,0,0,0,0,0,0
+2247,matzo meal,0,0,0,0,0,0
+2248,mayonnaise,0,0,0,0,0,0
+2249,mayonnaise (optional),0,0,0,0,0,0
+2250,mazola,0,0,0,0,0,0
+2251,mcintosh apple,0,0,0,0,0,0
+2252,meat tenderizer,0,0,0,0,0,0
+2253,meatballs:,0,0,0,0,0,0
+2254,meatless spaghetti,0,0,0,0,0,0
+2255,meatloaf,0,0,0,0,0,0
+2256,medium,0,0,0,0,0,0
+2257,medium acorn squash,0,0,0,0,0,0
+2258,medium apple,0,0,0,0,0,0
+2259,medium apples,0,0,0,0,0,0
+2260,medium baking potatoes,0,0,0,0,0,0
+2261,medium banana,0,0,0,0,0,0
+2262,medium bananas,0,0,0,0,0,0
+2263,medium beet,0,0,0,0,0,0
+2264,medium beets,0,0,0,0,0,0
+2265,medium bosc,0,0,0,0,0,0
+2266,medium butternut squash,0,0,0,0,0,0
+2267,medium carrot,0,0,0,0,0,0
+2268,medium carrots,0,0,0,0,0,0
+2269,medium celery stalks,0,0,0,0,0,0
+2270,medium cucumber,0,0,0,0,0,0
+2271,medium cucumbers,0,0,0,0,0,0
+2272,medium egg noodles,0,0,0,0,0,0
+2273,medium eggplant,0,0,0,0,0,0
+2274,medium eggplants,0,0,0,0,0,0
+2275,medium fresh shrimp,0,0,0,0,0,0
+2276,medium fresh tomatoes,0,0,0,0,0,0
+2277,medium garlic clove,0,0,0,0,0,0
+2278,medium garlic cloves,0,0,0,0,0,0
+2279,medium granny smith,0,0,0,0,0,0
+2280,medium green bell,0,0,0,0,0,0
+2281,medium green onions,0,0,0,0,0,0
+2282,medium green pepper,0,0,0,0,0,0
+2283,medium head cabbage,0,0,0,0,0,0
+2284,medium head cauliflower,0,0,0,0,0,0
+2285,medium head garlic,0,0,0,0,0,0
+2286,medium head red,0,0,0,0,0,0
+2287,medium mangos,0,0,0,0,0,0
+2288,medium new potatoes,0,0,0,0,0,0
+2289,medium onion,0,0,0,0,0,0
+2290,medium onions,0,0,0,0,0,0
+2291,medium papaya,0,0,0,0,0,0
+2292,medium portobello mushroom,0,0,0,0,0,0
+2293,medium potatoes,0,0,0,0,0,0
+2294,medium raw shrimp,0,0,0,0,0,0
+2295,medium red bell,0,0,0,0,0,0
+2296,medium red onion,0,0,0,0,0,0
+2297,medium ripe tomato,0,0,0,0,0,0
+2298,medium ripe tomatoes,0,0,0,0,0,0
+2299,medium salsa,0,0,0,0,0,0
+2300,medium shrimp,0,0,0,0,0,0
+2301,medium stalks,0,0,0,0,0,0
+2302,medium sugar pumpkin,0,0,0,0,0,0
+2303,medium sweet onion,0,0,0,0,0,0
+2304,medium taco shells,0,0,0,0,0,0
+2305,medium tomato,0,0,0,0,0,0
+2306,medium tomatoes,0,0,0,0,0,0
+2307,medium white onion,0,0,0,0,0,0
+2308,medium white potatoes,0,0,0,0,0,0
+2309,medium yellow bell,0,0,0,0,0,0
+2310,medium yellow onion,0,0,0,0,0,0
+2311,medium yellow onions,0,0,0,0,0,0
+2312,medium yellow squash,0,0,0,0,0,0
+2313,medium zucchini,0,0,0,0,0,0
+2314,medium zucchini cut,0,0,0,0,0,0
+2315,medium zucchinis,0,0,0,0,0,0
+2316,medium-grain rice,0,0,0,0,0,0
+2317,merguez (spicy lamb),0,0,0,0,0,0
+2318,merlot wine,0,0,0,0,0,0
+2319,mexican cheese blend,0,0,0,0,0,0
+2320,mexican crema,0,0,0,0,0,0
+2321,mexican crema crema,0,0,0,0,0,0
+2322,mexican vanilla extract,0,0,0,0,0,0
+2323,mexican-style corn,0,0,0,0,0,0
+2324,mexicorn,0,0,0,0,0,0
+2325,mild cheddar cheese,0,0,0,0,0,0
+2326,mild chile peppers,0,0,0,0,0,0
+2327,mild chunky salsa,0,0,0,0,0,0
+2328,mild curry paste,0,0,0,0,0,0
+2329,mild curry powder,0,0,0,0,0,0
+2330,mild goat cheese,0,0,0,0,0,0
+2331,mild paprika,0,0,0,0,0,0
+2332,mild picante sauce,0,0,0,0,0,0
+2333,mild salsa,0,0,0,0,0,0
+2334,mild sausage,0,0,0,0,0,0
+2335,mild taco,0,0,0,0,0,0
+2336,milk,0,0,0,0,0,0
+2337,milk (optional),0,0,0,0,0,0
+2338,milk chocolate,0,0,0,0,0,0
+2339,milk chocolate candy,0,0,0,0,0,0
+2340,milk chocolate chips,0,0,0,0,0,0
+2341,milk room temperature,0,0,0,0,0,0
+2342,minced lemon grass,0,0,0,0,0,0
+2343,minced lemon zest,0,0,0,0,0,0
+2344,mini chocolate chips,0,0,0,0,0,0
+2345,mini graham cracker,0,0,0,0,0,0
+2346,mini marshmallows,0,0,0,0,0,0
+2347,mini oreo bite,0,0,0,0,0,0
+2348,mini phyllo,0,0,0,0,0,0
+2349,mini potato gnocchi,0,0,0,0,0,0
+2350,mini semisweet chocolate,0,0,0,0,0,0
+2351,mini sweet peppers,0,0,0,0,0,0
+2352,mini twist pretzels,0,0,0,0,0,0
+2353,miniature,0,0,0,0,0,0
+2354,miniature cherry tomatoes,0,0,0,0,0,0
+2355,miniature chocolate,0,0,0,0,0,0
+2356,miniature chocolate chips,0,0,0,0,0,0
+2357,miniature chocolate-covered peanut,0,0,0,0,0,0
+2358,miniature marshmallows,0,0,0,0,0,0
+2359,miniature semi-sweet chocolate,0,0,0,0,0,0
+2360,miniature semisweet chocolate,0,0,0,0,0,0
+2361,mint chocolate chips,0,0,0,0,0,0
+2362,mint leaves,0,0,0,0,0,0
+2363,mirin,0,0,0,0,0,0
+2364,miso paste,0,0,0,0,0,0
+2365,mix together:,0,0,0,0,0,0
+2366,mixed baby greens,0,0,0,0,0,0
+2367,mixed baby salad,0,0,0,0,0,0
+2368,mixed bell peppers,0,0,0,0,0,0
+2369,mixed field greens,0,0,0,0,0,0
+2370,mixed greens,0,0,0,0,0,0
+2371,mixed nuts,0,0,0,0,0,0
+2372,mixed salad greens,0,0,0,0,0,0
+2373,mixed spice,0,0,0,0,0,0
+2374,mixed vegetables,0,0,0,0,0,0
+2375,mizithra cheese,0,0,0,0,0,0
+2376,moist yellow cake,0,0,0,0,0,0
+2377,molasses,0,0,0,0,0,0
+2378,monosodium glutamate,0,0,0,0,0,0
+2379,monosodium glutamate (msg),0,0,0,0,0,0
+2380,monterey jack cheese,0,0,0,0,0,0
+2381,montreal steak,0,0,0,0,0,0
+2382,morcilla sausage,0,0,0,0,0,0
+2383,morel mushrooms,0,0,0,0,0,0
+2384,mostaccioli,0,0,0,0,0,0
+2385,mostaccioli pasta,0,0,0,0,0,0
+2386,mozzarella,0,0,0,0,0,0
+2387,mozzarella cheese,0,0,0,0,0,0
+2388,mozzarella cheese sticks,0,0,0,0,0,0
+2389,muenster cheese,0,0,0,0,0,0
+2390,muir,0,0,0,0,0,0
+2391,mulberries,0,0,0,0,0,0
+2392,multi-grain penne pasta,0,0,0,0,0,0
+2393,multigrain bread,0,0,0,0,0,0
+2394,mung bean sprouts,0,0,0,0,0,0
+2395,muscovado (dark brown),0,0,0,0,0,0
+2396,muscovado sugar,0,0,0,0,0,0
+2397,mushroom,0,0,0,0,0,0
+2398,mushroom broth,0,0,0,0,0,0
+2399,mushroom gravy,0,0,0,0,0,0
+2400,mushroom pieces,0,0,0,0,0,0
+2401,mushrooms,0,0,0,0,0,0
+2402,mussels,0,0,0,0,0,0
+2403,mustard,0,0,0,0,0,0
+2404,mustard powder,0,0,0,0,0,0
+2405,mustard seed,0,0,0,0,0,0
+2406,mustard seeds,0,0,0,0,0,0
+2407,nacho cheese dip,0,0,0,0,0,0
+2408,nacho-flavor tortilla chips,0,0,0,0,0,0
+2409,nama shoyu (raw,0,0,0,0,0,0
+2410,natural crunchy peanut,0,0,0,0,0,0
+2411,natural peanut butter,0,0,0,0,0,0
+2412,navy beans,0,0,0,0,0,0
+2413,nectarine,0,0,0,0,0,0
+2414,nectarines,0,0,0,0,0,0
+2415,neufchatel cheese,0,0,0,0,0,0
+2416,new mexico,0,0,0,0,0,0
+2417,new mexico dry,0,0,0,0,0,0
+2418,new mexico red,0,0,0,0,0,0
+2419,new potatoes,0,0,0,0,0,0
+2420,new york strip,0,0,0,0,0,0
+2421,no-boil lasagna noodles,0,0,0,0,0,0
+2422,non-dairy creamer (such,0,0,0,0,0,0
+2423,non-fat cottage cheese,0,0,0,0,0,0
+2424,non-fat greek yogurt,0,0,0,0,0,0
+2425,non-instant chocolate pudding,0,0,0,0,0,0
+2426,non-instant vanilla,0,0,0,0,0,0
+2427,nonfat lemon yogurt,0,0,0,0,0,0
+2428,nonfat milk,0,0,0,0,0,0
+2429,nonstick cooking spray,0,0,0,0,0,0
+2430,noodle salad:,0,0,0,0,0,0
+2431,nopales,0,0,0,0,0,0
+2432,nutmeg,0,0,0,0,0,0
+2433,nutmeg cake:,0,0,0,0,0,0
+2434,nutritional yeast,0,0,0,0,0,0
+2435,nutter butter peanut,0,0,0,0,0,0
+2436,oat bran,0,0,0,0,0,0
+2437,oatmeal,0,0,0,0,0,0
+2438,oatmeal cookies,0,0,0,0,0,0
+2439,oatmeal crust:,0,0,0,0,0,0
+2440,oatnut bread,0,0,0,0,0,0
+2441,oats,0,0,0,0,0,0
+2442,oil,0,0,0,0,0,0
+2443,okra,0,0,0,0,0,0
+2444,old bay seasoning,0,0,0,0,0,0
+2445,old bay ™,0,0,0,0,0,0
+2446,old-fashioned oats,0,0,0,0,0,0
+2447,olive brine,0,0,0,0,0,0
+2448,olive oil,0,0,0,0,0,0
+2449,olive oil (not,0,0,0,0,0,0
+2450,olive oil (optional),0,0,0,0,0,0
+2451,olive oil cooking,0,0,0,0,0,0
+2452,olive-oil cooking spray,0,0,0,0,0,0
+2453,olives,0,0,0,0,0,0
+2454,omelet:,0,0,0,0,0,0
+2455,omelets:,0,0,0,0,0,0
+2456,onion,0,0,0,0,0,0
+2457,onion buns,0,0,0,0,0,0
+2458,onion juice,0,0,0,0,0,0
+2459,onion powder,0,0,0,0,0,0
+2460,onion powder (optional),0,0,0,0,0,0
+2461,onion rolls,0,0,0,0,0,0
+2462,onion salt,0,0,0,0,0,0
+2463,onions,0,0,0,0,0,0
+2464,optional toppings: walnuts,0,0,0,0,0,0
+2465,orange,0,0,0,0,0,0
+2466,orange bell,0,0,0,0,0,0
+2467,orange bell peppers,0,0,0,0,0,0
+2468,orange cake mix,0,0,0,0,0,0
+2469,orange decorator sugar,0,0,0,0,0,0
+2470,orange extract,0,0,0,0,0,0
+2471,orange food,0,0,0,0,0,0
+2472,orange food color,0,0,0,0,0,0
+2473,orange juice,0,0,0,0,0,0
+2474,orange juice concentrate,0,0,0,0,0,0
+2475,orange liqueur,0,0,0,0,0,0
+2476,orange marmalade,0,0,0,0,0,0
+2477,orange peel,0,0,0,0,0,0
+2478,orange peel cut,0,0,0,0,0,0
+2479,orange roughy fillets,0,0,0,0,0,0
+2480,orange vinaigrette (recipe,0,0,0,0,0,0
+2481,orange zest,0,0,0,0,0,0
+2482,orange-flavored fruit slice,0,0,0,0,0,0
+2483,orange-fleshed sweet potatoes,0,0,0,0,0,0
+2484,orange-yogurt sauce:,0,0,0,0,0,0
+2485,oranges,0,0,0,0,0,0
+2486,orecchiette pasta,0,0,0,0,0,0
+2487,oregano,0,0,0,0,0,0
+2488,oreo baking crumbs,0,0,0,0,0,0
+2489,oreo chocolate sandwich,0,0,0,0,0,0
+2490,oreo cookies,0,0,0,0,0,0
+2491,organic beef broth,0,0,0,0,0,0
+2492,oriental sesame oil,0,0,0,0,0,0
+2493,original,0,0,0,0,0,0
+2494,orzo pasta,0,0,0,0,0,0
+2495,oscar mayer real,0,0,0,0,0,0
+2496,other soup ingredients,0,0,0,0,0,0
+2497,other toppings,0,0,0,0,0,0
+2498,oval butter sandwich,0,0,0,0,0,0
+2499,oyster crackers,0,0,0,0,0,0
+2500,oyster sauce,0,0,0,0,0,0
+2501,oyster sauce (optional),0,0,0,0,0,0
+2502,paleo mayonnaise,0,0,0,0,0,0
+2503,palm sugar,0,0,0,0,0,0
+2504,pan cornbread,0,0,0,0,0,0
+2505,pancetta,0,0,0,0,0,0
+2506,pancetta bacon,0,0,0,0,0,0
+2507,paneer,0,0,0,0,0,0
+2508,paneer cut,0,0,0,0,0,0
+2509,panettone,0,0,0,0,0,0
+2510,panko bread crumbs,0,0,0,0,0,0
+2511,pans,0,0,0,0,0,0
+2512,papaya,0,0,0,0,0,0
+2513,paprika,0,0,0,0,0,0
+2514,paprika sweet,0,0,0,0,0,0
+2515,parma ham,0,0,0,0,0,0
+2516,parmesan cheese,0,0,0,0,0,0
+2517,parmesan cheese (optional),0,0,0,0,0,0
+2518,parmigiano-reggiano cheese,0,0,0,0,0,0
+2519,parsley,0,0,0,0,0,0
+2520,parsley flakes,0,0,0,0,0,0
+2521,parsnip,0,0,0,0,0,0
+2522,parsnips,0,0,0,0,0,0
+2523,part-skim ricotta cheese,0,0,0,0,0,0
+2524,pasta,0,0,0,0,0,0
+2525,pasta boiling water,0,0,0,0,0,0
+2526,pasta sauce,0,0,0,0,0,0
+2527,pastrami,0,0,0,0,0,0
+2528,pastry,0,0,0,0,0,0
+2529,pastry flour,0,0,0,0,0,0
+2530,pastry:,0,0,0,0,0,0
+2531,patties:,0,0,0,0,0,0
+2532,pattypan squash stem,0,0,0,0,0,0
+2533,pav bhaji masala,0,0,0,0,0,0
+2534,pea shoots,0,0,0,0,0,0
+2535,peach,0,0,0,0,0,0
+2536,peach pie filling,0,0,0,0,0,0
+2537,peach preserves,0,0,0,0,0,0
+2538,peach schnapps,0,0,0,0,0,0
+2539,peaches,0,0,0,0,0,0
+2540,peanut,0,0,0,0,0,0
+2541,peanut butter,0,0,0,0,0,0
+2542,peanut butter chips,0,0,0,0,0,0
+2543,peanut butter cups,0,0,0,0,0,0
+2544,peanut halves,0,0,0,0,0,0
+2545,peanut oil,0,0,0,0,0,0
+2546,peanut sauce,0,0,0,0,0,0
+2547,peanuts,0,0,0,0,0,0
+2548,pear,0,0,0,0,0,0
+2549,pear halves,0,0,0,0,0,0
+2550,pear juice,0,0,0,0,0,0
+2551,pearl (israeli),0,0,0,0,0,0
+2552,pearl barley,0,0,0,0,0,0
+2553,pearl onions,0,0,0,0,0,0
+2554,pears,0,0,0,0,0,0
+2555,peas,0,0,0,0,0,0
+2556,pecan halves,0,0,0,0,0,0
+2557,pecan shortbread cookies,0,0,0,0,0,0
+2558,pecans,0,0,0,0,0,0
+2559,pecorino-romano cheese,0,0,0,0,0,0
+2560,penne pasta,0,0,0,0,0,0
+2561,pepper,0,0,0,0,0,0
+2562,pepper boursin cheese,0,0,0,0,0,0
+2563,pepper sauce,0,0,0,0,0,0
+2564,pepper-jack cheese,0,0,0,0,0,0
+2565,peppercorn ranch salad,0,0,0,0,0,0
+2566,peppercorn sauce,0,0,0,0,0,0
+2567,peppercorns,0,0,0,0,0,0
+2568,pepperidge,0,0,0,0,0,0
+2569,pepperjack cheese,0,0,0,0,0,0
+2570,peppermint candies,0,0,0,0,0,0
+2571,peppermint candy canes,0,0,0,0,0,0
+2572,peppermint extract,0,0,0,0,0,0
+2573,peppermint oil,0,0,0,0,0,0
+2574,pepperoncini,0,0,0,0,0,0
+2575,pepperoncini peppers,0,0,0,0,0,0
+2576,pepperoni,0,0,0,0,0,0
+2577,pepperoni cut,0,0,0,0,0,0
+2578,pepperoni sausage,0,0,0,0,0,0
+2579,persimmon pulp,0,0,0,0,0,0
+2580,pesto,0,0,0,0,0,0
+2581,pesto basil sauce,0,0,0,0,0,0
+2582,pesto sauce,0,0,0,0,0,0
+2583,pesto:,0,0,0,0,0,0
+2584,pheasant,0,0,0,0,0,0
+2585,philadelphia,0,0,0,0,0,0
+2586,philadelphia brick cream,0,0,0,0,0,0
+2587,philadelphia chive,0,0,0,0,0,0
+2588,philadelphia cream cheese,0,0,0,0,0,0
+2589,philadelphia light brick,0,0,0,0,0,0
+2590,philadelphia neufchatel cheese,0,0,0,0,0,0
+2591,phyllo dough,0,0,0,0,0,0
+2592,picante sauce,0,0,0,0,0,0
+2593,pickle relish,0,0,0,0,0,0
+2594,pico,0,0,0,0,0,0
+2595,pie crust,0,0,0,0,0,0
+2596,pie crust pastry,0,0,0,0,0,0
+2597,pie crusts,0,0,0,0,0,0
+2598,pie filling:,0,0,0,0,0,0
+2599,pie shell,0,0,0,0,0,0
+2600,pie shells,0,0,0,0,0,0
+2601,pigeon peas,0,0,0,0,0,0
+2602,pillsbury,0,0,0,0,0,0
+2603,pimentos,0,0,0,0,0,0
+2604,pina colada mix,0,0,0,0,0,0
+2605,pinch,0,0,0,0,0,0
+2606,pine nuts,0,0,0,0,0,0
+2607,pineapple,0,0,0,0,0,0
+2608,pineapple chunks,0,0,0,0,0,0
+2609,pineapple fruit preserves,0,0,0,0,0,0
+2610,pineapple juice,0,0,0,0,0,0
+2611,pineapple preserves,0,0,0,0,0,0
+2612,pineapple ring,0,0,0,0,0,0
+2613,pineapple rings,0,0,0,0,0,0
+2614,pineapple tidbits,0,0,0,0,0,0
+2615,pint,0,0,0,0,0,0
+2616,pint blueberries,0,0,0,0,0,0
+2617,pint cherry tomatoes,0,0,0,0,0,0
+2618,pint fresh,0,0,0,0,0,0
+2619,pint fresh blackberries,0,0,0,0,0,0
+2620,pint fresh blueberries,0,0,0,0,0,0
+2621,pint fresh cherries,0,0,0,0,0,0
+2622,pint fresh raspberries,0,0,0,0,0,0
+2623,pint fresh strawberries,0,0,0,0,0,0
+2624,pint grape tomatoes,0,0,0,0,0,0
+2625,pint half-and-half cream,0,0,0,0,0,0
+2626,pint heavy cream,0,0,0,0,0,0
+2627,pint heavy whipping,0,0,0,0,0,0
+2628,pint light cream,0,0,0,0,0,0
+2629,pint part-skim ricotta,0,0,0,0,0,0
+2630,pint peach schnapps,0,0,0,0,0,0
+2631,pint red currants,0,0,0,0,0,0
+2632,pint red grape,0,0,0,0,0,0
+2633,pint sour cream,0,0,0,0,0,0
+2634,pint strawberries,0,0,0,0,0,0
+2635,pint vanilla ice,0,0,0,0,0,0
+2636,pint yellow grape,0,0,0,0,0,0
+2637,pint yellow pear,0,0,0,0,0,0
+2638,pinto beans,0,0,0,0,0,0
+2639,pints,0,0,0,0,0,0
+2640,pints fresh blueberries,0,0,0,0,0,0
+2641,pints fresh raspberries,0,0,0,0,0,0
+2642,pints fresh strawberries,0,0,0,0,0,0
+2643,pints grape tomatoes,0,0,0,0,0,0
+2644,pints part-skim ricotta,0,0,0,0,0,0
+2645,pints small heirloom,0,0,0,0,0,0
+2646,pints strawberries,0,0,0,0,0,0
+2647,pints yellow cherry,0,0,0,0,0,0
+2648,pistachio nuts,0,0,0,0,0,0
+2649,pita,0,0,0,0,0,0
+2650,pita bread,0,0,0,0,0,0
+2651,pita bread round,0,0,0,0,0,0
+2652,pita bread rounds,0,0,0,0,0,0
+2653,pita breads,0,0,0,0,0,0
+2654,pitas,0,0,0,0,0,0
+2655,pizza crust dough,0,0,0,0,0,0
+2656,pizza sauce,0,0,0,0,0,0
+2657,pkg.,0,0,0,0,0,0
+2658,plain,0,0,0,0,0,0
+2659,plain bagels,0,0,0,0,0,0
+2660,plain bread crumbs,0,0,0,0,0,0
+2661,plain breadcrumbs,0,0,0,0,0,0
+2662,plain doughnut holes,0,0,0,0,0,0
+2663,plain dry bread,0,0,0,0,0,0
+2664,plain greek yogurt,0,0,0,0,0,0
+2665,plain lowfat yogurt,0,0,0,0,0,0
+2666,plain nonfat yogurt,0,0,0,0,0,0
+2667,plain oatmeal,0,0,0,0,0,0
+2668,plain whole milk,0,0,0,0,0,0
+2669,plain yogurt,0,0,0,0,0,0
+2670,plantains,0,0,0,0,0,0
+2671,planters pecan pieces,0,0,0,0,0,0
+2672,plum (roma) tomatoes,0,0,0,0,0,0
+2673,plum jam,0,0,0,0,0,0
+2674,plum sauce,0,0,0,0,0,0
+2675,plum tomato,0,0,0,0,0,0
+2676,plum tomato puree,0,0,0,0,0,0
+2677,plum tomatoes,0,0,0,0,0,0
+2678,plums,0,0,0,0,0,0
+2679,poblano pepper,0,0,0,0,0,0
+2680,pocket pita bread,0,0,0,0,0,0
+2681,pods green cardamom,0,0,0,0,0,0
+2682,polish kielbasa,0,0,0,0,0,0
+2683,polish sausage,0,0,0,0,0,0
+2684,pomegranate,0,0,0,0,0,0
+2685,pomegranate juice,0,0,0,0,0,0
+2686,pomegranate seeds,0,0,0,0,0,0
+2687,pomegranates,0,0,0,0,0,0
+2688,poppy seed salad,0,0,0,0,0,0
+2689,poppy seeds,0,0,0,0,0,0
+2690,poppyseed,0,0,0,0,0,0
+2691,poppyseed hot dog,0,0,0,0,0,0
+2692,poppyseed salad,0,0,0,0,0,0
+2693,pork,0,0,0,0,0,0
+2694,pork (any cut),0,0,0,0,0,0
+2695,pork baby,0,0,0,0,0,0
+2696,pork butt,0,0,0,0,0,0
+2697,pork butt roast,0,0,0,0,0,0
+2698,pork butt steaks,0,0,0,0,0,0
+2699,pork chops,0,0,0,0,0,0
+2700,pork cube steaks,0,0,0,0,0,0
+2701,pork loin,0,0,0,0,0,0
+2702,pork loin chops,0,0,0,0,0,0
+2703,pork loin roast,0,0,0,0,0,0
+2704,pork medallions,0,0,0,0,0,0
+2705,pork picnic roast,0,0,0,0,0,0
+2706,pork roast,0,0,0,0,0,0
+2707,pork sausage,0,0,0,0,0,0
+2708,pork sausage links,0,0,0,0,0,0
+2709,pork short spareribs,0,0,0,0,0,0
+2710,pork shoulder,0,0,0,0,0,0
+2711,pork shoulder roast,0,0,0,0,0,0
+2712,pork sirloin roast,0,0,0,0,0,0
+2713,pork spareribs,0,0,0,0,0,0
+2714,pork steaks,0,0,0,0,0,0
+2715,pork tenderloin,0,0,0,0,0,0
+2716,pork tenderloin medallions,0,0,0,0,0,0
+2717,pork tenderloins,0,0,0,0,0,0
+2718,port,0,0,0,0,0,0
+2719,port wine,0,0,0,0,0,0
+2720,portobello,0,0,0,0,0,0
+2721,portobello mushroom caps,0,0,0,0,0,0
+2722,portobello mushrooms,0,0,0,0,0,0
+2723,portuguese chourico,0,0,0,0,0,0
+2724,pot roast,0,0,0,0,0,0
+2725,potato,0,0,0,0,0,0
+2726,potato flakes,0,0,0,0,0,0
+2727,potato flour,0,0,0,0,0,0
+2728,potato gnocchi,0,0,0,0,0,0
+2729,potato starch,0,0,0,0,0,0
+2730,potato's peelings,0,0,0,0,0,0
+2731,potatoes,0,0,0,0,0,0
+2732,potatoes:,0,0,0,0,0,0
+2733,poultry,0,0,0,0,0,0
+2734,praline liqueur,0,0,0,0,0,0
+2735,pre-baked pizza crust,0,0,0,0,0,0
+2736,pre-cooked ham steak,0,0,0,0,0,0
+2737,prepared alfredo pasta,0,0,0,0,0,0
+2738,prepared alfredo sauce,0,0,0,0,0,0
+2739,prepared angel food,0,0,0,0,0,0
+2740,prepared barbecue sauce,0,0,0,0,0,0
+2741,prepared basil pesto,0,0,0,0,0,0
+2742,prepared chocolate cookie,0,0,0,0,0,0
+2743,prepared chocolate frosting,0,0,0,0,0,0
+2744,prepared chocolate fudge,0,0,0,0,0,0
+2745,prepared chocolate pie,0,0,0,0,0,0
+2746,prepared coarse-ground mustard,0,0,0,0,0,0
+2747,prepared coleslaw,0,0,0,0,0,0
+2748,prepared coleslaw (optional),0,0,0,0,0,0
+2749,prepared crisp taco,0,0,0,0,0,0
+2750,prepared dijon mustard,0,0,0,0,0,0
+2751,prepared dijon-style mustard,0,0,0,0,0,0
+2752,prepared graham cracker,0,0,0,0,0,0
+2753,prepared honey mustard,0,0,0,0,0,0
+2754,prepared horseradish,0,0,0,0,0,0
+2755,prepared instant,0,0,0,0,0,0
+2756,prepared marinara sauce,0,0,0,0,0,0
+2757,prepared mincemeat pie,0,0,0,0,0,0
+2758,prepared mini graham,0,0,0,0,0,0
+2759,prepared mustard,0,0,0,0,0,0
+2760,prepared pasta sauce,0,0,0,0,0,0
+2761,prepared pesto,0,0,0,0,0,0
+2762,prepared pesto sauce,0,0,0,0,0,0
+2763,prepared pie crusts,0,0,0,0,0,0
+2764,prepared pound cake,0,0,0,0,0,0
+2765,prepared pound cakes,0,0,0,0,0,0
+2766,prepared ranch,0,0,0,0,0,0
+2767,prepared ranch salad,0,0,0,0,0,0
+2768,prepared salsa,0,0,0,0,0,0
+2769,prepared salsa verde,0,0,0,0,0,0
+2770,prepared soy-ginger salad,0,0,0,0,0,0
+2771,prepared spicy mustard,0,0,0,0,0,0
+2772,prepared stuffing,0,0,0,0,0,0
+2773,prepared tart shells,0,0,0,0,0,0
+2774,prepared thai peanut,0,0,0,0,0,0
+2775,prepared thai sweet,0,0,0,0,0,0
+2776,prepared tomato sauce,0,0,0,0,0,0
+2777,prepared vanilla,0,0,0,0,0,0
+2778,prepared vanilla frosting,0,0,0,0,0,0
+2779,prepared vanilla pudding,0,0,0,0,0,0
+2780,pretzels,0,0,0,0,0,0
+2781,prime rib roast,0,0,0,0,0,0
+2782,process cheese food,0,0,0,0,0,0
+2783,process cheese sauce,0,0,0,0,0,0
+2784,prosciutto,0,0,0,0,0,0
+2785,provolone cheese,0,0,0,0,0,0
+2786,prunes,0,0,0,0,0,0
+2787,puff,0,0,0,0,0,0
+2788,puffed wheat cereal,0,0,0,0,0,0
+2789,pumpkin,0,0,0,0,0,0
+2790,pumpkin butter,0,0,0,0,0,0
+2791,pumpkin pie filling,0,0,0,0,0,0
+2792,pumpkin pie spice,0,0,0,0,0,0
+2793,pumpkin seeds,0,0,0,0,0,0
+2794,pure maple syrup,0,0,0,0,0,0
+2795,pure pumpkin,0,0,0,0,0,0
+2796,pure vanilla extract,0,0,0,0,0,0
+2797,pureed chipotle peppers,0,0,0,0,0,0
+2798,pureed strawberries,0,0,0,0,0,0
+2799,purple onion,0,0,0,0,0,0
+2800,pyure organic all,0,0,0,0,0,0
+2801,pyure organic liquid,0,0,0,0,0,0
+2802,quart beef broth,0,0,0,0,0,0
+2803,quart chocolate milk,0,0,0,0,0,0
+2804,quart oil,0,0,0,0,0,0
+2805,quart strawberries,0,0,0,0,0,0
+2806,quart vegetable stock,0,0,0,0,0,0
+2807,quart water,0,0,0,0,0,0
+2808,quartered dole fresh,0,0,0,0,0,0
+2809,quartered strawberries,0,0,0,0,0,0
+2810,quarts,0,0,0,0,0,0
+2811,quarts beef broth,0,0,0,0,0,0
+2812,quarts beef stock,0,0,0,0,0,0
+2813,quarts cider vinegar,0,0,0,0,0,0
+2814,quarts fresh strawberries,0,0,0,0,0,0
+2815,quarts green tomatoes,0,0,0,0,0,0
+2816,quarts half-and-half cream,0,0,0,0,0,0
+2817,quarts mussels,0,0,0,0,0,0
+2818,quarts oil,0,0,0,0,0,0
+2819,quarts tomato juice,0,0,0,0,0,0
+2820,quarts vanilla ice,0,0,0,0,0,0
+2821,quarts vegetable broth,0,0,0,0,0,0
+2822,quarts vegetable oil,0,0,0,0,0,0
+2823,quarts vegetable stock,0,0,0,0,0,0
+2824,quarts water,0,0,0,0,0,0
+2825,queso fresco,0,0,0,0,0,0
+2826,quick cooking,0,0,0,0,0,0
+2827,quick cooking oats,0,0,0,0,0,0
+2828,quick thai dipping,0,0,0,0,0,0
+2829,quick-cooking,0,0,0,0,0,0
+2830,quick-cooking barley,0,0,0,0,0,0
+2831,quick-cooking brown rice,0,0,0,0,0,0
+2832,quick-cooking grits,0,0,0,0,0,0
+2833,quick-cooking oats,0,0,0,0,0,0
+2834,quick-cooking tapioca,0,0,0,0,0,0
+2835,quinoa,0,0,0,0,0,0
+2836,rack,0,0,0,0,0,0
+2837,radishes,0,0,0,0,0,0
+2838,rainbow,0,0,0,0,0,0
+2839,rainbow carrots,0,0,0,0,0,0
+2840,raisin bran cereal,0,0,0,0,0,0
+2841,raisins,0,0,0,0,0,0
+2842,ramen,0,0,0,0,0,0
+2843,ramen noodle pasta,0,0,0,0,0,0
+2844,ramen noodles,0,0,0,0,0,0
+2845,ranch,0,0,0,0,0,0
+2846,ranch salad,0,0,0,0,0,0
+2847,ranch-style beans,0,0,0,0,0,0
+2848,ranch-style dip,0,0,0,0,0,0
+2849,ranch-style salad,0,0,0,0,0,0
+2850,rapid rise yeast,0,0,0,0,0,0
+2851,ras,0,0,0,0,0,0
+2852,raspberries,0,0,0,0,0,0
+2853,raspberry,0,0,0,0,0,0
+2854,raspberry extract,0,0,0,0,0,0
+2855,raspberry jam,0,0,0,0,0,0
+2856,raspberry pie filling,0,0,0,0,0,0
+2857,raspberry preserves,0,0,0,0,0,0
+2858,raspberry puree,0,0,0,0,0,0
+2859,raspberry syrup,0,0,0,0,0,0
+2860,raspberry vinaigrette,0,0,0,0,0,0
+2861,raspberry vinegar,0,0,0,0,0,0
+2862,raspberry walnut vinaigrette,0,0,0,0,0,0
+2863,raspberry-flavored gelatin mix,0,0,0,0,0,0
+2864,raw almond butter,0,0,0,0,0,0
+2865,raw almonds,0,0,0,0,0,0
+2866,raw apple cider,0,0,0,0,0,0
+2867,raw beets,0,0,0,0,0,0
+2868,raw honey,0,0,0,0,0,0
+2869,raw oysters,0,0,0,0,0,0
+2870,raw peanuts,0,0,0,0,0,0
+2871,raw pumpkin seeds,0,0,0,0,0,0
+2872,raw radish greens,0,0,0,0,0,0
+2873,raw shrimp,0,0,0,0,0,0
+2874,raw spanish peanuts,0,0,0,0,0,0
+2875,raw sunflower seeds,0,0,0,0,0,0
+2876,ready-to-use,0,0,0,0,0,0
+2877,ready-to-use graham cracker,0,0,0,0,0,0
+2878,real bacon bits,0,0,0,0,0,0
+2879,real maple syrup,0,0,0,0,0,0
+2880,recipe lemon custard,0,0,0,0,0,0
+2881,recipe orange cream,0,0,0,0,0,0
+2882,recipe pastry,0,0,0,0,0,0
+2883,recipe williamsburg butter,0,0,0,0,0,0
+2884,recipes,0,0,0,0,0,0
+2885,recipes pastry,0,0,0,0,0,0
+2886,red,0,0,0,0,0,0
+2887,red apple,0,0,0,0,0,0
+2888,red beans,0,0,0,0,0,0
+2889,red bell,0,0,0,0,0,0
+2890,red bell peppers,0,0,0,0,0,0
+2891,red boiling potatoes,0,0,0,0,0,0
+2892,red chile pepper,0,0,0,0,0,0
+2893,red chile peppers,0,0,0,0,0,0
+2894,red chili peppers,0,0,0,0,0,0
+2895,red cooking wine,0,0,0,0,0,0
+2896,red currant,0,0,0,0,0,0
+2897,red curry paste,0,0,0,0,0,0
+2898,red curry powder,0,0,0,0,0,0
+2899,red decorator sugar,0,0,0,0,0,0
+2900,red delicious apple,0,0,0,0,0,0
+2901,red delicious apples,0,0,0,0,0,0
+2902,red enchilada sauce,0,0,0,0,0,0
+2903,red food color,0,0,0,0,0,0
+2904,red food coloring,0,0,0,0,0,0
+2905,red globe grapes,0,0,0,0,0,0
+2906,red grapefruit,0,0,0,0,0,0
+2907,red green,0,0,0,0,0,0
+2908,red jalapeno peppers,0,0,0,0,0,0
+2909,red kidney beans,0,0,0,0,0,0
+2910,red leaf lettuce,0,0,0,0,0,0
+2911,red lentils,0,0,0,0,0,0
+2912,red maraschino cherries,0,0,0,0,0,0
+2913,red onion,0,0,0,0,0,0
+2914,red onions,0,0,0,0,0,0
+2915,red pepper,0,0,0,0,0,0
+2916,red pepper flakes,0,0,0,0,0,0
+2917,red pepper hummus,0,0,0,0,0,0
+2918,red pepper sauce,0,0,0,0,0,0
+2919,red peppers,0,0,0,0,0,0
+2920,red potato,0,0,0,0,0,0
+2921,red potatoes,0,0,0,0,0,0
+2922,red quinoa,0,0,0,0,0,0
+2923,red radishes,0,0,0,0,0,0
+2924,red raspberry jam,0,0,0,0,0,0
+2925,red raspberry preserves,0,0,0,0,0,0
+2926,red salmon,0,0,0,0,0,0
+2927,red seedless grapes,0,0,0,0,0,0
+2928,red snapper fillets,0,0,0,0,0,0
+2929,red thai curry,0,0,0,0,0,0
+2930,red wine,0,0,0,0,0,0
+2931,red wine (optional),0,0,0,0,0,0
+2932,red wine vinegar,0,0,0,0,0,0
+2933,red zinfandel wine,0,0,0,0,0,0
+2934,reduced sodium chicken,0,0,0,0,0,0
+2935,reduced sodium soy,0,0,0,0,0,0
+2936,reduced-fat,0,0,0,0,0,0
+2937,reduced-fat coconut milk,0,0,0,0,0,0
+2938,reduced-fat cream cheese,0,0,0,0,0,0
+2939,reduced-fat mayonnaise,0,0,0,0,0,0
+2940,reduced-fat pina colada,0,0,0,0,0,0
+2941,reduced-sodium beef broth,0,0,0,0,0,0
+2942,reduced-sodium soy sauce,0,0,0,0,0,0
+2943,reese's peanut butter,0,0,0,0,0,0
+2944,refried beans,0,0,0,0,0,0
+2945,refrigerator pie crusts,0,0,0,0,0,0
+2946,regular flavor jimmy,0,0,0,0,0,0
+2947,regular oats,0,0,0,0,0,0
+2948,remoulade sauce:,0,0,0,0,0,0
+2949,restaurant-style tortilla chips,0,0,0,0,0,0
+2950,reynolds,0,0,0,0,0,0
+2951,rhubarb,0,0,0,0,0,0
+2952,rhubarb cut,0,0,0,0,0,0
+2953,rib-eye steaks,0,0,0,0,0,0
+2954,ribs celery,0,0,0,0,0,0
+2955,ribs:,0,0,0,0,0,0
+2956,rice,0,0,0,0,0,0
+2957,rice flour,0,0,0,0,0,0
+2958,rice garlic vinegar,0,0,0,0,0,0
+2959,rice milk,0,0,0,0,0,0
+2960,rice noodles,0,0,0,0,0,0
+2961,rice stick noodles,0,0,0,0,0,0
+2962,rice vermicelli,0,0,0,0,0,0
+2963,rice vinegar,0,0,0,0,0,0
+2964,rice vinegar (see,0,0,0,0,0,0
+2965,rice wine,0,0,0,0,0,0
+2966,rice wine vinegar,0,0,0,0,0,0
+2967,rice wrappers,0,0,0,0,0,0
+2968,ricotta cheese,0,0,0,0,0,0
+2969,ricotta cheese (optional),0,0,0,0,0,0
+2970,rigatoni pasta,0,0,0,0,0,0
+2971,ripe avocado,0,0,0,0,0,0
+2972,ripe avocados,0,0,0,0,0,0
+2973,ripe banana,0,0,0,0,0,0
+2974,ripe bananas,0,0,0,0,0,0
+2975,ripe hass avocados,0,0,0,0,0,0
+2976,ripe mango,0,0,0,0,0,0
+2977,ripe mango cut,0,0,0,0,0,0
+2978,ripe pear,0,0,0,0,0,0
+2979,ripe pears,0,0,0,0,0,0
+2980,ripe persimmons,0,0,0,0,0,0
+2981,ripe tomato,0,0,0,0,0,0
+2982,ripe tomatoes,0,0,0,0,0,0
+2983,ritz crackers,0,0,0,0,0,0
+2984,roast turkey,0,0,0,0,0,0
+2985,rock cornish hens,0,0,0,0,0,0
+2986,rock lobster tails,0,0,0,0,0,0
+2987,rock salt,0,0,0,0,0,0
+2988,rolls,0,0,0,0,0,0
+2989,roma,0,0,0,0,0,0
+2990,roma (plum),0,0,0,0,0,0
+2991,roma (plum) tomato,0,0,0,0,0,0
+2992,roma (plum) tomatoes,0,0,0,0,0,0
+2993,roma tomato,0,0,0,0,0,0
+2994,roma tomatoes,0,0,0,0,0,0
+2995,romaine hearts,0,0,0,0,0,0
+2996,romaine lettuce,0,0,0,0,0,0
+2997,romaine lettuce leaves,0,0,0,0,0,0
+2998,romano cheese,0,0,0,0,0,0
+2999,rome beauty apples,0,0,0,0,0,0
+3000,root beer,0,0,0,0,0,0
+3001,root beer extract,0,0,0,0,0,0
+3002,roquefort cheese,0,0,0,0,0,0
+3003,rosemary,0,0,0,0,0,0
+3004,rotelle pasta,0,0,0,0,0,0
+3005,rotelli pasta,0,0,0,0,0,0
+3006,rotini,0,0,0,0,0,0
+3007,rotini pasta,0,0,0,0,0,0
+3008,rotisserie chicken,0,0,0,0,0,0
+3009,rotisserie-roasted chicken,0,0,0,0,0,0
+3010,round,0,0,0,0,0,0
+3011,round brie cheese,0,0,0,0,0,0
+3012,round gyoza/potsticker wrappers,0,0,0,0,0,0
+3013,round rice,0,0,0,0,0,0
+3014,round sheets,0,0,0,0,0,0
+3015,round steak,0,0,0,0,0,0
+3016,round steak cut,0,0,0,0,0,0
+3017,round wonton wrappers,0,0,0,0,0,0
+3018,royal gala apple,0,0,0,0,0,0
+3019,rum,0,0,0,0,0,0
+3020,rum (dark,0,0,0,0,0,0
+3021,rum extract,0,0,0,0,0,0
+3022,rump roast,0,0,0,0,0,0
+3023,russet potatoes,0,0,0,0,0,0
+3024,russian-style salad,0,0,0,0,0,0
+3025,rutabagas,0,0,0,0,0,0
+3026,rye bread,0,0,0,0,0,0
+3027,rye bread torn,0,0,0,0,0,0
+3028,rye croutons,0,0,0,0,0,0
+3029,rye flour,0,0,0,0,0,0
+3030,saffron,0,0,0,0,0,0
+3031,saffron threads,0,0,0,0,0,0
+3032,sage,0,0,0,0,0,0
+3033,sage leaves,0,0,0,0,0,0
+3034,sage pork sausage,0,0,0,0,0,0
+3035,sage-flavored pork sausage,0,0,0,0,0,0
+3036,sake,0,0,0,0,0,0
+3037,salad macaroni,0,0,0,0,0,0
+3038,salad oil,0,0,0,0,0,0
+3039,salad shrimp,0,0,0,0,0,0
+3040,salad:,0,0,0,0,0,0
+3041,salami,0,0,0,0,0,0
+3042,salmon,0,0,0,0,0,0
+3043,salmon filet,0,0,0,0,0,0
+3044,salmon fillet,0,0,0,0,0,0
+3045,salmon fillets,0,0,0,0,0,0
+3046,salmon patties:,0,0,0,0,0,0
+3047,salmon steaks,0,0,0,0,0,0
+3048,salsa,0,0,0,0,0,0
+3049,salsa (optional),0,0,0,0,0,0
+3050,salsa con queso,0,0,0,0,0,0
+3051,salsa:,0,0,0,0,0,0
+3052,salt,0,0,0,0,0,0
+3053,salt (optional),0,0,0,0,0,0
+3054,salt (or,0,0,0,0,0,0
+3055,salt free cajun,0,0,0,0,0,0
+3056,salt pepper,0,0,0,0,0,0
+3057,salt pork,0,0,0,0,0,0
+3058,salt-free garlic,0,0,0,0,0,0
+3059,salt-free herb,0,0,0,0,0,0
+3060,saltine crackers,0,0,0,0,0,0
+3061,sambal oelek,0,0,0,0,0,0
+3062,san marzano (italian),0,0,0,0,0,0
+3063,sandwich rolls,0,0,0,0,0,0
+3064,santa cruz,0,0,0,0,0,0
+3065,sauce,0,0,0,0,0,0
+3066,sauce:,0,0,0,0,0,0
+3067,sauerkraut,0,0,0,0,0,0
+3068,sausage,0,0,0,0,0,0
+3069,sausages,0,0,0,0,0,0
+3070,sauteed,0,0,0,0,0,0
+3071,sauteed mushrooms,0,0,0,0,0,0
+3072,sazon,0,0,0,0,0,0
+3073,sazon goya,0,0,0,0,0,0
+3074,scallions,0,0,0,0,0,0
+3075,scallops,0,0,0,0,0,0
+3076,scoop vanilla ice,0,0,0,0,0,0
+3077,scoop-shaped tortilla chips,0,0,0,0,0,0
+3078,scoops chocolate ice,0,0,0,0,0,0
+3079,scoops low-fat vanilla,0,0,0,0,0,0
+3080,scoops vanilla ice,0,0,0,0,0,0
+3081,scotch bonnet chile,0,0,0,0,0,0
+3082,scotch whiskey,0,0,0,0,0,0
+3083,sea bass,0,0,0,0,0,0
+3084,sea salt,0,0,0,0,0,0
+3085,sea scallops,0,0,0,0,0,0
+3086,seafood,0,0,0,0,0,0
+3087,seashell pasta,0,0,0,0,0,0
+3088,seasoned croutons,0,0,0,0,0,0
+3089,seasoned rice vinegar,0,0,0,0,0,0
+3090,seasoned salt,0,0,0,0,0,0
+3091,seasoned salt (or,0,0,0,0,0,0
+3092,seaweed flakes,0,0,0,0,0,0
+3093,seedless,0,0,0,0,0,0
+3094,seedless english cucumber,0,0,0,0,0,0
+3095,seedless english cucumbers,0,0,0,0,0,0
+3096,seedless grapes,0,0,0,0,0,0
+3097,seedless green grapes,0,0,0,0,0,0
+3098,seedless oranges,0,0,0,0,0,0
+3099,seedless raspberry jam,0,0,0,0,0,0
+3100,seedless raspberry preserves,0,0,0,0,0,0
+3101,seedless red grapes,0,0,0,0,0,0
+3102,seedless red raspberry,0,0,0,0,0,0
+3103,self-rising flour,0,0,0,0,0,0
+3104,semi-sweet baking chocolate,0,0,0,0,0,0
+3105,semi-sweet chocolate,0,0,0,0,0,0
+3106,semi-sweet chocolate chips,0,0,0,0,0,0
+3107,semi-sweet chocolate morsels,0,0,0,0,0,0
+3108,semisweet chocolate,0,0,0,0,0,0
+3109,semisweet chocolate chips,0,0,0,0,0,0
+3110,semisweet chocolate curls,0,0,0,0,0,0
+3111,semisweet mini,0,0,0,0,0,0
+3112,semolina,0,0,0,0,0,0
+3113,semolina flour,0,0,0,0,0,0
+3114,serrano chile peppers,0,0,0,0,0,0
+3115,serrano chiles,0,0,0,0,0,0
+3116,serrano chili peppers,0,0,0,0,0,0
+3117,serrano ham cut,0,0,0,0,0,0
+3118,serrano pepper,0,0,0,0,0,0
+3119,serrano peppers,0,0,0,0,0,0
+3120,sesame oil,0,0,0,0,0,0
+3121,sesame oil (optional),0,0,0,0,0,0
+3122,sesame seeds,0,0,0,0,0,0
+3123,shallot,0,0,0,0,0,0
+3124,shallots,0,0,0,0,0,0
+3125,sharp cheddar cheese,0,0,0,0,0,0
+3126,sheep's milk,0,0,0,0,0,0
+3127,sheet frozen puff,0,0,0,0,0,0
+3128,sheets,0,0,0,0,0,0
+3129,sheets frozen phyllo,0,0,0,0,0,0
+3130,shelf-stable gnocchi,0,0,0,0,0,0
+3131,shells:,0,0,0,0,0,0
+3132,sherry,0,0,0,0,0,0
+3133,sherry vinegar,0,0,0,0,0,0
+3134,sherry vinegar (optional),0,0,0,0,0,0
+3135,sherry wine,0,0,0,0,0,0
+3136,shiitake mushrooms,0,0,0,0,0,0
+3137,shiraz wine,0,0,0,0,0,0
+3138,shiso leaves,0,0,0,0,0,0
+3139,shoepeg corn,0,0,0,0,0,0
+3140,short grain rice,0,0,0,0,0,0
+3141,shortbread cookie crumbs,0,0,0,0,0,0
+3142,shortcake shell,0,0,0,0,0,0
+3143,shredded beet greens,0,0,0,0,0,0
+3144,shredded carrots,0,0,0,0,0,0
+3145,shredded coleslaw mix,0,0,0,0,0,0
+3146,shredded hash brown,0,0,0,0,0,0
+3147,shredded iceberg lettuce,0,0,0,0,0,0
+3148,shredded mexican blend,0,0,0,0,0,0
+3149,shredded mexican cheese,0,0,0,0,0,0
+3150,shredded mozzarella cheese,0,0,0,0,0,0
+3151,shredded romaine lettuce,0,0,0,0,0,0
+3152,shrimp,0,0,0,0,0,0
+3153,shrimp paste,0,0,0,0,0,0
+3154,shrimp stock,0,0,0,0,0,0
+3155,shucked oysters,0,0,0,0,0,0
+3156,silken tofu,0,0,0,0,0,0
+3157,silver dragees,0,0,0,0,0,0
+3158,simple syrup,0,0,0,0,0,0
+3159,simply,0,0,0,0,0,0
+3160,sirloin steak,0,0,0,0,0,0
+3161,sirloin tip roast,0,0,0,0,0,0
+3162,sirloin tip steaks,0,0,0,0,0,0
+3163,sirloin tips,0,0,0,0,0,0
+3164,sister schubert's dinner,0,0,0,0,0,0
+3165,skewers,0,0,0,0,0,0
+3166,skim milk,0,0,0,0,0,0
+3167,skin-on bone-in chicken,0,0,0,0,0,0
+3168,skin-on salmon fillet,0,0,0,0,0,0
+3169,skinless boneless,0,0,0,0,0,0
+3170,skinless boneless chicken,0,0,0,0,0,0
+3171,skinless boneless salmon,0,0,0,0,0,0
+3172,skinless chicken leg,0,0,0,0,0,0
+3173,skinless chicken pieces,0,0,0,0,0,0
+3174,skinless chicken thighs,0,0,0,0,0,0
+3175,slabs baby,0,0,0,0,0,0
+3176,sleeve buttery round,0,0,0,0,0,0
+3177,sliced almonds,0,0,0,0,0,0
+3178,sliced cucumber,0,0,0,0,0,0
+3179,sliced cucumbers,0,0,0,0,0,0
+3180,sliced green onion,0,0,0,0,0,0
+3181,sliced peaches,0,0,0,0,0,0
+3182,sliced pineapple,0,0,0,0,0,0
+3183,sliced seedless grapes,0,0,0,0,0,0
+3184,sliced strawberries,0,0,0,0,0,0
+3185,sliced water chestnuts,0,0,0,0,0,0
+3186,sloppy joe sauce,0,0,0,0,0,0
+3187,small,0,0,0,0,0,0
+3188,small apple,0,0,0,0,0,0
+3189,small apples,0,0,0,0,0,0
+3190,small avocado,0,0,0,0,0,0
+3191,small balls fresh,0,0,0,0,0,0
+3192,small banana,0,0,0,0,0,0
+3193,small bay leaf,0,0,0,0,0,0
+3194,small boneless skinless,0,0,0,0,0,0
+3195,small broccoli florets,0,0,0,0,0,0
+3196,small bulb,0,0,0,0,0,0
+3197,small bunch cilantro,0,0,0,0,0,0
+3198,small butternut squash,0,0,0,0,0,0
+3199,small cantaloupe balls,0,0,0,0,0,0
+3200,small carrot,0,0,0,0,0,0
+3201,small carrots,0,0,0,0,0,0
+3202,small celery stalk,0,0,0,0,0,0
+3203,small chocolate eggs,0,0,0,0,0,0
+3204,small cinnamon stick,0,0,0,0,0,0
+3205,small clams,0,0,0,0,0,0
+3206,small clove garlic,0,0,0,0,0,0
+3207,small cloves,0,0,0,0,0,0
+3208,small cucumber,0,0,0,0,0,0
+3209,small cucumbers,0,0,0,0,0,0
+3210,small curd cottage,0,0,0,0,0,0
+3211,small dill pickles,0,0,0,0,0,0
+3212,small eggplant,0,0,0,0,0,0
+3213,small eggs,0,0,0,0,0,0
+3214,small elbow macaroni,0,0,0,0,0,0
+3215,small flour,0,0,0,0,0,0
+3216,small fuji apples,0,0,0,0,0,0
+3217,small gnocchi,0,0,0,0,0,0
+3218,small granny smith,0,0,0,0,0,0
+3219,small gravenstein apples,0,0,0,0,0,0
+3220,small head bok,0,0,0,0,0,0
+3221,small head broccoli,0,0,0,0,0,0
+3222,small head cabbage,0,0,0,0,0,0
+3223,small head iceberg,0,0,0,0,0,0
+3224,small head red,0,0,0,0,0,0
+3225,small heads,0,0,0,0,0,0
+3226,small jalapeno,0,0,0,0,0,0
+3227,small jalapeno chile,0,0,0,0,0,0
+3228,small loaf french,0,0,0,0,0,0
+3229,small mangos,0,0,0,0,0,0
+3230,small meatballs,0,0,0,0,0,0
+3231,small mushrooms,0,0,0,0,0,0
+3232,small onion,0,0,0,0,0,0
+3233,small onions,0,0,0,0,0,0
+3234,small papaya,0,0,0,0,0,0
+3235,small pasta shells,0,0,0,0,0,0
+3236,small pearl tapioca,0,0,0,0,0,0
+3237,small peppermint patties,0,0,0,0,0,0
+3238,small potato,0,0,0,0,0,0
+3239,small potatoes,0,0,0,0,0,0
+3240,small pumpkin,0,0,0,0,0,0
+3241,small ripe avocado,0,0,0,0,0,0
+3242,small russet potatoes,0,0,0,0,0,0
+3243,small salad shrimp,0,0,0,0,0,0
+3244,small scallops,0,0,0,0,0,0
+3245,small seashell pasta,0,0,0,0,0,0
+3246,small seedless cucumbers,0,0,0,0,0,0
+3247,small shallot,0,0,0,0,0,0
+3248,small shallots,0,0,0,0,0,0
+3249,small shell pasta,0,0,0,0,0,0
+3250,small shrimp,0,0,0,0,0,0
+3251,small slices red,0,0,0,0,0,0
+3252,small spaghetti,0,0,0,0,0,0
+3253,small spears fresh,0,0,0,0,0,0
+3254,small square dinner,0,0,0,0,0,0
+3255,small stalks celery,0,0,0,0,0,0
+3256,small sugar pumpkin,0,0,0,0,0,0
+3257,small sugar pumpkins,0,0,0,0,0,0
+3258,small sweet potatoes,0,0,0,0,0,0
+3259,small thai chile,0,0,0,0,0,0
+3260,small tomato,0,0,0,0,0,0
+3261,small tomatoes,0,0,0,0,0,0
+3262,small whole,0,0,0,0,0,0
+3263,small whole-wheat pasta,0,0,0,0,0,0
+3264,small yellow bell,0,0,0,0,0,0
+3265,small yukon gold,0,0,0,0,0,0
+3266,small zucchini,0,0,0,0,0,0
+3267,small zucchini cubed,0,0,0,0,0,0
+3268,small zucchini cut,0,0,0,0,0,0
+3269,smoked boneless ham,0,0,0,0,0,0
+3270,smoked oysters,0,0,0,0,0,0
+3271,smoked salmon,0,0,0,0,0,0
+3272,smoked sausage,0,0,0,0,0,0
+3273,smooth peanut butter,0,0,0,0,0,0
+3274,snap peas,0,0,0,0,0,0
+3275,snow crab,0,0,0,0,0,0
+3276,snow crab clusters,0,0,0,0,0,0
+3277,snow peas,0,0,0,0,0,0
+3278,soba noodles,0,0,0,0,0,0
+3279,soda crackers,0,0,0,0,0,0
+3280,sofrito,0,0,0,0,0,0
+3281,sofrito sauce,0,0,0,0,0,0
+3282,soft bread crumbs,0,0,0,0,0,0
+3283,soft egg buns,0,0,0,0,0,0
+3284,soft goat cheese,0,0,0,0,0,0
+3285,soft margarine,0,0,0,0,0,0
+3286,soft tofu,0,0,0,0,0,0
+3287,solid pack pumpkin,0,0,0,0,0,0
+3288,sorghum flour,0,0,0,0,0,0
+3289,soup:,0,0,0,0,0,0
+3290,sour cherries,0,0,0,0,0,0
+3291,sour cream,0,0,0,0,0,0
+3292,sour cream (optional),0,0,0,0,0,0
+3293,sour cream room,0,0,0,0,0,0
+3294,sour cream sauce:,0,0,0,0,0,0
+3295,sour milk,0,0,0,0,0,0
+3296,sourdough starter,0,0,0,0,0,0
+3297,southwest sauce:,0,0,0,0,0,0
+3298,souvlaki marinade:,0,0,0,0,0,0
+3299,soy mayonnaise,0,0,0,0,0,0
+3300,soy milk,0,0,0,0,0,0
+3301,soy sauce,0,0,0,0,0,0
+3302,soy sauce (optional),0,0,0,0,0,0
+3303,soy-based steak marinade,0,0,0,0,0,0
+3304,soybean oil (often,0,0,0,0,0,0
+3305,spaghetti,0,0,0,0,0,0
+3306,spanish chorizo sausage,0,0,0,0,0,0
+3307,spanish onion,0,0,0,0,0,0
+3308,spanish paprika,0,0,0,0,0,0
+3309,spanish peanuts,0,0,0,0,0,0
+3310,spanish seasoning,0,0,0,0,0,0
+3311,spears,0,0,0,0,0,0
+3312,spears fresh asparagus,0,0,0,0,0,0
+3313,spelt kernels,0,0,0,0,0,0
+3314,spice,0,0,0,0,0,0
+3315,spice rub,0,0,0,0,0,0
+3316,spicy,0,0,0,0,0,0
+3317,spicy bulk pork,0,0,0,0,0,0
+3318,spicy italian sausage,0,0,0,0,0,0
+3319,spicy linguica sausage,0,0,0,0,0,0
+3320,spicy mustard,0,0,0,0,0,0
+3321,spicy pork sausage,0,0,0,0,0,0
+3322,spicy salsa verde,0,0,0,0,0,0
+3323,spicy turkey sausage,0,0,0,0,0,0
+3324,spinach,0,0,0,0,0,0
+3325,spinach fettuccine pasta,0,0,0,0,0,0
+3326,spinach leaves,0,0,0,0,0,0
+3327,splash,0,0,0,0,0,0
+3328,splenda,0,0,0,0,0,0
+3329,split skin-on chicken,0,0,0,0,0,0
+3330,sport peppers,0,0,0,0,0,0
+3331,spreadable cream cheese,0,0,0,0,0,0
+3332,sprig cilantro,0,0,0,0,0,0
+3333,sprig fennel leaf,0,0,0,0,0,0
+3334,sprig fresh basil,0,0,0,0,0,0
+3335,sprig fresh lemon,0,0,0,0,0,0
+3336,sprig fresh mint,0,0,0,0,0,0
+3337,sprig fresh parsley,0,0,0,0,0,0
+3338,sprig fresh rosemary,0,0,0,0,0,0
+3339,sprig fresh savory,0,0,0,0,0,0
+3340,sprig fresh thyme,0,0,0,0,0,0
+3341,sprigs,0,0,0,0,0,0
+3342,sprigs cilantro,0,0,0,0,0,0
+3343,sprigs fresh basil,0,0,0,0,0,0
+3344,sprigs fresh cilantro,0,0,0,0,0,0
+3345,sprigs fresh dill,0,0,0,0,0,0
+3346,sprigs fresh mint,0,0,0,0,0,0
+3347,sprigs fresh oregano,0,0,0,0,0,0
+3348,sprigs fresh parsley,0,0,0,0,0,0
+3349,sprigs fresh rosemary,0,0,0,0,0,0
+3350,sprigs fresh sage,0,0,0,0,0,0
+3351,sprigs fresh thyme,0,0,0,0,0,0
+3352,sprigs parsley,0,0,0,0,0,0
+3353,sprigs rosemary leaves,0,0,0,0,0,0
+3354,sprigs watercress,0,0,0,0,0,0
+3355,spring lettuce mix,0,0,0,0,0,0
+3356,spring roll wrappers,0,0,0,0,0,0
+3357,square bittersweet chocolate,0,0,0,0,0,0
+3358,square semisweet chocolate,0,0,0,0,0,0
+3359,square unsweetened chocolate,0,0,0,0,0,0
+3360,squares,0,0,0,0,0,0
+3361,squares baker's semi-sweet,0,0,0,0,0,0
+3362,squares high quality,0,0,0,0,0,0
+3363,squares land,0,0,0,0,0,0
+3364,squares semi-sweet baking,0,0,0,0,0,0
+3365,squares semi-sweet chocolate,0,0,0,0,0,0
+3366,squares unsweetened chocolate,0,0,0,0,0,0
+3367,squares white chocolate,0,0,0,0,0,0
+3368,squid,0,0,0,0,0,0
+3369,sriracha,0,0,0,0,0,0
+3370,sriracha chile sauce,0,0,0,0,0,0
+3371,sriracha chili sauce,0,0,0,0,0,0
+3372,sriracha hot chili,0,0,0,0,0,0
+3373,sriracha hot sauce,0,0,0,0,0,0
+3374,sriracha sauce,0,0,0,0,0,0
+3375,sriracha sauce (see,0,0,0,0,0,0
+3376,stale,0,0,0,0,0,0
+3377,star anise,0,0,0,0,0,0
+3378,star anise pods,0,0,0,0,0,0
+3379,steak,0,0,0,0,0,0
+3380,steak cut,0,0,0,0,0,0
+3381,steak sauce,0,0,0,0,0,0
+3382,steak sauce (e.g.,0,0,0,0,0,0
+3383,steak seasoning,0,0,0,0,0,0
+3384,steaks,0,0,0,0,0,0
+3385,steaks:,0,0,0,0,0,0
+3386,stevia brown sugar,0,0,0,0,0,0
+3387,stick pepperoni,0,0,0,0,0,0
+3388,stir fry:,0,0,0,0,0,0
+3389,stir-fry:,0,0,0,0,0,0
+3390,stone ground cornmeal,0,0,0,0,0,0
+3391,stone ground mustard,0,0,0,0,0,0
+3392,stone-ground mustard,0,0,0,0,0,0
+3393,store-bought roast chickens,0,0,0,0,0,0
+3394,store-bought rotisserie chicken,0,0,0,0,0,0
+3395,straw mushrooms,0,0,0,0,0,0
+3396,strawberries,0,0,0,0,0,0
+3397,strawberry,0,0,0,0,0,0
+3398,strawberry cake mix,0,0,0,0,0,0
+3399,strawberry extract,0,0,0,0,0,0
+3400,strawberry glaze,0,0,0,0,0,0
+3401,strawberry jam,0,0,0,0,0,0
+3402,strawberry preserves,0,0,0,0,0,0
+3403,strawberry puree,0,0,0,0,0,0
+3404,strip orange zest,0,0,0,0,0,0
+3405,strip steaks,0,0,0,0,0,0
+3406,strips,0,0,0,0,0,0
+3407,strips bacon,0,0,0,0,0,0
+3408,strips celery,0,0,0,0,0,0
+3409,strong coffee (made,0,0,0,0,0,0
+3410,stuffed peppers:,0,0,0,0,0,0
+3411,sugar,0,0,0,0,0,0
+3412,sugar right,0,0,0,0,0,0
+3413,sugar snap peas,0,0,0,0,0,0
+3414,sugar-based curing mixture,0,0,0,0,0,0
+3415,sugar-free lemon,0,0,0,0,0,0
+3416,sun-dried tomato paste,0,0,0,0,0,0
+3417,sun-dried tomato pesto,0,0,0,0,0,0
+3418,sun-dried tomatoes,0,0,0,0,0,0
+3419,sundried tomato mayonnaise:,0,0,0,0,0,0
+3420,sunflower seeds,0,0,0,0,0,0
+3421,super fine sugar,0,0,0,0,0,0
+3422,superfine (castor) sugar,0,0,0,0,0,0
+3423,superfine sugar,0,0,0,0,0,0
+3424,sushi,0,0,0,0,0,0
+3425,swai fish,0,0,0,0,0,0
+3426,sweet,0,0,0,0,0,0
+3427,sweet apple cut,0,0,0,0,0,0
+3428,sweet butter,0,0,0,0,0,0
+3429,sweet chili mayo:,0,0,0,0,0,0
+3430,sweet chili sauce,0,0,0,0,0,0
+3431,sweet corn,0,0,0,0,0,0
+3432,sweet corn kernels,0,0,0,0,0,0
+3433,sweet green pickle,0,0,0,0,0,0
+3434,sweet kernel corn,0,0,0,0,0,0
+3435,sweet marsala wine,0,0,0,0,0,0
+3436,sweet onion,0,0,0,0,0,0
+3437,sweet onions,0,0,0,0,0,0
+3438,sweet paprika,0,0,0,0,0,0
+3439,sweet peas,0,0,0,0,0,0
+3440,sweet pickle,0,0,0,0,0,0
+3441,sweet pickle juice,0,0,0,0,0,0
+3442,sweet pickles,0,0,0,0,0,0
+3443,sweet potato,0,0,0,0,0,0
+3444,sweet potatoes,0,0,0,0,0,0
+3445,sweet red peppers,0,0,0,0,0,0
+3446,sweet relish,0,0,0,0,0,0
+3447,sweet rice flour,0,0,0,0,0,0
+3448,sweet sherry,0,0,0,0,0,0
+3449,sweet soy sauce,0,0,0,0,0,0
+3450,sweet-and-sour sauce,0,0,0,0,0,0
+3451,sweetened-dried cranberries,0,0,0,0,0,0
+3452,swiss chard,0,0,0,0,0,0
+3453,swiss chard cut,0,0,0,0,0,0
+3454,swiss cheese,0,0,0,0,0,0
+3455,swiss monterey jack,0,0,0,0,0,0
+3456,swordfish steaks,0,0,0,0,0,0
+3457,syrup:,0,0,0,0,0,0
+3458,t-bone steak,0,0,0,0,0,0
+3459,taco,0,0,0,0,0,0
+3460,taco bell home,0,0,0,0,0,0
+3461,taco sauce,0,0,0,0,0,0
+3462,taco shells,0,0,0,0,0,0
+3463,tahini,0,0,0,0,0,0
+3464,tahini (sesame paste),0,0,0,0,0,0
+3465,tahini (sesame seed,0,0,0,0,0,0
+3466,tahini paste,0,0,0,0,0,0
+3467,tahini salad,0,0,0,0,0,0
+3468,tamari,0,0,0,0,0,0
+3469,tamarind paste,0,0,0,0,0,0
+3470,tamarind pulp,0,0,0,0,0,0
+3471,tandoori masala,0,0,0,0,0,0
+3472,tapioca,0,0,0,0,0,0
+3473,tapioca flour,0,0,0,0,0,0
+3474,tapioca starch,0,0,0,0,0,0
+3475,tarragon vinegar,0,0,0,0,0,0
+3476,tart apples,0,0,0,0,0,0
+3477,tart green apples,0,0,0,0,0,0
+3478,tart pastry:,0,0,0,0,0,0
+3479,tater tots,0,0,0,0,0,0
+3480,tawny port wine,0,0,0,0,0,0
+3481,tempeh,0,0,0,0,0,0
+3482,tequila,0,0,0,0,0,0
+3483,teriyaki marinade sauce,0,0,0,0,0,0
+3484,teriyaki sauce,0,0,0,0,0,0
+3485,texas,0,0,0,0,0,0
+3486,texas bean salsa:,0,0,0,0,0,0
+3487,thai,0,0,0,0,0,0
+3488,thai chile peppers,0,0,0,0,0,0
+3489,thai chiles,0,0,0,0,0,0
+3490,thai chili paste,0,0,0,0,0,0
+3491,thai chili peppers,0,0,0,0,0,0
+3492,thai chili sauce,0,0,0,0,0,0
+3493,thai fish sauce,0,0,0,0,0,0
+3494,thai garlic chile,0,0,0,0,0,0
+3495,thai red curry,0,0,0,0,0,0
+3496,thai sweet red,0,0,0,0,0,0
+3497,thai-style peanut sauce,0,0,0,0,0,0
+3498,thick,0,0,0,0,0,0
+3499,thick cut,0,0,0,0,0,0
+3500,thick cut bacon,0,0,0,0,0,0
+3501,thick cut boneless,0,0,0,0,0,0
+3502,thick cut pork,0,0,0,0,0,0
+3503,thick pork chops,0,0,0,0,0,0
+3504,thick slice,0,0,0,0,0,0
+3505,thick slices,0,0,0,0,0,0
+3506,thick slices bacon,0,0,0,0,0,0
+3507,thick slices italian,0,0,0,0,0,0
+3508,thick slices white,0,0,0,0,0,0
+3509,thick slices whole,0,0,0,0,0,0
+3510,thick soy sauce,0,0,0,0,0,0
+3511,thick-cut bacon,0,0,0,0,0,0
+3512,thick-cut boneless pork,0,0,0,0,0,0
+3513,thick-cut pork chops,0,0,0,0,0,0
+3514,thin,0,0,0,0,0,0
+3515,thin asparagus spears,0,0,0,0,0,0
+3516,thin chocolate wafers,0,0,0,0,0,0
+3517,thin cut pork,0,0,0,0,0,0
+3518,thin cut round,0,0,0,0,0,0
+3519,thin egg noodles,0,0,0,0,0,0
+3520,thin lime slices,0,0,0,0,0,0
+3521,thin pork chops,0,0,0,0,0,0
+3522,thin rice noodles,0,0,0,0,0,0
+3523,thin slices,0,0,0,0,0,0
+3524,thin slices cheddar,0,0,0,0,0,0
+3525,thin slices fresh,0,0,0,0,0,0
+3526,thin slices ham,0,0,0,0,0,0
+3527,thin veal cutlets,0,0,0,0,0,0
+3528,thin wheat crackers,0,0,0,0,0,0
+3529,thin-sliced boneless skinless,0,0,0,0,0,0
+3530,thin-sliced skinless boneless,0,0,0,0,0,0
+3531,thousand island,0,0,0,0,0,0
+3532,thyme,0,0,0,0,0,0
+3533,thyme leaves,0,0,0,0,0,0
+3534,tiger prawns,0,0,0,0,0,0
+3535,tiger shrimp,0,0,0,0,0,0
+3536,tilapia fillets,0,0,0,0,0,0
+3537,toasted wheat germ,0,0,0,0,0,0
+3538,toffee,0,0,0,0,0,0
+3539,tofu,0,0,0,0,0,0
+3540,tom,0,0,0,0,0,0
+3541,tomatillo salsa,0,0,0,0,0,0
+3542,tomatillos,0,0,0,0,0,0
+3543,tomato,0,0,0,0,0,0
+3544,tomato basil feta,0,0,0,0,0,0
+3545,tomato juice,0,0,0,0,0,0
+3546,tomato pasta sauce,0,0,0,0,0,0
+3547,tomato paste,0,0,0,0,0,0
+3548,tomato puree,0,0,0,0,0,0
+3549,tomato salsa,0,0,0,0,0,0
+3550,tomato sauce,0,0,0,0,0,0
+3551,tomato soup,0,0,0,0,0,0
+3552,tomato wedges,0,0,0,0,0,0
+3553,tomato-based chili sauce,0,0,0,0,0,0
+3554,tomato-basil pasta sauce,0,0,0,0,0,0
+3555,tomato-flavored bouillon,0,0,0,0,0,0
+3556,tomato-vegetable juice cocktail,0,0,0,0,0,0
+3557,tomatoes,0,0,0,0,0,0
+3558,toothpicks,0,0,0,0,0,0
+3559,tootsie rolls,0,0,0,0,0,0
+3560,top round london,0,0,0,0,0,0
+3561,top round steak,0,0,0,0,0,0
+3562,top sirloin roast,0,0,0,0,0,0
+3563,top sirloin steak,0,0,0,0,0,0
+3564,topping,0,0,0,0,0,0
+3565,topping:,0,0,0,0,0,0
+3566,toppings:,0,0,0,0,0,0
+3567,torn arugula leaves,0,0,0,0,0,0
+3568,torn baby spinach,0,0,0,0,0,0
+3569,torn basil leaves,0,0,0,0,0,0
+3570,torn dandelion greens,0,0,0,0,0,0
+3571,torn escarole,0,0,0,0,0,0
+3572,torn kale,0,0,0,0,0,0
+3573,torn radicchio,0,0,0,0,0,0
+3574,torn romaine lettuce,0,0,0,0,0,0
+3575,torn spinach leaves,0,0,0,0,0,0
+3576,torpedo rolls,0,0,0,0,0,0
+3577,tortilla chips,0,0,0,0,0,0
+3578,tortilla strips,0,0,0,0,0,0
+3579,tri-color pasta,0,0,0,0,0,0
+3580,tri-color rotini pasta,0,0,0,0,0,0
+3581,tri-colored farfalle (bow,0,0,0,0,0,0
+3582,trimmings,0,0,0,0,0,0
+3583,triple sec,0,0,0,0,0,0
+3584,triple sec liqueur,0,0,0,0,0,0
+3585,truffle:,0,0,0,0,0,0
+3586,tub cool whip,0,0,0,0,0,0
+3587,tub frozen,0,0,0,0,0,0
+3588,tub philadelphia savory,0,0,0,0,0,0
+3589,tub philadelphia savoury,0,0,0,0,0,0
+3590,tube,0,0,0,0,0,0
+3591,tuna,0,0,0,0,0,0
+3592,tuna steaks,0,0,0,0,0,0
+3593,turbinado sugar,0,0,0,0,0,0
+3594,turkey,0,0,0,0,0,0
+3595,turkey bacon,0,0,0,0,0,0
+3596,turkey bratwurst,0,0,0,0,0,0
+3597,turkey breakfast sausage,0,0,0,0,0,0
+3598,turkey breast,0,0,0,0,0,0
+3599,turkey carcass,0,0,0,0,0,0
+3600,turkey drumsticks,0,0,0,0,0,0
+3601,turkey fat,0,0,0,0,0,0
+3602,turkey gravy,0,0,0,0,0,0
+3603,turkey kielbasa,0,0,0,0,0,0
+3604,turkey legs,0,0,0,0,0,0
+3605,turkey pan drippings,0,0,0,0,0,0
+3606,turkey sausage,0,0,0,0,0,0
+3607,turkey stock,0,0,0,0,0,0
+3608,turkey tenderloins,0,0,0,0,0,0
+3609,turkey thighs,0,0,0,0,0,0
+3610,turkey wings,0,0,0,0,0,0
+3611,turkey-style bacon,0,0,0,0,0,0
+3612,turmeric,0,0,0,0,0,0
+3613,turmeric powder,0,0,0,0,0,0
+3614,turnip,0,0,0,0,0,0
+3615,turnip greens,0,0,0,0,0,0
+3616,turnips,0,0,0,0,0,0
+3617,twist lemon peel,0,0,0,0,0,0
+3618,tzatziki sauce (cucumber,0,0,0,0,0,0
+3619,udon noodles,0,0,0,0,0,0
+3620,unbaked pastry shell,0,0,0,0,0,0
+3621,unbaked pie crust,0,0,0,0,0,0
+3622,unbaked pie crusts,0,0,0,0,0,0
+3623,unbaked pie shell,0,0,0,0,0,0
+3624,unbaked pie shells,0,0,0,0,0,0
+3625,unbaked pizza crust,0,0,0,0,0,0
+3626,unbaked tart shells,0,0,0,0,0,0
+3627,uncooked acini,0,0,0,0,0,0
+3628,uncooked alphabet pasta,0,0,0,0,0,0
+3629,uncooked barley,0,0,0,0,0,0
+3630,uncooked basmati rice,0,0,0,0,0,0
+3631,uncooked bow tie,0,0,0,0,0,0
+3632,uncooked chorizo sausage,0,0,0,0,0,0
+3633,uncooked egg noodles,0,0,0,0,0,0
+3634,uncooked elbow macaroni,0,0,0,0,0,0
+3635,uncooked farfalle (bow,0,0,0,0,0,0
+3636,uncooked fusilli pasta,0,0,0,0,0,0
+3637,uncooked jasmine rice,0,0,0,0,0,0
+3638,uncooked lasagna noodles,0,0,0,0,0,0
+3639,uncooked linguine,0,0,0,0,0,0
+3640,uncooked linguine pasta,0,0,0,0,0,0
+3641,uncooked macaroni,0,0,0,0,0,0
+3642,uncooked medium egg,0,0,0,0,0,0
+3643,uncooked medium grain,0,0,0,0,0,0
+3644,uncooked medium shell-shaped,0,0,0,0,0,0
+3645,uncooked medium shrimp,0,0,0,0,0,0
+3646,uncooked orecchiette pasta,0,0,0,0,0,0
+3647,uncooked orzo,0,0,0,0,0,0
+3648,uncooked orzo pasta,0,0,0,0,0,0
+3649,uncooked pasta shells,0,0,0,0,0,0
+3650,uncooked pastina,0,0,0,0,0,0
+3651,uncooked pearl barley,0,0,0,0,0,0
+3652,uncooked penne pasta,0,0,0,0,0,0
+3653,uncooked quinoa,0,0,0,0,0,0
+3654,uncooked rice,0,0,0,0,0,0
+3655,uncooked rigatoni pasta,0,0,0,0,0,0
+3656,uncooked rotini pasta,0,0,0,0,0,0
+3657,uncooked shrimp,0,0,0,0,0,0
+3658,uncooked spaghetti,0,0,0,0,0,0
+3659,uncooked spaghettini,0,0,0,0,0,0
+3660,unflavored gelatin,0,0,0,0,0,0
+3661,unpacked brown sugar,0,0,0,0,0,0
+3662,unpasteurized miso,0,0,0,0,0,0
+3663,unpeeled butternut squash,0,0,0,0,0,0
+3664,unpeeled cucumber,0,0,0,0,0,0
+3665,unsalted butter,0,0,0,0,0,0
+3666,unsalted cashew nuts,0,0,0,0,0,0
+3667,unsalted cashews,0,0,0,0,0,0
+3668,unsalted peanuts,0,0,0,0,0,0
+3669,unsalted soda crackers,0,0,0,0,0,0
+3670,unsalted sunflower seeds,0,0,0,0,0,0
+3671,unsulfured molasses,0,0,0,0,0,0
+3672,unsweetened apple juice,0,0,0,0,0,0
+3673,unsweetened applesauce,0,0,0,0,0,0
+3674,unsweetened cherry,0,0,0,0,0,0
+3675,unsweetened chocolate,0,0,0,0,0,0
+3676,unsweetened cocoa,0,0,0,0,0,0
+3677,unsweetened cocoa powder,0,0,0,0,0,0
+3678,unsweetened coconut milk,0,0,0,0,0,0
+3679,unsweetened pineapple juice,0,0,0,0,0,0
+3680,unsweetened pineapple tidbits,0,0,0,0,0,0
+3681,untreated cedar plank,0,0,0,0,0,0
+3682,untreated cedar planks,0,0,0,0,0,0
+3683,vanilla,0,0,0,0,0,0
+3684,vanilla bean,0,0,0,0,0,0
+3685,vanilla bean split,0,0,0,0,0,0
+3686,vanilla cream cheese,0,0,0,0,0,0
+3687,vanilla extract,0,0,0,0,0,0
+3688,vanilla extract (optional),0,0,0,0,0,0
+3689,vanilla frosting,0,0,0,0,0,0
+3690,vanilla greek-style yogurt,0,0,0,0,0,0
+3691,vanilla ice cream,0,0,0,0,0,0
+3692,vanilla nonfat,0,0,0,0,0,0
+3693,vanilla nonfat yogurt,0,0,0,0,0,0
+3694,vanilla sandwich cookies,0,0,0,0,0,0
+3695,vanilla soy milk,0,0,0,0,0,0
+3696,vanilla sugar,0,0,0,0,0,0
+3697,vanilla wafer cookies,0,0,0,0,0,0
+3698,vanilla wafer crumbs,0,0,0,0,0,0
+3699,vanilla wafers,0,0,0,0,0,0
+3700,vanilla yogurt,0,0,0,0,0,0
+3701,vanilla-flavored almond bark,0,0,0,0,0,0
+3702,vanilla-flavored almond milk,0,0,0,0,0,0
+3703,veal,0,0,0,0,0,0
+3704,veal cutlets,0,0,0,0,0,0
+3705,veal scaloppini,0,0,0,0,0,0
+3706,veal shank,0,0,0,0,0,0
+3707,veal stock,0,0,0,0,0,0
+3708,vegan,0,0,0,0,0,0
+3709,vegan green chile,0,0,0,0,0,0
+3710,vegan margarine,0,0,0,0,0,0
+3711,vegetable base,0,0,0,0,0,0
+3712,vegetable bouillon,0,0,0,0,0,0
+3713,vegetable bouillon powder,0,0,0,0,0,0
+3714,vegetable broth,0,0,0,0,0,0
+3715,vegetable cooking spray,0,0,0,0,0,0
+3716,vegetable oil,0,0,0,0,0,0
+3717,vegetable oil (for,0,0,0,0,0,0
+3718,vegetable shortening,0,0,0,0,0,0
+3719,vegetable soup mix,0,0,0,0,0,0
+3720,vegetable stock,0,0,0,0,0,0
+3721,vegetables:,0,0,0,0,0,0
+3722,vegetarian burger crumbles,0,0,0,0,0,0
+3723,vegetarian fish sauce,0,0,0,0,0,0
+3724,vegetarian worcestershire sauce,0,0,0,0,0,0
+3725,venison,0,0,0,0,0,0
+3726,venison stew meat,0,0,0,0,0,0
+3727,venison tenderloin,0,0,0,0,0,0
+3728,venison tenderloin roasts,0,0,0,0,0,0
+3729,venison tenderloin steaks,0,0,0,0,0,0
+3730,vermicelli pasta,0,0,0,0,0,0
+3731,vermouth,0,0,0,0,0,0
+3732,vidalia onions,0,0,0,0,0,0
+3733,vine-ripened tomato,0,0,0,0,0,0
+3734,vine-ripened tomatoes,0,0,0,0,0,0
+3735,vinegar,0,0,0,0,0,0
+3736,virgin coconut oil,0,0,0,0,0,0
+3737,virgin olive oil,0,0,0,0,0,0
+3738,vodka,0,0,0,0,0,0
+3739,walnut halves,0,0,0,0,0,0
+3740,walnut oil,0,0,0,0,0,0
+3741,walnut pieces,0,0,0,0,0,0
+3742,walnut topping:,0,0,0,0,0,0
+3743,walnuts,0,0,0,0,0,0
+3744,walnuts pecans,0,0,0,0,0,0
+3745,warm milk,0,0,0,0,0,0
+3746,warm water,0,0,0,0,0,0
+3747,wasabi,0,0,0,0,0,0
+3748,wasabi paste,0,0,0,0,0,0
+3749,wasabi powder,0,0,0,0,0,0
+3750,wasabi powder (optional),0,0,0,0,0,0
+3751,water,0,0,0,0,0,0
+3752,water (optional),0,0,0,0,0,0
+3753,water (or,0,0,0,0,0,0
+3754,water (to rinse,0,0,0,0,0,0
+3755,water chestnuts,0,0,0,0,0,0
+3756,water*,0,0,0,0,0,0
+3757,water-packed artichoke hearts,0,0,0,0,0,0
+3758,water-packed tuna,0,0,0,0,0,0
+3759,watercress,0,0,0,0,0,0
+3760,watermelon,0,0,0,0,0,0
+3761,watermelon balls,0,0,0,0,0,0
+3762,watermelon chunks,0,0,0,0,0,0
+3763,wax beans,0,0,0,0,0,0
+3764,wedges,0,0,0,0,0,0
+3765,wet ingredients:,0,0,0,0,0,0
+3766,wheat,0,0,0,0,0,0
+3767,wheat bran,0,0,0,0,0,0
+3768,wheat bread,0,0,0,0,0,0
+3769,wheat bread crumbs,0,0,0,0,0,0
+3770,wheat crackers,0,0,0,0,0,0
+3771,wheat flour,0,0,0,0,0,0
+3772,wheat germ,0,0,0,0,0,0
+3773,wheat hamburger buns,0,0,0,0,0,0
+3774,wheat hot dog,0,0,0,0,0,0
+3775,wheat pastry flour,0,0,0,0,0,0
+3776,wheat penne pasta,0,0,0,0,0,0
+3777,wheat pita breads,0,0,0,0,0,0
+3778,wheat rotini pasta,0,0,0,0,0,0
+3779,wheel brie cheese,0,0,0,0,0,0
+3780,whipped cream,0,0,0,0,0,0
+3781,whipped cream (optional),0,0,0,0,0,0
+3782,whipped cream cheese,0,0,0,0,0,0
+3783,whipped cream garnish,0,0,0,0,0,0
+3784,whiskey,0,0,0,0,0,0
+3785,white beans,0,0,0,0,0,0
+3786,white bread,0,0,0,0,0,0
+3787,white bread crusts,0,0,0,0,0,0
+3788,white bread cubes,0,0,0,0,0,0
+3789,white bread cut,0,0,0,0,0,0
+3790,white bread torn,0,0,0,0,0,0
+3791,white cabbage cut,0,0,0,0,0,0
+3792,white cake mix,0,0,0,0,0,0
+3793,white cheddar cheese,0,0,0,0,0,0
+3794,white chocolate,0,0,0,0,0,0
+3795,white chocolate baking,0,0,0,0,0,0
+3796,white chocolate brandy,0,0,0,0,0,0
+3797,white chocolate cheesecake:,0,0,0,0,0,0
+3798,white chocolate chips,0,0,0,0,0,0
+3799,white confectioners,0,0,0,0,0,0
+3800,white confectioners' coating,0,0,0,0,0,0
+3801,white cooking wine,0,0,0,0,0,0
+3802,white corn,0,0,0,0,0,0
+3803,white corn kernels,0,0,0,0,0,0
+3804,white corn syrup,0,0,0,0,0,0
+3805,white corn tortillas,0,0,0,0,0,0
+3806,white creme,0,0,0,0,0,0
+3807,white frosting,0,0,0,0,0,0
+3808,white hominy,0,0,0,0,0,0
+3809,white horseradish,0,0,0,0,0,0
+3810,white kidney,0,0,0,0,0,0
+3811,white kidney beans,0,0,0,0,0,0
+3812,white meat chicken,0,0,0,0,0,0
+3813,white mushrooms,0,0,0,0,0,0
+3814,white onion,0,0,0,0,0,0
+3815,white onions,0,0,0,0,0,0
+3816,white pepper,0,0,0,0,0,0
+3817,white pepper (optional),0,0,0,0,0,0
+3818,white potatoes,0,0,0,0,0,0
+3819,white rice,0,0,0,0,0,0
+3820,white rice flour,0,0,0,0,0,0
+3821,white rice vinegar,0,0,0,0,0,0
+3822,white rum,0,0,0,0,0,0
+3823,white sugar,0,0,0,0,0,0
+3824,white sugar (optional),0,0,0,0,0,0
+3825,white truffle oil,0,0,0,0,0,0
+3826,white tuna,0,0,0,0,0,0
+3827,white vanilla baking,0,0,0,0,0,0
+3828,white vinegar,0,0,0,0,0,0
+3829,white wine,0,0,0,0,0,0
+3830,white wine (optional),0,0,0,0,0,0
+3831,white wine vinegar,0,0,0,0,0,0
+3832,white-wine vinegar,0,0,0,0,0,0
+3833,whole-grain mustard,0,0,0,0,0,0
+3834,whole-wheat pastry flour,0,0,0,0,0,0
+3835,whole-wheat spaghetti,0,0,0,0,0,0
+3836,wide egg noodles,0,0,0,0,0,0
+3837,wide lasagna noodles,0,0,0,0,0,0
+3838,wild rice,0,0,0,0,0,0
+3839,wine,0,0,0,0,0,0
+3840,wine vinegar,0,0,0,0,0,0
+3841,wings:,0,0,0,0,0,0
+3842,winter squash,0,0,0,0,0,0
+3843,wok oil,0,0,0,0,0,0
+3844,wonton filling:,0,0,0,0,0,0
+3845,wonton wrappers,0,0,0,0,0,0
+3846,wooden craft sticks,0,0,0,0,0,0
+3847,wooden skewers,0,0,0,0,0,0
+3848,wooden sticks,0,0,0,0,0,0
+3849,worcestershire sauce,0,0,0,0,0,0
+3850,xanthan gum,0,0,0,0,0,0
+3851,yams,0,0,0,0,0,0
+3852,yeast,0,0,0,0,0,0
+3853,yellow,0,0,0,0,0,0
+3854,yellow bell pepper,0,0,0,0,0,0
+3855,yellow bell peppers,0,0,0,0,0,0
+3856,yellow cake mix,0,0,0,0,0,0
+3857,yellow chewy fruit-flavored,0,0,0,0,0,0
+3858,yellow corn,0,0,0,0,0,0
+3859,yellow cornmeal,0,0,0,0,0,0
+3860,yellow curry powder,0,0,0,0,0,0
+3861,yellow food,0,0,0,0,0,0
+3862,yellow food coloring,0,0,0,0,0,0
+3863,yellow miso paste,0,0,0,0,0,0
+3864,yellow mustard,0,0,0,0,0,0
+3865,yellow mustard (optional),0,0,0,0,0,0
+3866,yellow onion,0,0,0,0,0,0
+3867,yellow onions,0,0,0,0,0,0
+3868,yellow paste food,0,0,0,0,0,0
+3869,yellow potatoes,0,0,0,0,0,0
+3870,yellow rice mix,0,0,0,0,0,0
+3871,yellow shoepeg corn,0,0,0,0,0,0
+3872,yellow split peas,0,0,0,0,0,0
+3873,yellow squash,0,0,0,0,0,0
+3874,yellow wax beans,0,0,0,0,0,0
+3875,yellow wax peppers,0,0,0,0,0,0
+3876,yogurt,0,0,0,0,0,0
+3877,young arugula,0,0,0,0,0,0
+3878,yucca (cassava) roots,0,0,0,0,0,0
+3879,yukon gold potatoes,0,0,0,0,0,0
+3880,za'atar,0,0,0,0,0,0
+3881,zest,0,0,0,0,0,0
+3882,zesty italian dressing,0,0,0,0,0,0
+3883,ziti pasta,0,0,0,0,0,0
+3884,zucchini,0,0,0,0,0,0
+3885,zucchini chunks,0,0,0,0,0,0
+3886,zucchini cubed,0,0,0,0,0,0
+3887,zucchini cut,0,0,0,0,0,0
+3888,zucchinis,0,0,0,0,0,0
