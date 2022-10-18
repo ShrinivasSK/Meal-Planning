@@ -1,5 +1,6 @@
 btp/**
 Data/MealRec/**
 Data/Kaggle-Meal-Plan/**
-Data/Cylinary-DB/**
+Data/Culinary-DB/**
 Data/Recipe1M/**
+NSGA/__pycache__/**
