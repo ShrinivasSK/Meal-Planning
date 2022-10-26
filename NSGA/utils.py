@@ -73,6 +73,7 @@ class NSGAUtils:
                             vector=self.dataset.get_dish_vector(breakfast[i_]),
                             title=self.dataset.get_dish_title(breakfast[i_]),
                             meal=self.problem_config.id2meal[len(meal_plan)],
+                            cuisine=self.dataset.get_dish_cuisine(breakfast[i_]),
                         )
                     )
                 else:
@@ -89,6 +90,7 @@ class NSGAUtils:
                             vector=self.dataset.get_dish_vector(lunch[i_]),
                             title=self.dataset.get_dish_title(lunch[i_]),
                             meal=self.problem_config.id2meal[len(meal_plan)],
+                            cuisine=self.dataset.get_dish_cuisine(lunch[i_]),
                         )
                     )
                 else:
@@ -105,6 +107,7 @@ class NSGAUtils:
                             vector=self.dataset.get_dish_vector(snacks[i_]),
                             title=self.dataset.get_dish_title(snacks[i_]),
                             meal=self.problem_config.id2meal[len(meal_plan)],
+                            cuisine=self.dataset.get_dish_cuisine(snacks[i_]),
                         )
                     )
                 else:
@@ -121,6 +124,7 @@ class NSGAUtils:
                             vector=self.dataset.get_dish_vector(dinner[i_]),
                             title=self.dataset.get_dish_title(dinner[i_]),
                             meal=self.problem_config.id2meal[len(meal_plan)],
+                            cuisine=self.dataset.get_dish_cuisine(dinner[i_]),
                         )
                     )
                 else:
@@ -191,7 +195,7 @@ class NSGAUtils:
             population.fronts.append(temp)
         # print(i)
 
-    def calculate_crowding_distance(self, front:list[Individual]) -> None:
+    def calculate_crowding_distance(self, front:"list[Individual]") -> None:
         if len(front) > 0:
             solutions_num = len(front)
             for individual in front:
@@ -253,6 +257,7 @@ class NSGAUtils:
                         vector=random_dish_vec,
                         title=self.dataset.get_dish_title(random_dish_id),
                         meal=self.problem_config.id2meal[len(meal_plan)],
+                        cuisine=self.dataset.get_dish_cuisine(random_dish_id),
                     )
                 )
             else:
@@ -275,7 +280,7 @@ class NSGAUtils:
             return True
         return False
 
-    def create_children(self,population:Population)-> list[Individual]:
+    def create_children(self,population:Population)-> "list[Individual]":
         ## May lead to infinite loop if enough children are never valid
         children=[]
 

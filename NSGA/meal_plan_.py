@@ -8,15 +8,17 @@ import numpy as np
 import math
 
 class MealPlan:
-    def __init__(self,problem_config:ProblemConfig,dataset:Dataset,dishes:list[Dish]=[]) -> None:
+    def __init__(self,problem_config:ProblemConfig,dataset:Dataset,dishes:"list[Dish]"=[]) -> None:
         self.plan:list[Dish]=dishes
         self.problem_config=problem_config
         self.dataset=dataset
 
+        # self.printed=False
+
     def add_dish(self,dish:Dish):
         self.plan.append(dish)
 
-    def calculate_nutri(self)->list[list[int]]:
+    def calculate_nutri(self)->"list[list[int]]":
         nutri_day=[0]*self.problem_config.num_nutrients
         nutri_breakfast=[0]*self.problem_config.num_nutrients
         nutri_lunch=[0]*self.problem_config.num_nutrients
@@ -51,7 +53,7 @@ class MealPlan:
             nutri_dinner
         ]
     
-    def calculate_wt(self)->list[list[int]]:
+    def calculate_wt(self)->"list[list[int]]":
         wt_day=0
         wt_breakfast=0
         wt_lunch=0
@@ -141,7 +143,7 @@ class MealPlan:
                 value+=math.sqrt(abs(self.dataset.get_combi_dish(self.plan[i],self.plan[j])))
         if cnt==0:
             return 0
-        return (value/cnt)*1000
+        return (value/cnt)*10
 
     def get_diversity(self)->float:
         value=0
@@ -153,19 +155,24 @@ class MealPlan:
                 if self.plan[j].id==0 or self.plan[j].meal!=self.plan[i].meal:
                     continue
                 cnt+=1
-                value+=np.linalg.norm(self.plan[i].vector - self.plan[j].vector)
+                value+=np.linalg.norm(self.plan[i].vector[1:-1] - self.plan[j].vector[1:-1])
         if cnt==0:
             return 0
         return value/cnt
 
     def get_pos_preference(self)->float:
-        dish_ids=set([ dish.id for dish in self.plan])
+        # return 0
+        dish_ids=set([ dish.cuisine for dish in self.plan])
         if(len(dish_ids)==0):
             return 0
-        return len(dish_ids.intersection(self.dataset.preferred_dishes))/len(dish_ids)
+        # if not self.printed:
+        #     print(dish_ids,self.problem_config.preferred_cuisines)
+        #     self.printed=True
+        return len(dish_ids.intersection(self.problem_config.preferred_cuisines))/len(dish_ids)
 
     def get_neg_preference(self)->float:
+        # return 0
         dish_ids=set([ dish.id for dish in self.plan])
         if(len(dish_ids)==0):
             return 0
-        return len(dish_ids.intersection(self.dataset.rejected_dishes))/len(dish_ids)
+        return len(dish_ids.intersection(self.problem_config.rejected_cuisines))/len(dish_ids)

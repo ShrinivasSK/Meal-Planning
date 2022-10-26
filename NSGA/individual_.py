@@ -10,7 +10,7 @@ class Individual:
         self.crowding_distance=None
         self.domination_count=None
         self.dominated_solutions=None
-        self.objectives:list[float]=list()
+        self.objectives:"list[float]"=list()
 
         self.meal_plan=meal_plan
         self.features,self.ids=self.getFeaturesAndIds()
@@ -35,7 +35,7 @@ class Individual:
             or_condition = or_condition or first > second
         return (and_condition and or_condition)
 
-    def calculate_objectives(self)->list[float]:
+    def calculate_objectives(self)->"list[float]":
         self.objectives= [
             self.meal_plan.get_combi_value(),
             self.meal_plan.get_diversity(),
@@ -58,7 +58,6 @@ class Individual:
         res+="\n"+"Nutrition Values: "+str(self.meal_plan.calculate_nutri()[0])
         res+="\n"+"Weight: "+str(self.meal_plan.calculate_wt()[0][0])
         res+="\n"+"Objective Values: "+str(self.objectives)
-        res+="\n"+"Non Dominated Rank: "+str(self.rank)
         
         res+="\n"+"\n Meal Plan: "
         for id,dish in enumerate(self.meal_plan.plan):

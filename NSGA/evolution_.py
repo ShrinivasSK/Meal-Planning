@@ -26,51 +26,60 @@ from NSGA.utils import NSGAUtils
 
 from tqdm import tqdm
 
+import logging
+
+logger=logging.getLogger()
+
 class Evolution:
 
     def __init__(self,dataset: Dataset,problem_config:ProblemConfig) -> None:
         self.utils=NSGAUtils(dataset,problem_config)
 
         self.population:Population=None
-        self.history_objectives:list[list[float]]=[]
+        self.history_objectives:"list[list[float]]"=[]
 
-    def evolve(self)->list[Individual]:
-        print("Creating Initial Population...")
+    def evolve(self)->"list[Individual]":
+        logger.info("Creating Initial Population...")
         self.population=self.utils.create_intitial_population()
-        print(len(self.population))
+        logger.info("Initial Population Size: "+str(len(self.population)))
 
-        print("Fast Non Dominated Sorting")
+        init_pop_obj=[]
+        for pop in self.population:
+            init_pop_obj.append(pop.calculate_objectives())
+
+        logger.info("Initial All Objectives: "+str(init_pop_obj))
+
+        # logger.info("Fast Non Dominated Sorting")
         self.utils.fast_nondominated_sort(self.population)
 
-        print(self.population.fronts[0][0])
+        logger.info("Random Initial Meal Plan: ")
+        logger.info(self.population.fronts[0][0])
 
-        print("Calculating Crowding Distance")
+        # logger.info("Calculating Crowding Distance")
         for front in self.population.fronts:
             self.utils.calculate_crowding_distance(front)
 
-        print("Creating Children")
+        # logger.info("Creating Children")
         children=self.utils.create_children(self.population)
 
         returned_population=None
 
-        print("Initial Objectives")
-        print(self.population.calculate_average_objectives())
+        logger.info("Initial Avg Objectives: "+str(self.population.calculate_average_objectives()))
 
-        print(len(self.population))
         # for front in self.population.fronts:
         #     if(len(front)==0):
         #         continue
-        #     print(front[0].calculate_objectives())
+        #     logger.info(front[0].calculate_objectives())
         objs=[]
-        print("Starting Evolution..")
+        logger.info("Starting Evolution..")
         for i in tqdm(range(self.utils.problem_config.number_of_generations)):
-            # print("\nIteration: ",i+1)
+            # logger.info("\nIteration: ",i+1)
 
             self.population.extend(children)
-            # print("Fast Non Dominated Sorting")
+            # logger.info("Fast Non Dominated Sorting")
             self.utils.fast_nondominated_sort(self.population)
 
-            # print("Creating new population")
+            # logger.info("Creating new population")
             new_population=Population()
 
             front_num=0
@@ -85,30 +94,30 @@ class Evolution:
             returned_population = self.population
 
             if(i%10==0):
-                print("Objective Value: ",new_population.calculate_average_objectives())
+                logger.info("Iteration "+str(i)+": Objective Value: "+str(new_population.calculate_average_objectives()))
                 self.history_objectives.append(new_population.calculate_average_objectives())
 
-            # print("Preparing for next iteration")
+            # logger.info("Preparing for next iteration")
             self.population = new_population
             self.utils.fast_nondominated_sort(self.population)
             for front in self.population.fronts:
                 self.utils.calculate_crowding_distance(front)
             children = self.utils.create_children(self.population)
 
-            # print("Fronts", len(self.population.fronts))
+            # logger.info("Fronts", len(self.population.fronts))
             # for front in self.population.fronts:
             #     if(len(front)==0):
             #         continue
-            #     print(front[0].calculate_objectives())
+            #     logger.info(front[0].calculate_objectives())
 
             # for front in self.population.fronts:
             #     for pop in front:
-            #         print(pop.objectives)
-            #     print()
+            #         logger.info(pop.objectives)
+            #     logger.info()
 
             # break
         
-        print("Objective Value: ",new_population.calculate_average_objectives())
+        logger.info("Objective Value: "+str(new_population.calculate_average_objectives()))
         
         return self.population.fronts[0]
 

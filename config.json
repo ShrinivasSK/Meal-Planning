@@ -55,5 +55,12 @@
     "number_of_tournament_participants": 5,
     "tournament_probability": 0.8,
     "number_of_generations": 100,
-    "dish_vector_dimensions": 300
+    "dish_vector_dimensions": 300,
+    "preferred_cuisines": [
+        "Italy",
+        "Mexico"
+    ],
+    "rejected_cuisines":[
+        "North America"
+    ]
 }
