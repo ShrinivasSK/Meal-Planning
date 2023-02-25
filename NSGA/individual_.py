@@ -44,11 +44,12 @@ class Individual:
         ]
         return self.objectives
 
-    def check_nutri(self):
-        return self.meal_plan.check_nutri()
+    ## Useful to maintain compatibility between validity calls between Meal Plan and Individual
+    def check_nutri(self,group_index:int):
+        return self.meal_plan.check_nutri(group_index)
 
-    def check_wt(self):
-        return self.meal_plan.check_wt()
+    def check_wt(self,group_index:int):
+        return self.meal_plan.check_wt(group_index)
 
     def check_no_repeat(self):
         return self.meal_plan.check_no_repeat()

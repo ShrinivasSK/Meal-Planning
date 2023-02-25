@@ -1,59 +1,38 @@
 {
-    "user_count": 1,
-    "population_size": 100,
-    "number_of_nutrients": 4,
-    "breakfast_dishes": 3,
-    "lunch_dishes": 5,
-    "snacks_dishes":2,
-    "dinner_dishes": 5,
-    "daily_nutrient_requirements": [
-        [1500,3000],
-        [50,150],
-        [30,80],
-        [150,400]
-    ],
-    "breakfast_nutrient_requirements": [
-        [0,3e9],
-        [0,2e9],
-        [0,6e9],
-        [0,3e9]
-    ],
-    "lunch_nutrient_requirements": [
-        [0,3e9],
-        [0,2e9],
-        [0,6e9],
-        [0,3e9]
-    ],
-    "snacks_nutrient_requirements": [
-        [0,3e9],
-        [0,2e9],
-        [0,6e9],
-        [0,3e9]
-    ],
-    "dinner_nutrient_requirements": [
-        [0,3e9],
-        [0,2e9],
-        [0,6e9],
-        [0,3e9]
-    ],
-    "daily_weight_requirements": [
-        [1000,2000]
-    ],
-    "breakfast_weight_requirements": [
-        [200,410]
-    ],
-    "lunch_weight_requirements": [
-        [300,810]
-    ],
-    "snacks_weight_requirements": [
-        [100,310]
-    ],
-    "dinner_weight_requirements": [
-        [300,810]
-    ],
-    "mutation_parameter": 0.2,
-    "number_of_tournament_participants": 5,
-    "tournament_probability": 0.8,
-    "number_of_generations": 100,
-    "dish_vector_dimensions": 300
+    "meal": {
+        "breakfast_dishes": 3,
+        "lunch_dishes": 5,
+        "snacks_dishes":2,
+        "dinner_dishes": 5
+    },
+    "planning":{
+        "plan_type": "multiple", 
+        "group_count": 1,
+        "number_of_nutrients": 4,
+        "dish_vector_dimensions": 300
+    },
+    "NSGA": {
+        "mutation_parameter": 0.2,
+        "number_of_tournament_participants": 5,
+        "tournament_probability": 0.8,
+        "number_of_generations": 100,
+        "population_size": 100
+    },
+    "groups":[
+        {
+            "user_count": 1,
+            "daily_nutrient_requirements": [
+                [1500,3000],
+                [50,150],
+                [30,80],
+                [150,400]
+            ],
+            "daily_weight_requirements": [
+                [1000,2000]
+            ],
+            "positive_preferences": [],
+            "negative_preferences": []
+        }
+    ]
+    
 }

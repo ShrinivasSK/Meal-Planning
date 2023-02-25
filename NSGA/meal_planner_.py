@@ -11,8 +11,10 @@ class NSGAMealPlanner:
         
         print("Initialising Variables.....")
         
-        problem_config=ProblemConfig(config)
-        dataset=Dataset()
+        problem_config=ProblemConfig(**config)
+        problem_config.init_other()
+
+        dataset=Dataset(config)
         evolution=Evolution(dataset,problem_config)
 
         print("Running")
@@ -27,4 +29,8 @@ class NSGAMealPlanner:
         
         print("Objective Values History: ")
         print(evolution.history_objectives)
+
+    @staticmethod
+    def plan_multiple(config: dict):
+        pass
     

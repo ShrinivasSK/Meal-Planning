@@ -47,9 +47,9 @@ class NSGAUtils:
         return clean
 
     def get_random_quantity(self) -> int:
-        return random.randint(self.problem_config.user_count,self.problem_config.user_count*2)
+        return random.randint(self.problem_config.planning.group_count,self.problem_config.planning.group_count*2)
 
-    def create_intitial_population(self) -> Population:
+    def create_intitial_population(self,group_index=0) -> Population:
         breakfast_options=self.get_cliques(self.dataset,"breakfast",lower_limit=1,higher_limit=3)
         lunch_options=self.get_cliques(self.dataset,"lunch",lower_limit=3,higher_limit=5)
         snacks_options=self.get_cliques(self.dataset,"snacks",lower_limit=1,higher_limit=3)
@@ -59,12 +59,12 @@ class NSGAUtils:
 
         population=Population()
 
-        while (len(population)<self.problem_config.population_size):
+        while (len(population)<self.problem_config.NSGA.population_size):
             meal_plan=[]
 
             ## Add Breakfast Dishes
             breakfast=breakfast_options[random.randint(0,len(breakfast_options)-1)]
-            for i_ in range(self.problem_config.breakfast_dishes):
+            for i_ in range(self.problem_config.meal.breakfast_dishes):
                 if i_<len(breakfast):
                     meal_plan.append(
                         Dish(
@@ -72,7 +72,7 @@ class NSGAUtils:
                             quantity=self.get_random_quantity(),
                             vector=self.dataset.get_dish_vector(breakfast[i_]),
                             title=self.dataset.get_dish_title(breakfast[i_]),
-                            meal=self.problem_config.id2meal[len(meal_plan)],
+                            meal=self.problem_config.get_meal_from_id(len(meal_plan)),
                         )
                     )
                 else:
@@ -80,7 +80,7 @@ class NSGAUtils:
 
             ## Add Lunch Dishes
             lunch=lunch_options[random.randint(0,len(lunch_options)-1)]
-            for i_ in range(self.problem_config.lunch_dishes):
+            for i_ in range(self.problem_config.meal.lunch_dishes):
                 if i_<len(lunch):
                     meal_plan.append(
                         Dish(
@@ -88,7 +88,7 @@ class NSGAUtils:
                             quantity=self.get_random_quantity(),
                             vector=self.dataset.get_dish_vector(lunch[i_]),
                             title=self.dataset.get_dish_title(lunch[i_]),
-                            meal=self.problem_config.id2meal[len(meal_plan)],
+                            meal=self.problem_config.get_meal_from_id(len(meal_plan)),
                         )
                     )
                 else:
@@ -96,7 +96,7 @@ class NSGAUtils:
             
             ## Add Snacks Dishes
             snacks=snacks_options[random.randint(0,len(snacks_options)-1)]
-            for i_ in range(self.problem_config.snacks_dishes):
+            for i_ in range(self.problem_config.meal.snacks_dishes):
                 if i_<len(snacks):
                     meal_plan.append(
                         Dish(
@@ -104,7 +104,7 @@ class NSGAUtils:
                             quantity=self.get_random_quantity(),
                             vector=self.dataset.get_dish_vector(snacks[i_]),
                             title=self.dataset.get_dish_title(snacks[i_]),
-                            meal=self.problem_config.id2meal[len(meal_plan)],
+                            meal=self.problem_config.get_meal_from_id(len(meal_plan)),
                         )
                     )
                 else:
@@ -112,7 +112,7 @@ class NSGAUtils:
 
             ## Add Dinner Dishes
             dinner=dinner_options[random.randint(0,len(dinner_options)-1)]
-            for i_ in range(self.problem_config.dinner_dishes):
+            for i_ in range(self.problem_config.meal.dinner_dishes):
                 if i_<len(dinner):
                     meal_plan.append(
                         Dish(
@@ -120,7 +120,7 @@ class NSGAUtils:
                             quantity=self.get_random_quantity(),
                             vector=self.dataset.get_dish_vector(dinner[i_]),
                             title=self.dataset.get_dish_title(dinner[i_]),
-                            meal=self.problem_config.id2meal[len(meal_plan)],
+                            meal=self.problem_config.get_meal_from_id(len(meal_plan)),
                         )
                     )
                 else:
@@ -133,7 +133,7 @@ class NSGAUtils:
             meal_plan=MealPlan(self.problem_config,self.dataset,meal_plan)
             
             ## Check Validity
-            if(self.isValidChild(meal_plan)):
+            if(self.isValidChild(meal_plan,group_index)):
                 # print(meal_plan.plan)
                 population.append(
                     Individual(
@@ -147,8 +147,12 @@ class NSGAUtils:
 
         return population
     
-    def isValidChild(self,child: MealPlan) -> bool:
-        return child.check_nutri() and child.check_wt() and child.check_no_repeat()
+    def isValidChild(self,child: MealPlan,group_index:int=0) -> bool:
+        return all([
+            child.check_nutri(group_index),
+            child.check_wt(group_index),
+            child.check_no_repeat()
+        ])
 
     def fast_nondominated_sort(self, population:Population ) -> None:
         population.fronts = [[]]
@@ -234,7 +238,7 @@ class NSGAUtils:
     def mutate(self,ind:Individual)-> Individual:
         meal_plan=[]
         for id,dish in enumerate(ind.meal_plan.plan):
-            if(NSGAUtils.choose_with_prob(self.problem_config.mutation_param)):
+            if(NSGAUtils.choose_with_prob(self.problem_config.NSGA.mutation_parameter)):
                 # dish_vec= np.array(deepcopy(dish.vector)[1:-1]).astype('float64')
                 # ings=self.dataset.get_random_ingredients()
                 # for ing in ings:
@@ -244,7 +248,7 @@ class NSGAUtils:
                 #     else:
                 #         dish_vec=np.subtract(ing*random.random(),dish_vec)
                 # id,dish_vec=self.dataset.get_closest_dish(dish_vec)
-                random_dish_id,random_dish_vec=self.dataset.get_random_dish(self.problem_config.id2meal[id])
+                random_dish_id,random_dish_vec=self.dataset.get_random_dish(self.problem_config.get_meal_from_id(id))
 
                 meal_plan.append(
                     Dish(
@@ -252,7 +256,7 @@ class NSGAUtils:
                         quantity=self.get_random_quantity(),
                         vector=random_dish_vec,
                         title=self.dataset.get_dish_title(random_dish_id),
-                        meal=self.problem_config.id2meal[len(meal_plan)],
+                        meal=self.problem_config.get_meal_from_id(len(meal_plan)),
                     )
                 )
             else:
@@ -261,10 +265,10 @@ class NSGAUtils:
         return Individual(MealPlan(self.problem_config,self.dataset,meal_plan))
 
     def tournament(self, population:Population):
-        participants = random.sample(population.population, self.problem_config.tournament_participants)
+        participants = random.sample(population.population, self.problem_config.NSGA.number_of_tournament_participants)
         best = None
         for participant in participants:
-            if best is None or (self.crowding_operator(participant, best) == 1 and NSGAUtils.choose_with_prob(self.problem_config.tournament_prob)):
+            if best is None or (self.crowding_operator(participant, best) == 1 and NSGAUtils.choose_with_prob(self.problem_config.NSGA.tournament_probability)):
                 best = participant
 
         return best

@@ -10,69 +10,52 @@ Methods
 """
 
 class ProblemConfig:
-    def __init__(self,config:dict) -> None:
-        self.user_count=config['user_count']
-        self.population_size=config['population_size']
+    def __init__(self,**config) -> None:
+        for key, value in config.items():
+            if type(value) == dict:
+                config[key] = ProblemConfig(**value)
+            if type(value)==list:
+              config[key]=[]
+              for val in value:
+                if type(val)==dict:
+                  config[key].append(ProblemConfig(**val))
+                else:
+                  config[key].append(val)
+        self.__dict__.update(config)
+    
+    def init_other(self):
+        self.breakfast_id_limit=self.meal.breakfast_dishes
+        self.lunch_id_limit=self.breakfast_id_limit+self.meal.lunch_dishes
+        self.snacks_id_limit=self.lunch_id_limit+self.meal.snacks_dishes
+        self.dinner_id_limit=self.snacks_id_limit+self.meal.dinner_dishes
 
-        self.num_nutrients=config['number_of_nutrients']
-        
-        self.breakfast_dishes=config['breakfast_dishes']
-        self.lunch_dishes=config['lunch_dishes']
-        self.snacks_dishes=config['snacks_dishes']
-        self.dinner_dishes=config['dinner_dishes']
+        self.nutri_limits:list[int]=[]
+        self.wt_limits:list[int]=[]
+        self.preferred_dishes:list[set]=[]
+        self.rejected_dishes:list[set]=[]
 
-        self.breakfast_id_limit=self.breakfast_dishes
-        self.lunch_id_limit=self.breakfast_id_limit+self.lunch_dishes
-        self.snacks_id_limit=self.lunch_id_limit+self.snacks_dishes
-        self.dinner_id_limit=self.snacks_id_limit+self.dinner_dishes
+        for i in range(self.planning.group_count):
+            self.nutri_limits.append(
+                self.groups[i].daily_nutrient_requirements,
+            )
+            self.wt_limits.append(
+               self.groups[i].daily_weight_requirements,
+            )
 
-        self.id2meal={
-            0:'Breakfast',
-            1 :'Breakfast',
-            2: 'Breakfast',
-            3:'Lunch',
-            4 :'Lunch',
-            5 :'Lunch',
-            6: 'Lunch',
-            7 :'Lunch',
-            8: 'Snacks',
-            9: 'Snacks',
-            10 :'Dinner',
-            11: 'Dinner',
-            12: 'Dinner',
-            13: 'Dinner',
-            14: 'Dinner', 
-        }
+            self.preferred_dishes.append(
+               set(self.groups[i].positive_preferences)
+            )
+            self.rejected_dishes.append(
+               set(self.groups[i].negative_preferences)
+            )
 
-        self.nutri_reqs_day=config['daily_nutrient_requirements']
-        self.nutri_reqs_breakfast=config['breakfast_nutrient_requirements']
-        self.nutri_reqs_lunch=config['lunch_nutrient_requirements']
-        self.nutri_reqs_snacks=config['snacks_nutrient_requirements']
-        self.nutri_reqs_dinner=config['dinner_nutrient_requirements']
-        self.nutri_limits=[
-            self.nutri_reqs_day,
-            self.nutri_reqs_breakfast,
-            self.nutri_reqs_lunch,
-            self.nutri_reqs_snacks,
-            self.nutri_reqs_dinner
-        ]
-        
-        self.weight_reqs_day=config['daily_weight_requirements']
-        self.weight_reqs_breakfast=config['breakfast_weight_requirements']
-        self.weight_reqs_lunch=config['lunch_weight_requirements']
-        self.weight_reqs_snacks=config['snacks_weight_requirements']
-        self.weight_reqs_dinner=config['dinner_weight_requirements']
-        self.wt_limits=[
-            self.weight_reqs_day,
-            self.weight_reqs_breakfast,
-            self.weight_reqs_lunch,
-            self.weight_reqs_snacks,
-            self.weight_reqs_dinner
-        ]
-
-        self.mutation_param=config['mutation_parameter']
-        self.tournament_participants=config['number_of_tournament_participants']
-        self.tournament_prob=config['tournament_probability']
-        self.number_of_generations=config['number_of_generations']
-        self.dish_dimensions=config['dish_vector_dimensions']
+    def get_meal_from_id(self,id):
+        if(id<self.breakfast_id_limit):
+            return 'Breakfast'
+        elif(id<self.lunch_id_limit):
+            return 'Lunch'
+        elif(id<self.snacks_id_limit):
+            return 'Snacks'
+        else:
+            return 'Dinner'
 

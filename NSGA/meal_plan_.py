@@ -17,11 +17,12 @@ class MealPlan:
         self.plan.append(dish)
 
     def calculate_nutri(self)->list[list[int]]:
-        nutri_day=[0]*self.problem_config.num_nutrients
-        nutri_breakfast=[0]*self.problem_config.num_nutrients
-        nutri_lunch=[0]*self.problem_config.num_nutrients
-        nutri_snacks=[0]*self.problem_config.num_nutrients
-        nutri_dinner=[0]*self.problem_config.num_nutrients
+        ## Calculated for all meals in the day so that we can check individual limits in the future
+        nutri_day=[0]*self.problem_config.planning.number_of_nutrients
+        nutri_breakfast=[0]*self.problem_config.planning.number_of_nutrients
+        nutri_lunch=[0]*self.problem_config.planning.number_of_nutrients
+        nutri_snacks=[0]*self.problem_config.planning.number_of_nutrients
+        nutri_dinner=[0]*self.problem_config.planning.number_of_nutrients
 
         for id,dish in enumerate(self.plan):
             if(dish.id==0):
@@ -33,13 +34,10 @@ class MealPlan:
 
             if(id<self.problem_config.breakfast_id_limit):
                 nutri_breakfast=list(map(add,nutri_dish,nutri_breakfast))
-            
             elif(id<self.problem_config.lunch_id_limit):
                 nutri_lunch=list(map(add,nutri_dish,nutri_lunch))
-            
             elif(id<self.problem_config.snacks_id_limit):
                 nutri_snacks=list(map(add,nutri_dish,nutri_snacks))
-            
             else:
                 nutri_dinner=list(map(add,nutri_dish,nutri_dinner))
 
@@ -52,6 +50,7 @@ class MealPlan:
         ]
     
     def calculate_wt(self)->list[list[int]]:
+        ## Calculated for all meals in the day so that we can check individual limits in the future
         wt_day=0
         wt_breakfast=0
         wt_lunch=0
@@ -93,31 +92,22 @@ class MealPlan:
                 return False
         return True
 
-    def check_nutri(self) -> bool:
+    def check_nutri(self,group_index) -> bool:
         nutri=self.calculate_nutri()
         # print(nutri)
         # print(self.problem_config.nutri_limits)
-        return all(
-            [
-                MealPlan.checkIfSatisfied(
-                    nutri[i],
-                    self.problem_config.nutri_limits[i]
-                )
-                for i in range(len(nutri))
-            ]
-        )
+        return MealPlan.checkIfSatisfied(
+                nutri[0],
+                self.problem_config.nutri_limits[group_index]
+            )
+   
 
-    def check_wt(self) -> bool:
+    def check_wt(self,group_index) -> bool:
         wt=self.calculate_wt()
-        return all(
-            [
-                MealPlan.checkIfSatisfied(
-                    wt[i],
-                    self.problem_config.wt_limits[i]
-                )
-                for i in range(len(wt))
-            ]
-        )
+        return MealPlan.checkIfSatisfied(
+                wt[0],
+                self.problem_config.wt_limits[group_index]
+            )
 
     def check_no_repeat(self) -> bool:
         dishes=set()
@@ -158,14 +148,14 @@ class MealPlan:
             return 0
         return value/cnt
 
-    def get_pos_preference(self)->float:
+    def get_pos_preference(self,group_index:int=0)->float:
         dish_ids=set([ dish.id for dish in self.plan])
         if(len(dish_ids)==0):
             return 0
-        return len(dish_ids.intersection(self.dataset.preferred_dishes))/len(dish_ids)
+        return len(dish_ids.intersection(self.problem_config.preferred_dishes[group_index]))/len(dish_ids)
 
-    def get_neg_preference(self)->float:
+    def get_neg_preference(self,group_index:int=0)->float:
         dish_ids=set([ dish.id for dish in self.plan])
         if(len(dish_ids)==0):
             return 0
-        return len(dish_ids.intersection(self.dataset.rejected_dishes))/len(dish_ids)
+        return len(dish_ids.intersection(self.problem_config.rejected_dishes[group_index]))/len(dish_ids)

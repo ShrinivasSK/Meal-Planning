@@ -12,7 +12,7 @@ from NSGA.dish_ import Dish
 
 class Dataset:
 
-    def __init__(self) -> None:
+    def __init__(self,config:dict) -> None:
         df_dishes=pd.read_csv("F:/SHRINIVAS/KGP/BTP/Meal-Planning/Data/Processed/dishes.csv")
         df_ings=pd.read_csv("F:/SHRINIVAS/KGP/BTP/Meal-Planning/Data/Processed/ingredients.csv")
         df_dish_ings=pd.read_csv("F:/SHRINIVAS/KGP/BTP/Meal-Planning/Data/Processed/rec_ing.csv")
@@ -47,9 +47,6 @@ class Dataset:
 
         self.combi_model=KeyedVectors.load_word2vec_format("F:\SHRINIVAS\KGP\BTP\Meal-Planning\models\graph_combi.bin",binary=True)
         self.combi_vocab=set(self.combi_model.key_to_index.keys())
-
-        self.preferred_dishes:set[int]=set()
-        self.rejected_dishes:set[int]=set()
 
     
     def get_dish_vector(self,id:int):

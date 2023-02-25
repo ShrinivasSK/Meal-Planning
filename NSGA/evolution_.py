@@ -63,7 +63,7 @@ class Evolution:
         #     print(front[0].calculate_objectives())
         objs=[]
         print("Starting Evolution..")
-        for i in tqdm(range(self.utils.problem_config.number_of_generations)):
+        for i in tqdm(range(self.utils.problem_config.NSGA.number_of_generations)):
             # print("\nIteration: ",i+1)
 
             self.population.extend(children)
@@ -74,14 +74,14 @@ class Evolution:
             new_population=Population()
 
             front_num=0
-            while len(new_population) + len(self.population.fronts[front_num]) <= self.utils.problem_config.population_size:
+            while len(new_population) + len(self.population.fronts[front_num]) <= self.utils.problem_config.NSGA.population_size:
                 self.utils.calculate_crowding_distance(self.population.fronts[front_num])
                 new_population.extend(self.population.fronts[front_num])
                 front_num += 1
 
             self.utils.calculate_crowding_distance(self.population.fronts[front_num])
             self.population.fronts[front_num].sort(key=lambda individual: individual.crowding_distance, reverse=True)
-            new_population.extend(self.population.fronts[front_num][0:self.utils.problem_config.population_size-len(new_population)])
+            new_population.extend(self.population.fronts[front_num][0:self.utils.problem_config.NSGA.population_size-len(new_population)])
             returned_population = self.population
 
             if(i%10==0):
