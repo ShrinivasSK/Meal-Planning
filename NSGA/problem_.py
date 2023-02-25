@@ -1,4 +1,5 @@
 ## Defining the NSGA Problem
+from NSGA.dataset_ import Dataset
 
 """
 Attributes:
@@ -58,4 +59,23 @@ class ProblemConfig:
             return 'Snacks'
         else:
             return 'Dinner'
+
+        flag1,self.preferred_cuisines=self.get_cuisines(config['preferred_cuisines'],data.cuisines)
+        flag2,self.rejected_cuisines=self.get_cuisines(config['rejected_cuisines'],data.cuisines)
+
+        if(flag1==-1 or flag2==-1):
+            self.cuisine_invalid=1
+        else:
+            self.cuisine_invalid=0
+
+        # print(self.preferred_cuisines,self.rejected_cuisines,self.cuisine_invalid)
+
+    def get_cuisines(self,data,cuisines):
+        ret=set()
+        for val in data:
+            if val in cuisines:
+                ret.add(cuisines.index(val))
+            else:
+                return -1,[]
+        return 1,ret   
 

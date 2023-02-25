@@ -1,0 +1,2354 @@
+17:44:34.272 INFO Initialising Variables.....
+17:44:34.486 INFO loading projection weights from Data/Recipe1M/vocab.bin
+17:44:34.486 DEBUG {'uri': 'Data/Recipe1M/vocab.bin', 'mode': 'rb', 'buffering': -1, 'encoding': None, 'errors': None, 'newline': None, 'closefd': True, 'opener': None, 'compression': 'infer_from_extension', 'transport_params': None}
+17:44:34.862 DEBUG starting a new internal lifecycle event log for KeyedVectors
+17:44:34.862 INFO KeyedVectors lifecycle event {'msg': 'loaded (30167, 300) matrix of type float32 from Data/Recipe1M/vocab.bin', 'binary': True, 'encoding': 'utf8', 'datetime': '2022-10-18T17:44:34.852765', 'gensim': '4.2.0', 'python': '3.8.10 (default, Jun 22 2022, 20:18:18) \n[GCC 9.4.0]', 'platform': 'Linux-5.4.0-126-generic-x86_64-with-glibc2.29', 'event': 'load_word2vec_format'}
+17:44:34.888 INFO loading projection weights from models/graph_combi.bin
+17:44:34.924 DEBUG {'uri': 'models/graph_combi.bin', 'mode': 'rb', 'buffering': -1, 'encoding': None, 'errors': None, 'newline': None, 'closefd': True, 'opener': None, 'compression': 'infer_from_extension', 'transport_params': None}
+17:44:34.986 DEBUG starting a new internal lifecycle event log for KeyedVectors
+17:44:34.986 INFO KeyedVectors lifecycle event {'msg': 'loaded (7280, 64) matrix of type float32 from models/graph_combi.bin', 'binary': True, 'encoding': 'utf8', 'datetime': '2022-10-18T17:44:34.986576', 'gensim': '4.2.0', 'python': '3.8.10 (default, Jun 22 2022, 20:18:18) \n[GCC 9.4.0]', 'platform': 'Linux-5.4.0-126-generic-x86_64-with-glibc2.29', 'event': 'load_word2vec_format'}
+17:44:35.6 INFO Running
+17:44:35.28 INFO Creating Initial Population...
+17:44:45.282 INFO Initial Population Size100
+17:44:45.305 INFO Initial Objectives: [[9.811896443108836, 3.8434277310220164, 0.0, -0.0], [9.547738385961463, 3.428348826747364, 0.0, -0.0], [9.51665852762395, 3.4698183284861694, 0.0, -0.0], [9.359833434619675, 2.9907133560987362, 0.0, -0.0], [9.000329693640115, 2.377530330702098, 0.0, -0.0], [9.596367559713629, 4.67941265764462, 0.0, -0.0], [9.655950357398195, 2.595982480708636, 0.0, -0.0], [9.62969981343288, 3.7423778365715554, 0.0, -0.0], [8.62960911919384, 5.031113187222446, 0.0, -0.0], [9.787097528789152, 2.774854089997086, 0.0, -0.0], [9.738985143433487, 2.183739382376025, 0.0, -0.0], [9.733622174373822, 2.9124830664974826, 0.0, -0.0], [9.672571172089896, 2.030413744114502, 0.0, -0.0], [8.896700457850018, 3.144906396439027, 0.0, -0.0], [9.622699786966411, 4.239333545885004, 0.0, -0.0], [9.552973459032726, 3.62246072549545, 0.0, -0.0], [9.78333897089081, 2.428664473922806, 0.0, -0.0], [9.658937179477011, 2.759868752672573, 0.0, -0.0], [9.923676479212844, 2.6509103492050294, 0.0, -0.0], [9.654917766258468, 3.032207913087417, 0.0, -0.0], [9.577128504239838, 2.140055865402029, 0.0, -0.0], [9.566445922780908, 2.251986192433563, 0.0, -0.0], [9.541249670998397, 3.651520904579202, 0.0, -0.0], [9.46320934383449, 2.6478386797053215, 0.0, -0.0], [9.271430754926396, 3.360906867329985, 0.0, -0.0], [9.663764674562263, 3.816396104182577, 0.0, -0.0], [9.575016151773646, 2.6400058511811175, 0.0, -0.0], [9.656827613414787, 3.035083549199292, 0.0, -0.0], [9.272611767333602, 4.503808457890266, 0.0, -0.0], [9.756731860279942, 3.0318031392735065, 0.0, -0.0], [8.534857437719447, 3.0170520629465676, 0.0, -0.0], [9.631852299070525, 2.477393418235789, 0.0, -0.0], [9.739592468033086, 1.9940925175392306, 0.0, -0.0], [9.592786105450863, 2.6295727195650103, 0.0, -0.0], [9.598006974866198, 3.6786576280888594, 0.0, -0.0], [9.600612669568111, 4.051056179939766, 0.0, -0.0], [9.577510844106117, 2.913945415148099, 0.0, -0.0], [9.256060270362962, 2.373957168185464, 0.0, -0.0], [9.390504109448962, 3.6048921556730638, 0.0, -0.0], [9.730671895275249, 3.0683793052505903, 0.0, -0.0], [9.873602968951152, 4.6481533375220465, 0.0, -0.0], [9.602445981785701, 2.7484166680678563, 0.0, -0.0], [9.657020252070032, 1.669028401925112, 0.0, -0.0], [9.66736560459761, 3.924409672456708, 0.0, -0.0], [9.688916730947783, 3.4764040697714047, 0.0, -0.0], [9.366923751019389, 2.5112637828220516, 0.0, -0.0], [9.030210442700556, 3.4432659255712217, 0.0, -0.0], [9.8148883172327, 1.8423123827594687, 0.0, -0.0], [9.422456111609055, 3.0964268102101036, 0.0, -0.0], [9.425925811426586, 2.3374796662310935, 0.0, -0.0], [9.643293240070667, 2.1495894489978093, 0.0, -0.0], [9.668280372637264, 1.9850482896485075, 0.0, -0.0], [9.40335641310731, 2.517657777362463, 0.0, -0.0], [8.893174910883147, 2.2050387912493714, 0.0, -0.0], [9.648589735724961, 2.8012766097883395, 0.0, -0.0], [9.382351998032684, 2.8666934488059206, 0.0, -0.0], [9.715907957758128, 3.3675470492013324, 0.0, -0.0], [8.940579285653381, 4.150948407869973, 0.0, -0.0], [9.72312673844385, 4.1892147278106915, 0.0, -0.0], [9.555538962522844, 2.75497212847117, 0.0, -0.0], [9.562596079874194, 3.3105338035315754, 0.0, -0.0], [9.392913128027189, 4.514510564419581, 0.0, -0.0], [8.871384193254855, 4.000793113765327, 0.0, -0.0], [9.408055725923113, 3.1621874607384686, 0.0, -0.0], [9.571953784370384, 4.195117965237876, 0.0, -0.0], [9.820222708144277, 2.3969058547383004, 0.0, -0.0], [9.611753385253966, 2.417183345251921, 0.0, -0.0], [9.626127631520534, 2.1355273126107397, 0.0, -0.0], [9.67044269582725, 2.662792396885995, 0.0, -0.0], [9.551541890411544, 4.997211755966675, 0.0, -0.0], [9.156630090333168, 3.19306546888821, 0.0, -0.0], [9.117776360770613, 5.0687367839408894, 0.0, -0.0], [9.452739076000855, 5.319115294873707, 0.0, -0.0], [9.512613211783929, 3.298760550053442, 0.0, -0.0], [8.970278424233056, 3.9509745435909305, 0.0, -0.0], [9.552214665034803, 2.4018117870870905, 0.0, -0.0], [9.818194410075906, 2.4084335801836962, 0.0, -0.0], [9.257288098829676, 4.006007070073142, 0.0, -0.0], [8.895775780654311, 4.24507781965019, 0.0, -0.0], [9.701717981320078, 3.758118088518067, 0.0, -0.0], [9.709654877581853, 2.563986661319559, 0.0, -0.0], [9.463745814498504, 3.895041260529846, 0.0, -0.0], [9.520639451742667, 4.118522526613431, 0.0, -0.0], [8.779101353686878, 4.90994076708608, 0.0, -0.0], [9.464510034919194, 3.0107072540495747, 0.0, -0.0], [9.13714397934805, 4.869068912662077, 0.0, -0.0], [9.31637993300523, 3.0943374564820707, 0.0, -0.0], [9.346982312908942, 4.163240110510996, 0.0, -0.0], [9.066751920928377, 4.384990016233608, 0.0, -0.0], [9.634283063985762, 2.818194771940163, 0.0, -0.0], [9.735403146086727, 3.5993437164996678, 0.0, -0.0], [9.703443620276722, 1.9746512467567439, 0.0, -0.0], [9.838383772247669, 2.79447886075961, 0.0, -0.0], [8.866598055458901, 3.771749022692742, 0.0, -0.0], [9.66618047209727, 3.5020167774300006, 0.0, -0.0], [9.528298870688408, 2.679523163163558, 0.0, -0.0], [9.759314189635965, 2.0972072953483223, 0.0, -0.0], [9.475958266465938, 2.8403119339597596, 0.0, -0.0], [9.7255971222958, 2.8044177110954402, 0.0, -0.0], [9.826816102761612, 2.766661332888699, 0.0, -0.0]]
+17:44:45.305 INFO Fast Non Dominated Sorting
+17:44:45.335 INFO 
+Nutrition Values: [2577.03788, 126.236502, 56.7996758, 294.893235]
+Weight: 1100
+Objective Values: [9.596367559713629, 4.67941265764462, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Pepperoni Rolls
+1 
+2 
+3 Irish Potatoes
+4 True Bangers And Mash With Onion Gravy
+5 Irish Potato Candy
+6 
+7 
+8 Sucre A La Creme
+9 
+10 Easy Mexican Hot Chocolate
+11 Swedish Cardamom Meatballs
+12 Sweet And Sour Red Cabbage
+13 
+14 
+17:44:45.344 INFO Calculating Crowding Distance
+17:44:45.344 INFO Creating Children
+17:44:45.557 INFO Initial Objectives
+17:44:45.578 INFO [9.489818360605515, 3.2161337411121576, 0.0, 0.0]
+17:44:45.580 INFO 100
+17:44:45.580 INFO Starting Evolution..
+17:44:45.647 INFO Objective Value: [8.509394775504408, 3.795604200451088, 0.0, 0.0]
+17:44:47.720 INFO Objective Value: [8.382218968889608, 5.240515698669092, 0.0, 0.0]
+17:44:49.428 INFO Objective Value: [8.627506248652175, 6.506800708598966, 0.0, 0.0]
+17:44:51.183 INFO Objective Value: [8.675684676487087, 7.375131352088398, 0.0, 0.0]
+17:44:52.959 INFO Objective Value: [8.933491670372252, 7.150380141576179, 0.0, 0.0]
+17:44:54.780 INFO Objective Value: [9.232806539970461, 6.698691258013267, 0.0, 0.0]
+17:44:56.657 INFO Objective Value: [9.254876179403313, 6.574998603958697, 0.0, 0.0]
+17:44:58.540 INFO Objective Value: [9.19528163503402, 6.366565239908653, 0.0, 0.0]
+17:45:00.420 INFO Objective Value: [8.878369699747545, 6.41904757538502, 0.0, 0.0]
+17:45:02.257 INFO Objective Value: [9.060223689846453, 6.042015819299726, 0.0, 0.0]
+17:45:04.92 INFO Objective Value: [9.11283590576628, 5.734349635383942, 0.0, 0.0]
+17:45:04.92 INFO Meal Plan Generated: 
+17:45:04.108 INFO Front Size: 100
+17:45:04.108 INFO 
+Nutrition Values: [2653.34015, 131.689626, 59.3402208, 326.563032]
+Weight: 1200
+Objective Values: [9.923676479212844, 2.6509103492050294, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 German Potato Pancakes
+1 
+2 
+3 Moroccan Spicy Carrot Salad
+4 Marrakesh Vegetable Curry
+5 Moroccan Potato Bean Soup
+6 
+7 
+8 Kay'S Shortbread
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.108 INFO 
+Nutrition Values: [2647.5341500000004, 140.31016599999998, 52.8189608, 313.742092]
+Weight: 1200
+Objective Values: [9.923676479212844, 2.6509103492050294, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chocolate Chip Orange Zucchini Bread
+1 
+2 
+3 Moroccan Spicy Carrot Salad
+4 Marrakesh Vegetable Curry
+5 Moroccan Potato Bean Soup
+6 
+7 
+8 Kay'S Shortbread
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.108 INFO 
+Nutrition Values: [2731.19725, 143.080974, 55.0148308, 328.445682]
+Weight: 1300
+Objective Values: [9.923676479212844, 2.6509103492050294, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chocolate Chip Orange Zucchini Bread
+1 
+2 
+3 Moroccan Spicy Carrot Salad
+4 Marrakesh Vegetable Curry
+5 Moroccan Potato Bean Soup
+6 
+7 
+8 Chewy Chocolate Chip Oatmeal Cookies
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.139 INFO 
+Nutrition Values: [2899.9722500000003, 147.020946, 62.747580799999994, 357.129642]
+Weight: 1300
+Objective Values: [9.923676479212844, 2.6509103492050294, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 German Potato Pancakes
+1 
+2 
+3 Moroccan Spicy Carrot Salad
+4 Marrakesh Vegetable Curry
+5 Moroccan Potato Bean Soup
+6 
+7 
+8 Easter Eggs
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.139 INFO 
+Nutrition Values: [2899.9722500000003, 147.020946, 62.747580799999994, 357.129642]
+Weight: 1300
+Objective Values: [9.923676479212844, 2.6509103492050294, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 German Potato Pancakes
+1 
+2 
+3 Moroccan Spicy Carrot Salad
+4 Marrakesh Vegetable Curry
+5 Moroccan Potato Bean Soup
+6 
+7 
+8 Easter Eggs
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.173 INFO 
+Nutrition Values: [2899.9722500000003, 147.020946, 62.747580799999994, 357.129642]
+Weight: 1300
+Objective Values: [9.923676479212844, 2.6509103492050294, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 German Potato Pancakes
+1 
+2 
+3 Moroccan Spicy Carrot Salad
+4 Marrakesh Vegetable Curry
+5 Moroccan Potato Bean Soup
+6 
+7 
+8 Easter Eggs
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.173 INFO 
+Nutrition Values: [2618.9982500000006, 139.233506, 54.7239168, 309.732602]
+Weight: 1300
+Objective Values: [9.923676479212844, 2.6509103492050294, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Moroccan Spicy Carrot Salad
+4 Marrakesh Vegetable Curry
+5 Moroccan Potato Bean Soup
+6 
+7 
+8 Easter Eggs
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.174 INFO 
+Nutrition Values: [2618.9982500000006, 139.233506, 54.7239168, 309.732602]
+Weight: 1300
+Objective Values: [9.923676479212844, 2.6509103492050294, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Moroccan Spicy Carrot Salad
+4 Marrakesh Vegetable Curry
+5 Moroccan Potato Bean Soup
+6 
+7 
+8 Easter Eggs
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.197 INFO 
+Nutrition Values: [2765.76735, 140.931376, 62.3010288, 331.405362]
+Weight: 1200
+Objective Values: [9.923676479212844, 2.6509103492050294, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 German Potato Pancakes
+1 
+2 
+3 Moroccan Spicy Carrot Salad
+4 Marrakesh Vegetable Curry
+5 Moroccan Potato Bean Soup
+6 
+7 
+8 Peanut Butter Marshmallow Squares
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.197 INFO 
+Nutrition Values: [2899.9722500000003, 147.020946, 62.747580799999994, 357.129642]
+Weight: 1300
+Objective Values: [9.923676479212844, 2.6509103492050294, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 German Potato Pancakes
+1 
+2 
+3 Moroccan Spicy Carrot Salad
+4 Marrakesh Vegetable Curry
+5 Moroccan Potato Bean Soup
+6 
+7 
+8 Easter Eggs
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.220 INFO 
+Nutrition Values: [2581.2648500000005, 136.653846, 54.6624288, 300.580362]
+Weight: 1300
+Objective Values: [9.923676479212844, 2.6509103492050294, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Moroccan Spicy Carrot Salad
+4 Marrakesh Vegetable Curry
+5 Moroccan Potato Bean Soup
+6 
+7 
+8 Mexican Wedding Cookies
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.220 INFO 
+Nutrition Values: [2650.59515, 146.051366, 57.3578588, 293.209792]
+Weight: 1200
+Objective Values: [9.923676479212844, 2.6509103492050294, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Mini Southwestern Corn Pup Muffins With Fiesta Dipping Sauce
+1 
+2 
+3 Moroccan Spicy Carrot Salad
+4 Marrakesh Vegetable Curry
+5 Moroccan Potato Bean Soup
+6 
+7 
+8 Kay'S Shortbread
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.247 INFO 
+Nutrition Values: [2706.27185, 134.305546, 58.7731948, 330.95104200000003]
+Weight: 1300
+Objective Values: [9.923676479212844, 2.6509103492050294, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Moroccan Spicy Carrot Salad
+4 Marrakesh Vegetable Curry
+5 Moroccan Potato Bean Soup
+6 
+7 
+8 Pizzelles Ii
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.247 INFO 
+Nutrition Values: [2650.59515, 146.051366, 57.3578588, 293.209792]
+Weight: 1200
+Objective Values: [9.923676479212844, 2.6509103492050294, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Mini Southwestern Corn Pup Muffins With Fiesta Dipping Sauce
+1 
+2 
+3 Moroccan Spicy Carrot Salad
+4 Marrakesh Vegetable Curry
+5 Moroccan Potato Bean Soup
+6 
+7 
+8 Kay'S Shortbread
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.248 INFO 
+Nutrition Values: [2650.59515, 146.051366, 57.3578588, 293.209792]
+Weight: 1200
+Objective Values: [9.923676479212844, 2.6509103492050294, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Mini Southwestern Corn Pup Muffins With Fiesta Dipping Sauce
+1 
+2 
+3 Moroccan Spicy Carrot Salad
+4 Marrakesh Vegetable Curry
+5 Moroccan Potato Bean Soup
+6 
+7 
+8 Kay'S Shortbread
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.272 INFO 
+Nutrition Values: [2899.9722500000003, 147.020946, 62.747580799999994, 357.129642]
+Weight: 1300
+Objective Values: [9.923676479212844, 2.6509103492050294, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 German Potato Pancakes
+1 
+2 
+3 Moroccan Spicy Carrot Salad
+4 Marrakesh Vegetable Curry
+5 Moroccan Potato Bean Soup
+6 
+7 
+8 Easter Eggs
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.272 INFO 
+Nutrition Values: [2653.34015, 131.689626, 59.3402208, 326.563032]
+Weight: 1200
+Objective Values: [9.923676479212844, 2.6509103492050294, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 German Potato Pancakes
+1 
+2 
+3 Moroccan Spicy Carrot Salad
+4 Marrakesh Vegetable Curry
+5 Moroccan Potato Bean Soup
+6 
+7 
+8 Kay'S Shortbread
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.272 INFO 
+Nutrition Values: [2731.40499, 136.313535, 64.37742560000001, 326.46755199999996]
+Weight: 1200
+Objective Values: [9.873602968951152, 4.6481533375220465, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 French Crepes
+1 
+2 
+3 Amish Potato Salad
+4 Amish Macaroni Salad
+5 New Year'S Cookies
+6 
+7 
+8 Meringue Mushrooms
+9 
+10 Ghoraiybah
+11 Falafels With Yogurt-Dill Sauce
+12 Lebanese Lemon Lentil Soup
+13 
+14 
+
+17:45:04.304 INFO 
+Nutrition Values: [1951.3231300000002, 98.672988, 34.6885301, 241.35771700000004]
+Weight: 1200
+Objective Values: [9.854428808339511, 4.847705043136576, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Raspberry Lemon Muffins
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Shortbread Christmas Cookies
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.305 INFO 
+Nutrition Values: [2024.0022300000003, 100.37727000000001, 35.6808391, 255.29706700000003]
+Weight: 1200
+Objective Values: [9.854428808339511, 4.847705043136576, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Raspberry Lemon Muffins
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Anzac Biscuits I
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.331 INFO 
+Nutrition Values: [1951.3231300000002, 98.672988, 34.6885301, 241.35771700000004]
+Weight: 1200
+Objective Values: [9.854428808339511, 4.847705043136576, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Raspberry Lemon Muffins
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Shortbread Christmas Cookies
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.331 INFO 
+Nutrition Values: [1816.80363, 100.898414, 34.0459232, 202.070057]
+Weight: 1200
+Objective Values: [9.854428808339511, 4.847705043136576, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Molasses Crinkles
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.354 INFO 
+Nutrition Values: [1959.2274300000001, 107.033776, 35.4862931, 223.216767]
+Weight: 1200
+Objective Values: [9.854428808339511, 4.847705043136576, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Anzac Biscuits I
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.354 INFO 
+Nutrition Values: [2147.1564500000004, 120.745844, 36.4343882, 240.756669]
+Weight: 1400
+Objective Values: [9.854428808339511, 4.847705043136576, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Church-Window Cookies
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.354 INFO 
+Nutrition Values: [2428.13045, 128.53328399999998, 44.4580522, 288.153709]
+Weight: 1400
+Objective Values: [9.854428808339511, 4.847705043136576, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 German Potato Pancakes
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Church-Window Cookies
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.379 INFO 
+Nutrition Values: [2025.2634500000001, 102.672135, 35.4650702, 250.214949]
+Weight: 1300
+Objective Values: [9.854428808339511, 4.847705043136576, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Raspberry Lemon Muffins
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Shortbread Christmas Cookies
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.379 INFO 
+Nutrition Values: [1959.2274300000001, 107.033776, 35.4862931, 223.216767]
+Weight: 1200
+Objective Values: [9.854428808339511, 4.847705043136576, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Anzac Biscuits I
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.402 INFO 
+Nutrition Values: [1953.27313, 110.073561, 35.2889747, 214.788477]
+Weight: 1300
+Objective Values: [9.854428808339511, 4.847705043136576, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Brown-Eyed Susans I
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.402 INFO 
+Nutrition Values: [2221.6078300000004, 133.005461, 41.3214201, 224.147307]
+Weight: 1200
+Objective Values: [9.854428808339511, 4.847705043136576, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Mini Southwestern Corn Pup Muffins With Fiesta Dipping Sauce
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Kay'S Shortbread
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.425 INFO 
+Nutrition Values: [1959.2274300000001, 107.033776, 35.4862931, 223.216767]
+Weight: 1200
+Objective Values: [9.854428808339511, 4.847705043136576, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Anzac Biscuits I
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.425 INFO 
+Nutrition Values: [2117.5783300000003, 120.912651, 38.3709851, 229.650647]
+Weight: 1200
+Objective Values: [9.854428808339511, 4.847705043136576, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Caramel Shortbread
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.425 INFO 
+Nutrition Values: [2237.45643, 129.182956, 41.5275951, 237.26056699999998]
+Weight: 1200
+Objective Values: [9.854428808339511, 4.847705043136576, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Mini Southwestern Corn Pup Muffins With Fiesta Dipping Sauce
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Anzac Biscuits I
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.447 INFO 
+Nutrition Values: [1953.27313, 110.073561, 35.2889747, 214.788477]
+Weight: 1300
+Objective Values: [9.854428808339511, 4.847705043136576, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Brown-Eyed Susans I
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.448 INFO 
+Nutrition Values: [2191.33326, 114.430495, 43.576182200000005, 259.330959]
+Weight: 1300
+Objective Values: [9.854428808339511, 4.847705043136576, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 German Potato Pancakes
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Double Chocolate Biscotti
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.463 INFO 
+Nutrition Values: [2015.71333, 107.113073, 36.907338100000004, 238.999477]
+Weight: 1300
+Objective Values: [9.854428808339511, 4.847705043136576, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Chewiest Brownies
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.463 INFO 
+Nutrition Values: [1959.2274300000001, 107.033776, 35.4862931, 223.216767]
+Weight: 1200
+Objective Values: [9.854428808339511, 4.847705043136576, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Anzac Biscuits I
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.476 INFO 
+Nutrition Values: [2544.9252500000002, 137.974188, 47.487682199999995, 296.924389]
+Weight: 1400
+Objective Values: [9.854428808339511, 4.847705043136576, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 German Potato Pancakes
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Easter Eggs
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.476 INFO 
+Nutrition Values: [2428.13045, 128.53328399999998, 44.4580522, 288.153709]
+Weight: 1400
+Objective Values: [9.854428808339511, 4.847705043136576, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 German Potato Pancakes
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Church-Window Cookies
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.499 INFO 
+Nutrition Values: [2076.6332500000003, 107.418272, 36.071109199999995, 253.190159]
+Weight: 1300
+Objective Values: [9.854428808339511, 4.847705043136576, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Raspberry Lemon Muffins
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Chocolate Chip Cookie Bars
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.499 INFO 
+Nutrition Values: [2733.4133300000003, 130.964901, 48.531812099999996, 358.006557]
+Weight: 1300
+Objective Values: [9.854428808339511, 4.847705043136576, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 German Potato Pancakes
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Easiest Peanut Butter Fudge
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.499 INFO 
+Nutrition Values: [2234.2471300000007, 117.861001, 43.3126387, 262.185517]
+Weight: 1300
+Objective Values: [9.854428808339511, 4.847705043136576, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 German Potato Pancakes
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Brown-Eyed Susans I
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.522 INFO 
+Nutrition Values: [2733.4133300000003, 130.964901, 48.531812099999996, 358.006557]
+Weight: 1300
+Objective Values: [9.854428808339511, 4.847705043136576, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 German Potato Pancakes
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Easiest Peanut Butter Fudge
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.522 INFO 
+Nutrition Values: [2221.6078300000004, 133.005461, 41.3214201, 224.147307]
+Weight: 1200
+Objective Values: [9.854428808339511, 4.847705043136576, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Mini Southwestern Corn Pup Muffins With Fiesta Dipping Sauce
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Kay'S Shortbread
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.522 INFO 
+Nutrition Values: [2224.3528300000007, 118.64372100000001, 43.3037821, 257.500547]
+Weight: 1200
+Objective Values: [9.854428808339511, 4.847705043136576, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 German Potato Pancakes
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Kay'S Shortbread
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.545 INFO 
+Nutrition Values: [2025.2634500000001, 102.672135, 35.4650702, 250.214949]
+Weight: 1300
+Objective Values: [9.854428808339511, 4.847705043136576, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Raspberry Lemon Muffins
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Shortbread Christmas Cookies
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.545 INFO 
+Nutrition Values: [1960.4886500000002, 109.328641, 35.2705242, 218.13464900000002]
+Weight: 1300
+Objective Values: [9.854428808339511, 4.847705043136576, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Shortbread Christmas Cookies
+9 
+10 Amish Sugar Cookies
+11 Amish Potato Salad
+12 New Year'S Cookies
+13 
+14 
+
+17:45:04.545 INFO 
+Nutrition Values: [1995.4621000000002, 101.942856, 48.9810348, 238.52006799999998]
+Weight: 1400
+Objective Values: [9.826243047054442, 6.4137067475152785, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Meringue Mushrooms
+9 
+10 Ghoraiybah
+11 Falafels With Yogurt-Dill Sauce
+12 Lebanese Lemon Lentil Soup
+13 
+14 
+
+17:45:04.556 INFO 
+Nutrition Values: [1985.0324799999999, 103.112301, 48.8726171, 232.86056399999998]
+Weight: 1200
+Objective Values: [9.826243047054442, 6.4137067475152785, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Urban Legend Chocolate Chip Cookies
+9 
+10 Ghoraiybah
+11 Falafels With Yogurt-Dill Sauce
+12 Lebanese Lemon Lentil Soup
+13 
+14 
+
+17:45:04.557 INFO 
+Nutrition Values: [2149.3059000000003, 110.77803999999999, 50.9913362, 254.57590599999997]
+Weight: 1300
+Objective Values: [9.826243047054442, 6.4137067475152785, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Oatmeal Blueberry Muffins
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Kay'S Shortbread
+9 
+10 Ghoraiybah
+11 Falafels With Yogurt-Dill Sauce
+12 Lebanese Lemon Lentil Soup
+13 
+14 
+
+17:45:04.557 INFO 
+Nutrition Values: [2243.88648, 149.011212, 65.6997681, 178.599297]
+Weight: 1200
+Objective Values: [9.632804116770666, 6.466336566874527, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Mini Southwestern Corn Pup Muffins With Fiesta Dipping Sauce
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Mexican Wedding Cakes Ii
+9 
+10 Anise Seed Borrachio Cookies
+11 Jerk Grilled Chicken Wings
+12 Easy Chicken Fajita Soup
+13 
+14 
+
+17:45:04.572 INFO 
+Nutrition Values: [2018.78964, 123.49594100000002, 59.1700436, 185.013719]
+Weight: 1400
+Objective Values: [9.632804116770666, 6.466336566874527, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Molasses Sugar Cookies
+9 
+10 Anise Seed Borrachio Cookies
+11 Jerk Grilled Chicken Wings
+12 Easy Chicken Fajita Soup
+13 
+14 
+
+17:45:04.572 INFO 
+Nutrition Values: [2047.4243, 120.69655400000002, 67.1993512, 191.620939]
+Weight: 1300
+Objective Values: [9.632804116770666, 6.466336566874527, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Apple Puff Pancake
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Chocolate Chip Peppermint Cookies
+9 
+10 Anise Seed Borrachio Cookies
+11 Jerk Grilled Chicken Wings
+12 Easy Chicken Fajita Soup
+13 
+14 
+
+17:45:04.595 INFO 
+Nutrition Values: [1965.6574799999999, 126.862032, 59.6584661, 164.555497]
+Weight: 1200
+Objective Values: [9.632804116770666, 6.466336566874527, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Mexican Wedding Cakes Ii
+9 
+10 Anise Seed Borrachio Cookies
+11 Jerk Grilled Chicken Wings
+12 Easy Chicken Fajita Soup
+13 
+14 
+
+17:45:04.595 INFO 
+Nutrition Values: [1836.1319199999998, 115.87275200000002, 57.89662309999999, 158.656168]
+Weight: 1200
+Objective Values: [9.632804116770666, 6.466336566874527, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Easy Chocolate Truffles
+9 
+10 Anise Seed Borrachio Cookies
+11 Jerk Grilled Chicken Wings
+12 Easy Chicken Fajita Soup
+13 
+14 
+
+17:45:04.595 INFO 
+Nutrition Values: [2243.88648, 149.011212, 65.6997681, 178.599297]
+Weight: 1200
+Objective Values: [9.632804116770666, 6.466336566874527, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Mini Southwestern Corn Pup Muffins With Fiesta Dipping Sauce
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Mexican Wedding Cakes Ii
+9 
+10 Anise Seed Borrachio Cookies
+11 Jerk Grilled Chicken Wings
+12 Easy Chicken Fajita Soup
+13 
+14 
+
+17:45:04.620 INFO 
+Nutrition Values: [1965.6574799999999, 126.862032, 59.6584661, 164.555497]
+Weight: 1200
+Objective Values: [9.632804116770666, 6.466336566874527, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Mexican Wedding Cakes Ii
+9 
+10 Anise Seed Borrachio Cookies
+11 Jerk Grilled Chicken Wings
+12 Easy Chicken Fajita Soup
+13 
+14 
+
+17:45:04.620 INFO 
+Nutrition Values: [1965.6574799999999, 126.862032, 59.6584661, 164.555497]
+Weight: 1200
+Objective Values: [9.632804116770666, 6.466336566874527, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Mexican Wedding Cakes Ii
+9 
+10 Anise Seed Borrachio Cookies
+11 Jerk Grilled Chicken Wings
+12 Easy Chicken Fajita Soup
+13 
+14 
+
+17:45:04.620 INFO 
+Nutrition Values: [2114.36092, 138.021932, 63.937925099999994, 172.699968]
+Weight: 1200
+Objective Values: [9.632804116770666, 6.466336566874527, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Mini Southwestern Corn Pup Muffins With Fiesta Dipping Sauce
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Easy Chocolate Truffles
+9 
+10 Anise Seed Borrachio Cookies
+11 Jerk Grilled Chicken Wings
+12 Easy Chicken Fajita Soup
+13 
+14 
+
+17:45:04.635 INFO 
+Nutrition Values: [1881.7681799999998, 113.50920200000002, 57.211713599999996, 173.704897]
+Weight: 1200
+Objective Values: [9.632804116770666, 6.466336566874527, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Cereal Treats Ii
+9 
+10 Anise Seed Borrachio Cookies
+11 Jerk Grilled Chicken Wings
+12 Easy Chicken Fajita Soup
+13 
+14 
+
+17:45:04.635 INFO 
+Nutrition Values: [2054.1068, 130.03325900000002, 58.2930864, 182.295379]
+Weight: 1300
+Objective Values: [9.632804116770666, 6.466336566874527, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 English Toffee
+9 
+10 Anise Seed Borrachio Cookies
+11 Jerk Grilled Chicken Wings
+12 Easy Chicken Fajita Soup
+13 
+14 
+
+17:45:04.653 INFO 
+Nutrition Values: [2246.5371, 140.60376900000003, 62.7012522, 200.873099]
+Weight: 1400
+Objective Values: [9.632804116770666, 6.466336566874527, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Mexican Wedding Cookies
+9 
+10 Anise Seed Borrachio Cookies
+11 Jerk Grilled Chicken Wings
+12 Easy Chicken Fajita Soup
+13 
+14 
+
+17:45:04.653 INFO 
+Nutrition Values: [1836.1319199999998, 115.87275200000002, 57.89662309999999, 158.656168]
+Weight: 1200
+Objective Values: [9.632804116770666, 6.466336566874527, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Easy Chocolate Truffles
+9 
+10 Anise Seed Borrachio Cookies
+11 Jerk Grilled Chicken Wings
+12 Easy Chicken Fajita Soup
+13 
+14 
+
+17:45:04.654 INFO 
+Nutrition Values: [2243.88648, 149.011212, 65.6997681, 178.599297]
+Weight: 1200
+Objective Values: [9.632804116770666, 6.466336566874527, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Mini Southwestern Corn Pup Muffins With Fiesta Dipping Sauce
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Mexican Wedding Cakes Ii
+9 
+10 Anise Seed Borrachio Cookies
+11 Jerk Grilled Chicken Wings
+12 Easy Chicken Fajita Soup
+13 
+14 
+
+17:45:04.665 INFO 
+Nutrition Values: [1965.6574799999999, 126.862032, 59.6584661, 164.555497]
+Weight: 1200
+Objective Values: [9.632804116770666, 6.466336566874527, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Mexican Wedding Cakes Ii
+9 
+10 Anise Seed Borrachio Cookies
+11 Jerk Grilled Chicken Wings
+12 Easy Chicken Fajita Soup
+13 
+14 
+
+17:45:04.665 INFO 
+Nutrition Values: [2014.728, 125.21727900000002, 58.5161702, 183.385009]
+Weight: 1300
+Objective Values: [9.632804116770666, 6.466336566874527, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Church Windows I
+9 
+10 Anise Seed Borrachio Cookies
+11 Jerk Grilled Chicken Wings
+12 Easy Chicken Fajita Soup
+13 
+14 
+
+17:45:04.692 INFO 
+Nutrition Values: [2246.5371, 140.60376900000003, 62.7012522, 200.873099]
+Weight: 1400
+Objective Values: [9.632804116770666, 6.466336566874527, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Mexican Wedding Cookies
+9 
+10 Anise Seed Borrachio Cookies
+11 Jerk Grilled Chicken Wings
+12 Easy Chicken Fajita Soup
+13 
+14 
+
+17:45:04.692 INFO 
+Nutrition Values: [2172.59678, 136.604622, 61.924712099999994, 192.015867]
+Weight: 1300
+Objective Values: [9.632804116770666, 6.466336566874527, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Mexican Wedding Cookies
+9 
+10 Anise Seed Borrachio Cookies
+11 Jerk Grilled Chicken Wings
+12 Easy Chicken Fajita Soup
+13 
+14 
+
+17:45:04.692 INFO 
+Nutrition Values: [2491.3041800000005, 146.971722, 70.00986409999999, 248.565147]
+Weight: 1300
+Objective Values: [9.632804116770666, 6.466336566874527, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 German Potato Pancakes
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Easter Eggs
+9 
+10 Anise Seed Borrachio Cookies
+11 Jerk Grilled Chicken Wings
+12 Easy Chicken Fajita Soup
+13 
+14 
+
+17:45:04.726 INFO 
+Nutrition Values: [2351.3037, 135.68853000000001, 65.0346868, 235.438188]
+Weight: 1400
+Objective Values: [9.479765737879273, 6.577399443197451, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Country Quiche
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Meringue Mushrooms
+9 
+10 Crunchies
+11 Falafels With Yogurt-Dill Sauce
+12 Lebanese Lemon Lentil Soup
+13 
+14 
+
+17:45:04.727 INFO 
+Nutrition Values: [2093.44303, 130.519544, 50.6548331, 191.06069399999998]
+Weight: 1100
+Objective Values: [9.4378812912384, 6.796353921249683, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Cinnamon-Roasted Almonds
+9 
+10 Easy Mexican Hot Chocolate
+11 Swedish Cardamom Meatballs
+12 Peanut Butter Potato Candy
+13 
+14 
+
+17:45:04.727 INFO 
+Nutrition Values: [2740.27975, 138.050787, 66.0714022, 328.43703600000003]
+Weight: 1300
+Objective Values: [9.4378812912384, 6.796353921249683, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Apple Puff Pancake
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Peanut Butter Cornflake Crunch Bars
+9 
+10 Easy Mexican Hot Chocolate
+11 Swedish Cardamom Meatballs
+12 Peanut Butter Potato Candy
+13 
+14 
+
+17:45:04.753 INFO 
+Nutrition Values: [1940.35573, 115.05806999999999, 44.164402700000004, 192.02629599999997]
+Weight: 1200
+Objective Values: [9.4378812912384, 6.796353921249683, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Meringue Mushrooms
+9 
+10 Easy Mexican Hot Chocolate
+11 Swedish Cardamom Meatballs
+12 Peanut Butter Potato Candy
+13 
+14 
+
+17:45:04.753 INFO 
+Nutrition Values: [2003.8664299999998, 120.226662, 44.832525100000005, 195.224024]
+Weight: 1100
+Objective Values: [9.4378812912384, 6.796353921249683, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Urban Legend Chocolate Chip Cookies
+9 
+10 Easy Mexican Hot Chocolate
+11 Swedish Cardamom Meatballs
+12 Peanut Butter Potato Candy
+13 
+14 
+
+17:45:04.753 INFO 
+Nutrition Values: [1918.77571, 114.29324499999998, 46.4334621, 184.615504]
+Weight: 1100
+Objective Values: [9.4378812912384, 6.796353921249683, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 French Crepes
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Citrus Shortbread Cookies
+9 
+10 Easy Mexican Hot Chocolate
+11 Swedish Cardamom Meatballs
+12 Peanut Butter Potato Candy
+13 
+14 
+
+17:45:04.776 INFO 
+Nutrition Values: [2351.4985500000003, 142.62314100000003, 48.9821902, 227.755036]
+Weight: 1300
+Objective Values: [9.4378812912384, 6.796353921249683, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Mexican Wedding Cookies
+9 
+10 Easy Mexican Hot Chocolate
+11 Swedish Cardamom Meatballs
+12 Peanut Butter Potato Candy
+13 
+14 
+
+17:45:04.776 INFO 
+Nutrition Values: [2351.4985500000003, 142.62314100000003, 48.9821902, 227.755036]
+Weight: 1300
+Objective Values: [9.4378812912384, 6.796353921249683, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Mexican Wedding Cookies
+9 
+10 Easy Mexican Hot Chocolate
+11 Swedish Cardamom Meatballs
+12 Peanut Butter Potato Candy
+13 
+14 
+
+17:45:04.776 INFO 
+Nutrition Values: [2240.44565, 133.24513100000001, 48.1984312, 224.144126]
+Weight: 1200
+Objective Values: [9.4378812912384, 6.796353921249683, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Layers Of Love Chocolate Brownies
+9 
+10 Easy Mexican Hot Chocolate
+11 Swedish Cardamom Meatballs
+12 Peanut Butter Potato Candy
+13 
+14 
+
+17:45:04.800 INFO 
+Nutrition Values: [2060.66995, 119.52772100000001, 44.2691917, 209.444066]
+Weight: 1200
+Objective Values: [9.4378812912384, 6.796353921249683, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Cereal Treats Ii
+9 
+10 Easy Mexican Hot Chocolate
+11 Swedish Cardamom Meatballs
+12 Peanut Butter Potato Candy
+13 
+14 
+
+17:45:04.801 INFO 
+Nutrition Values: [2595.21215, 140.419881, 60.96847520000001, 284.468996]
+Weight: 1200
+Objective Values: [9.4378812912384, 6.796353921249683, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Blueberry Waffles With Fast Blueberry Sauce
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Cocoa Kiss Cookies
+9 
+10 Easy Mexican Hot Chocolate
+11 Swedish Cardamom Meatballs
+12 Peanut Butter Potato Candy
+13 
+14 
+
+17:45:04.801 INFO 
+Nutrition Values: [2070.8369500000003, 109.951012, 43.9280562, 236.657006]
+Weight: 1400
+Objective Values: [9.430288492792249, 7.06067668943729, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Mexican Wedding Cookies
+9 
+10 Crunchies
+11 Vietnamese Fresh Spring Rolls
+12 Lebanese Lemon Lentil Soup
+13 
+14 
+
+17:45:04.826 INFO 
+Nutrition Values: [1910.50945, 102.89149979999999, 45.3833977, 209.79968399999998]
+Weight: 1300
+Objective Values: [9.430288492792249, 7.06067668943729, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Mini Southwestern Corn Pup Muffins With Fiesta Dipping Sauce
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Ladyfingers
+9 
+10 Crunchies
+11 Vietnamese Fresh Spring Rolls
+12 Lebanese Lemon Lentil Soup
+13 
+14 
+
+17:45:04.827 INFO 
+Nutrition Values: [1661.03697, 77.6161594, 43.6872204, 213.47907709999998]
+Weight: 1300
+Objective Values: [9.061882104735046, 7.294733847126486, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Kofta Kebabs
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Cucumber And Apple Salad
+6 
+7 
+8 Fudge Bonbons
+9 
+10 Ghoraiybah
+11 Falafels With Yogurt-Dill Sauce
+12 Lebanese Lemon Lentil Soup
+13 
+14 
+
+17:45:04.827 INFO 
+Nutrition Values: [2015.1710799999998, 116.91932600000001, 48.4206708, 198.027874]
+Weight: 1200
+Objective Values: [8.92995090653811, 7.567989863101592, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Vanilla Crepes
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Molasses Crinkles
+9 
+10 Vietnamese Fresh Spring Rolls
+11 Swedish Cardamom Meatballs
+12 Coconut Ice
+13 
+14 
+
+17:45:04.858 INFO 
+Nutrition Values: [2428.59298, 136.357405, 53.02138370000001, 260.591314]
+Weight: 1300
+Objective Values: [8.92995090653811, 7.567989863101592, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Oatmeal Blueberry Muffins
+1 
+2 
+3 Greek Butter Cookies
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Greek Rice Salad
+6 
+7 
+8 Pecan Pie Bars I
+9 
+10 Vietnamese Fresh Spring Rolls
+11 Swedish Cardamom Meatballs
+12 Coconut Ice
+13 
+14 
+
+17:45:04.858 INFO 
+Nutrition Values: [1679.8709199999998, 94.7305204, 39.64712840000001, 175.8425371]
+Weight: 1200
+Objective Values: [8.673520348919004, 7.6773810208608895, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Kofta Kebabs
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Cucumber And Apple Salad
+6 
+7 
+8 Fudge Bonbons
+9 
+10 Easy Mexican Hot Chocolate
+11 Swedish Cardamom Meatballs
+12 Peanut Butter Potato Candy
+13 
+14 
+
+17:45:04.858 INFO 
+Nutrition Values: [1679.8709199999998, 94.7305204, 39.64712840000001, 175.8425371]
+Weight: 1200
+Objective Values: [8.673520348919004, 7.6773810208608895, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Kofta Kebabs
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Cucumber And Apple Salad
+6 
+7 
+8 Fudge Bonbons
+9 
+10 Easy Mexican Hot Chocolate
+11 Swedish Cardamom Meatballs
+12 Peanut Butter Potato Candy
+13 
+14 
+
+17:45:04.869 INFO 
+Nutrition Values: [1523.69164, 66.96761540000001, 35.096744400000006, 205.5498271]
+Weight: 1300
+Objective Values: [8.665927550472853, 7.941703789048499, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Kofta Kebabs
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Cucumber And Apple Salad
+6 
+7 
+8 Fudgy Brownies I
+9 
+10 Crunchies
+11 Vietnamese Fresh Spring Rolls
+12 Lebanese Lemon Lentil Soup
+13 
+14 
+
+17:45:04.869 INFO 
+Nutrition Values: [1523.69164, 66.96761540000001, 35.096744400000006, 205.5498271]
+Weight: 1300
+Objective Values: [8.665927550472853, 7.941703789048499, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Kofta Kebabs
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Cucumber And Apple Salad
+6 
+7 
+8 Fudgy Brownies I
+9 
+10 Crunchies
+11 Vietnamese Fresh Spring Rolls
+12 Lebanese Lemon Lentil Soup
+13 
+14 
+
+17:45:04.870 INFO 
+Nutrition Values: [1878.95599, 101.49259540000001, 43.910664000000004, 207.4437071]
+Weight: 1300
+Objective Values: [8.165589964218714, 8.449016962712799, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Kofta Kebabs
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Cucumber And Apple Salad
+6 
+7 
+8 Fudgy Brownies I
+9 
+10 Vietnamese Fresh Spring Rolls
+11 Swedish Cardamom Meatballs
+12 Coconut Ice
+13 
+14 
+
+17:45:04.886 INFO 
+Nutrition Values: [1797.40409, 98.9211374, 43.671468000000004, 190.84099709999998]
+Weight: 1200
+Objective Values: [8.165589964218714, 8.449016962712799, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Oatmeal Blueberry Muffins
+1 
+2 
+3 Kofta Kebabs
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Cucumber And Apple Salad
+6 
+7 
+8 Kay'S Shortbread
+9 
+10 Vietnamese Fresh Spring Rolls
+11 Swedish Cardamom Meatballs
+12 Coconut Ice
+13 
+14 
+
+17:45:04.886 INFO 
+Nutrition Values: [2631.3445199999996, 139.31538039999998, 75.8884684, 277.6594771]
+Weight: 1400
+Objective Values: [5.782346899279336, 8.523066836614852, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Pepperoni Rolls
+1 
+2 
+3 Kofta Kebabs
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Cucumber And Apple Salad
+6 
+7 
+8 Fudge Bonbons
+9 
+10 Easy Mexican Hot Chocolate
+11 Swedish Cardamom Meatballs
+12 Peanut Butter Potato Candy
+13 Mushroom And Spinach Ravioli With Chive Butter Sauce
+14 
+
+17:45:04.911 INFO 
+Nutrition Values: [2422.1147199999996, 132.7785604, 68.3547084, 248.3479171]
+Weight: 1400
+Objective Values: [5.782346899279336, 8.523066836614852, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Kofta Kebabs
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Cucumber And Apple Salad
+6 
+7 
+8 Fudge Bonbons
+9 
+10 Easy Mexican Hot Chocolate
+11 Swedish Cardamom Meatballs
+12 Peanut Butter Potato Candy
+13 Mushroom And Spinach Ravioli With Chive Butter Sauce
+14 
+
+17:45:04.911 INFO 
+Nutrition Values: [2421.13539, 131.37619940000002, 70.453818, 247.74941710000002]
+Weight: 1400
+Objective Values: [5.443726642812477, 8.564088636065803, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Kofta Kebabs
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Cucumber And Apple Salad
+6 
+7 
+8 White Chip Chocolate Cookies
+9 
+10 Vietnamese Fresh Spring Rolls
+11 Swedish Cardamom Meatballs
+12 Coconut Ice
+13 Mushroom And Spinach Ravioli With Chive Butter Sauce
+14 
+
+17:45:04.934 INFO 
+Nutrition Values: [2549.8562899999997, 135.37342940000002, 71.392814, 270.2365171]
+Weight: 1400
+Objective Values: [5.443726642812477, 8.564088636065803, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Kofta Kebabs
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Cucumber And Apple Salad
+6 
+7 
+8 Cranberry Squares
+9 
+10 Vietnamese Fresh Spring Rolls
+11 Swedish Cardamom Meatballs
+12 Coconut Ice
+13 Mushroom And Spinach Ravioli With Chive Butter Sauce
+14 
+
+17:45:04.934 INFO 
+Nutrition Values: [2347.6463, 129.95966239999998, 74.975495, 232.15932300000003]
+Weight: 1300
+Objective Values: [5.337683999926699, 8.670784059896496, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Taqueria Style Tacos - Carne Asada
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Cucumber And Apple Salad
+6 
+7 
+8 Easy Chocolate Truffles
+9 
+10 Vietnamese Fresh Spring Rolls
+11 Swedish Cardamom Meatballs
+12 Coconut Ice
+13 
+14 
+
+17:45:04.935 INFO 
+Nutrition Values: [2410.41936, 132.2942004, 75.630459, 241.84524200000004]
+Weight: 1300
+Objective Values: [5.337683999926699, 8.670784059896496, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Chef John'S Buttermilk Biscuits
+1 
+2 
+3 Taqueria Style Tacos - Carne Asada
+4 Gorgonzola And Olive Stuffed Grape Leaves
+5 Cucumber And Apple Salad
+6 
+7 
+8 Urban Legend Chocolate Chip Cookies
+9 
+10 Vietnamese Fresh Spring Rolls
+11 Swedish Cardamom Meatballs
+12 Coconut Ice
+13 
+14 
+
+17:45:04.960 INFO 
+Nutrition Values: [2800.0272999999997, 140.31010839999996, 77.71571300000001, 318.81958000000003]
+Weight: 1200
+Objective Values: [4.027044248961644, 8.778465141994301, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Oatmeal Blueberry Muffins
+1 
+2 
+3 Taqueria Style Tacos - Carne Asada
+4 Caramel Spice Cake
+5 Cucumber And Apple Salad
+6 
+7 
+8 Kay'S Shortbread
+9 
+10 Vietnamese Fresh Spring Rolls
+11 Swedish Cardamom Meatballs
+12 Coconut Ice
+13 
+14 
+
+17:45:04.960 INFO 
+Nutrition Values: [2800.0272999999997, 140.31010839999996, 77.71571300000001, 318.81958000000003]
+Weight: 1200
+Objective Values: [4.027044248961644, 8.778465141994301, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Oatmeal Blueberry Muffins
+1 
+2 
+3 Taqueria Style Tacos - Carne Asada
+4 Caramel Spice Cake
+5 Cucumber And Apple Salad
+6 
+7 
+8 Kay'S Shortbread
+9 
+10 Vietnamese Fresh Spring Rolls
+11 Swedish Cardamom Meatballs
+12 Coconut Ice
+13 
+14 
+
+17:45:04.961 INFO 
+Nutrition Values: [2731.24162, 137.19211519999996, 78.80919100000001, 306.45637000000005]
+Weight: 1300
+Objective Values: [1.2244273024521815, 8.791029770557804, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Oatmeal Blueberry Muffins
+1 
+2 
+3 Taqueria Style Tacos - Carne Asada
+4 Caramel Spice Cake
+5 Cucumber And Apple Salad
+6 
+7 
+8 Kay'S Shortbread
+9 
+10 Vietnamese Fresh Spring Rolls
+11 Swedish Cardamom Meatballs
+12 Ladyfingers
+13 
+14 
+
+17:45:04.961 INFO 
+Nutrition Values: [2731.24162, 137.19211519999996, 78.80919100000001, 306.45637000000005]
+Weight: 1300
+Objective Values: [1.2244273024521815, 8.791029770557804, 0.0, -0.0]
+Non Dominated Rank: 0
+
+ Meal Plan: 
+0 Oatmeal Blueberry Muffins
+1 
+2 
+3 Taqueria Style Tacos - Carne Asada
+4 Caramel Spice Cake
+5 Cucumber And Apple Salad
+6 
+7 
+8 Kay'S Shortbread
+9 
+10 Vietnamese Fresh Spring Rolls
+11 Swedish Cardamom Meatballs
+12 Ladyfingers
+13 
+14 
