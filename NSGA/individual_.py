@@ -35,12 +35,12 @@ class Individual:
             or_condition = or_condition or first > second
         return (and_condition and or_condition)
 
-    def calculate_objectives(self)->"list[float]":
+    def calculate_objectives(self,group_index:int=0)->"list[float]":
         self.objectives= [
             self.meal_plan.get_combi_value(),
             self.meal_plan.get_diversity(),
-            self.meal_plan.get_pos_preference(),
-            -1*self.meal_plan.get_neg_preference(),
+            self.meal_plan.get_pos_preference(group_index),
+            -1*self.meal_plan.get_neg_preference(group_index),
         ]
         return self.objectives
 

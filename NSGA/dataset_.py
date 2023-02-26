@@ -12,7 +12,7 @@ from NSGA.dish_ import Dish
 
 class Dataset:
 
-    def __init__(self,config:dict) -> None:
+    def __init__(self) -> None:
         df_dishes=pd.read_csv("F:/SHRINIVAS/KGP/BTP/Meal-Planning/Data/Processed/dishes.csv")
         df_ings=pd.read_csv("F:/SHRINIVAS/KGP/BTP/Meal-Planning/Data/Processed/ingredients.csv")
         df_dish_ings=pd.read_csv("F:/SHRINIVAS/KGP/BTP/Meal-Planning/Data/Processed/rec_ing.csv")
@@ -50,10 +50,10 @@ class Dataset:
         self.combi_vocab=set(self.combi_model.key_to_index.keys())
 
         self.cuisines=['North America', 'United States', 'Europe', 'Italy',
-       'Middle East', 'South East Asia', 'Canada', 'France', 'Mexico',
-       'British Isles', 'Australia & NZ', 'Greece', 'Eastern Europe',
-       'Asia', 'South America', 'China', 'Japan', 'Africa',
-       'Indian Subcontinent', 'Korea']
+            'Middle East', 'South East Asia', 'Canada', 'France', 'Mexico',
+            'British Isles', 'Australia & NZ', 'Greece', 'Eastern Europe',
+            'Asia', 'South America', 'China', 'Japan', 'Africa',
+            'Indian Subcontinent', 'Korea']
             
 
     def get_dish_vector(self,id:int):

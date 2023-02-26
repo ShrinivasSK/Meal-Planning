@@ -284,7 +284,7 @@ class NSGAUtils:
             return True
         return False
 
-    def create_children(self,population:Population)-> "list[Individual]":
+    def create_children(self,population:Population,group_index:int=0)-> "list[Individual]":
         ## May lead to infinite loop if enough children are never valid
         children=[]
 
@@ -300,14 +300,13 @@ class NSGAUtils:
             child1=self.mutate(child1)
             child2=self.mutate(child2)
 
-            if(self.isValidChild(child1)):
-                child1.calculate_objectives()
+            if(self.isValidChild(child1,group_index)):
+                child1.calculate_objectives(group_index)
                 children.append(child1)
 
-            if(self.isValidChild(child2)):
-                child2.calculate_objectives()
+            if(self.isValidChild(child2,group_index)):
+                child2.calculate_objectives(group_index)
                 children.append(child2)
 
         return children
-
 

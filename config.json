@@ -9,7 +9,8 @@
         "plan_type": "multiple", 
         "group_count": 1,
         "number_of_nutrients": 4,
-        "dish_vector_dimensions": 300
+        "dish_vector_dimensions": 300,
+        "num_suggestions": 5
     },
     "NSGA": {
         "mutation_parameter": 0.2,

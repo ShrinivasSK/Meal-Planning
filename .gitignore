@@ -4,6 +4,7 @@ Data/Kaggle-Meal-Plan/**
 Data/Culinary-DB/**
 Data/Recipe1M/**
 NSGA/__pycache__/**
+test.ipynb
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
