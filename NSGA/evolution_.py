@@ -35,12 +35,17 @@ class Evolution:
     def __init__(self,dataset: Dataset,problem_config:ProblemConfig) -> None:
         self.utils=NSGAUtils(dataset,problem_config)
 
+        self.problem_config=problem_config
         self.population:Population=None
         self.history_objectives:"list[list[float]]"=[]
 
     def evolve(self,group_index:int =0 )->"list[Individual]":
         logger.info("Creating Initial Population...")
-        self.population=self.utils.create_intitial_population(group_index)
+        if self.problem_config.planning.plan_type=="many_in_one":
+            self.population=self.utils.create_initial_population_many()
+        else:
+            self.population=self.utils.create_intitial_population(group_index)
+        
         logger.info("Initial Population Size: "+str(len(self.population)))
 
         init_pop_obj=[]

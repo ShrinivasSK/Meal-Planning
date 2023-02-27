@@ -44,17 +44,9 @@ class Individual:
         ]
         return self.objectives
 
-    ## Useful to maintain compatibility between validity calls between Meal Plan and Individual
-    def check_nutri(self,group_index:int):
-        return self.meal_plan.check_nutri(group_index)
-
-    def check_wt(self,group_index:int):
-        return self.meal_plan.check_wt(group_index)
-
-    def check_no_repeat(self):
-        return self.meal_plan.check_no_repeat()
-
     def __str__(self) -> str:
+        if len(self.objectives)==0:
+            self.calculate_objectives()
         res=""
         res+="\n"+"Nutrition Values: "+str(self.meal_plan.calculate_nutri()[0])
         res+="\n"+"Weight: "+str(self.meal_plan.calculate_wt()[0][0])
@@ -62,6 +54,8 @@ class Individual:
         
         res+="\n"+"\n Meal Plan: "
         for id,dish in enumerate(self.meal_plan.plan):
-            res+="\n"+str(id)+" "+dish.__str__()
+            if dish.id==0:
+                continue
+            res+="\n"+str(self.meal_plan.problem_config.get_meal_from_id(id))+" "+dish.__str__()
 
         return res

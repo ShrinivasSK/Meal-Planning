@@ -20,7 +20,9 @@ from NSGA.dish_ import Dish
 from NSGA.problem_ import ProblemConfig
 
 import networkx as nx
+from operator import add
 import random
+from collections import defaultdict
 import time
 from copy import deepcopy
 from typing import Tuple
@@ -46,8 +48,106 @@ class NSGAUtils:
 
         return clean
 
-    def get_random_quantity(self) -> int:
-        return random.randint(self.problem_config.planning.group_count,self.problem_config.planning.group_count*2)
+    def get_random_quantity(self,group_index=0) -> int:
+        return random.randint(self.problem_config.groups[group_index].user_count,self.problem_config.groups[group_index].user_count*2)
+    
+    def create_initial_population_many(self) -> Population:
+        breakfast_options=self.get_cliques(self.dataset,"breakfast",lower_limit=1,higher_limit=3)
+        lunch_options=self.get_cliques(self.dataset,"lunch",lower_limit=1,higher_limit=5)
+        snacks_options=self.get_cliques(self.dataset,"snacks",lower_limit=1,higher_limit=3)
+        dinner_options=self.get_cliques(self.dataset,"dinner",lower_limit=1,higher_limit=5)
+
+        # print(dinner_options[0])
+
+        population=Population()
+
+        while (len(population)<self.problem_config.NSGA.population_size):
+            meal_plan=[]
+
+            ## Add Breakfast Dishes
+            for group_index in range(self.problem_config.planning.group_count):
+                breakfast=breakfast_options[random.randint(0,len(breakfast_options)-1)]
+                for i_ in range(self.problem_config.meal.breakfast_dishes):
+                    if i_<len(breakfast):
+                        meal_plan.append(
+                            Dish(
+                                id=breakfast[i_],
+                                quantity=self.get_random_quantity(group_index),
+                                vector=self.dataset.get_dish_vector(breakfast[i_]),
+                                title=self.dataset.get_dish_title(breakfast[i_]),
+                                meal=self.problem_config.get_meal_from_id(len(meal_plan)),
+                                cuisine=self.dataset.get_dish_cuisine(breakfast[i_]),
+                            )
+                        )
+                    else:
+                        meal_plan.append(Dish.get_padding_dish())
+
+            ## Add Lunch Dishes
+            for group_index in range(self.problem_config.planning.group_count):
+                lunch=lunch_options[random.randint(0,len(lunch_options)-1)]
+                for i_ in range(self.problem_config.meal.lunch_dishes):
+                    if i_<len(lunch):
+                        meal_plan.append(
+                            Dish(
+                                id=lunch[i_],
+                                quantity=self.get_random_quantity(group_index),
+                                vector=self.dataset.get_dish_vector(lunch[i_]),
+                                title=self.dataset.get_dish_title(lunch[i_]),
+                                meal=self.problem_config.get_meal_from_id(len(meal_plan)),
+                                cuisine=self.dataset.get_dish_cuisine(lunch[i_]),
+                            )
+                        )
+                    else:
+                        meal_plan.append(Dish.get_padding_dish())
+            
+            ## Add Snacks Dishes
+            for group_index in range(self.problem_config.planning.group_count):
+                snacks=snacks_options[random.randint(0,len(snacks_options)-1)]
+                for i_ in range(self.problem_config.meal.snacks_dishes):
+                    if i_<len(snacks):
+                        meal_plan.append(
+                            Dish(
+                                id=snacks[i_],
+                                quantity=self.get_random_quantity(group_index),
+                                vector=self.dataset.get_dish_vector(snacks[i_]),
+                                title=self.dataset.get_dish_title(snacks[i_]),
+                                meal=self.problem_config.get_meal_from_id(len(meal_plan)),
+                                cuisine=self.dataset.get_dish_cuisine(snacks[i_]),
+                            )
+                        )
+                    else:
+                        meal_plan.append(Dish.get_padding_dish())
+
+            ## Add Dinner Dishes
+            for group_index in range(self.problem_config.planning.group_count):
+                dinner=dinner_options[random.randint(0,len(dinner_options)-1)]
+                for i_ in range(self.problem_config.meal.dinner_dishes):
+                    if i_<len(dinner):
+                        meal_plan.append(
+                            Dish(
+                                id=dinner[i_],
+                                quantity=self.get_random_quantity(group_index),
+                                vector=self.dataset.get_dish_vector(dinner[i_]),
+                                title=self.dataset.get_dish_title(dinner[i_]),
+                                meal=self.problem_config.get_meal_from_id(len(meal_plan)),
+                                cuisine=self.dataset.get_dish_cuisine(dinner[i_]),
+                            )
+                        )
+                    else:
+                        meal_plan.append(Dish.get_padding_dish())
+            
+            meal_plan=MealPlan(self.problem_config,self.dataset,meal_plan)
+            
+            ## Check Validity
+            if(self.isValidChild(meal_plan)):
+                population.append(
+                    Individual(
+                        meal_plan=meal_plan
+                        )
+                    )
+        
+        return population
+            
 
     def create_intitial_population(self,group_index=0) -> Population:
         breakfast_options=self.get_cliques(self.dataset,"breakfast",lower_limit=1,higher_limit=3)
@@ -69,7 +169,7 @@ class NSGAUtils:
                     meal_plan.append(
                         Dish(
                             id=breakfast[i_],
-                            quantity=self.get_random_quantity(),
+                            quantity=self.get_random_quantity(group_index),
                             vector=self.dataset.get_dish_vector(breakfast[i_]),
                             title=self.dataset.get_dish_title(breakfast[i_]),
                             meal=self.problem_config.get_meal_from_id(len(meal_plan)),
@@ -86,7 +186,7 @@ class NSGAUtils:
                     meal_plan.append(
                         Dish(
                             id=lunch[i_],
-                            quantity=self.get_random_quantity(),
+                            quantity=self.get_random_quantity(group_index),
                             vector=self.dataset.get_dish_vector(lunch[i_]),
                             title=self.dataset.get_dish_title(lunch[i_]),
                             meal=self.problem_config.get_meal_from_id(len(meal_plan)),
@@ -103,7 +203,7 @@ class NSGAUtils:
                     meal_plan.append(
                         Dish(
                             id=snacks[i_],
-                            quantity=self.get_random_quantity(),
+                            quantity=self.get_random_quantity(group_index),
                             vector=self.dataset.get_dish_vector(snacks[i_]),
                             title=self.dataset.get_dish_title(snacks[i_]),
                             meal=self.problem_config.get_meal_from_id(len(meal_plan)),
@@ -120,7 +220,7 @@ class NSGAUtils:
                     meal_plan.append(
                         Dish(
                             id=dinner[i_],
-                            quantity=self.get_random_quantity(),
+                            quantity=self.get_random_quantity(group_index),
                             vector=self.dataset.get_dish_vector(dinner[i_]),
                             title=self.dataset.get_dish_title(dinner[i_]),
                             meal=self.problem_config.get_meal_from_id(len(meal_plan)),
@@ -152,6 +252,55 @@ class NSGAUtils:
         return population
     
     def isValidChild(self,child: MealPlan,group_index:int=0) -> bool:
+        if self.problem_config.planning.plan_type=="many_in_one":
+            nutri=[0]*self.problem_config.planning.number_of_nutrients
+            wt=0
+            dishes=set()
+            tot=0
+            dish_cnts=defaultdict(int)
+            for id,dish in enumerate(child.plan):
+                if dish.id!=0:
+                    dish_cnts[self.problem_config.get_meal_from_id(id)]+=1
+                    tot+=1
+                    dishes.add(dish.id)
+                    nutri=list(map(add,self.dataset.get_dish_nutri(dish),nutri))
+                    wt+=self.dataset.get_dish_weight(dish)
+            meal_dish_cnt=[
+                dish_cnts['Breakfast'],
+                dish_cnts['Lunch'],
+                dish_cnts['Snacks'],
+                dish_cnts['Dinner'],
+            ]
+            
+            nutri_req=nutri_req=self.problem_config.groups[0].daily_nutrient_requirements
+            wt_req=self.problem_config.groups[0].daily_weight_requirements
+            for group in self.problem_config.groups[1:]:
+                wt_req=list(map(lambda l1,l2: list(map(add,l1,l2)),group.daily_weight_requirements,wt_req))
+                nutri_req=list(map(lambda l1,l2: list(map(add,l1,l2)),group.daily_nutrient_requirements,nutri_req))
+
+            cnt_limits=[
+                [0,(self.problem_config.meal.breakfast_dishes*self.problem_config.planning.group_count)/1.5],
+                [0,(self.problem_config.meal.lunch_dishes*self.problem_config.planning.group_count)/1.5],
+                [0,(self.problem_config.meal.snacks_dishes*self.problem_config.planning.group_count)],
+                [0,(self.problem_config.meal.dinner_dishes*self.problem_config.planning.group_count)/1.5],
+            ]
+
+            t=[
+                MealPlan.checkIfSatisfied(nutri,nutri_req),
+                MealPlan.checkIfSatisfied([wt],wt_req),
+                MealPlan.checkIfSatisfied(meal_dish_cnt,cnt_limits), ## Count Limit to Dishes
+                len(dishes)==tot, ## no repeat
+            ]
+            # print(MealPlan.checkIfSatisfied(meal_dish_cnt,cnt_limits))
+            # print(nutri,nutri_req)
+            # print([wt],wt_req)
+            # print(meal_dish_cnt,cnt_limits)
+            # print(t)
+
+
+            return all(t)
+
+
         return all([
             child.check_nutri(group_index),
             child.check_wt(group_index),
@@ -239,7 +388,7 @@ class NSGAUtils:
         ]
 
 
-    def mutate(self,ind:Individual)-> Individual:
+    def mutate(self,ind:Individual,group_index=0)-> Individual:
         meal_plan=[]
         for id,dish in enumerate(ind.meal_plan.plan):
             if(NSGAUtils.choose_with_prob(self.problem_config.NSGA.mutation_parameter)):
@@ -257,7 +406,7 @@ class NSGAUtils:
                 meal_plan.append(
                     Dish(
                         id=random_dish_id,
-                        quantity=self.get_random_quantity(),
+                        quantity=self.get_random_quantity(group_index),
                         vector=random_dish_vec,
                         title=self.dataset.get_dish_title(random_dish_id),
                         meal=self.problem_config.get_meal_from_id(len(meal_plan)),
@@ -297,14 +446,14 @@ class NSGAUtils:
             
             child1, child2 = self.crossover(parent1,parent2)
 
-            child1=self.mutate(child1)
-            child2=self.mutate(child2)
+            child1=self.mutate(child1,group_index)
+            child2=self.mutate(child2,group_index)
 
-            if(self.isValidChild(child1,group_index)):
+            if(self.isValidChild(child1.meal_plan,group_index)):
                 child1.calculate_objectives(group_index)
                 children.append(child1)
 
-            if(self.isValidChild(child2,group_index)):
+            if(self.isValidChild(child2.meal_plan,group_index)):
                 child2.calculate_objectives(group_index)
                 children.append(child2)
 

@@ -99,16 +99,16 @@ class MealPlan:
         # print(nutri)
         # print(self.problem_config.nutri_limits)
         return MealPlan.checkIfSatisfied(
-                nutri[0],
-                self.problem_config.nutri_limits[group_index]
+                [nutri[0][0]],
+                [self.problem_config.groups[group_index].daily_nutrient_requirements[0]]
             )
    
 
     def check_wt(self,group_index) -> bool:
         wt=self.calculate_wt()
         return MealPlan.checkIfSatisfied(
-                wt[0],
-                self.problem_config.wt_limits[group_index]
+                [wt[0][0]],
+                [self.problem_config.groups[group_index].daily_weight_requirements[0]]
             )
 
     def check_no_repeat(self) -> bool:
@@ -151,13 +151,26 @@ class MealPlan:
         return value/cnt
 
     def get_pos_preference(self,group_index:int=0)->float:
-        dish_ids=set([ dish.id for dish in self.plan])
+        dish_ids=set([ dish.cuisine for dish in self.plan])
         if(len(dish_ids)==0):
             return 0
-        return len(dish_ids.intersection(self.problem_config.preferred_dishes[group_index]))/len(dish_ids)
+        prefered_dishes=set()
+        if self.problem_config.planning.plan_type=="many_in_one":
+            for group in self.problem_config.groups:
+                prefered_dishes.update(group.positive_preferences)
+        else:
+            prefered_dishes=set(self.problem_config.groups[group_index].positive_preferences)
+        return len(dish_ids.intersection(prefered_dishes))/len(dish_ids)
 
     def get_neg_preference(self,group_index:int=0)->float:
-        dish_ids=set([ dish.id for dish in self.plan])
+        dish_ids=set([ dish.cuisine for dish in self.plan])
         if(len(dish_ids)==0):
             return 0
-        return len(dish_ids.intersection(self.problem_config.rejected_dishes[group_index]))/len(dish_ids)
+        rejected_dishes=set()
+        if self.problem_config.planning.plan_type=="many_in_one":
+            for group in self.problem_config.groups:
+                rejected_dishes.update(group.negative_preferences)
+        else:
+            rejected_dishes=set(self.problem_config.groups[group_index].negative_preferences)
+        return len(dish_ids.intersection(rejected_dishes))/len(dish_ids)
+    

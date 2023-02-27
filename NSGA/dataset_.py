@@ -43,7 +43,7 @@ class Dataset:
         self.dish_vecs=np.load("Data/Processed/rec_vecs.npy")
         self.kdTree=KDTree(self.dish_vecs)
 
-        self.ing_vector_model=KeyedVectors.load_word2vec_format("Data/Recipe1M/vocab.bin", binary=True)
+        self.ing_vector_model=KeyedVectors.load_word2vec_format("Data/Recipe1M/vocab.bin/vocab.bin", binary=True)
         self.ing_vocab=list(set(self.ing_vector_model.key_to_index.keys()))
 
         self.combi_model=KeyedVectors.load_word2vec_format("models/graph_combi.bin",binary=True)
