@@ -32,7 +32,9 @@ class Dataset:
                 'Lunch': dish['Lunch'],
                 'Snacks': dish['Snacks'],
                 'Dinner': dish['Dinner'],
-                'Cuisine':dish['Cuisine']
+                'Cuisine':dish['Cuisine'],
+                'Category':dish['Category'],
+                'Tags':dish['Tags']
             }
 
         dish=df_dish_ings['Recipe ID'].values
@@ -70,7 +72,7 @@ class Dataset:
         return vecs
 
     def get_closest_dish(self,vec:"list[float]")->Tuple[int,"list[float]"]:
-        distance,index=self.kdTree.query(vec)
+        _,index=self.kdTree.query(vec)
         return index+1,self.dish_vecs[index]
 
     def get_dish_nutri(self,dish: Dish)->"list[float]":
@@ -86,6 +88,12 @@ class Dataset:
     
     def get_dish_title(self,dish_id:int)->str:
         return self.id2dish[int(dish_id)]['Title']
+    
+    def get_dish_tags(self,dish_id:int)->str:
+        return self.id2dish[int(dish_id)]['Tags']
+    
+    def get_dish_category(self,dish_id:int)->str:
+        return self.id2dish[int(dish_id)]['Category']
 
     def get_dish_cuisine(self,dish_id:int)->str:
         cuisine=self.id2dish[int(dish_id)]['Cuisine']
@@ -93,7 +101,7 @@ class Dataset:
         if(cuisine not in self.cuisines):
             return -1
         else:
-            return self.cuisines.index(cuisine)
+            return cuisine
 
     def get_random_dish(self,meal)->Dish:
         id=random.randint(0,len(self.titles)-1)

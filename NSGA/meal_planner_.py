@@ -6,6 +6,7 @@ from sklearn_extra.cluster import KMedoids
 import numpy as np
 import random
 from collections import defaultdict
+import copy
 
 ## TODO: Model Nutrition as a soft constraint
 class NSGAMealPlanner:
@@ -128,46 +129,130 @@ class NSGAMealPlanner:
         return matched_reps ## NUM_SUGGESTIONS X NUM_GROUPS
     
     @staticmethod
-    def merge_dishes(dishes:list[Dish])->dict[int,bool]:
+    def merge_dishes(dishes:list[Dish],limit,problem_config,dataset,ratio,brute_force=False)->"list[Dish]":
         ## Choose half the dishes from breakfast, lunch, dinner, snacks
         ## TODO: apply a distance threshold
         ## TODO: add logic to select one of the dishes (here preference to first 1 arbitrarily)
-        distances=[]
-        for id1,dish1 in enumerate(dishes):
-            for id2,dish2 in enumerate(dishes):
-                if id1<id2:
-                    distances.append(
-                    [
-                        NSGAMealPlanner.get_difference_dish(dish1,dish2),
-                        (id1,id2)
-                    ])
-        distances=sorted(distances)
+        if not brute_force:
+            distances=[]
+            for id1,dish1 in enumerate(dishes):
+                for id2,dish2 in enumerate(dishes):
+                    if id1<id2:
+                        distances.append(
+                        [
+                            NSGAMealPlanner.get_difference_dish(dish1,dish2),
+                            (id1,id2)
+                        ])
+            distances=sorted(distances)
 
-        removed=defaultdict(lambda: False)
-        num_dishes=len(dishes)
-        cur_id=0
-        while num_dishes>(len(dishes))//1.5 and cur_id<len(distances):
-            dish_id1=distances[cur_id][1][0]
-            dish_id2=distances[cur_id][1][1]
-            if removed[dish_id1] or removed[dish_id2]:
-                cur_id+=1
-                continue ## Take the other dish, i.e do not remove anything
-            else:
-                if random.random()<=0.5: ## remove one randomly for now
-                    removed[dish_id1]=True   
-                    dishes[dish_id2].quantity+=dishes[dish_id1].quantity
+            removed=defaultdict(lambda: False)
+            num_dishes=len(dishes)
+            cur_id=0
+            while num_dishes>(len(dishes))//1.5 and cur_id<len(distances):
+                dish_id1=distances[cur_id][1][0]
+                dish_id2=distances[cur_id][1][1]
+                if removed[dish_id1] or removed[dish_id2]:
+                    cur_id+=1
+                    continue ## Take the other dish, i.e do not remove anything
                 else:
-                    removed[dish_id2]=True
-                    dishes[dish_id1].quantity+=dishes[dish_id2].quantity
-                cur_id+=1
-                num_dishes-=1
+                    if random.random()<=0.5: ## remove one randomly for now
+                        removed[dish_id1]=True   
+                        dishes[dish_id2].quantity+=dishes[dish_id1].quantity
+                    else:
+                        removed[dish_id2]=True
+                        dishes[dish_id1].quantity+=dishes[dish_id2].quantity
+                    cur_id+=1
+                    num_dishes-=1
 
-        merged_dishes=[]
-        for id,dish in enumerate(dishes):
-            if not removed[id]:
-                merged_dishes.append(dish)
+            merged_dishes=[]
+            for id,dish in enumerate(dishes):
+                if not removed[id]:
+                    merged_dishes.append(dish)
 
-        return merged_dishes
+            return merged_dishes
+        else:
+            nutri_req=np.array(problem_config.groups[0].daily_nutrient_requirements)*ratio
+            wt_req=np.array(problem_config.groups[0].daily_weight_requirements)*ratio
+            for group in problem_config.groups[1:]:
+                wt_req+=np.array(group.daily_weight_requirements)*ratio
+                nutri_req+=np.array(group.daily_nutrient_requirements)*ratio
+            num_dishes=len(dishes)
+            total_subsets=2**num_dishes
+            best_subset=[]
+            best_optim=[0]*4
+            tot_quantity=0
+            for dish in dishes:
+                tot_quantity+=dish.quantity
+            for i in range(total_subsets):
+                temp_q=tot_quantity
+                meal=[]
+                for j in range(num_dishes):
+                    temp=i
+                    if j!=0:
+                        temp=i>>(j-1)
+                    if ((temp & 1)):
+                        meal.append(copy.deepcopy(dishes[j]))
+                        temp_q-=dishes[j].quantity
+                
+                if len(meal)<2 or len(meal)>limit:
+                    continue
+                ## maintain food quantity
+                while temp_q>0:
+                    for dish in meal:
+                        dish.quantity+=1
+                        temp_q-=1
+                        if temp_q<=0:
+                            break
+
+                meal_plan=MealPlan(problem_config,dataset,meal)
+                
+                # if not NSGAMealPlanner.isValid(meal_plan,nutri_req,wt_req):
+                #     # print(len(meal))
+                #     continue
+                optim=[
+                    meal_plan.get_pos_preference(),
+                    -1*meal_plan.get_neg_preference(),
+                    meal_plan.get_combi_value(),
+                    meal_plan.get_diversity(),
+                ]
+                if NSGAMealPlanner.is_better(optim,best_optim,len(meal),len(best_subset)):
+                    best_optim=optim
+                    best_subset=meal
+            
+            return best_subset
+        
+    @staticmethod
+    def checkIfSatisfied(vals,limits) -> bool:
+        for i in range(len(vals)):
+            if not (limits[i][0]<=vals[i]):
+                return False
+        return True
+    
+    @staticmethod
+    def isValid(meal_plan:MealPlan,nutri_req,wt_req)->bool:
+        wt=meal_plan.calculate_wt()
+        nutri=meal_plan.calculate_nutri()
+        dishes=set()
+        for dish in meal_plan.plan:
+            dishes.add(dish.id)
+        t=[
+            NSGAMealPlanner.checkIfSatisfied([nutri[0][0]],nutri_req),
+            NSGAMealPlanner.checkIfSatisfied([wt[0][0]],wt_req),
+            # len(dishes)==len(meal_plan.plan), ## no repeat
+        ]
+        # print(t)
+        return all(t)
+        
+    @staticmethod
+    def is_better(val1:"list[float]",val2:"list[float]",l1:int,l2:int)->bool:
+        if val1[1]==0 and val2[1]!=0:
+            return True
+        if val2[1]==0 and val1[1]!=0:
+            return False
+        if val1==val2:
+            return l1<=l2
+        return val1>=val2
+        
 
     @staticmethod
     def merge_group_plans(group_reps:list[Individual],config:ProblemConfig,dataset:Dataset)->Individual:
@@ -192,19 +277,27 @@ class NSGAMealPlanner:
 
         suggested_meal_plan=[]
 
-        merged_breakfast=NSGAMealPlanner.merge_dishes(dishes_breakfast)
+        merged_breakfast=NSGAMealPlanner.merge_dishes(dishes_breakfast,
+                        (config.meal.breakfast_dishes*config.planning.group_count)/1.5,
+                        config,dataset,0.15,brute_force=True)
         config.meal.breakfast_dishes=len(merged_breakfast)
         suggested_meal_plan.extend(merged_breakfast) 
         
-        merged_lunch=NSGAMealPlanner.merge_dishes(dishes_lunch)
+        merged_lunch=NSGAMealPlanner.merge_dishes(dishes_lunch,
+                        (config.meal.lunch_dishes*config.planning.group_count)/1.5,
+                        config,dataset,0.3,brute_force=True)
         config.meal.lunch_dishes=len(merged_lunch)
         suggested_meal_plan.extend(merged_lunch) 
 
-        merged_snacks=NSGAMealPlanner.merge_dishes(dishes_snacks)
+        merged_snacks=NSGAMealPlanner.merge_dishes(dishes_snacks,
+                        (config.meal.snacks_dishes*config.planning.group_count),
+                        config,dataset,0.15,brute_force=True)
         config.meal.snacks_dishes=len(merged_snacks)
         suggested_meal_plan.extend(merged_snacks) 
 
-        merged_dinner=NSGAMealPlanner.merge_dishes(dishes_dinner)
+        merged_dinner=NSGAMealPlanner.merge_dishes(dishes_dinner,
+                        (config.meal.dinner_dishes*config.planning.group_count)/1.5,
+                        config,dataset,0.2,brute_force=True)
         config.meal.dinner_dishes=len(merged_dinner)
         suggested_meal_plan.extend(merged_dinner) 
 

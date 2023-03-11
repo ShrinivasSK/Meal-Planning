@@ -25,15 +25,16 @@
             "daily_nutrient_requirements": [
                 [1000,4000],
                 [50,350],
-                [30,160],
-                [150,600]
+                [30,1600],
+                [100,600]
             ],
             "daily_weight_requirements": [
                 [1000,2000]
             ],
-            "positive_preferences": [],
+            "positive_preferences": ["Indian Subcontinent"],
             "negative_preferences": []
         }
+
     ]
     
 }

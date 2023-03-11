@@ -77,6 +77,8 @@ class NSGAUtils:
                                 title=self.dataset.get_dish_title(breakfast[i_]),
                                 meal=self.problem_config.get_meal_from_id(len(meal_plan)),
                                 cuisine=self.dataset.get_dish_cuisine(breakfast[i_]),
+                                category=self.dataset.get_dish_category(breakfast[i_]),
+                                tags=self.dataset.get_dish_tags(breakfast[i_])
                             )
                         )
                     else:
@@ -95,6 +97,8 @@ class NSGAUtils:
                                 title=self.dataset.get_dish_title(lunch[i_]),
                                 meal=self.problem_config.get_meal_from_id(len(meal_plan)),
                                 cuisine=self.dataset.get_dish_cuisine(lunch[i_]),
+                                category=self.dataset.get_dish_category(lunch[i_]),
+                                tags=self.dataset.get_dish_tags(lunch[i_])
                             )
                         )
                     else:
@@ -113,6 +117,8 @@ class NSGAUtils:
                                 title=self.dataset.get_dish_title(snacks[i_]),
                                 meal=self.problem_config.get_meal_from_id(len(meal_plan)),
                                 cuisine=self.dataset.get_dish_cuisine(snacks[i_]),
+                                category=self.dataset.get_dish_category(snacks[i_]),
+                                tags=self.dataset.get_dish_tags(snacks[i_])
                             )
                         )
                     else:
@@ -131,6 +137,8 @@ class NSGAUtils:
                                 title=self.dataset.get_dish_title(dinner[i_]),
                                 meal=self.problem_config.get_meal_from_id(len(meal_plan)),
                                 cuisine=self.dataset.get_dish_cuisine(dinner[i_]),
+                                category=self.dataset.get_dish_category(dinner[i_]),
+                                tags=self.dataset.get_dish_tags(dinner[i_])
                             )
                         )
                     else:
@@ -174,6 +182,8 @@ class NSGAUtils:
                             title=self.dataset.get_dish_title(breakfast[i_]),
                             meal=self.problem_config.get_meal_from_id(len(meal_plan)),
                             cuisine=self.dataset.get_dish_cuisine(breakfast[i_]),
+                            category=self.dataset.get_dish_category(breakfast[i_]),
+                            tags=self.dataset.get_dish_tags(breakfast[i_])
                         )
                     )
                 else:
@@ -191,6 +201,8 @@ class NSGAUtils:
                             title=self.dataset.get_dish_title(lunch[i_]),
                             meal=self.problem_config.get_meal_from_id(len(meal_plan)),
                             cuisine=self.dataset.get_dish_cuisine(lunch[i_]),
+                            category=self.dataset.get_dish_category(lunch[i_]),
+                            tags=self.dataset.get_dish_tags(lunch[i_])
                         )
                     )
                 else:
@@ -208,6 +220,8 @@ class NSGAUtils:
                             title=self.dataset.get_dish_title(snacks[i_]),
                             meal=self.problem_config.get_meal_from_id(len(meal_plan)),
                             cuisine=self.dataset.get_dish_cuisine(snacks[i_]),
+                            category=self.dataset.get_dish_category(snacks[i_]),
+                            tags=self.dataset.get_dish_tags(snacks[i_])
                         )
                     )
                 else:
@@ -225,6 +239,8 @@ class NSGAUtils:
                             title=self.dataset.get_dish_title(dinner[i_]),
                             meal=self.problem_config.get_meal_from_id(len(meal_plan)),
                             cuisine=self.dataset.get_dish_cuisine(dinner[i_]),
+                            category=self.dataset.get_dish_category(dinner[i_]),
+                            tags=self.dataset.get_dish_tags(dinner[i_])
                         )
                     )
                 else:
@@ -411,6 +427,8 @@ class NSGAUtils:
                         title=self.dataset.get_dish_title(random_dish_id),
                         meal=self.problem_config.get_meal_from_id(len(meal_plan)),
                         cuisine=self.dataset.get_dish_cuisine(random_dish_id),
+                        category=self.dataset.get_dish_category(random_dish_id),
+                        tags=self.dataset.get_dish_tags(random_dish_id)
                     )
                 )
             else:

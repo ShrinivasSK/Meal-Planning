@@ -30,9 +30,9 @@ class ProblemConfig:
         self.snacks_id_limit=self.lunch_id_limit+self.meal.snacks_dishes
         self.dinner_id_limit=self.snacks_id_limit+self.meal.dinner_dishes
         
-        for group in self.groups:
-            _,group.positive_preferences=self.get_cuisines(group.positive_preferences,data.cuisines)
-            _,group.negative_preferences=self.get_cuisines(group.negative_preferences,data.cuisines)
+        # for group in self.groups:
+        #     _,group.positive_preferences=self.get_cuisines(group.positive_preferences,data.cuisines)
+        #     _,group.negative_preferences=self.get_cuisines(group.negative_preferences,data.cuisines)
 
         # print(self.preferred_cuisines,self.rejected_cuisines,self.cuisine_invalid)
 
@@ -67,12 +67,4 @@ class ProblemConfig:
         else:
             return 'Dinner'
 
-    def get_cuisines(self,data,cuisines):
-        ret=set()
-        for val in data:
-            if val in cuisines:
-                ret.add(cuisines.index(val))
-            else:
-                return -1,[]
-        return 1,ret   
 
