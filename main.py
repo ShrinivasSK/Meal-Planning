@@ -11,7 +11,7 @@ logging.basicConfig(filename='Outputs/output.log',
                     filemode='a',
                     format='%(asctime)s.%(msecs)d %(levelname)s %(message)s',
                     datefmt='%H:%M:%S',
-                    level=logging.DEBUG)
+                    level=logging.ERROR)
 
 logger=logging.getLogger()
 

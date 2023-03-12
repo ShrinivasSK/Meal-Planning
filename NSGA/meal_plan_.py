@@ -126,10 +126,10 @@ class MealPlan:
         for i in range(len(self.plan)):
             if self.plan[i].id==0:
                 continue
-            cnt+=1
             for j in range(i+1,len(self.plan)):
                 if self.plan[j].id==0 or self.plan[j].meal!=self.plan[i].meal:
                     continue
+                cnt+=1
                 value+=math.sqrt(abs(self.dataset.get_combi_dish(self.plan[i],self.plan[j])))
         if cnt==0:
             return 0
@@ -141,10 +141,10 @@ class MealPlan:
         for i in range(len(self.plan)):
             if self.plan[i].id==0:
                 continue
-            cnt+=1
             for j in range(i+1,len(self.plan)):
                 if self.plan[j].id==0 or self.plan[j].meal!=self.plan[i].meal:
                     continue
+                cnt+=1
                 value+=np.linalg.norm(self.plan[i].vector[1:-1] - self.plan[j].vector[1:-1])
         if cnt==0:
             return 0
