@@ -149,28 +149,37 @@ class MealPlan:
         if cnt==0:
             return 0
         return value/cnt
+    
+    @staticmethod
+    def intersection(l1:list,l2:list)->int:
+        cnt=0
+        for val in l1:
+            if val in l2:
+                cnt+=1
+        return cnt
+
 
     def get_pos_preference(self,group_index:int=0)->float:
-        dish_ids=set([ dish.cuisine for dish in self.plan])
+        dish_ids=[ dish.cuisine for dish in self.plan for _ in range(dish.quantity)]
         if(len(dish_ids)==0):
             return 0
-        prefered_dishes=set()
+        prefered_dishes=[]
         if self.problem_config.planning.plan_type=="many_in_one":
             for group in self.problem_config.groups:
-                prefered_dishes.update(group.positive_preferences)
+                prefered_dishes.extend(group.positive_preferences)
         else:
-            prefered_dishes=set(self.problem_config.groups[group_index].positive_preferences)
-        return len(dish_ids.intersection(prefered_dishes))/len(dish_ids)
+            prefered_dishes=self.problem_config.groups[group_index].positive_preferences
+        return MealPlan.intersection(dish_ids,prefered_dishes)/len(dish_ids)
 
     def get_neg_preference(self,group_index:int=0)->float:
-        dish_ids=set([ dish.cuisine for dish in self.plan])
+        dish_ids=[ dish.cuisine for dish in self.plan for _ in range(dish.quantity)]
         if(len(dish_ids)==0):
             return 0
-        rejected_dishes=set()
+        rejected_dishes=[]
         if self.problem_config.planning.plan_type=="many_in_one":
             for group in self.problem_config.groups:
-                rejected_dishes.update(group.negative_preferences)
+                rejected_dishes.extend(group.negative_preferences)
         else:
-            rejected_dishes=set(self.problem_config.groups[group_index].negative_preferences)
-        return len(dish_ids.intersection(rejected_dishes))/len(dish_ids)
+            rejected_dishes=self.problem_config.groups[group_index].negative_preferences
+        return MealPlan.intersection(dish_ids,rejected_dishes)/len(dish_ids)
     

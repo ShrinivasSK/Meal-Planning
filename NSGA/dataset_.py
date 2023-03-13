@@ -13,9 +13,9 @@ from NSGA.dish_ import Dish
 class Dataset:
 
     def __init__(self) -> None:
-        df_dishes=pd.read_csv("F:/SHRINIVAS/KGP/BTP/Meal-Planning/Data/Processed/dishes.csv")
-        df_ings=pd.read_csv("F:/SHRINIVAS/KGP/BTP/Meal-Planning/Data/Processed/ingredients.csv")
-        df_dish_ings=pd.read_csv("F:/SHRINIVAS/KGP/BTP/Meal-Planning/Data/Processed/rec_ing.csv")
+        df_dishes=pd.read_csv("./Data/Processed/dishes.csv")
+        df_ings=pd.read_csv("./Data/Processed/ingredients.csv")
+        df_dish_ings=pd.read_csv("./Data/Processed/rec_ing.csv")
               
         self.titles=df_dishes['Title'].values
         self.ings=df_ings['Name'].values
@@ -45,7 +45,7 @@ class Dataset:
         self.dish_vecs=np.load("Data/Processed/rec_vecs.npy")
         self.kdTree=KDTree(self.dish_vecs)
 
-        self.ing_vector_model=KeyedVectors.load_word2vec_format("Data/Recipe1M/vocab.bin/vocab.bin", binary=True)
+        self.ing_vector_model=KeyedVectors.load_word2vec_format("./Data/Recipe1M/vocab.bin", binary=True)
         self.ing_vocab=list(set(self.ing_vector_model.key_to_index.keys()))
 
         self.combi_model=KeyedVectors.load_word2vec_format("models/w2v_combi.bin",binary=True)

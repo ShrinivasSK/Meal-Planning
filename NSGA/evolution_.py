@@ -48,11 +48,8 @@ class Evolution:
         
         logger.info("Initial Population Size: "+str(len(self.population)))
 
-        init_pop_obj=[]
         for pop in self.population:
-            init_pop_obj.append(pop.calculate_objectives(group_index))
-
-        logger.info("Initial All Objectives: "+str(init_pop_obj))
+            pop.calculate_objectives(group_index)
 
         # logger.info("Fast Non Dominated Sorting")
         self.utils.fast_nondominated_sort(self.population)
@@ -69,10 +66,6 @@ class Evolution:
 
         logger.info("Initial Avg Objectives: "+str(self.population.calculate_average_objectives(group_index)))
 
-        # for front in self.population.fronts:
-        #     if(len(front)==0):
-        #         continue
-        #     logger.info(front[0].calculate_objectives())
         logger.info("Starting Evolution..")
         for i in tqdm(range(self.utils.problem_config.NSGA.number_of_generations)):
             # logger.info("\nIteration: ",i+1)
@@ -106,18 +99,6 @@ class Evolution:
                 self.utils.calculate_crowding_distance(front)
             children = self.utils.create_children(self.population,group_index)
 
-            # logger.info("Fronts", len(self.population.fronts))
-            # for front in self.population.fronts:
-            #     if(len(front)==0):
-            #         continue
-            #     logger.info(front[0].calculate_objectives())
-
-            # for front in self.population.fronts:
-            #     for pop in front:
-            #         logger.info(pop.objectives)
-            #     logger.info()
-
-            # break
         
         logger.info("Objective Value: "+str(obj))
         

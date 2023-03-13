@@ -2,18 +2,18 @@ from NSGA.meal_planner_ import NSGAMealPlanner
 
 import logging
 import json
-from sklearn_extra.cluster import KMedoids
-from scipy.spatial import KDTree
-import numpy as np
 import time
 
 logging.basicConfig(filename='Outputs/output.log',
                     filemode='a',
                     format='%(asctime)s.%(msecs)d %(levelname)s %(message)s',
                     datefmt='%H:%M:%S',
-                    level=logging.ERROR)
+                    level=logging.DEBUG)
 
 logger=logging.getLogger()
+
+# TODO: 
+# Threshold on individual objectives when selecting representatives
 
 if __name__=="__main__":
     

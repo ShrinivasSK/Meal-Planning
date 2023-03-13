@@ -2,7 +2,8 @@
 
 from NSGA import Dish, Individual, MealPlan, ProblemConfig, Dataset, Evolution
 
-from sklearn_extra.cluster import KMedoids
+from sklearn.cluster import KMeans
+from scipy.spatial import KDTree
 import numpy as np
 import random
 from collections import defaultdict
@@ -37,10 +38,7 @@ class NSGAMealPlanner:
         for individual in pareto_front:
             res_objectives.append(individual.objectives)
 
-        logger.info("Objective Values of Pareto Front: ")
-        logger.info(str(res_objectives))
-
-        final_pop=NSGAMealPlanner.post_process(pareto_front)
+        final_pop=NSGAMealPlanner.post_process(pareto_front,res_objectives)
         
         logger.info("Meal Plan Generated: ")
         for individual in final_pop:
@@ -49,19 +47,26 @@ class NSGAMealPlanner:
         return final_pop
     
     @staticmethod
-    def post_process(population:"list[Individual]"):
+    def post_process(population:"list[Individual]",objectives:"list[float]"):
+        obj_to_index={}
+
         X=[]
-        for ind in population:
-            X.append([ind.objectives[0],ind.objectives[1]])
+        for id,obj in enumerate(objectives):
+            X.append([obj[0],obj[1]])
 
         X=np.array(X)
         
-        rep_indices=KMedoids(n_clusters=5,init='k-medoids++',random_state=42).fit(X).medoid_indices_
+        kdTree=KDTree(X)
+
+        kmeans=KMeans(n_clusters=5,init='k-means++',random_state=42).fit(X)
+
         representatives=[]
-        for indice in rep_indices:
-            representatives.append(population[indice])
+        for center in kmeans.cluster_centers_:
+            _,id=kdTree.query(center)
+            representatives.append(population[id])
 
         return representatives
+
 
     @staticmethod
     def get_difference_dish(d1:Dish,d2:Dish)->float:
