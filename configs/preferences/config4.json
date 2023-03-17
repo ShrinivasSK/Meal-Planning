@@ -31,9 +31,10 @@
             "daily_weight_requirements": [
                 [1000,2000]
             ],
-            "positive_preferences": [],
-            "negative_preferences": []
+            "positive_preferences": ["Australia & NZ","South East Asia"],
+            "negative_preferences": ["Italy"]
         }
+
     ]
     
 }
