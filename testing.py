@@ -11,7 +11,7 @@ logging.basicConfig(filename='Outputs/output.log',
                     filemode='a',
                     format='%(asctime)s.%(msecs)d %(levelname)s %(message)s',
                     datefmt='%H:%M:%S',
-                    level=logging.WARN)
+                    level=logging.WARNING)
 
 logger=logging.getLogger()
 
@@ -62,11 +62,9 @@ def generate_constraints(all_subsets=False):
             for j in range(5):
                 if ((i>>j) & 1): 
                     if j!=4:
-                        config["groups"][0]["daily_nutrient_requirements"][j]=...
-                        configs[j]["groups"][0]["daily_nutrient_requirements"][j]
+                        config["groups"][0]["daily_nutrient_requirements"][j]=configs[j]["groups"][0]["daily_nutrient_requirements"][j]
                     else:
-                        config["groups"][0]["daily_weight_requirements"]=...
-                        configs[j]["groups"][0]["daily_weight_requirements"]
+                        config["groups"][0]["daily_weight_requirements"]=configs[j]["groups"][0]["daily_weight_requirements"]
             subset_configs.append(config)
         
         return subset_configs
@@ -125,7 +123,7 @@ def generate_all_multiple(plan_type):
     return configs
 
 def run_config(config):
-    logger.warn(f"Config:\n {config}")
+    logger.warning(f"Config:\n {config}")
     
     start=time.time()
     if config['planning']['plan_type']=='multiple':
@@ -147,8 +145,8 @@ def run_config(config):
 
     end=time.time()
 
-    logger.warn(f"Time Required:\n{end-start}")
-    logger.warn("Average Objectives:\n"+str(obj))
+    logger.warning(f"Time Required:\n{end-start}")
+    logger.warning("Average Objectives:\n"+str(obj))
 
     return obj,end-start
 
@@ -219,21 +217,22 @@ def get_values_for_separate(single_objs,single_times):
 
 if __name__=="__main__":
     cons_configs_all=generate_constraints(all_subsets=True) ## 32 configs
-    run_configs("Constraints Configs",cons_configs_all) ## Estimated Time 32 minutes
+    # run_configs("Constraints Configs",cons_configs_all) ## Estimated Time 32 minutes
+    print(cons_configs_all[1])
     
-    prefs_configs_all=generate_preferences(all_subsets=True) ## 20 configs
-    run_configs("Prefernces Configs",prefs_configs_all) ## Estimated Time 20 minutes
+    # prefs_configs_all=generate_preferences(all_subsets=True) ## 20 configs
+    # run_configs("Prefernces Configs",prefs_configs_all) ## Estimated Time 20 minutes
 
-    single_configs_all=generate_all_single() ## 50 configs
-    single_objs,single_times=run_configs("Single Configs",single_configs_all) ## Estimated Time 50 minutes
+    # single_configs_all=generate_all_single() ## 50 configs
+    # single_objs,single_times=run_configs("Single Configs",single_configs_all) ## Estimated Time 50 minutes
 
-    plan_multiple_configs_all=generate_all_multiple("multiple") ## 40 configs
-    run_configs("Plan Multiple Configs",plan_multiple_configs_all) ## Estimated Time 185 minutes
+    # plan_multiple_configs_all=generate_all_multiple("multiple") ## 40 configs
+    # run_configs("Plan Multiple Configs",plan_multiple_configs_all) ## Estimated Time 185 minutes
     
-    plan_in_onego_configs_all=generate_all_multiple("many_in_one") ## 40 configs
-    run_configs("Plan In One Go Configs",plan_in_onego_configs_all) ## Estimated Time 185 minutes
+    # plan_in_onego_configs_all=generate_all_multiple("many_in_one") ## 40 configs
+    # run_configs("Plan In One Go Configs",plan_in_onego_configs_all) ## Estimated Time 185 minutes
 
-    get_values_for_separate(single_objs,single_times)
+    # get_values_for_separate(single_objs,single_times)
 
     ## Estimated Time Required For Complete Run: 470 minutes: 8 hours
     
