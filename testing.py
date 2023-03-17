@@ -216,8 +216,8 @@ def get_values_for_separate(single_objs,single_times):
                     
 
 if __name__=="__main__":
-    cons_configs_all=generate_constraints(all_subsets=True) ## 32 configs
-    run_configs("Constraints Configs",cons_configs_all) ## Estimated Time 32 minutes
+    prefs_configs_all=generate_preferences(all_subsets=True) ## 20 configs
+    run_configs("Prefernces Configs",prefs_configs_all) ## Estimated Time 20 minutes
 
     single_configs_all=generate_all_single() ## 50 configs
     single_objs,single_times=run_configs("Single Configs",single_configs_all) ## Estimated Time 50 minutes
@@ -230,8 +230,8 @@ if __name__=="__main__":
 
     get_values_for_separate(single_objs,single_times)
 
-    prefs_configs_all=generate_preferences(all_subsets=True) ## 20 configs
-    run_configs("Prefernces Configs",prefs_configs_all) ## Estimated Time 20 minutes
+    cons_configs_all=generate_constraints(all_subsets=True) ## 32 configs
+    run_configs("Constraints Configs",cons_configs_all) ## Estimated Time 32 minutes
 
     ## Estimated Time Required For Complete Run: 470 minutes: 8 hours
     
