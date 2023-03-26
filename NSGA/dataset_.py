@@ -48,7 +48,7 @@ class Dataset:
         self.ing_vector_model=KeyedVectors.load_word2vec_format("./Data/Recipe1M/vocab.bin", binary=True)
         self.ing_vocab=list(set(self.ing_vector_model.key_to_index.keys()))
 
-        self.combi_model=KeyedVectors.load_word2vec_format("models/w2v_combi.bin",binary=True)
+        self.combi_model=KeyedVectors.load_word2vec_format("models/graph_combi.bin",binary=True)
         self.combi_vocab=set(self.combi_model.key_to_index.keys())
 
         self.cuisines=['North America', 'United States', 'Europe', 'Italy',

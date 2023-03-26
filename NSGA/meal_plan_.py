@@ -130,10 +130,16 @@ class MealPlan:
                 if self.plan[j].id==0 or self.plan[j].meal!=self.plan[i].meal:
                     continue
                 cnt+=1
-                value+=math.sqrt(abs(self.dataset.get_combi_dish(self.plan[i],self.plan[j])))
+                value+=(self.dataset.get_combi_dish(self.plan[i],self.plan[j]))
         if cnt==0:
             return 0
-        return (value/cnt)*10
+        return (value/cnt)
+    
+    @staticmethod
+    def sim(v1,v2):
+        v1=v1/np.linalg.norm(v1)
+        v2=v2/np.linalg.norm(v2)
+        return np.linalg.norm(v1-v2)/math.sqrt(2)
 
     def get_diversity(self)->float:
         value=0
@@ -145,7 +151,7 @@ class MealPlan:
                 if self.plan[j].id==0 or self.plan[j].meal!=self.plan[i].meal:
                     continue
                 cnt+=1
-                value+=np.linalg.norm(self.plan[i].vector[1:-1] - self.plan[j].vector[1:-1])
+                value+=MealPlan.sim(self.plan[i].vector[1:-1],self.plan[j].vector[1:-1])
         if cnt==0:
             return 0
         return value/cnt

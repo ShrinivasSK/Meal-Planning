@@ -58,7 +58,7 @@ class NSGAMealPlanner:
         
         kdTree=KDTree(X)
 
-        kmeans=KMeans(n_clusters=5,init='k-means++',random_state=42).fit(X)
+        kmeans=KMeans(n_clusters=5,init='k-means++',random_state=42,n_init='auto').fit(X)
 
         representatives=[]
         for center in kmeans.cluster_centers_:
@@ -333,10 +333,7 @@ class NSGAMealPlanner:
             for individual in pareto_front:
                 res_objectives.append(individual.objectives)
 
-            logger.info("Objective Values of Pareto Front: ")
-            logger.info(str(res_objectives))
-
-            group_rep=NSGAMealPlanner.post_process(pareto_front)
+            group_rep=NSGAMealPlanner.post_process(pareto_front,res_objectives)
             group_reps.append(group_rep)
 
         logger.info("Group Plans Ready")
