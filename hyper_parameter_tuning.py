@@ -4,7 +4,7 @@ import logging
 import json
 import numpy as np
 
-logging.basicConfig(filename='Outputs/output.log',
+logging.basicConfig(filename='Outputs/output_hyper_parameter_tuning.log',
                     filemode='a',
                     format='%(asctime)s.%(msecs)d %(levelname)s %(message)s',
                     datefmt='%H:%M:%S',

@@ -7,7 +7,7 @@ import copy
 
 NUM_OBJECTIVES=5
 
-logging.basicConfig(filename='Outputs/output.log',
+logging.basicConfig(filename='Outputs/output_testing.log',
                     filemode='a',
                     format='%(asctime)s.%(msecs)d %(levelname)s %(message)s',
                     datefmt='%H:%M:%S',
@@ -203,6 +203,7 @@ def get_values_for_separate(single_objs,single_times):
                 time+=single_times[j] 
 
             avg_obj=[val/cnt for  val in avg_obj]
+            avg_obj[4]=avg_obj[4]*cnt ## Number of dishes for separate is the sum of individual dishes
             time=time ## Time required for separate is the sum of individual times
 
             ## Take sum to find average of all averages to report as score of separate
@@ -235,9 +236,4 @@ if __name__=="__main__":
 
     ## Estimated Time Required For Complete Run: 470 minutes: 8 hours
     
-
-
-
-    
-
     
