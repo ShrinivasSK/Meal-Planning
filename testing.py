@@ -1,4 +1,4 @@
-from NSGA.meal_planner_ import NSGAMealPlanner
+from plan.meal_planner import NSGAMealPlanner
 
 import logging
 import json
@@ -217,7 +217,7 @@ def get_values_for_separate(single_objs,single_times):
 
 if __name__=="__main__":
     prefs_configs_all=generate_preferences(all_subsets=True) ## 20 configs
-    run_configs("Prefernces Configs",prefs_configs_all) ## Estimated Time 20 minutes
+    run_configs("Prefernces Configs",prefs_configs_all) ## Estimated Time 20 minutes (number of users)
 
     single_configs_all=generate_all_single() ## 50 configs
     single_objs,single_times=run_configs("Single Configs",single_configs_all) ## Estimated Time 50 minutes

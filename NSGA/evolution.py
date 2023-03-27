@@ -18,10 +18,10 @@ Attributes
     a. History Values
 """
 
-from NSGA.dataset_ import Dataset
-from NSGA.individual_ import Individual
-from NSGA.population_ import Population
-from NSGA.problem_ import ProblemConfig
+from plan.dataset import Dataset
+from plan.individual import Individual
+from NSGA.population import Population
+from plan.problem import ProblemConfig
 from NSGA.utils import NSGAUtils
 
 from tqdm import tqdm

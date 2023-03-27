@@ -1,6 +1,8 @@
 ## Putting it all together
 
-from NSGA import Dish, Individual, MealPlan, ProblemConfig, Dataset, Evolution
+from plan import Dish, Dataset, MealPlan, ProblemConfig, Individual
+import NSGA as nsg
+import HybridGA as hbd
 
 from sklearn.cluster import KMeans
 from scipy.spatial import KDTree
@@ -10,7 +12,7 @@ from collections import defaultdict
 import copy
 
 ## TODO: Model Nutrition as a soft constraint
-class NSGAMealPlanner:
+class MealPlanner:
     
     @staticmethod
     def plan(config:dict,logger) -> "list[Individual]":
@@ -21,12 +23,14 @@ class NSGAMealPlanner:
         problem_config=ProblemConfig(**config)
         problem_config.init_other(dataset)
         
-        evolution=Evolution(dataset,problem_config)
+        if problem_config.planning.ga=="hybrid":
+            evolution=hbd.Evolution(dataset,problem_config)
+        else:
+            evolution=nsg.Evolution(dataset,problem_config)
 
         logger.info("Running")
         
         pareto_front=evolution.evolve()
-        
 
         logger.info("NSGA Complete")
         logger.info("Front Size: "+ str(len(pareto_front)))
@@ -38,7 +42,7 @@ class NSGAMealPlanner:
         for individual in pareto_front:
             res_objectives.append(individual.objectives)
 
-        final_pop=NSGAMealPlanner.post_process(pareto_front,res_objectives)
+        final_pop=MealPlanner.post_process(pareto_front,res_objectives)
         
         logger.info("Meal Plan Generated: ")
         for individual in final_pop:
@@ -77,29 +81,15 @@ class NSGAMealPlanner:
         diff=0
         for id in range(len(m1.plan)):
             if problem_config.get_meal_from_id(id)=='Breakfast':
-                diff+=abs(NSGAMealPlanner.get_difference_dish(m1.plan[id],m2.plan[id])/problem_config.meal.breakfast_dishes)
+                diff+=abs(MealPlanner.get_difference_dish(m1.plan[id],m2.plan[id])/problem_config.meal.breakfast_dishes)
             elif problem_config.get_meal_from_id(id)=='Lunch':
-                diff+=abs(NSGAMealPlanner.get_difference_dish(m1.plan[id],m2.plan[id])/problem_config.meal.lunch_dishes)
+                diff+=abs(MealPlanner.get_difference_dish(m1.plan[id],m2.plan[id])/problem_config.meal.lunch_dishes)
             elif problem_config.get_meal_from_id(id)=='Snacks':
-                diff+=abs(NSGAMealPlanner.get_difference_dish(m1.plan[id],m2.plan[id])/problem_config.meal.snacks_dishes)
+                diff+=abs(MealPlanner.get_difference_dish(m1.plan[id],m2.plan[id])/problem_config.meal.snacks_dishes)
             elif problem_config.get_meal_from_id(id)=='Dinner':
-                diff+=abs(NSGAMealPlanner.get_difference_dish(m1.plan[id],m2.plan[id])/problem_config.meal.dinner_dishes)
+                diff+=abs(MealPlanner.get_difference_dish(m1.plan[id],m2.plan[id])/problem_config.meal.dinner_dishes)
         return diff
     
-    @staticmethod
-    def cluster_front(front: list[Individual],config: ProblemConfig) -> list[Individual]:
-        x=[]
-        for ind in front:
-            x.append(ind.objectives)
-        x=np.array(x)
-
-        representatives=KMedoids(n_clusters=config.planning.num_suggestions).fit(x).medoid_indices_
-
-        final_suggestions=[]
-        for rep in representatives:
-            final_suggestions.append(rep)
-
-        return final_suggestions
     
     @staticmethod
     def match_group_plans(group_reps:list[list[Individual]], config: ProblemConfig)->list[list[Individual]]:
@@ -111,7 +101,7 @@ class NSGAMealPlanner:
                 for id2,plan2 in enumerate(group_reps[id-1]):
                     distances.append(
                         [ 
-                        NSGAMealPlanner.difference_between_meal_plans(
+                        MealPlanner.difference_between_meal_plans(
                             plan1.meal_plan,plan2.meal_plan,config),
                         (id1,id2)
                         ]
@@ -145,7 +135,7 @@ class NSGAMealPlanner:
                     if id1<id2:
                         distances.append(
                         [
-                            NSGAMealPlanner.get_difference_dish(dish1,dish2),
+                            MealPlanner.get_difference_dish(dish1,dish2),
                             (id1,id2)
                         ])
             distances=sorted(distances)
@@ -211,7 +201,7 @@ class NSGAMealPlanner:
 
                 meal_plan=MealPlan(problem_config,dataset,meal)
                 
-                # if not NSGAMealPlanner.isValid(meal_plan,nutri_req,wt_req):
+                # if not MealPlanner.isValid(meal_plan,nutri_req,wt_req):
                 #     # print(len(meal))
                 #     continue
                 optim=[
@@ -220,7 +210,7 @@ class NSGAMealPlanner:
                     meal_plan.get_combi_value(),
                     meal_plan.get_diversity(),
                 ]
-                if NSGAMealPlanner.is_better(optim,best_optim,len(meal),len(best_subset)):
+                if MealPlanner.is_better(optim,best_optim,len(meal),len(best_subset)):
                     best_optim=optim
                     best_subset=meal
             
@@ -241,8 +231,8 @@ class NSGAMealPlanner:
         for dish in meal_plan.plan:
             dishes.add(dish.id)
         t=[
-            NSGAMealPlanner.checkIfSatisfied([nutri[0][0]],nutri_req),
-            NSGAMealPlanner.checkIfSatisfied([wt[0][0]],wt_req),
+            MealPlanner.checkIfSatisfied([nutri[0][0]],nutri_req),
+            MealPlanner.checkIfSatisfied([wt[0][0]],wt_req),
             # len(dishes)==len(meal_plan.plan), ## no repeat
         ]
         # print(t)
@@ -282,25 +272,25 @@ class NSGAMealPlanner:
 
         suggested_meal_plan=[]
 
-        merged_breakfast=NSGAMealPlanner.merge_dishes(dishes_breakfast,
+        merged_breakfast=MealPlanner.merge_dishes(dishes_breakfast,
                         (config.meal.breakfast_dishes*config.planning.group_count)/1.5,
                         config,dataset,0.15,brute_force=True)
         config.meal.breakfast_dishes=len(merged_breakfast)
         suggested_meal_plan.extend(merged_breakfast) 
         
-        merged_lunch=NSGAMealPlanner.merge_dishes(dishes_lunch,
+        merged_lunch=MealPlanner.merge_dishes(dishes_lunch,
                         (config.meal.lunch_dishes*config.planning.group_count)/1.5,
                         config,dataset,0.3,brute_force=True)
         config.meal.lunch_dishes=len(merged_lunch)
         suggested_meal_plan.extend(merged_lunch) 
 
-        merged_snacks=NSGAMealPlanner.merge_dishes(dishes_snacks,
+        merged_snacks=MealPlanner.merge_dishes(dishes_snacks,
                         (config.meal.snacks_dishes*config.planning.group_count),
                         config,dataset,0.15,brute_force=True)
         config.meal.snacks_dishes=len(merged_snacks)
         suggested_meal_plan.extend(merged_snacks) 
 
-        merged_dinner=NSGAMealPlanner.merge_dishes(dishes_dinner,
+        merged_dinner=MealPlanner.merge_dishes(dishes_dinner,
                         (config.meal.dinner_dishes*config.planning.group_count)/1.5,
                         config,dataset,0.2,brute_force=True)
         config.meal.dinner_dishes=len(merged_dinner)
@@ -317,7 +307,10 @@ class NSGAMealPlanner:
         problem_config=ProblemConfig(**config)
         problem_config.init_other(dataset)
 
-        evolution=Evolution(dataset,problem_config)
+        if problem_config.planning.ga=="hybrid":
+            evolution=hbd.Evolution(dataset,problem_config)
+        else:
+            evolution=nsg.Evolution(dataset,problem_config)
 
         logger.info("Running")
         group_reps=[]
@@ -336,17 +329,17 @@ class NSGAMealPlanner:
             logger.info("Objective Values of Pareto Front: ")
             logger.info(str(res_objectives))
 
-            group_rep=NSGAMealPlanner.post_process(pareto_front)
+            group_rep=MealPlanner.post_process(pareto_front)
             group_reps.append(group_rep)
 
         logger.info("Group Plans Ready")
         logger.info("Matching Group Plans")
-        matched_reps=NSGAMealPlanner.match_group_plans(group_reps,problem_config)
+        matched_reps=MealPlanner.match_group_plans(group_reps,problem_config)
 
         logger.info("Meal Plan Generated: ")
         final_pop=[]
         for matched_rep in matched_reps:
-            suggested=NSGAMealPlanner.merge_group_plans(matched_rep,problem_config,dataset)
+            suggested=MealPlanner.merge_group_plans(matched_rep,problem_config,dataset)
             logger.info(str(suggested)+"\n")
             final_pop.append(suggested)
 

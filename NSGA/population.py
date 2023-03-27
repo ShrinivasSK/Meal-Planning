@@ -1,6 +1,6 @@
 ## Population Class: Has a list of citizens
 
-from NSGA.individual_ import Individual
+from plan.individual import Individual
 
 
 NUM_OBJECTIVES=4

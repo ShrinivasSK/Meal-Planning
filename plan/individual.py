@@ -1,5 +1,5 @@
 ## Individual of the Population: Meal Plan
-from NSGA.meal_plan_ import MealPlan
+from plan.meal_plan import MealPlan
 
 import numpy as np
 
@@ -35,13 +35,17 @@ class Individual:
             or_condition = or_condition or first > second
         return (and_condition and or_condition)
 
-    def calculate_objectives(self,group_index:int=0)->"list[float]":
+    def calculate_objectives(self,penalty_wts=None,group_index:int=0)->"list[float]":
         self.objectives= [
             self.meal_plan.get_combi_value(),
             self.meal_plan.get_diversity(),
             self.meal_plan.get_pos_preference(group_index),
             -1*self.meal_plan.get_neg_preference(group_index),
         ]
+        if penalty_wts!=None: ## Penalty is 0 if HybridGA is not being used
+            penalty=self.meal_plan.get_penalty(penalty_wts,group_index) 
+            for i in range(len(self.objectives)):
+                self.objectives[i]-=penalty
         return self.objectives
 
     def __str__(self) -> str:

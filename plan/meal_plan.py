@@ -1,7 +1,7 @@
 ## Class for Meal Plan
-from NSGA.dataset_ import Dataset
-from NSGA.dish_ import Dish
-from NSGA.problem_ import ProblemConfig
+from plan.dataset import Dataset
+from plan.dish import Dish
+from plan.problem import ProblemConfig
 
 from operator import add
 import numpy as np
@@ -182,4 +182,36 @@ class MealPlan:
         else:
             rejected_dishes=self.problem_config.groups[group_index].negative_preferences
         return MealPlan.intersection(dish_ids,rejected_dishes)/len(dish_ids)
+    
+    @staticmethod
+    def get_penalty_value(vals,limits):
+        p=0
+        cnt=0
+        for i in range(len(vals)):
+            ## lower limit penalty
+            if vals[i]<limits[i][0]:
+                p+=vals[i]/limits[i][0]
+                cnt+=1
+            ## upper limit penalty
+            if vals[i]>limits[i][1]:
+                p+=1-(vals[i]/limits[i][1])
+                cnt+=1
+        return p/cnt
+
+    def get_penalty(self,penalty_wts,group_index:int =0):
+        if self.problem_config.planning.ga!="hybrid":
+            return 0
+        nutri=self.calculate_nutri()
+        nutri_penalty=MealPlan.get_penalty_value(
+            [nutri[0][0]],
+            [self.problem_config.groups[group_index].daily_nutrient_requirements[0]]
+        )
+        
+        wt=self.calculate_wt()
+        wt_penalty=MealPlan.get_penalty_value(
+            [wt[0][0]],
+                [self.problem_config.groups[group_index].daily_weight_requirements[0]]
+        )
+
+        return penalty_wts[0] * nutri_penalty + penalty_wts[1] * wt_penalty
     

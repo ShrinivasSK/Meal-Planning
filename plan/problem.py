@@ -1,5 +1,5 @@
 ## Defining the NSGA Problem
-from NSGA.dataset_ import Dataset
+from plan.dataset import Dataset
 
 """
 Attributes:

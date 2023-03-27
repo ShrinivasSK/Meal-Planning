@@ -1,4 +1,4 @@
-from NSGA.meal_planner_ import NSGAMealPlanner
+from plan.meal_planner import NSGAMealPlanner
 
 import logging
 import json
