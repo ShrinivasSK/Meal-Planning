@@ -18,14 +18,11 @@ Attributes
     a. History Values
 """
 
-from plan.dataset import Dataset
-from plan.individual import Individual
-from NSGA.population import Population
-from plan.problem import ProblemConfig
+from plan import Dataset, Individual, ProblemConfig
 from NSGA.utils import NSGAUtils
+from NSGA.population import NSGAPopulation
 
 from tqdm import tqdm
-
 import logging
 
 logger=logging.getLogger()
@@ -36,7 +33,7 @@ class Evolution:
         self.utils=NSGAUtils(dataset,problem_config)
 
         self.problem_config=problem_config
-        self.population:Population=None
+        self.population:NSGAPopulation=None
         self.history_objectives:"list[list[float]]"=[]
 
     def evolve(self,group_index:int =0 )->"list[Individual]":
@@ -75,7 +72,7 @@ class Evolution:
             self.utils.fast_nondominated_sort(self.population)
 
             # logger.info("Creating new population")
-            new_population=Population()
+            new_population=NSGAPopulation()
 
             front_num=0
             while len(new_population) + len(self.population.fronts[front_num]) <= self.utils.problem_config.NSGA.population_size:

@@ -29,6 +29,9 @@ class ProblemConfig:
         self.lunch_id_limit=self.breakfast_id_limit+self.meal.lunch_dishes
         self.snacks_id_limit=self.lunch_id_limit+self.meal.snacks_dishes
         self.dinner_id_limit=self.snacks_id_limit+self.meal.dinner_dishes
+
+        self.init_feasible_population_limit=self.HybridGA.target_proportion*self.HybridGA.population_size
+        self.init_infeasible_population_limit=(1-self.HybridGA.target_proportion)*self.HybridGA.population_size
         
         # for group in self.groups:
         #     _,group.positive_preferences=self.get_cuisines(group.positive_preferences,data.cuisines)

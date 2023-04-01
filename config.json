@@ -22,7 +22,8 @@
         "number_of_tournament_participants": 2,
         "population_size": 200,
         "diversification_iter": 10,
-        "target_proportion": 0.7
+        "target_proportion": 0.7,
+        "number_elite": 50
     },
     "NSGA": {
         "mutation_parameter": 0.1,

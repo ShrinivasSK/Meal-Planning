@@ -4,3 +4,4 @@ from .dataset import Dataset
 from .dish import Dish
 from .individual import Individual
 from .utils import PlanUtils
+from .meal_planner import MealPlanner

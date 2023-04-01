@@ -1,11 +1,11 @@
 ## Population Class: Has a list of citizens
 
-from plan.individual import Individual
+from plan import Individual
 
 
 NUM_OBJECTIVES=4
 
-class Population:
+class NSGAPopulation:
     
     def __init__(self) -> None:
         self.population:"list[Individual]"=list()

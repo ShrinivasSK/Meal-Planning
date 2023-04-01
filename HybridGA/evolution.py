@@ -16,11 +16,10 @@ Attributes
     a. History Values
 """
 
-from plan.dataset import Dataset
-from plan.individual import Individual
-from NSGA.population import Population
-from plan.problem import ProblemConfig
+from plan import Dataset, Individual, ProblemConfig
+
 from HybridGA.utils import HybridGAUtils
+from HybridGA.population import HybridGAPopulation
 
 from tqdm import tqdm
 
@@ -34,7 +33,7 @@ class Evolution:
         self.utils=HybridGAUtils(dataset,problem_config)
 
         self.problem_config=problem_config
-        self.population:Population=None
+        self.population:HybridGAPopulation=None
         self.history_objectives:"list[list[float]]"=[]
 
     def evolve(self,group_index:int =0 )->"list[Individual]":
@@ -44,6 +43,8 @@ class Evolution:
             self.population=self.utils.create_initial_population_many()
         else:
             self.population=self.utils.create_intitial_population(group_index)
+
+        print(len(self.population["feasible"]),len(self.population["infeasible"]))
         
         logger.info("Initial Population Size: "+str(len(self.population)))
 
@@ -54,27 +55,37 @@ class Evolution:
         ]
         iter_without_improvement=0
 
-        for pop in self.population["feasible"]:
-            pop.calculate_objectives(penalty_wts,group_index)
-        for pop in self.population["infeasible"]:
-            pop.calculate_objectives(penalty_wts,group_index)
+        logger.info("Initial Avg Objectives: "+str(self.population.calculate_average_objectives(penalty_wts,group_index)))
 
         logger.info("Random Initial Meal Plan: ")
         logger.info(self.population["feasible"][0])
 
-        logger.info("Initial Avg Objectives: "+str(self.population.calculate_average_objectives(penalty_wts,group_index)))
-
         ## Note best solution
+        for ind in self.population["infeasible"]:
+            ind.calculate_objectives()
+        self.utils.get_biased_fitness_values(self.population)
         _,best_val=self.utils.find_best_solution(self.population)
 
         logger.info("Starting Evolution..")
         for i in tqdm(range(self.utils.problem_config.HybridGA.number_of_generations)):
-            # Creating Children
-            children=self.utils.create_children(self.population,group_index)
+            ## Creating Children
+            ## 1. Choose Parents with tournament selection
+            ## 2. Cross Over
+            ## 3. Mutation
+            ## 4. Add to correct sub population
+            children=self.utils.create_children(self.population,penalty_wts=penalty_wts,group_index=group_index,limit=len(self.population))
+
+            ## Local Search: Enhance Children
+            children=self.utils.educate(children,group_index)
+            # print(len(children["feasible"]),len(children["infeasible"]))
+            # print(len(self.population["feasible"]),len(self.population["infeasible"]))
             self.population.extend(children)
+            # print(len(self.population["feasible"]),len(self.population["infeasible"]))
 
             ## Survivor Selection
-            new_population=self.utils.survivor_selection(self.population)
+            self.utils.get_biased_fitness_values(self.population)
+
+            new_population=self.utils.survivor_selection(self.population,limit=len(self.population)//2)
 
             ## Note best solution
             _,curr_val=self.utils.find_best_solution(new_population)
@@ -105,9 +116,14 @@ class Evolution:
 
         
         logger.info("Objective Value: "+str(obj))
+        print(len(self.population["feasible"]),len(self.population["infeasible"]))
         
         ## Get Pareto Front
         pareto_front= self.utils.get_pareto_front(self.population)
+
+        if len(pareto_front)==0:
+            print("Empty Pareto Optimal Set.")
+            return self.population["feasible"]
 
         return pareto_front
 

@@ -1,4 +1,4 @@
-from plan import MealPlan, Individual, ProblemConfig, Dataset, Dish, PlanUtils
+from plan import MealPlan, ProblemConfig, Dataset
 
 import networkx as nx
 from operator import add
@@ -76,65 +76,8 @@ class PlanUtils:
             child.check_wt(group_index),
             child.check_no_repeat()
         ])
-    
-    def crossover(self,ind1: Individual,ind2: Individual) -> Tuple[Individual,Individual]:
-        meal_plan_child1=[]
-        meal_plan_child2=[]
-        for i in range(len(ind1.meal_plan.plan)):
-            if(PlanUtils.choose_with_prob(0.5)):
-                meal_plan_child1.append(ind1.meal_plan.plan[i])
-                meal_plan_child2.append(ind2.meal_plan.plan[i])
-            else:
-                meal_plan_child1.append(ind2.meal_plan.plan[i])
-                meal_plan_child2.append(ind1.meal_plan.plan[i])
-        
-        return [
-            Individual(MealPlan(self.problem_config,self.dataset,meal_plan_child1)),
-            Individual(MealPlan(self.problem_config,self.dataset,meal_plan_child2))
-        ]
 
 
-    def mutate(self,ind:Individual,group_index=0)-> Individual:
-        meal_plan=[]
-        for id,dish in enumerate(ind.meal_plan.plan):
-            if(PlanUtils.choose_with_prob(self.problem_config.NSGA.mutation_parameter)):
-                # dish_vec= np.array(deepcopy(dish.vector)[1:-1]).astype('float64')
-                # ings=self.dataset.get_random_ingredients()
-                # for ing in ings:
-                #     # print(ing)
-                #     if(PlanUtils.choose_with_prob(0.5)):
-                #         dish_vec=np.add(ing*random.random(),dish_vec)
-                #     else:
-                #         dish_vec=np.subtract(ing*random.random(),dish_vec)
-                # id,dish_vec=self.dataset.get_closest_dish(dish_vec)
-                random_dish_id,random_dish_vec=self.dataset.get_random_dish(self.problem_config.get_meal_from_id(id))
-
-                meal_plan.append(
-                    Dish(
-                        id=random_dish_id,
-                        quantity=self.get_random_quantity(group_index),
-                        vector=random_dish_vec,
-                        title=self.dataset.get_dish_title(random_dish_id),
-                        meal=self.problem_config.get_meal_from_id(len(meal_plan)),
-                        cuisine=self.dataset.get_dish_cuisine(random_dish_id),
-                        category=self.dataset.get_dish_category(random_dish_id),
-                        tags=self.dataset.get_dish_tags(random_dish_id)
-                    )
-                )
-            else:
-                meal_plan.append(dish)
-
-        return Individual(MealPlan(self.problem_config,self.dataset,meal_plan))
-
-    def tournament(self, population):
-        participants = random.sample(population.population, self.problem_config.NSGA.number_of_tournament_participants)
-        best = None
-        for participant in participants:
-            if best is None or (self.crowding_operator(participant, best) == 1 and PlanUtils.choose_with_prob(self.problem_config.NSGA.tournament_probability)):
-                best = participant
-
-        return best
-    
     @staticmethod
     def choose_with_prob(prob: float)->bool:
         if random.random() <= prob:

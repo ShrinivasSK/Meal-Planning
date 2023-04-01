@@ -10,7 +10,11 @@ class Individual:
         self.crowding_distance=None
         self.domination_count=None
         self.dominated_solutions=None
-        self.objectives:"list[float]"=list()
+        self.objectives:"list[float]"=None
+
+        self.diversity_rank=None
+        self.biased_fitness=None
+        self.feasiblity=None
 
         self.meal_plan=meal_plan
         self.features,self.ids=self.getFeaturesAndIds()
@@ -36,6 +40,8 @@ class Individual:
         return (and_condition and or_condition)
 
     def calculate_objectives(self,penalty_wts=None,group_index:int=0)->"list[float]":
+        if self.objectives!=None:
+            return self.objectives
         self.objectives= [
             self.meal_plan.get_combi_value(),
             self.meal_plan.get_diversity(),
@@ -46,6 +52,7 @@ class Individual:
             penalty=self.meal_plan.get_penalty(penalty_wts,group_index) 
             for i in range(len(self.objectives)):
                 self.objectives[i]-=penalty
+
         return self.objectives
 
     def __str__(self) -> str:

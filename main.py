@@ -1,4 +1,4 @@
-from plan.meal_planner import NSGAMealPlanner
+from plan import MealPlanner
 
 import logging
 import json
@@ -25,9 +25,9 @@ if __name__=="__main__":
     start=time.time()
 
     if config['planning']['plan_type']=='multiple':
-        final_res=NSGAMealPlanner.plan_multiple(config,logger)
+        final_res=MealPlanner.plan_multiple(config,logger)
     else:
-        final_res = NSGAMealPlanner.plan(config,logger)
+        final_res = MealPlanner.plan(config,logger)
 
     end=time.time()
 

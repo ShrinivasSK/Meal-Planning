@@ -202,6 +202,8 @@ class MealPlan:
             if vals[i]>limits[i][1]:
                 p+=1-(vals[i]/limits[i][1])
                 cnt+=1
+        if cnt==0:
+            return 0
         return p/cnt
 
     def get_penalty(self,penalty_wts,group_index:int =0):
@@ -216,7 +218,7 @@ class MealPlan:
         wt=self.calculate_wt()
         wt_penalty=MealPlan.get_penalty_value(
             [wt[0][0]],
-                [self.problem_config.groups[group_index].daily_weight_requirements[0]]
+            [self.problem_config.groups[group_index].daily_weight_requirements[0]]
         )
 
         return penalty_wts[0] * nutri_penalty + penalty_wts[1] * wt_penalty
