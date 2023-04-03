@@ -63,7 +63,8 @@ class Evolution:
         for ind in self.population["infeasible"]:
             ind.calculate_objectives(penalty_wts=penalty_wts,group_index=group_index)
 
-        self.utils.get_biased_fitness_values(self.population)
+        # self.utils.get_biased_fitness_values(self.population)
+        self.utils.calculate_rank_and_crowding(self.population)
         _,best_val=self.utils.find_best_solution(self.population)
 
         logger.info("Starting Evolution..")
@@ -81,7 +82,7 @@ class Evolution:
             self.population.extend(children)
 
             ## Survivor Selection
-            self.utils.get_biased_fitness_values(self.population)
+            # self.utils.get_biased_fitness_values(self.population)
             self.population=self.utils.survivor_selection(self.population,limit=len(self.population)//2)
 
             ## Note best solution
@@ -115,7 +116,8 @@ class Evolution:
                 self.population["infeasible"].extend(new_population["infeasible"])
                 
                 self.population.calculate_objectives(penalty_wts,group_index)
-                self.utils.get_biased_fitness_values(self.population)
+                # self.utils.get_biased_fitness_values(self.population)
+                self.utils.calculate_rank_and_crowding(self.population)
 
                 iter_without_improvement=0
 

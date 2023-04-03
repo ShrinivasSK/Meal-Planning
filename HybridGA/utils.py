@@ -256,9 +256,16 @@ class HybridGAUtils:
 
         return best_ind,best_obj
     
-    def better(self,ind1:Individual,ind2:Individual)->bool:
+    def better(self,individual:Individual,other_individual:Individual)->bool:
         ## Returns True if Ind1 is better than Ind2 based on biased fitness function
-        return ind1.biased_fitness>=ind2.biased_fitness
+        # return ind1.biased_fitness>=ind2.biased_fitness
+
+        ## Better based on crowding operator
+        if (individual.rank < other_individual.rank) or \
+            ((individual.rank == other_individual.rank) and (individual.crowding_distance > other_individual.crowding_distance)):
+            return True
+        else:
+            return False
     
     def tournament(self, population:HybridGAPopulation):
         choices=[]
@@ -434,8 +441,7 @@ class HybridGAUtils:
             rank_array[val_pos] = i
 
         return rank_array
-
-
+    
     def create_children(self,population,penalty_wts,limit:int,group_index:int=0)->dict[str,list[Individual]]:
         children={
             "feasible":[],
@@ -512,6 +518,20 @@ class HybridGAUtils:
         #             new_pop["infeasible"].append(ind)
 
         ## Fast Non Dominated Sorting and crowding distance based survivor selection
+        fronts=self.calculate_rank_and_crowding(population)
+
+        new_population=HybridGAPopulation()
+        front_num=0
+        while len(new_population) + len(fronts[front_num]) <= limit:
+            new_population.extend_list(fronts[front_num])
+            front_num += 1
+
+        fronts[front_num].sort(key=lambda individual: individual.crowding_distance, reverse=True)
+        new_population.extend_list(fronts[front_num][0:self.problem_config.HybridGA.population_size-len(new_population)])
+            
+        return new_population
+    
+    def calculate_rank_and_crowding(self,population:HybridGAPopulation)->list[list[Individual]]:
         fronts = [[]]
         cnt=0
         for individual in population:
@@ -550,19 +570,11 @@ class HybridGAUtils:
                         temp.append(other_individual)
             i = i+1
             fronts.append(temp)
-        # print(i)
-        new_population=HybridGAPopulation()
-        front_num=0
-        while len(new_population) + len(fronts[front_num]) <= limit:
-            self.calculate_crowding_distance(fronts[front_num])
-            new_population.extend_list(fronts[front_num])
-            front_num += 1
 
-        self.calculate_crowding_distance(fronts[front_num])
-        fronts[front_num].sort(key=lambda individual: individual.crowding_distance, reverse=True)
-        new_population.extend_list(fronts[front_num][0:self.problem_config.HybridGA.population_size-len(new_population)])
-            
-        return new_population
+        for front in fronts:
+            self.calculate_crowding_distance(front)
+
+        return fronts
     
     def calculate_crowding_distance(self, front:"list[Individual]") -> None:
         if len(front) > 0:
