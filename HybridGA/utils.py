@@ -12,7 +12,7 @@ class HybridGAUtils:
         self.plan_utils=PlanUtils(dataset,problem_config)
         random.seed()
 
-    def create_initial_population_many(self)->HybridGAPopulation:
+    def create_initial_population_many(self,limit:int)->HybridGAPopulation:
         breakfast_options=self.plan_utils.get_cliques(self.dataset,"breakfast",lower_limit=1,higher_limit=3)
         lunch_options=self.plan_utils.get_cliques(self.dataset,"lunch",lower_limit=1,higher_limit=5)
         snacks_options=self.plan_utils.get_cliques(self.dataset,"snacks",lower_limit=1,higher_limit=3)
@@ -20,7 +20,7 @@ class HybridGAUtils:
 
         population=HybridGAPopulation()
 
-        while (len(population)<self.problem_config.NSGA.population_size):
+        while (len(population)<limit):
             meal_plan=[]
 
             ## Add Breakfast Dishes
@@ -126,7 +126,7 @@ class HybridGAUtils:
         
         return population
 
-    def create_intitial_population(self,group_index:int=0)->HybridGAPopulation:
+    def create_intitial_population(self,limit:int,group_index:int=0)->HybridGAPopulation:
         breakfast_options=self.plan_utils.get_cliques(self.dataset,"breakfast",lower_limit=1,higher_limit=3)
         lunch_options=self.plan_utils.get_cliques(self.dataset,"lunch",lower_limit=3,higher_limit=5)
         snacks_options=self.plan_utils.get_cliques(self.dataset,"snacks",lower_limit=1,higher_limit=3)
@@ -134,7 +134,7 @@ class HybridGAUtils:
 
         population=HybridGAPopulation()
 
-        while (len(population)<self.problem_config.HybridGA.population_size):
+        while (len(population)<limit):
             meal_plan=[]
 
             ## Add Breakfast Dishes
@@ -246,7 +246,9 @@ class HybridGAUtils:
         best_ind=None
         for ind in population["feasible"]:
             ## Sum is taken to get one metric to quantify quality of solution
-            obj=ind.biased_fitness
+            ## Biased Fitness not considered as that is based on ranks that depends on the 
+            ## population at that time
+            obj=sum(ind.objectives)
 
             if best_obj<obj:
                 best_obj=obj
@@ -333,7 +335,7 @@ class HybridGAUtils:
 
         return diversity_ranks
 
-    def find_obj_ranks_for_pop(self,population:HybridGAPopulation):
+    def find_obj_ranks_for_pop(self,population:list[Individual]):
         ## Fast Non Dominated Sorting
         fronts = [[]]
         cnt=0
@@ -386,6 +388,8 @@ class HybridGAUtils:
         Inplace normalisation of rank array: Divide by maximum
         """
         maxV=max(arr)
+        # if maxV==0:
+        #     return
         for i in range(len(arr)):
             arr[i]=arr[i]/maxV
         
@@ -495,30 +499,97 @@ class HybridGAUtils:
     
     def survivor_selection(self,population:HybridGAPopulation,limit:int)->HybridGAPopulation:
         ## Remove the weakest individuals based on biased fitness function
-        biased_fitness=[ind.biased_fitness for ind in population]
-        ## Are ranks so select lowest values
-        best_n_indices=sorted(range(len(biased_fitness)),key=lambda x: biased_fitness[x])[:limit]
+        # biased_fitness=[ind.biased_fitness for ind in population]
+        # ## Are ranks so select lowest values
+        # best_n_indices=sorted(range(len(biased_fitness)),key=lambda x: biased_fitness[x])[:limit]
 
-        new_pop=HybridGAPopulation()
-        for id,ind in enumerate(population):
-            if id in best_n_indices:
-                if ind.feasiblity:
-                    new_pop["feasible"].append(ind)
-                else:
-                    new_pop["infeasible"].append(ind)
-        
-        return new_pop
+        # new_pop=HybridGAPopulation()
+        # for id,ind in enumerate(population):
+        #     if id in best_n_indices:
+        #         if ind.feasiblity:
+        #             new_pop["feasible"].append(ind)
+        #         else:
+        #             new_pop["infeasible"].append(ind)
+
+        ## Fast Non Dominated Sorting and crowding distance based survivor selection
+        fronts = [[]]
+        cnt=0
+        for individual in population:
+            # print("Current Ind Obj",individual.objectives)
+            individual.domination_count = 0
+            individual.dominated_solutions = []
+            for other_individual in population: 
+                # print("Other Ind Obj",other_individual.objectives,sep=" ")
+                if(individual.ids==other_individual.ids):
+                    # print(": same",sep=" ")
+                    continue
+                if individual.dominates(other_individual):
+                    # print(": current dominates",sep=" ")
+                    individual.dominated_solutions.append(other_individual)
+                elif other_individual.dominates(individual):
+                    # print(": other dominates",sep=" ")
+                    individual.domination_count += 1
+                # else:
+                    # print(": neither dominates",sep=" ")
+            # print()
+            if individual.domination_count == 0:
+                individual.rank = 0
+                cnt+=1
+                fronts[0].append(individual)
+        # print("Count",cnt)
+        i = 0
+        count = 0
+        while len(fronts[i]) > 0:
+            temp = []
+            for individual in fronts[i]:
+                for other_individual in individual.dominated_solutions:
+                    other_individual.domination_count -= 1
+                    if other_individual.domination_count == 0:
+                        other_individual.rank = i+1
+                        count = count + 1
+                        temp.append(other_individual)
+            i = i+1
+            fronts.append(temp)
+        # print(i)
+        new_population=HybridGAPopulation()
+        front_num=0
+        while len(new_population) + len(fronts[front_num]) <= limit:
+            self.calculate_crowding_distance(fronts[front_num])
+            new_population.extend_list(fronts[front_num])
+            front_num += 1
+
+        self.calculate_crowding_distance(fronts[front_num])
+        fronts[front_num].sort(key=lambda individual: individual.crowding_distance, reverse=True)
+        new_population.extend_list(fronts[front_num][0:self.problem_config.HybridGA.population_size-len(new_population)])
+            
+        return new_population
+    
+    def calculate_crowding_distance(self, front:"list[Individual]") -> None:
+        if len(front) > 0:
+            solutions_num = len(front)
+            for individual in front:
+                individual.crowding_distance = 0
+
+            for m in range(len(front[0].objectives)):
+                front.sort(key=lambda individual: individual.objectives[m])
+                front[0].crowding_distance = 10**9
+                front[solutions_num-1].crowding_distance = 10**9
+                m_values = [individual.objectives[m] for individual in front]
+                scale = max(m_values) - min(m_values)
+                if scale == 0: scale = 1
+                for i in range(1, solutions_num-1):
+                    front[i].crowding_distance += (front[i+1].objectives[m] - front[i-1].objectives[m])/scale
+
         
 
     def get_pareto_front(self, population:HybridGAPopulation )-> list[Individual]:
         pareto_front = []
-        cnt=0
         for individual in population["feasible"]:
             individual.calculate_objectives()
 
             individual.domination_count = 0
             individual.dominated_solutions = []
-            for other_individual in population: 
+            for other_individual in population["feasible"]: 
                 if(individual.ids==other_individual.ids):
                     # same
                     continue
@@ -533,7 +604,6 @@ class HybridGAUtils:
 
             if individual.domination_count == 0:
                 individual.rank = 0
-                cnt+=1
                 pareto_front.append(individual)
 
         return pareto_front

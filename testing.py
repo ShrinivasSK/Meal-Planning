@@ -1,4 +1,4 @@
-from plan.meal_planner import NSGAMealPlanner
+from plan import MealPlanner
 
 import logging
 import json
@@ -7,7 +7,7 @@ import copy
 
 NUM_OBJECTIVES=5
 
-logging.basicConfig(filename='Outputs/output_testing.log',
+logging.basicConfig(filename='Outputs/output_testing_hybrid.log',
                     filemode='a',
                     format='%(asctime)s.%(msecs)d %(levelname)s %(message)s',
                     datefmt='%H:%M:%S',
@@ -127,9 +127,9 @@ def run_config(config):
     
     start=time.time()
     if config['planning']['plan_type']=='multiple':
-        final_res=NSGAMealPlanner.plan_multiple(config,logger)
+        final_res=MealPlanner.plan_multiple(config,logger)
     else:
-        final_res = NSGAMealPlanner.plan(config,logger)
+        final_res = MealPlanner.plan(config,logger)
 
     obj=[0.0]*NUM_OBJECTIVES
     for ind in final_res:
@@ -220,19 +220,21 @@ if __name__=="__main__":
     prefs_configs_all=generate_preferences(all_subsets=True) ## 20 configs
     run_configs("Prefernces Configs",prefs_configs_all) ## Estimated Time 20 minutes (number of users)
 
+    cons_configs_all=generate_constraints(all_subsets=True) ## 32 configs
+    run_configs("Constraints Configs",cons_configs_all) ## Estimated Time 32 minutes
+    
     single_configs_all=generate_all_single() ## 50 configs
     single_objs,single_times=run_configs("Single Configs",single_configs_all) ## Estimated Time 50 minutes
 
-    plan_multiple_configs_all=generate_all_multiple("multiple") ## 40 configs
-    run_configs("Plan Multiple Configs",plan_multiple_configs_all) ## Estimated Time 185 minutes
+    # plan_multiple_configs_all=generate_all_multiple("multiple") ## 40 configs
+    # run_configs("Plan Multiple Configs",plan_multiple_configs_all) ## Estimated Time 185 minutes
     
-    plan_in_onego_configs_all=generate_all_multiple("many_in_one") ## 40 configs
-    run_configs("Plan In One Go Configs",plan_in_onego_configs_all) ## Estimated Time 185 minutes
+    # plan_in_onego_configs_all=generate_all_multiple("many_in_one") ## 40 configs
+    # run_configs("Plan In One Go Configs",plan_in_onego_configs_all) ## Estimated Time 185 minutes
 
-    get_values_for_separate(single_objs,single_times)
+    # get_values_for_separate(single_objs,single_times)
 
-    cons_configs_all=generate_constraints(all_subsets=True) ## 32 configs
-    run_configs("Constraints Configs",cons_configs_all) ## Estimated Time 32 minutes
+    
 
     ## Estimated Time Required For Complete Run: 470 minutes: 8 hours
     

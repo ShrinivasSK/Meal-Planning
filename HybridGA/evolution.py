@@ -40,12 +40,11 @@ class Evolution:
         ## 1. Creating Initial Population
         logger.info("Creating Initial Population...")
         if self.problem_config.planning.plan_type=="many_in_one":
-            self.population=self.utils.create_initial_population_many()
+            self.population=self.utils.create_initial_population_many(limit=self.problem_config.HybridGA.population_size)
         else:
-            self.population=self.utils.create_intitial_population(group_index)
+            self.population=self.utils.create_intitial_population(limit=self.problem_config.HybridGA.population_size,
+                                                                group_index=group_index)
 
-        print(len(self.population["feasible"]),len(self.population["infeasible"]))
-        
         logger.info("Initial Population Size: "+str(len(self.population)))
 
         ## 2. Initialise Weights
@@ -62,7 +61,8 @@ class Evolution:
 
         ## Note best solution
         for ind in self.population["infeasible"]:
-            ind.calculate_objectives()
+            ind.calculate_objectives(penalty_wts=penalty_wts,group_index=group_index)
+
         self.utils.get_biased_fitness_values(self.population)
         _,best_val=self.utils.find_best_solution(self.population)
 
@@ -77,18 +77,15 @@ class Evolution:
 
             ## Local Search: Enhance Children
             children=self.utils.educate(children,group_index)
-            # print(len(children["feasible"]),len(children["infeasible"]))
-            # print(len(self.population["feasible"]),len(self.population["infeasible"]))
+            
             self.population.extend(children)
-            # print(len(self.population["feasible"]),len(self.population["infeasible"]))
 
             ## Survivor Selection
             self.utils.get_biased_fitness_values(self.population)
-
-            new_population=self.utils.survivor_selection(self.population,limit=len(self.population)//2)
+            self.population=self.utils.survivor_selection(self.population,limit=len(self.population)//2)
 
             ## Note best solution
-            _,curr_val=self.utils.find_best_solution(new_population)
+            _,curr_val=self.utils.find_best_solution(self.population)
             if curr_val>=best_val:
                 _,best_val=_,curr_val
                 iter_without_improvement=0
@@ -98,31 +95,44 @@ class Evolution:
             ## Weight Adjustment
             feas_prop=len(self.population["feasible"])/len(self.population)
             if feas_prop <= self.problem_config.HybridGA.target_proportion - 0.05:
-                penalty_wts=[wt*1.2 for wt in penalty_wts]
+                penalty_wts=[min(10,wt*1.2) for wt in penalty_wts]
             elif feas_prop >= self.problem_config.HybridGA.target_proportion + 0.05:
                 penalty_wts=[wt*0.85 for wt in penalty_wts]
 
             ## Diversification
-            if iter_without_improvement!=0 and (iter_without_improvement%self.problem_config.HybridGA.diversification_iter):
-                pass
-            
+            if iter_without_improvement!=0 and (iter_without_improvement%self.problem_config.HybridGA.diversification_iter==0):
+                ## Select Top 30% of the population and re-create the rest
+                logger.info("Diversifying Population")
+                self.population=self.utils.survivor_selection(self.population,limit=int(len(self.population)*0.3))
+                
+                if self.problem_config.planning.plan_type=="many_in_one":
+                    new_population=self.utils.create_initial_population_many(limit=int(self.problem_config.HybridGA.population_size*0.7))
+                else:
+                    new_population=self.utils.create_intitial_population(limit=int(self.problem_config.HybridGA.population_size*0.7),
+                                                                        group_index=group_index)
+
+                self.population["feasible"].extend(new_population["feasible"])
+                self.population["infeasible"].extend(new_population["infeasible"])
+                
+                self.population.calculate_objectives(penalty_wts,group_index)
+                self.utils.get_biased_fitness_values(self.population)
+
+                iter_without_improvement=0
+
+
             ## Logging State
             if(i%10==0):
-                obj=new_population.calculate_average_objectives(penalty_wts,group_index)
+                obj=self.population.calculate_average_objectives(penalty_wts,group_index)
                 logger.info("Iteration "+str(i)+": Objective Value: "+str(obj))
                 self.history_objectives.append(obj)
 
-            self.population = new_population
-
         
         logger.info("Objective Value: "+str(obj))
-        print(len(self.population["feasible"]),len(self.population["infeasible"]))
         
         ## Get Pareto Front
         pareto_front= self.utils.get_pareto_front(self.population)
 
         if len(pareto_front)==0:
-            print("Empty Pareto Optimal Set.")
             return self.population["feasible"]
 
         return pareto_front

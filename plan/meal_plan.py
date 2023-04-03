@@ -196,11 +196,11 @@ class MealPlan:
         for i in range(len(vals)):
             ## lower limit penalty
             if vals[i]<limits[i][0]:
-                p+=vals[i]/limits[i][0]
+                p+=vals[i]/limits[i][0]-1
                 cnt+=1
             ## upper limit penalty
             if vals[i]>limits[i][1]:
-                p+=1-(vals[i]/limits[i][1])
+                p+=max(-1,1-(vals[i]/limits[i][1]))
                 cnt+=1
         if cnt==0:
             return 0

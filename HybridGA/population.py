@@ -26,8 +26,22 @@ class HybridGAPopulation:
         self.population["feasible"].extend(new_inds["feasible"])
         self.population["infeasible"].extend(new_inds["infeasible"])
 
+    def extend_list(self,new_inds:list[Individual]):
+        for ind in new_inds:
+            if ind.feasiblity==True:
+                self.population["feasible"].append(ind)
+            else:
+                self.population["infeasible"].append(ind)
+
     def append(self,new_ind:Individual,which:str):
         self.population[which].append(new_ind)
+
+    def calculate_objectives(self,penalty_wts,group_index:int=0)->"list[float]":
+        for citizen in self.population["feasible"]:
+            citizen.calculate_objectives(penalty_wts,group_index)
+
+        for citizen in self.population["infeasible"]:
+            citizen.calculate_objectives(penalty_wts,group_index)
 
     def calculate_average_objectives(self,penalty_wts,group_index:int=0)->"list[float]":
         obj=[0.0]*NUM_OBJECTIVES

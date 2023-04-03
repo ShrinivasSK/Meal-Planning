@@ -44,8 +44,8 @@
             "daily_weight_requirements": [
                 [1000,2000]
             ],
-            "positive_preferences": ["France"],
-            "negative_preferences": ["Mexico"]
+            "positive_preferences": ["Greece"],
+            "negative_preferences": ["British Isles"]
         }
 
     ]

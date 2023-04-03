@@ -48,10 +48,10 @@ class Individual:
             self.meal_plan.get_pos_preference(group_index),
             -1*self.meal_plan.get_neg_preference(group_index),
         ]
-        if penalty_wts!=None: ## Penalty is 0 if HybridGA is not being used
-            penalty=self.meal_plan.get_penalty(penalty_wts,group_index) 
+        if penalty_wts!=None: ## Penalty is None if HybridGA is not being used
+            penalty=self.meal_plan.get_penalty(penalty_wts,group_index) ## Between [-1,0]
             for i in range(len(self.objectives)):
-                self.objectives[i]-=penalty
+                self.objectives[i]+=penalty
 
         return self.objectives
 
