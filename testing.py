@@ -7,7 +7,7 @@ import copy
 
 NUM_OBJECTIVES=5
 
-logging.basicConfig(filename='Outputs/output_testing_hybrid.log',
+logging.basicConfig(filename='Outputs/output_testing_nsga.log',
                     filemode='a',
                     format='%(asctime)s.%(msecs)d %(levelname)s %(message)s',
                     datefmt='%H:%M:%S',
@@ -93,11 +93,11 @@ def generate_all_multiple(plan_type):
 
     configs=[] 
     group_sizes={  ## group_size : num_groups_for_size
-        2:10,
-        3:10,
-        5:10,
-        7:5,
-        10:5,
+        2:5,
+        3:5,
+        5:5,
+        7:3,
+        10:0,
     }
     single_configs=generate_all_single()
     with open("./configs/config_standard.json") as f:
@@ -108,6 +108,7 @@ def generate_all_multiple(plan_type):
             cfg=copy.deepcopy(standard_config)
             cfg["planning"]["plan_type"]=plan_type
             cfg["planning"]["group_count"]=size
+            cfg["groups"]=[]
             for id,j in enumerate(range(i,len(single_configs),cnt)):
                 if id>=size:
                     break
@@ -133,11 +134,13 @@ def run_config(config):
 
     obj=[0.0]*NUM_OBJECTIVES
     for ind in final_res:
+        if config['planning']['plan_type']=='multiple':
+            ind.calculate_objectives(is_final_multiple=True)
         temp=[obj[i]+ind.objectives[i] for i in range(len(ind.objectives))]
         dish_cnt=obj[4]
         for dish in ind.meal_plan.plan:
             if dish.id!=0:
-                dish_cnt+=1
+                dish_cnt+=dish.quantity
         temp.append(dish_cnt)
         obj=temp
 
@@ -217,17 +220,17 @@ def get_values_for_separate(single_objs,single_times):
                     
 
 if __name__=="__main__":
-    prefs_configs_all=generate_preferences(all_subsets=True) ## 20 configs
-    run_configs("Prefernces Configs",prefs_configs_all) ## Estimated Time 20 minutes (number of users)
+    # prefs_configs_all=generate_preferences(all_subsets=True) ## 20 configs
+    # run_configs("Prefernces Configs",prefs_configs_all) ## Estimated Time 20 minutes (number of users)
 
-    cons_configs_all=generate_constraints(all_subsets=True) ## 32 configs
-    run_configs("Constraints Configs",cons_configs_all) ## Estimated Time 32 minutes
+    # cons_configs_all=generate_constraints(all_subsets=True) ## 32 configs
+    # run_configs("Constraints Configs",cons_configs_all) ## Estimated Time 32 minutes
     
-    single_configs_all=generate_all_single() ## 50 configs
-    single_objs,single_times=run_configs("Single Configs",single_configs_all) ## Estimated Time 50 minutes
+    # single_configs_all=generate_all_single() ## 50 configs
+    # single_objs,single_times=run_configs("Single Configs",single_configs_all) ## Estimated Time 50 minutes
 
-    # plan_multiple_configs_all=generate_all_multiple("multiple") ## 40 configs
-    # run_configs("Plan Multiple Configs",plan_multiple_configs_all) ## Estimated Time 185 minutes
+    plan_multiple_configs_all=generate_all_multiple("multiple") ## 40 configs
+    run_configs("Plan Multiple Configs",plan_multiple_configs_all) ## Estimated Time 185 minutes
     
     # plan_in_onego_configs_all=generate_all_multiple("many_in_one") ## 40 configs
     # run_configs("Plan In One Go Configs",plan_in_onego_configs_all) ## Estimated Time 185 minutes

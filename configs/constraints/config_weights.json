@@ -6,7 +6,7 @@
         "dinner_dishes": 5
     },
     "planning":{
-        "ga": "hybrid",
+        "ga": "nsga",
         "plan_type": "single", 
         "group_count": 1,
         "number_of_nutrients": 4,

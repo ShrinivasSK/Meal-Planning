@@ -165,24 +165,24 @@ class MealPlan:
         return cnt
 
 
-    def get_pos_preference(self,group_index:int=0)->float:
+    def get_pos_preference(self,group_index:int=0,is_final_multiple=False)->float:
         dish_ids=[ dish.cuisine for dish in self.plan for _ in range(dish.quantity)]
         if(len(dish_ids)==0):
             return 0
         prefered_dishes=[]
-        if self.problem_config.planning.plan_type=="many_in_one":
+        if self.problem_config.planning.plan_type=="many_in_one" or is_final_multiple:
             for group in self.problem_config.groups:
                 prefered_dishes.extend(group.positive_preferences)
         else:
             prefered_dishes=self.problem_config.groups[group_index].positive_preferences
         return MealPlan.intersection(dish_ids,prefered_dishes)/len(dish_ids)
 
-    def get_neg_preference(self,group_index:int=0)->float:
+    def get_neg_preference(self,group_index:int=0,is_final_multiple=False)->float:
         dish_ids=[ dish.cuisine for dish in self.plan for _ in range(dish.quantity)]
         if(len(dish_ids)==0):
             return 0
         rejected_dishes=[]
-        if self.problem_config.planning.plan_type=="many_in_one":
+        if self.problem_config.planning.plan_type=="many_in_one" or is_final_multiple:
             for group in self.problem_config.groups:
                 rejected_dishes.extend(group.negative_preferences)
         else:

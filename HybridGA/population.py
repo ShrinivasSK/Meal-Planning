@@ -45,6 +45,8 @@ class HybridGAPopulation:
 
     def calculate_average_objectives(self,penalty_wts,group_index:int=0)->"list[float]":
         obj=[0.0]*NUM_OBJECTIVES
+        if len(self.population["feasible"])==0:
+            return obj
         
         for citizen in self.population["feasible"]:
             cit_obj=citizen.calculate_objectives(penalty_wts,group_index)

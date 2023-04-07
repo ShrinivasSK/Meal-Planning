@@ -327,7 +327,7 @@ class NSGAUtils:
                 meal_plan.append(
                     Dish(
                         id=random_dish_id,
-                        quantity=self.get_random_quantity(group_index),
+                        quantity=self.plan_utils.get_random_quantity(group_index),
                         vector=random_dish_vec,
                         title=self.dataset.get_dish_title(random_dish_id),
                         meal=self.problem_config.get_meal_from_id(len(meal_plan)),

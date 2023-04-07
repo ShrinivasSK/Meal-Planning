@@ -56,12 +56,16 @@ class Evolution:
 
         logger.info("Initial Avg Objectives: "+str(self.population.calculate_average_objectives(penalty_wts,group_index)))
 
-        logger.info("Random Initial Meal Plan: ")
-        logger.info(self.population["feasible"][0])
-
+        
         ## Note best solution
         for ind in self.population["infeasible"]:
             ind.calculate_objectives(penalty_wts=penalty_wts,group_index=group_index)
+
+        logger.info("Random Initial Meal Plan: ")
+        if len(self.population["feasible"])!=0:
+            logger.info(self.population["feasible"][0])
+        else:
+            logger.info(self.population["infeasible"][0])
 
         # self.utils.get_biased_fitness_values(self.population)
         self.utils.calculate_rank_and_crowding(self.population)

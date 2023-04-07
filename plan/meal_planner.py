@@ -42,7 +42,10 @@ class MealPlanner:
         for individual in pareto_front:
             res_objectives.append(individual.objectives)
 
-        final_pop=MealPlanner.post_process(pareto_front,res_objectives)
+        if len(pareto_front)>5:
+            final_pop=MealPlanner.post_process(pareto_front,res_objectives)
+        else:
+            final_pop=pareto_front
         
         logger.info("Meal Plan Generated: ")
         for individual in final_pop:
@@ -205,8 +208,8 @@ class MealPlanner:
                 #     # print(len(meal))
                 #     continue
                 optim=[
-                    meal_plan.get_pos_preference(),
-                    -1*meal_plan.get_neg_preference(),
+                    meal_plan.get_pos_preference(is_final_multiple=True),
+                    -1*meal_plan.get_neg_preference(is_final_multiple=True),
                     meal_plan.get_combi_value(),
                     meal_plan.get_diversity(),
                 ]
@@ -240,13 +243,7 @@ class MealPlanner:
         
     @staticmethod
     def is_better(val1:"list[float]",val2:"list[float]",l1:int,l2:int)->bool:
-        if val1[1]==0 and val2[1]!=0:
-            return True
-        if val2[1]==0 and val1[1]!=0:
-            return False
-        if val1==val2:
-            return l1<=l2
-        return val1>=val2
+        return sum(val1)>=sum(val2)
         
 
     @staticmethod
@@ -337,6 +334,7 @@ class MealPlanner:
         final_pop=[]
         for matched_rep in matched_reps:
             suggested=MealPlanner.merge_group_plans(matched_rep,problem_config,dataset)
+            suggested.calculate_objectives(is_final_multiple=True)
             logger.info(str(suggested)+"\n")
             final_pop.append(suggested)
 
