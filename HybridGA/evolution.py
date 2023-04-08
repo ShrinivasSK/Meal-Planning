@@ -55,7 +55,6 @@ class Evolution:
         iter_without_improvement=0
 
         logger.info("Initial Avg Objectives: "+str(self.population.calculate_average_objectives(penalty_wts,group_index)))
-
         
         ## Note best solution
         for ind in self.population["infeasible"]:
@@ -79,9 +78,11 @@ class Evolution:
             ## 3. Mutation
             ## 4. Add to correct sub population
             children=self.utils.create_children(self.population,penalty_wts=penalty_wts,group_index=group_index,limit=len(self.population))
+            # print(len(children["feasible"]),len(children["infeasible"]))
 
             ## Local Search: Enhance Children
-            children=self.utils.educate(children,group_index)
+            children=self.utils.educate(children,penalty_wts,group_index)
+            # print(len(children["feasible"]),len(children["infeasible"]))
             
             self.population.extend(children)
 
@@ -130,6 +131,7 @@ class Evolution:
             if(i%10==0):
                 obj=self.population.calculate_average_objectives(penalty_wts,group_index)
                 logger.info("Iteration "+str(i)+": Objective Value: "+str(obj))
+                logger.info("Iteration "+str(i)+": Feasible: "+str(len(self.population["feasible"]))+" Infeasible: "+str(len(self.population["infeasible"])))
                 self.history_objectives.append(obj)
 
         
@@ -139,6 +141,7 @@ class Evolution:
         pareto_front= self.utils.get_pareto_front(self.population)
 
         if len(pareto_front)==0:
+            logger.info("Pareto Front Empty")
             return self.population["feasible"]
 
         return pareto_front

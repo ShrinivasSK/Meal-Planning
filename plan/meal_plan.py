@@ -9,7 +9,7 @@ import math
 
 class MealPlan:
     def __init__(self,problem_config:ProblemConfig,dataset:Dataset,dishes:"list[Dish]"=[]) -> None:
-        self.plan:list[Dish]=dishes
+        self.plan:"list[Dish]"=dishes
         self.problem_config=problem_config
         self.dataset=dataset
 
@@ -18,7 +18,7 @@ class MealPlan:
     def add_dish(self,dish:Dish):
         self.plan.append(dish)
 
-    def calculate_nutri(self)->list[list[int]]:
+    def calculate_nutri(self)->"list[list[int]]":
         ## Calculated for all meals in the day so that we can check individual limits in the future
         nutri_day=[0]*self.problem_config.planning.number_of_nutrients
         nutri_breakfast=[0]*self.problem_config.planning.number_of_nutrients
@@ -51,7 +51,7 @@ class MealPlan:
             nutri_dinner
         ]
     
-    def calculate_wt(self)->list[list[int]]:
+    def calculate_wt(self)->"list[list[int]]":
         ## Calculated for all meals in the day so that we can check individual limits in the future
         wt_day=0
         wt_breakfast=0

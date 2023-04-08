@@ -32,7 +32,7 @@ class MealPlanner:
         
         pareto_front=evolution.evolve()
 
-        logger.info("NSGA Complete")
+        logger.info("GA Complete")
         logger.info("Front Size: "+ str(len(pareto_front)))
 
         logger.info("Objective Values History: ")
@@ -55,17 +55,26 @@ class MealPlanner:
     
     @staticmethod
     def post_process(population:"list[Individual]",objectives:"list[float]"):
-        obj_to_index={}
-
         X=[]
         for id,obj in enumerate(objectives):
-            X.append([obj[0],obj[1]])
+            X.append(obj)
 
         X=np.array(X)
+
+        ## Remove Candidates too far away from center
+        mean=np.mean(X,axis=0)
+        std=np.std(X,axis=0)
+        selected_candidates=[]
+        for val in X:
+            if (val<mean-std).any() or (val>mean+std).any():
+                # print(val,mean)
+                continue
+            selected_candidates.append(val)
+        X=np.array(selected_candidates)
         
         kdTree=KDTree(X)
 
-        kmeans=KMeans(n_clusters=5,init='k-means++',random_state=42,n_init='auto').fit(X)
+        kmeans=KMeans(n_clusters=5,init='k-means++',random_state=42).fit(X)
 
         representatives=[]
         for center in kmeans.cluster_centers_:
@@ -95,7 +104,7 @@ class MealPlanner:
     
     
     @staticmethod
-    def match_group_plans(group_reps:list[list[Individual]], config: ProblemConfig)->list[list[Individual]]:
+    def match_group_plans(group_reps:"list[list[Individual]]", config: ProblemConfig)->"list[list[Individual]]":
         # INPUT: NUM_GROUPS x NUM_SUGGESTIONS
         matchings=[]
         for id in range(1,len(group_reps)):
@@ -127,7 +136,7 @@ class MealPlanner:
         return matched_reps ## NUM_SUGGESTIONS X NUM_GROUPS
     
     @staticmethod
-    def merge_dishes(dishes:list[Dish],limit,problem_config,dataset,ratio,brute_force=False)->"list[Dish]":
+    def merge_dishes(dishes:"list[Dish]",limit,problem_config,dataset,ratio,brute_force=False)->"list[Dish]":
         ## Choose half the dishes from breakfast, lunch, dinner, snacks
         ## TODO: apply a distance threshold
         ## TODO: add logic to select one of the dishes (here preference to first 1 arbitrarily)
@@ -247,7 +256,7 @@ class MealPlanner:
         
 
     @staticmethod
-    def merge_group_plans(group_reps:list[Individual],config:ProblemConfig,dataset:Dataset)->Individual:
+    def merge_group_plans(group_reps:"list[Individual]",config:ProblemConfig,dataset:Dataset)->Individual:
         dishes_breakfast=[]
         dishes_lunch=[]
         dishes_snacks=[]

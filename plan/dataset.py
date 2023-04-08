@@ -77,6 +77,21 @@ class Dataset:
 
     def get_dish_nutri(self,dish: Dish)->"list[float]":
         return [n*dish.quantity for n in self.id2dish[int(dish.id)]['Nutrition'] ]
+    
+    def get_combi_vector(self,dish:Dish):
+        return self.combi_model[str(dish.id)]
+    
+    def get_combi_similar(self,vec)->str:
+        vec=np.array(vec,dtype=np.float32)
+        return self.combi_model.most_similar(positive=[vec],topn=1)[0][0]
+    
+    def get_preferred(self,preferences)->int:
+        prefered_dishes=[dish_id for dish_id,dish_data in self.id2dish.items() if dish_data['Cuisine'] in preferences]
+        return random.choice(prefered_dishes)
+    
+    def sample_dishes(self,count:int)->"list[int]":
+        dishes=[dish_id for dish_id in self.id2dish.keys()]
+        return random.choices(dishes,k=count)
 
     def get_dish_weight(self,dish: Dish)->int:
         return self.id2dish[int(dish.id)]['Serving Size']*dish.quantity

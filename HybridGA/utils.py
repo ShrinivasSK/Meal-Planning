@@ -1,3 +1,5 @@
+from collections import defaultdict
+import copy
 from plan import MealPlan, Individual, ProblemConfig, Dataset, Dish, PlanUtils
 from HybridGA.population import HybridGAPopulation
 
@@ -5,6 +7,7 @@ import random
 from typing import Tuple
 import numpy as np
 
+## Current Error: Length of Meal Plans is changing due to some reason
 class HybridGAUtils:
     def __init__(self,dataset:Dataset,problem_config:ProblemConfig) -> None:
         self.problem_config=problem_config
@@ -106,6 +109,12 @@ class HybridGAUtils:
             meal_plan=MealPlan(self.problem_config,self.dataset,meal_plan)
             
             ## Check Validity and add to correct group
+            dishes=set()
+            for id,dish in enumerate(meal_plan):
+                if dish.id!=0:
+                    tot+=1
+            if len(dishes)!=tot:
+                continue
             if(self.plan_utils.isValidChild(meal_plan)):
                 if len(population["feasible"])>=self.problem_config.init_feasible_population_limit:
                     continue
@@ -217,6 +226,8 @@ class HybridGAUtils:
             meal_plan=MealPlan(self.problem_config,self.dataset,meal_plan)
             
             ## Check Validity and add to correct group
+            if not meal_plan.check_no_repeat():
+                continue
             if(self.plan_utils.isValidChild(meal_plan)):
                 # if len(population["feasible"])>=self.problem_config.init_feasible_population_limit:
                 #     continue
@@ -280,8 +291,186 @@ class HybridGAUtils:
 
         return best
     
-    def educate(self,children,group_index):
-        return children
+    def educate(self,children:"dict[str,list[Individual]]",penalty_wts,group_index:int=0)->"dict[str,list[Individual]]":
+        updated_children={
+            'feasible':[],
+            'infeasible':[],
+        }
+        ## Improve Feasible
+        for child in children["feasible"]:
+            if random.random()<=self.problem_config.HybridGA.education_probability:
+                dishes_by_meal=defaultdict(list)
+                for id,dish in enumerate(child.meal_plan.plan):
+                    dishes_by_meal[self.problem_config.get_meal_from_id(id)].append(dish)
+
+                ## Improve dishes by meal individually
+                ## by sampling meals from better candidates
+                improved_plan=[]
+                for meal,dishes in dishes_by_meal.items():
+                    improved_plan.extend(self.improve_meal(dishes,meal,group_index))
+                
+                improved_plan=MealPlan(self.problem_config,self.dataset,improved_plan)
+                
+                # best_ind=None
+                # best_val=0
+                # for i in range(3**4):
+                #     curr_plan=[]
+                #     curr_plan.extend(improved[0][i%(len(improved[0]))])
+                #     curr_plan.extend(improved[1][(i//3)%(len(improved[1]))])
+                #     curr_plan.extend(improved[2][(i//9)%(len(improved[2]))])
+                #     curr_plan.extend(improved[3][(i//27)%(len(improved[3]))])
+
+                #     meal_plan=MealPlan(self.problem_config,self.dataset,curr_plan)
+                #     if(self.plan_utils.isValidChild(meal_plan)):
+                #         temp_ind=Individual(meal_plan)
+                #         obj=temp_ind.calculate_objectives(penalty_wts,group_index)
+                #         if best_val<sum(obj):
+                #             best_val=sum(obj)
+                #             best_ind=copy.deepcopy(temp_ind)
+                
+                if self.plan_utils.isValidChild(improved_plan):
+                    improved_ind=Individual(improved_plan)
+                    improved_ind.calculate_objectives(penalty_wts,group_index)
+                    improved_ind.feasiblity=True
+                    updated_children["feasible"].append(improved_ind)
+                else:
+                    updated_children["feasible"].append(child)        
+            else:
+                updated_children["feasible"].append(child)
+        
+        ## Improve Infeasible
+        for child in children["infeasible"]:
+            if random.random()<=self.problem_config.HybridGA.education_probability:
+                dishes_by_meal=defaultdict(list)
+                for id,dish in enumerate(child.meal_plan.plan):
+                    dishes_by_meal[self.problem_config.get_meal_from_id(id)].append(dish)
+
+                ## Improve dishes by meal individually
+                ## by sampling meals from better candidates
+                improved_plan=[]
+                for meal,dishes in dishes_by_meal.items():
+                    improved_plan.extend(self.improve_meal(dishes,meal,group_index))
+                
+                improved_plan=MealPlan(self.problem_config,self.dataset,improved_plan)
+                # best_ind=None
+                # best_val=0
+                # for i in range(3**4):
+                #     curr_plan=[]
+                #     curr_plan.extend(improved[0][i%(len(improved[0]))])
+                #     curr_plan.extend(improved[1][(i//3)%(len(improved[1]))])
+                #     curr_plan.extend(improved[2][(i//9)%(len(improved[2]))])
+                #     curr_plan.extend(improved[3][(i//27)%(len(improved[3]))])
+
+                    
+                #     temp_ind=Individual(meal_plan)
+                #     obj=temp_ind.calculate_objectives(penalty_wts,group_index)
+                #     if best_val<sum(obj):
+                #         best_val=sum(obj)
+                #         best_ind=copy.deepcopy(temp_ind)
+                improved_ind=Individual(improved_plan)
+                improved_ind.calculate_objectives(penalty_wts,group_index)
+                if self.plan_utils.isValidChild(improved_plan):
+                    improved_ind.feasiblity=True
+                    updated_children["feasible"].append(improved_ind)
+                else:
+                    improved_ind.feasiblity=False
+                    updated_children["infeasible"].append(improved_ind)
+            else:
+                updated_children["infeasible"].append(child)
+        
+        return updated_children
+    
+    def improve_meal(self,dishes:"list[Dish]",which_meal:str,group_index:int=0)->"list[Dish]":
+        """
+        Improve a set of dishes corresponding to one meal 
+        """
+        non_padding_dishes=[dish for dish in dishes if dish.id!=0]
+        if len(non_padding_dishes)==1: 
+            return dishes
+        
+        random_dish=random.choice(non_padding_dishes)
+
+        if len(self.problem_config.groups[group_index].positive_preferences)!=0:
+            choices=[1,2,3]
+        else:
+            choices=[1,2]
+
+        choice=random.choice(choices)
+
+        if choice==1:
+            ## Improve combination
+            other_avg=[]
+            for dish in dishes:
+                if dish.id!=random_dish.id and dish.id!=0:
+                    other_avg.append(self.dataset.get_combi_vector(dish))
+            if len(other_avg)==0:
+                print(non_padding_dishes,dishes)
+                return dishes
+            other_avg=np.mean(other_avg)
+            combi_dish_id=int(self.dataset.get_combi_similar(other_avg))
+            combi_dish=Dish(
+                id=combi_dish_id,
+                quantity=random_dish.quantity,
+                vector=self.dataset.get_dish_vector(combi_dish_id),
+                title=self.dataset.get_dish_title(combi_dish_id),
+                meal=which_meal,
+                cuisine=self.dataset.get_dish_cuisine(combi_dish_id),
+                category=self.dataset.get_dish_category(combi_dish_id),
+                tags=self.dataset.get_dish_tags(combi_dish_id)
+            )
+            
+            improved_combi=[combi_dish]
+            for dish in dishes:
+                if dish.id!=random_dish.id:
+                    improved_combi.append(dish)
+            return improved_combi
+        elif choice==2:
+            ## Improve diversity
+            other_avg=[]
+            for dish in dishes:
+                if dish.id!=random_dish.id and dish.id!=0:
+                    other_avg.append(dish.vector[1:-1])
+            if len(other_avg)==0:
+                return dishes
+            other_avg=np.mean(other_avg)
+            other_dishes=self.dataset.sample_dishes(count=5)
+            best_id=np.argmax([np.linalg.norm(other_avg-self.dataset.get_dish_vector(id)) for id in other_dishes])
+            div_dish_id=other_dishes[best_id]
+            div_dish=Dish(
+                id=div_dish_id,
+                quantity=random_dish.quantity,
+                vector=self.dataset.get_dish_vector(div_dish_id),
+                title=self.dataset.get_dish_title(div_dish_id),
+                meal=which_meal,
+                cuisine=self.dataset.get_dish_cuisine(div_dish_id),
+                category=self.dataset.get_dish_category(div_dish_id),
+                tags=self.dataset.get_dish_tags(div_dish_id)
+            )
+            improved_div=[div_dish]
+            for dish in dishes:
+                if dish.id!=random_dish.id:
+                    improved_div.append(dish)
+            return improved_div
+        elif choice==3:
+            ## Improve preference
+            pref_dish_id=self.dataset.get_preferred(self.problem_config.groups[group_index].positive_preferences)
+            pref_dish=Dish(
+                id=pref_dish_id,
+                quantity=random_dish.quantity,
+                vector=self.dataset.get_dish_vector(pref_dish_id),
+                title=self.dataset.get_dish_title(pref_dish_id),
+                meal=which_meal,
+                cuisine=self.dataset.get_dish_cuisine(pref_dish_id),
+                category=self.dataset.get_dish_category(pref_dish_id),
+                tags=self.dataset.get_dish_tags(pref_dish_id)
+            )
+            improved_pref=[pref_dish]
+            for dish in dishes:
+                if dish.id!=random_dish.id:
+                    improved_pref.append(dish)
+            return improved_pref
+
+
     
     @staticmethod
     def intersection(l1:list,l2:list)->int:
@@ -342,7 +531,7 @@ class HybridGAUtils:
 
         return diversity_ranks
 
-    def find_obj_ranks_for_pop(self,population:list[Individual]):
+    def find_obj_ranks_for_pop(self,population:"list[Individual]"):
         ## Fast Non Dominated Sorting
         fronts = [[]]
         cnt=0
@@ -442,7 +631,7 @@ class HybridGAUtils:
 
         return rank_array
     
-    def create_children(self,population,penalty_wts,limit:int,group_index:int=0)->dict[str,list[Individual]]:
+    def create_children(self,population,penalty_wts,limit:int,group_index:int=0)->"dict[str,list[Individual]]":
         children={
             "feasible":[],
             "infeasible":[]
@@ -452,12 +641,20 @@ class HybridGAUtils:
             parent1=self.tournament(population)
             parent2=parent1
             # print(parent1==parent2)
-            while parent1==parent2:
-                parent2=self.tournament(population)
+            try:
+                while parent1==parent2:
+                    parent2=self.tournament(population)
+            except Exception as e:
+                print(e)
+                print(len(parent1.features),len(parent2.features))
+                continue
             
             child = self.crossover(parent1,parent2)
 
             child=self.mutate(child,group_index)
+
+            if not child.meal_plan.check_no_repeat():
+                continue
 
             if(self.plan_utils.isValidChild(child.meal_plan,group_index)):
                 child.calculate_objectives(penalty_wts,group_index)
@@ -531,7 +728,7 @@ class HybridGAUtils:
             
         return new_population
     
-    def calculate_rank_and_crowding(self,population:HybridGAPopulation)->list[list[Individual]]:
+    def calculate_rank_and_crowding(self,population:HybridGAPopulation)->"list[list[Individual]]":
         fronts = [[]]
         cnt=0
         for individual in population:
@@ -594,13 +791,12 @@ class HybridGAUtils:
 
         
 
-    def get_pareto_front(self, population:HybridGAPopulation )-> list[Individual]:
+    def get_pareto_front(self, population:HybridGAPopulation )-> "list[Individual]":
         pareto_front = []
         for individual in population["feasible"]:
             individual.calculate_objectives()
 
             individual.domination_count = 0
-            individual.dominated_solutions = []
             for other_individual in population["feasible"]: 
                 if(individual.ids==other_individual.ids):
                     # same

@@ -16,7 +16,7 @@ class HybridGAPopulation:
     def __len__(self) -> int:
         return len(self.population["feasible"])+len(self.population["infeasible"])
     
-    def __getitem__(self,which)->list[Individual]:
+    def __getitem__(self,which)->"list[Individual]":
         return self.population[which]
     
     def __iter__(self)->Iterator[Individual]:
@@ -26,7 +26,7 @@ class HybridGAPopulation:
         self.population["feasible"].extend(new_inds["feasible"])
         self.population["infeasible"].extend(new_inds["infeasible"])
 
-    def extend_list(self,new_inds:list[Individual]):
+    def extend_list(self,new_inds:"list[Individual]"):
         for ind in new_inds:
             if ind.feasiblity==True:
                 self.population["feasible"].append(ind)

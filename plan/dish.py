@@ -4,7 +4,7 @@ import numpy as np
 VEC_SIZE=300
 
 class Dish:
-    def __init__(self,id:int,quantity:int,vector:"list[float]",title:str,meal:str,cuisine:float,tags:str,category:str) -> None:
+    def __init__(self,id:int,quantity:int,vector:"list[float]",title:str,meal:str,cuisine:str,tags:str,category:str) -> None:
         self.id=id
         self.title=title
         self.quantity=quantity
