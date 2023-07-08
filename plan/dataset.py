@@ -43,7 +43,7 @@ class Dataset:
             self.id2dish[dish[i]]['Ingredients']+=self.ings[ings[i]-1]+"^"
 
         self.dish_vecs=np.load("Data/Processed/rec_vecs.npy")
-        self.kdTree=KDTree(self.dish_vecs)
+        # self.kdTree=KDTree(self.dish_vecs)
 
         self.ing_vector_model=KeyedVectors.load_word2vec_format("./Data/Recipe1M/vocab.bin", binary=True)
         self.ing_vocab=list(set(self.ing_vector_model.key_to_index.keys()))
@@ -71,9 +71,9 @@ class Dataset:
             vecs.append(self.ing_vector_model[random_ing])
         return vecs
 
-    def get_closest_dish(self,vec:"list[float]")->Tuple[int,"list[float]"]:
-        _,index=self.kdTree.query(vec)
-        return index+1,self.dish_vecs[index]
+    # def get_closest_dish(self,vec:"list[float]")->Tuple[int,"list[float]"]:
+    #     _,index=self.kdTree.query(vec)
+    #     return index+1,self.dish_vecs[index]
 
     def get_dish_nutri(self,dish: Dish)->"list[float]":
         return [n*dish.quantity for n in self.id2dish[int(dish.id)]['Nutrition'] ]
@@ -112,7 +112,6 @@ class Dataset:
 
     def get_dish_cuisine(self,dish_id:int)->str:
         cuisine=self.id2dish[int(dish_id)]['Cuisine']
-        # print(cuisine)
         if(cuisine not in self.cuisines):
             return -1
         else:

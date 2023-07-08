@@ -13,8 +13,6 @@ class MealPlan:
         self.problem_config=problem_config
         self.dataset=dataset
 
-        # self.printed=False
-
     def add_dish(self,dish:Dish):
         self.plan.append(dish)
 
@@ -96,8 +94,6 @@ class MealPlan:
 
     def check_nutri(self,group_index) -> bool:
         nutri=self.calculate_nutri()
-        # print(nutri)
-        # print(self.problem_config.nutri_limits)
         return MealPlan.checkIfSatisfied(
                 [nutri[0][0]],
                 [self.problem_config.groups[group_index].daily_nutrient_requirements[0]]

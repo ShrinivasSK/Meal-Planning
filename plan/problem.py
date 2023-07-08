@@ -33,11 +33,6 @@ class ProblemConfig:
         self.init_feasible_population_limit=self.HybridGA.target_proportion*self.HybridGA.population_size
         self.init_infeasible_population_limit=(1-self.HybridGA.target_proportion)*self.HybridGA.population_size
         
-        # for group in self.groups:
-        #     _,group.positive_preferences=self.get_cuisines(group.positive_preferences,data.cuisines)
-        #     _,group.negative_preferences=self.get_cuisines(group.negative_preferences,data.cuisines)
-
-        # print(self.preferred_cuisines,self.rejected_cuisines,self.cuisine_invalid)
 
     def get_cuisines(self,prefs,cuisines):
         ret=set()

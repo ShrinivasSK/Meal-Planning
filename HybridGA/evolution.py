@@ -78,16 +78,13 @@ class Evolution:
             ## 3. Mutation
             ## 4. Add to correct sub population
             children=self.utils.create_children(self.population,penalty_wts=penalty_wts,group_index=group_index,limit=len(self.population))
-            # print(len(children["feasible"]),len(children["infeasible"]))
 
             ## Local Search: Enhance Children
             children=self.utils.educate(children,penalty_wts,group_index)
-            # print(len(children["feasible"]),len(children["infeasible"]))
             
             self.population.extend(children)
 
             ## Survivor Selection
-            # self.utils.get_biased_fitness_values(self.population)
             self.population=self.utils.survivor_selection(self.population,limit=len(self.population)//2)
 
             ## Note best solution
@@ -121,7 +118,6 @@ class Evolution:
                 self.population["infeasible"].extend(new_population["infeasible"])
                 
                 self.population.calculate_objectives(penalty_wts,group_index)
-                # self.utils.get_biased_fitness_values(self.population)
                 self.utils.calculate_rank_and_crowding(self.population)
 
                 iter_without_improvement=0

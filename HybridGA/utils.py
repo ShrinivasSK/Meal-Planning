@@ -16,6 +16,7 @@ class HybridGAUtils:
         random.seed()
 
     def create_initial_population_many(self,limit:int)->HybridGAPopulation:
+        ## Get all the cliques in the combination graph
         breakfast_options=self.plan_utils.get_cliques(self.dataset,"breakfast",lower_limit=1,higher_limit=3)
         lunch_options=self.plan_utils.get_cliques(self.dataset,"lunch",lower_limit=1,higher_limit=5)
         snacks_options=self.plan_utils.get_cliques(self.dataset,"snacks",lower_limit=1,higher_limit=3)
@@ -43,7 +44,7 @@ class HybridGAUtils:
                                 tags=self.dataset.get_dish_tags(breakfast[i_])
                             )
                         )
-                    else:
+                    else: ## Add a padding dish to maintain size
                         meal_plan.append(Dish.get_padding_dish())
 
             ## Add Lunch Dishes
@@ -63,7 +64,7 @@ class HybridGAUtils:
                                 tags=self.dataset.get_dish_tags(lunch[i_])
                             )
                         )
-                    else:
+                    else: ## Add a padding dish to maintain size
                         meal_plan.append(Dish.get_padding_dish())
             
             ## Add Snacks Dishes
@@ -83,7 +84,7 @@ class HybridGAUtils:
                                 tags=self.dataset.get_dish_tags(snacks[i_])
                             )
                         )
-                    else:
+                    else: ## Add a padding dish to maintain size
                         meal_plan.append(Dish.get_padding_dish())
 
             ## Add Dinner Dishes
@@ -103,7 +104,7 @@ class HybridGAUtils:
                                 tags=self.dataset.get_dish_tags(dinner[i_])
                             )
                         )
-                    else:
+                    else: ## Add a padding dish to maintain size
                         meal_plan.append(Dish.get_padding_dish())
             
             meal_plan=MealPlan(self.problem_config,self.dataset,meal_plan)
@@ -136,6 +137,7 @@ class HybridGAUtils:
         return population
 
     def create_intitial_population(self,limit:int,group_index:int=0)->HybridGAPopulation:
+        ## Get all the cliques in the combination graph
         breakfast_options=self.plan_utils.get_cliques(self.dataset,"breakfast",lower_limit=1,higher_limit=3)
         lunch_options=self.plan_utils.get_cliques(self.dataset,"lunch",lower_limit=3,higher_limit=5)
         snacks_options=self.plan_utils.get_cliques(self.dataset,"snacks",lower_limit=1,higher_limit=3)
@@ -268,9 +270,6 @@ class HybridGAUtils:
         return best_ind,best_obj
     
     def better(self,individual:Individual,other_individual:Individual)->bool:
-        ## Returns True if Ind1 is better than Ind2 based on biased fitness function
-        # return ind1.biased_fitness>=ind2.biased_fitness
-
         ## Better based on crowding operator
         if (individual.rank < other_individual.rank) or \
             ((individual.rank == other_individual.rank) and (individual.crowding_distance > other_individual.crowding_distance)):
@@ -311,23 +310,6 @@ class HybridGAUtils:
                 
                 improved_plan=MealPlan(self.problem_config,self.dataset,improved_plan)
                 
-                # best_ind=None
-                # best_val=0
-                # for i in range(3**4):
-                #     curr_plan=[]
-                #     curr_plan.extend(improved[0][i%(len(improved[0]))])
-                #     curr_plan.extend(improved[1][(i//3)%(len(improved[1]))])
-                #     curr_plan.extend(improved[2][(i//9)%(len(improved[2]))])
-                #     curr_plan.extend(improved[3][(i//27)%(len(improved[3]))])
-
-                #     meal_plan=MealPlan(self.problem_config,self.dataset,curr_plan)
-                #     if(self.plan_utils.isValidChild(meal_plan)):
-                #         temp_ind=Individual(meal_plan)
-                #         obj=temp_ind.calculate_objectives(penalty_wts,group_index)
-                #         if best_val<sum(obj):
-                #             best_val=sum(obj)
-                #             best_ind=copy.deepcopy(temp_ind)
-                
                 if self.plan_utils.isValidChild(improved_plan):
                     improved_ind=Individual(improved_plan)
                     improved_ind.calculate_objectives(penalty_wts,group_index)
@@ -352,21 +334,7 @@ class HybridGAUtils:
                     improved_plan.extend(self.improve_meal(dishes,meal,group_index))
                 
                 improved_plan=MealPlan(self.problem_config,self.dataset,improved_plan)
-                # best_ind=None
-                # best_val=0
-                # for i in range(3**4):
-                #     curr_plan=[]
-                #     curr_plan.extend(improved[0][i%(len(improved[0]))])
-                #     curr_plan.extend(improved[1][(i//3)%(len(improved[1]))])
-                #     curr_plan.extend(improved[2][(i//9)%(len(improved[2]))])
-                #     curr_plan.extend(improved[3][(i//27)%(len(improved[3]))])
 
-                    
-                #     temp_ind=Individual(meal_plan)
-                #     obj=temp_ind.calculate_objectives(penalty_wts,group_index)
-                #     if best_val<sum(obj):
-                #         best_val=sum(obj)
-                #         best_ind=copy.deepcopy(temp_ind)
                 improved_ind=Individual(improved_plan)
                 improved_ind.calculate_objectives(penalty_wts,group_index)
                 if self.plan_utils.isValidChild(improved_plan):
@@ -640,7 +608,6 @@ class HybridGAUtils:
         while len(children["feasible"])+len(children["infeasible"])<limit:
             parent1=self.tournament(population)
             parent2=parent1
-            # print(parent1==parent2)
             try:
                 while parent1==parent2:
                     parent2=self.tournament(population)
@@ -671,15 +638,7 @@ class HybridGAUtils:
         meal_plan=[]
         for id,dish in enumerate(ind.meal_plan.plan):
             if(PlanUtils.choose_with_prob(self.problem_config.HybridGA.mutation_parameter)):
-                # dish_vec= np.array(deepcopy(dish.vector)[1:-1]).astype('float64')
-                # ings=self.dataset.get_random_ingredients()
-                # for ing in ings:
-                #     # print(ing)
-                #     if(PlanUtils.choose_with_prob(0.5)):
-                #         dish_vec=np.add(ing*random.random(),dish_vec)
-                #     else:
-                #         dish_vec=np.subtract(ing*random.random(),dish_vec)
-                # id,dish_vec=self.dataset.get_closest_dish(dish_vec)
+                ## replace with a random dish
                 random_dish_id,random_dish_vec=self.dataset.get_random_dish(self.problem_config.get_meal_from_id(id))
 
                 meal_plan.append(
@@ -701,19 +660,6 @@ class HybridGAUtils:
     
     
     def survivor_selection(self,population:HybridGAPopulation,limit:int)->HybridGAPopulation:
-        ## Remove the weakest individuals based on biased fitness function
-        # biased_fitness=[ind.biased_fitness for ind in population]
-        # ## Are ranks so select lowest values
-        # best_n_indices=sorted(range(len(biased_fitness)),key=lambda x: biased_fitness[x])[:limit]
-
-        # new_pop=HybridGAPopulation()
-        # for id,ind in enumerate(population):
-        #     if id in best_n_indices:
-        #         if ind.feasiblity:
-        #             new_pop["feasible"].append(ind)
-        #         else:
-        #             new_pop["infeasible"].append(ind)
-
         ## Fast Non Dominated Sorting and crowding distance based survivor selection
         fronts=self.calculate_rank_and_crowding(population)
 
