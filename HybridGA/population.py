@@ -3,8 +3,6 @@ import itertools
 from typing import Iterator
 from plan.individual import Individual
 
-NUM_OBJECTIVES=4
-
 class HybridGAPopulation:
     
     def __init__(self) -> None:
@@ -44,14 +42,17 @@ class HybridGAPopulation:
             citizen.calculate_objectives(penalty_wts,group_index)
 
     def calculate_average_objectives(self,penalty_wts,group_index:int=0)->"list[float]":
-        obj=[0.0]*NUM_OBJECTIVES
+        obj=None
         if len(self.population["feasible"])==0:
             return obj
         
         for citizen in self.population["feasible"]:
             cit_obj=citizen.calculate_objectives(penalty_wts,group_index)
-            for i in range(NUM_OBJECTIVES):
-                obj[i]+=cit_obj[i]
+            if obj==None:
+                obj = cit_obj
+            else:
+                for i in range(len(cit_obj)):
+                    obj[i]+=cit_obj[i]
         
         for i in range(len(obj)):
             obj[i]/=len(self.population["feasible"])

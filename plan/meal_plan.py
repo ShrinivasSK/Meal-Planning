@@ -159,7 +159,37 @@ class MealPlan:
             if val in l2:
                 cnt+=1
         return cnt
+    
+    @staticmethod
+    def constraint_objective_for_one(vals,limits):
+        obj=0
+        cnt=0
+        for i in range(len(vals)):
+            ## lower limit objective
+            if vals[i]<limits[i][0]:
+                obj+=vals[i]/limits[i][0]-1
+                cnt+=1
+            ## upper limit objective
+            if vals[i]>limits[i][1]:
+                obj+=1-(vals[i]/limits[i][1])
+                cnt+=1
+        if cnt==0:
+            return 0
+        return obj/cnt
 
+    def get_constraint_objective(self,group_index:int = 0):
+        nutri=self.calculate_nutri()
+        nutri_obj=MealPlan.constraint_objective_for_one(
+            [nutri[0][0]],
+            [self.problem_config.groups[group_index].daily_nutrient_requirements[0]]
+        )
+        
+        wt=self.calculate_wt()
+        wt_obj=MealPlan.constraint_objective_for_one(
+            [wt[0][0]],
+            [self.problem_config.groups[group_index].daily_weight_requirements[0]]
+        )
+        return nutri_obj + wt_obj
 
     def get_pos_preference(self,group_index:int=0,is_final_multiple=False)->float:
         dish_ids=[ dish.cuisine for dish in self.plan for _ in range(dish.quantity)]

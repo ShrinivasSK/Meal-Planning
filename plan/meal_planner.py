@@ -43,7 +43,7 @@ class MealPlanner:
             res_objectives.append(individual.objectives)
 
         if len(pareto_front)>5:
-            final_pop=MealPlanner.post_process(pareto_front,res_objectives)
+            final_pop=MealPlanner.post_process(pareto_front,res_objectives,problem_config)
         else:
             final_pop=pareto_front
         
@@ -54,7 +54,14 @@ class MealPlanner:
         return final_pop
     
     @staticmethod
-    def post_process(population:"list[Individual]",objectives:"list[float]"):
+    def post_process(population:"list[Individual]",objectives:"list[float]",problem_config: ProblemConfig):
+        if hasattr(problem_config.planning,'weights') or problem_config.planning.num_objectives == 1:
+            top_5 = np.argsort(np.array(objectives)[:,0])[:5]
+            selected_candidates=[]
+            for index in top_5:
+                selected_candidates.append(population[index])
+            return selected_candidates
+        
         X=[]
         for id,obj in enumerate(objectives):
             X.append(obj)
@@ -332,7 +339,7 @@ class MealPlanner:
             for individual in pareto_front:
                 res_objectives.append(individual.objectives)
 
-            group_rep=MealPlanner.post_process(pareto_front,res_objectives)
+            group_rep=MealPlanner.post_process(pareto_front,res_objectives,problem_config)
             group_reps.append(group_rep)
 
         logger.info("Group Plans Ready")

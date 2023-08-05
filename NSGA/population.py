@@ -3,8 +3,6 @@
 from plan import Individual
 
 
-NUM_OBJECTIVES=4
-
 class NSGAPopulation:
     
     def __init__(self) -> None:
@@ -16,20 +14,29 @@ class NSGAPopulation:
     
     def __iter__(self):
         return self.population.__iter__()
+    
+    def __getitem__(self,key):
+        return self.population[key]
 
     def extend(self,new_inds:"list[Individual]"):
-        self.population.extend(new_inds)
+        for ind in new_inds:
+            if ind not in self.population:
+                self.population.append(ind)
 
     def append(self,new_ind:Individual):
-        self.population.append(new_ind)
+        if new_ind not in self.population:
+            self.population.append(new_ind)
 
     def calculate_average_objectives(self,group_index:int=0)->"list[float]":
-        obj=[0.0]*NUM_OBJECTIVES
+        obj=None
         
         for citizen in self.population:
             cit_obj=citizen.calculate_objectives(group_index)
-            for i in range(NUM_OBJECTIVES):
-                obj[i]+=cit_obj[i]
+            if obj == None:
+                obj = cit_obj
+            else:
+                for i in range(len(cit_obj)):
+                    obj[i]+=cit_obj[i]
         
         for i in range(len(obj)):
             obj[i]/=len(self.population)

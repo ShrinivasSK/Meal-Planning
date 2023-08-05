@@ -345,13 +345,18 @@ class NSGAUtils:
     def create_children(self,population:NSGAPopulation,group_index:int=0)-> "list[Individual]":
         ## May lead to infinite loop if enough children are never valid
         children=[]
-
+        last_children_size = 0
+        pop_same_cnt = 0
         while len(children)<len(population):
             parent1=self.tournament(population)
             parent2=parent1
             # print(parent1==parent2)
+            num_iter=0
             while parent1==parent2:
+                num_iter+=1
                 parent2=self.tournament(population)
+                if(num_iter>=10): ## to avoid infinite loops
+                    break
             
             child1, child2 = self.crossover(parent1,parent2)
 
@@ -365,6 +370,15 @@ class NSGAUtils:
             if(self.plan_utils.isValidChild(child2.meal_plan,group_index)):
                 child2.calculate_objectives(group_index)
                 children.append(child2)
+
+            ## to avoid infinite loops
+            if len(children) == last_children_size:
+                pop_same_cnt += 1
+                if pop_same_cnt >= 10:
+                    break
+            else:
+                pop_same_cnt = 0
+            last_children_size = len(children)
 
         return children
 

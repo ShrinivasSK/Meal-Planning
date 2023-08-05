@@ -7,11 +7,11 @@ import copy
 
 NUM_OBJECTIVES=5
 
-logging.basicConfig(filename='Outputs/output_testing_nsga.log',
+logging.basicConfig(filename='Outputs/output_ablation.log',
                     filemode='a',
                     format='%(asctime)s.%(msecs)d %(levelname)s %(message)s',
                     datefmt='%H:%M:%S',
-                    level=logging.WARNING)
+                    level=logging.ERROR)
 
 logger=logging.getLogger()
 

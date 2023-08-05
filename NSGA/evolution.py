@@ -81,8 +81,12 @@ class Evolution:
                 front_num += 1
 
             self.utils.calculate_crowding_distance(self.population.fronts[front_num])
-            self.population.fronts[front_num].sort(key=lambda individual: individual.crowding_distance, reverse=True)
-            new_population.extend(self.population.fronts[front_num][0:self.utils.problem_config.NSGA.population_size-len(new_population)])
+            if self.problem_config.planning.num_objectives == 1:
+                best_ind = sorted(self.population,key=lambda ind: ind.objectives)[:self.utils.problem_config.NSGA.population_size]
+                new_population.extend(best_ind)
+            else:
+                self.population.fronts[front_num].sort(key=lambda individual: individual.crowding_distance, reverse=True)
+                new_population.extend(self.population.fronts[front_num][0:self.utils.problem_config.NSGA.population_size-len(new_population)])
 
             if(i%10==0):
                 obj=new_population.calculate_average_objectives(group_index)
@@ -99,5 +103,7 @@ class Evolution:
         
         logger.info("Objective Value: "+str(obj))
         
+        if self.problem_config.planning.num_objectives == 1:
+            return self.population
         return self.population.fronts[0]
 
