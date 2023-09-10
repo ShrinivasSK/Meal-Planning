@@ -98,7 +98,14 @@ class MealPlan:
                 [nutri[0][0]],
                 [self.problem_config.groups[group_index].daily_nutrient_requirements[0]]
             )
-   
+    
+    def evaluate_plan(self) ->list[float]:
+        return [
+            self.get_combi_value(),
+            self.get_diversity(),
+            self.get_pos_preference(),
+            self.get_neg_preference(),
+        ]
 
     def check_wt(self,group_index) -> bool:
         wt=self.calculate_wt()

@@ -27,6 +27,8 @@ import logging
 
 logger=logging.getLogger()
 
+DEBUG = True
+
 class Evolution:
 
     def __init__(self,dataset: Dataset,problem_config:ProblemConfig) -> None:
@@ -71,27 +73,56 @@ class Evolution:
             # logger.info("Fast Non Dominated Sorting")
             self.utils.fast_nondominated_sort(self.population)
 
-            # logger.info("Creating new population")
-            new_population=NSGAPopulation()
+            # if DEBUG:
+            #     with open(f"F:\SHRINIVAS\KGP\BTP\Meal-Planning\Outputs\\{i+1}_gen_single.csv","w") as f:
+            #         for ind in self.population:
+            #             for dish in ind.meal_plan.plan:
+            #                 f.write(f"{dish.id},{dish.quantity},")
+            #             f.write('\n')
 
-            front_num=0
-            while len(new_population) + len(self.population.fronts[front_num]) <= self.utils.problem_config.NSGA.population_size:
-                self.utils.calculate_crowding_distance(self.population.fronts[front_num])
-                new_population.extend(self.population.fronts[front_num])
-                front_num += 1
+            if DEBUG:
+                logger.debug("Orig Population")
+                for ind in self.population:
+                    logger.debug(ind.meal_plan.evaluate_plan())
+            # logger.info("Creating new population") 
+            new_population = NSGAPopulation()
 
-            self.utils.calculate_crowding_distance(self.population.fronts[front_num])
             if self.problem_config.planning.num_objectives == 1:
-                best_ind = sorted(self.population,key=lambda ind: ind.objectives)[:self.utils.problem_config.NSGA.population_size]
+                best_ind = sorted(self.population,key=lambda ind: ind.objectives,reverse=True)[:self.utils.problem_config.NSGA.population_size]
                 new_population.extend(best_ind)
             else:
+                front_num=0
+                while len(new_population) + len(self.population.fronts[front_num]) <= self.utils.problem_config.NSGA.population_size:
+                    self.utils.calculate_crowding_distance(self.population.fronts[front_num])
+                    new_population.extend(self.population.fronts[front_num])
+                    front_num += 1
+
+                self.utils.calculate_crowding_distance(self.population.fronts[front_num])
                 self.population.fronts[front_num].sort(key=lambda individual: individual.crowding_distance, reverse=True)
                 new_population.extend(self.population.fronts[front_num][0:self.utils.problem_config.NSGA.population_size-len(new_population)])
+
+            # if DEBUG:
+            #     with open(f"F:\SHRINIVAS\KGP\BTP\Meal-Planning\Outputs\selected_{i+1}_gen_single.csv","w") as f:
+            #         for ind in new_population:
+            #             for dish in ind.meal_plan.plan:
+            #                 f.write(f"{dish.id},{dish.quantity},")
+            #             f.write('\n')
+
+            if DEBUG:
+                logger.debug("New Population")
+                for ind in new_population:
+                    logger.debug(ind.meal_plan.evaluate_plan())
 
             if(i%10==0):
                 obj=new_population.calculate_average_objectives(group_index)
                 logger.info("Iteration "+str(i)+": Objective Value: "+str(obj))
                 self.history_objectives.append(obj)
+                if DEBUG:
+                    with open(f"F:\SHRINIVAS\KGP\BTP\Meal-Planning\Outputs\selected_{i+1}_gen_single.csv","w") as f:
+                        for ind in new_population:
+                            for dish in ind.meal_plan.plan:
+                                f.write(f"{dish.id},{dish.quantity},")
+                            f.write('\n')
 
             # logger.info("Preparing for next iteration")
             self.population = new_population
@@ -100,6 +131,8 @@ class Evolution:
                 self.utils.calculate_crowding_distance(front)
             children = self.utils.create_children(self.population,group_index)
 
+            # if DEBUG:
+            #     break
         
         logger.info("Objective Value: "+str(obj))
         

@@ -84,12 +84,12 @@ class Individual:
         ]
     
     def __str__(self) -> str:
-        if len(self.objectives)==0:
-            self.calculate_objectives()
+        # if len(self.objectives)==0:
+        #     self.calculate_objectives()
         res=""
         res+="\n"+"Nutrition Values: "+str(self.meal_plan.calculate_nutri()[0])
         res+="\n"+"Weight: "+str(self.meal_plan.calculate_wt()[0][0])
-        res+="\n"+"Objective Values: "+str(self.objectives)
+        res+="\n"+"Objective Values: "+str(self.evaluate_plan())
         
         res+="\n"+"\n Meal Plan: "
         for id,dish in enumerate(self.meal_plan.plan):

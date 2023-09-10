@@ -50,6 +50,11 @@ class MealPlanner:
         logger.info("Meal Plan Generated: ")
         for individual in final_pop:
             logger.info(str(individual)+"\n")
+            with open(f"F:\SHRINIVAS\KGP\BTP\Meal-Planning\Outputs\\final_gen_single.csv","w") as f:
+                for ind in final_pop:
+                    for dish in ind.meal_plan.plan:
+                        f.write(f"{dish.id},{dish.quantity},")
+                    f.write('\n')
 
         return final_pop
     
@@ -72,11 +77,18 @@ class MealPlanner:
         mean=np.mean(X,axis=0)
         std=np.std(X,axis=0)
         selected_candidates=[]
-        for val in X:
-            if (val<mean-std).any() or (val>mean+std).any():
+        selected_ids = []
+        for id, val in enumerate(X):
+            if (val<mean-std).any(): #or (val>mean+std).any():
                 # print(val,mean)
                 continue
             selected_candidates.append(val)
+            selected_ids.append(id)
+        if len(selected_ids)<5:
+            representatives=[]
+            for id in selected_ids:
+                representatives.append(population[id])
+            return representatives
         X=np.array(selected_candidates)
         
         kdTree=KDTree(X)

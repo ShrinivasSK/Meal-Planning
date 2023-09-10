@@ -5,7 +5,7 @@ import json
 import time
 import copy
 
-NUM_OBJECTIVES=5
+NUM_OBJECTIVES = 5
 
 logging.basicConfig(filename='Outputs/output_ablation.log',
                     filemode='a',
